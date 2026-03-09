@@ -51,12 +51,6 @@ def run(playwright1: Playwright) -> None:
             head=page1.locator(".ce_head")
             old_name=new_name
             #print('start')
-            
-        #old_name=page1.locator('.ce_head').last.inner_text()
-
-        #print(head.all_inner_texts()[2])
-
-        #print("processing page "+str(j))
         
         for i in range(head.count()-1):
             data={}
