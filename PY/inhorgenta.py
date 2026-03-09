@@ -90,18 +90,32 @@ def run(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
     page1 = context.new_page()
-    for i in range(5):
+    for i in range(len(df)):
+        data={}
         if pd.isna(df.loc[i,'url'])==False:
             page1.goto(df.loc[i,'url'], wait_until="domcontentloaded")
+            
             if page1.get_by_role("button", name="Accept All").count()>0:
                 page1.get_by_role("button", name="Accept All").click()
             test=page1.locator(".ce_cntnt")
 
-            print(test.locator.last(".ce_cntnt1").inner_text())
+            data['contact_point']=test.locator(".ce_head").last.inner_text()
+            data['contact_address']=test.locator(".ce_addr").inner_text()
+            
+            if test.locator(".ce_mobile").count()>0:
+                data['contact_mobile']=test.locator(".ce_mobile").inner_text()
+                
+            if test.locator(".ce_email").count()>0:
+                data['contact_email']=test.locator(".ce_email").first.inner_text()
+            
+            if test.locator(".ce_website").count()>0:
+                data['website']=test.locator(".ce_website").first.inner_text()
+            data['exhibitor_url']=df.loc[i,'url']
 
-            #".ce_cntnt > .ce_cntnt1 > .ce_head"
+            with open('inhorgenta_contact.json', "a") as f:
+                json_record = json.dumps(data)
+                f.write(json_record + '\n')  
 
-            #print(test.last.inner_text())
 
 with sync_playwright() as playwright:
     run(playwright)
