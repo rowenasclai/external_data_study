@@ -8,7 +8,14 @@ import json
 
 #url="https://asiamold-china.cn.messefrankfurt.com/guangzhou/en/exhibitor-search.html?page=2&pagesize=90"
 #url="https://intertextile-shanghai-apparel-fabrics-spring.hk.messefrankfurt.com/shanghai/en/exhibitor-search.html?page=1&pagesize=30"
-url="https://intertextile-shenzhen.hk.messefrankfurt.com/shenzhen/en/exhibitor-search.html?page=1&pagesize=30"
+#url="https://intertextile-shenzhen.hk.messefrankfurt.com/shenzhen/en/exhibitor-search.html?page=1&pagesize=30"
+
+#url="https://ishc-cihe.hk.messefrankfurt.com/beijing/en/exhibitor-search.html?page=1&pagesize=30
+#url="https://interpets.jp.messefrankfurt.com/tokyo/en/exhibitor-search.html?page=1&pagesize=30"
+#url="https://shenzhen-international-toy-and-hobby-fair.hk.messefrankfurt.com/shenzhen/en/exhibitor-search.html?page=1&pagesize=30"
+#url="https://shenzhen-international-stroller-mother-and-baby-product-fair.hk.messefrankfurt.com/shenzhen/en/exhibitor-search.html?page=1&pagesize=30"
+
+url="https://auto-maintenance.cn.messefrankfurt.com/beijing/en/exhibitor-search.html?page=1&pagesize=30"
 
 def run(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
@@ -18,9 +25,9 @@ def run(playwright: Playwright) -> None:
 
     data={}
 
-    for j in range(1,23):
+    for j in range(1,17):
         #url="https://intertextile-shanghai-apparel-fabrics-spring.hk.messefrankfurt.com/shanghai/en/exhibitor-search.html?page="+str(j)+"&pagesize=30"
-        url="https://intertextile-shenzhen.hk.messefrankfurt.com/shenzhen/en/exhibitor-search.html?page="+str(j)+"&pagesize=30"
+        url="https://auto-maintenance.cn.messefrankfurt.com/beijing/en/exhibitor-search.html?page="+str(j)+"&pagesize=30"
 
         page1.goto(url)
 
@@ -45,7 +52,7 @@ def run(playwright: Playwright) -> None:
             elif page1.get_by_role("link", name=data['company_name']).count()>0:
                 data['url']=page1.get_by_role("link", name=data['company_name']).get_attribute("href")
 
-            with open('sz_intertextile.json', "a") as f:
+            with open('bj_auto_maintenance.json', "a") as f:
                 json_record = json.dumps(data)
                 f.write(json_record + '\n')  
 
