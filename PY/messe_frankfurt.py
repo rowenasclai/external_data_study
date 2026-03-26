@@ -28,7 +28,7 @@ def run(playwright: Playwright) -> None:
 
     data={}
 
-    for j in range(1,6):
+    for j in range(6,7):
         #url="https://intertextile-shanghai-apparel-fabrics-spring.hk.messefrankfurt.com/shanghai/en/exhibitor-search.html?page="+str(j)+"&pagesize=30"
         url="https://beautyworld-japan-nagoya.jp.messefrankfurt.com/nagoya/en/exhibitor-search.html?page="+str(j)+"&pagesize=30"
 
