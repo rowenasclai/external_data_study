@@ -16,7 +16,9 @@ import json
 #url="https://shenzhen-international-stroller-mother-and-baby-product-fair.hk.messefrankfurt.com/shenzhen/en/exhibitor-search.html?page=1&pagesize=30"
 
 #url="https://auto-maintenance.cn.messefrankfurt.com/beijing/en/exhibitor-search.html?page=1&pagesize=30"
-url="https://intertextile-shanghai-apparel-fabrics-spring.hk.messefrankfurt.com/shanghai/en/exhibitor-search.html?page=1&pagesize=30"
+#url="https://intertextile-shanghai-apparel-fabrics-spring.hk.messefrankfurt.com/shanghai/en/exhibitor-search.html?page=1&pagesize=30"
+
+url="https://beautyworld-japan-nagoya.jp.messefrankfurt.com/nagoya/en/exhibitor-search.html?page=1&pagesize=30"
 
 def run(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
@@ -26,9 +28,9 @@ def run(playwright: Playwright) -> None:
 
     data={}
 
-    for j in range(1,34):
+    for j in range(1,6):
         #url="https://intertextile-shanghai-apparel-fabrics-spring.hk.messefrankfurt.com/shanghai/en/exhibitor-search.html?page="+str(j)+"&pagesize=30"
-        url="https://intertextile-shanghai-apparel-fabrics-spring.hk.messefrankfurt.com/shanghai/en/exhibitor-search.html?page="+str(j)+"&pagesize=90"
+        url="https://beautyworld-japan-nagoya.jp.messefrankfurt.com/nagoya/en/exhibitor-search.html?page="+str(j)+"&pagesize=30"
 
         page1.goto(url)
 
@@ -53,7 +55,7 @@ def run(playwright: Playwright) -> None:
             elif page1.get_by_role("link", name=data['company_name']).count()>0:
                 data['url']=page1.get_by_role("link", name=data['company_name']).get_attribute("href")
 
-            with open('sha_apparel_fabrics.json', "a") as f:
+            with open('ngo_beautyworld.json', "a") as f:
                 json_record = json.dumps(data)
                 f.write(json_record + '\n')  
 
