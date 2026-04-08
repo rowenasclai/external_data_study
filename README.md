@@ -9,3 +9,4 @@ Event-based Data Source:
 - HKTDC
 - International events
 - Global Sourcing
+- Japan IT Week Spring (RX Global)
