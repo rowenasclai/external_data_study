@@ -18,7 +18,7 @@ import json
 #url="https://auto-maintenance.cn.messefrankfurt.com/beijing/en/exhibitor-search.html?page=1&pagesize=30"
 #url="https://intertextile-shanghai-apparel-fabrics-spring.hk.messefrankfurt.com/shanghai/en/exhibitor-search.html?page=1&pagesize=30"
 
-url="https://beautyworld-japan-nagoya.jp.messefrankfurt.com/nagoya/en/exhibitor-search.html?page=1&pagesize=30"
+url="https://auto-maintenance.cn.messefrankfurt.com/beijing/en/exhibitor-search.html?page=1&pagesize=90"
 
 def run(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
@@ -28,13 +28,13 @@ def run(playwright: Playwright) -> None:
 
     data={}
 
-    for j in range(6,7):
+    for j in range(1,17):
         #url="https://intertextile-shanghai-apparel-fabrics-spring.hk.messefrankfurt.com/shanghai/en/exhibitor-search.html?page="+str(j)+"&pagesize=30"
-        url="https://beautyworld-japan-nagoya.jp.messefrankfurt.com/nagoya/en/exhibitor-search.html?page="+str(j)+"&pagesize=30"
+        url="https://auto-maintenance.cn.messefrankfurt.com/beijing/en/exhibitor-search.html?page="+str(j)+"&pagesize=90"
 
         page1.goto(url)
 
-        for i in range(30):
+        for i in range(90):
 
             exhibitor_list=page1.locator(".ex-exhibitor-search-results-container")
 
@@ -55,7 +55,7 @@ def run(playwright: Playwright) -> None:
             elif page1.get_by_role("link", name=data['company_name']).count()>0:
                 data['url']=page1.get_by_role("link", name=data['company_name']).get_attribute("href")
 
-            with open('ngo_beautyworld.json', "a") as f:
+            with open('beijing-automechanika.json', "a") as f:
                 json_record = json.dumps(data)
                 f.write(json_record + '\n')  
 

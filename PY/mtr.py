@@ -18,8 +18,16 @@ import requests
 
 
 from datetime import datetime
+from datetime import datetime, timedelta
+
+# Approximation (30 days * 2)
+#two_months_ago = datetime.now() - timedelta(days=60)
+
+#print(two_months_ago)
+
 
 current_datetime = datetime.now()
+current_datetime = datetime.now()- timedelta(days=60)
 
 # Format as "YYYY-MM-DD HH:MM:SS"
 formatted_string = current_datetime.strftime("%b%y")

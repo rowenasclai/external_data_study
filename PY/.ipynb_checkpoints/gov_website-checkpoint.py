@@ -201,7 +201,7 @@ def run(playwright: Playwright, url, domain, suffix) -> None:
     page1 = context.new_page()
     #page2 = context.new_page()
 
-    if suffix=='esd':
+    if suffix=='epd':
         cl=".node__content"
         list1=page.locator(f"{cl}")
         list2=list1.locator('ul > li')
@@ -492,7 +492,7 @@ def run(playwright: Playwright, url, domain, suffix) -> None:
             df['url']=page1.url
     #print(df)
     
-    if suffix=='esd':
+    if suffix=='epd':
         cl1='.p-table'
     elif suffix=='dsd':
         cl1='.col-lg-9.content'
@@ -504,6 +504,8 @@ def run(playwright: Playwright, url, domain, suffix) -> None:
     if suffix not in ('emsd','cedd_consultant','emsd_consultant','hkaa','hyd','hyd_consultant','wsd','wsd_consultant','td','td_consultant',
                     'gld','hahk'):
         df=pd.DataFrame()
+        all_links=page.locator(".content").get_by_role('link')
+        
         for i in range(all_links.count()):
         
             link=all_links.nth(i).get_attribute("href")
@@ -592,114 +594,114 @@ with sync_playwright() as playwright:
     suffix='epd'
     dpt='Environmental Protection Department'
     date_pattern = r"\d{1,2} (january|february|march|april|may|june|july|august|september|october|november|december|jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)( |\xa0)\d{2,4}"
-    #run(playwright,url,domain,suffix)
-    #process_export(url,dpt,suffix)
+    # run(playwright,url,domain,suffix)
+    # process_export(url,dpt,suffix)
 
     url = 'https://www.dsd.gov.hk/EN/Our_Projects/Contracts_Consultancies_Awarded/index.html'
     domain='https://www.dsd.gov.hk/EN/Our_Projects/Contracts_Consultancies_Awarded/'
     suffix='dsd'
     dpt='Drainage Services Department'
-    #run(playwright,url,domain,suffix)
-    #process_export(url,dpt,suffix)
+    # run(playwright,url,domain,suffix)
+    # process_export(url,dpt,suffix)
 
     url = 'https://www.cedd.gov.hk/eng/tender-notices/contracts/contracts-awarded/index.html'
     domain='https://www.cedd.gov.hk/'
     suffix='cedd'
     dpt = 'Civil Engineering and Development Department'
-    #run(playwright,url,domain,suffix)
-    #process_export(url,dpt,suffix)
+    # run(playwright,url,domain,suffix)
+    # process_export(url,dpt,suffix)
 
     url='https://www.cedd.gov.hk/eng/tender-notices/consultancy-agreements/consultancies-awarded/index.html'
     domain='https://www.cedd.gov.hk/'
     suffix='cedd_consultant'
     dpt = 'Civil Engineering and Development Department'
 
-    #run(playwright,url,domain,suffix)
-    #process_export(url,dpt,suffix)
+    run(playwright,url,domain,suffix)
+    process_export(url,dpt,suffix)
 
     url = 'https://www.emsd.gov.hk/en/tenders_contracts_and_consultancies/tender_notices/award_of_tender/index.html'
     domain='https://www.emsd.gov.hk'
     suffix='emsd'
     dpt='Electrical and Mechanical Services Department'
-    #run(playwright,url,domain,suffix)
-    #process_export(url,dpt,suffix)
+    run(playwright,url,domain,suffix)
+    process_export(url,dpt,suffix)
 
     url = 'https://www.emsd.gov.hk/en/tenders_contracts_and_consultancies/tender_notices/award_of_consultancies/index.html'
     domain='https://www.emsd.gov.hk'
     suffix='emsd_consultant'
     dpt='Electrical and Mechanical Services Department'
 
-    #run(playwright,url,domain,suffix)
-    #process_export(url,dpt,suffix)
+    run(playwright,url,domain,suffix)
+    process_export(url,dpt,suffix)
 
     url='https://www.hongkongairport.com/en/airport-authority/tender-notices/notice-of-contract-award.page'
     domain='https://www.hongkongairport.com'
     suffix='hkaa'
     dpt='Hong Kong Airport Authority'
 
-    #run(playwright,url,domain,suffix)
-    #process_export(url,dpt,suffix)
+    run(playwright,url,domain,suffix)
+    process_export(url,dpt,suffix)
     url='https://www.hyd.gov.hk/en/tender_notices/contracts/awarded/index.html'
     domain='https://www.hyd.gov.hk/'
     suffix='hyd'
     dpt='Highways Department'
 
-    #run(playwright,url,domain,suffix)
-    #process_export(url,dpt,suffix)
+    run(playwright,url,domain,suffix)
+    process_export(url,dpt,suffix)
 
     url='https://www.hyd.gov.hk/en/tender_notices/contracts/awarded/index.html'
     domain='https://www.hyd.gov.hk/'
     suffix='hyd_consultant'
     dpt='Highways Department'
 
-    #run(playwright,url,domain,suffix)
-    #process_export(url,dpt,suffix)
+    run(playwright,url,domain,suffix)
+    process_export(url,dpt,suffix)
 
     url='https://www.wsd.gov.hk/en/tenders-contracts-and-consultancies/contracts/active-wsd-capital-works-contracts/index.html'
     domain='https://www.wsd.gov.hk/'
     suffix='wsd'
     dpt='Water Supplies Department'
 
-    #run(playwright,url,domain,suffix)
-    #process_export(url,dpt,suffix)
+    run(playwright,url,domain,suffix)
+    process_export(url,dpt,suffix)
 
     url='https://www.wsd.gov.hk/en/tenders-contracts-and-consultancies/consultancies/award-consultancies/index.html'
     domain='https://www.wsd.gov.hk/'
     suffix='wsd_consultant'
     dpt='Water Supplies Department'
 
-    #run(playwright,url,domain,suffix)
-    #process_export(url,dpt,suffix)
+    run(playwright,url,domain,suffix)
+    process_export(url,dpt,suffix)
 
     url='https://www.td.gov.hk/en/tender_notices/award_of_contracts_and_consultancies/works_contract/index.html'
     domain='https://www.wsd.gov.hk/'
     suffix='td'
     dpt='Transport Department'
 
-    #run(playwright,url,domain,suffix)
-    #process_export(url,dpt,suffix)
+    run(playwright,url,domain,suffix)
+    process_export(url,dpt,suffix)
     url = 'https://www.td.gov.hk/en/tender_notices/award_of_contracts_and_consultancies/non_works_contract/index.html'
     domain='https://www.wsd.gov.hk/'
     suffix='td_consultant'
     dpt='Transport Department'
 
-    #run(playwright,url,domain,suffix)
-    #process_export(url,dpt,suffix)
+    run(playwright,url,domain,suffix)
+    process_export(url,dpt,suffix)
     url ='https://pcms2.gld.gov.hk/iprod/#/scn00101'
     domain='https://pcms2.gld.gov.hk/'
     suffix='gld'
     dpt='gld'
 
-    #run(playwright,url,domain,suffix)
-    #process_export(url,dpt,suffix)
+    run(playwright,url,domain,suffix)
+    process_export(url,dpt,suffix)
 
     url='https://www.ha.org.hk/visitor/ha_visitor_index.asp?Content_ID=2001&Lang=ENG&Dimension=10'
     domain='https://www.ha.org.hk/visitor/'
     suffix='hahk'
     dpt='hahk'
 
-    #run(playwright,url,domain,suffix)
+    run(playwright,url,domain,suffix)
     process_export(url,dpt,suffix)
-    #combine()
+    combine()
     
 
