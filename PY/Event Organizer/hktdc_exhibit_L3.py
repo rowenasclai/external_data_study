@@ -11,7 +11,7 @@ import os
 domain='https://www.hktdc.com'
 
 prefix=input('What is the prefix of your exhibition?')
-os.chdir("/Users/rowena/Other Projects/external_data_study/Result/HKTDC/"+prefix) 
+os.chdir("/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/"+prefix) 
 
 df2_L1=pd.read_csv('hktdc_'+prefix+'_L2.csv')
 
@@ -151,6 +151,6 @@ def run(playwright: Playwright) -> None:
 
 with sync_playwright() as playwright:
     run(playwright)
-    df = pd.read_json('/Users/rowena/Other Projects/external_data_study/Result/HKTDC/'+prefix+'/hktdc_'+prefix+'_L3.json', orient='records', lines=True)
+    df = pd.read_json('/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/'+prefix+'/hktdc_'+prefix+'_L3.json', orient='records', lines=True)
 
-    df.to_csv('/Users/rowena/Other Projects/external_data_study/Result/HKTDC/'+prefix+'/hktdc_'+prefix+'_L3.csv',index=False)
+    df.to_csv('/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/'+prefix+'/hktdc_'+prefix+'_L3.csv',index=False)

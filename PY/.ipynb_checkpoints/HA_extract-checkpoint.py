@@ -36,25 +36,25 @@ formatted_string_P3 = past_3_month.strftime("%b_%Y")
 # In[1111]:
 
 
-for string in [formatted_string,formatted_string_P1,formatted_string_P2,formatted_string_P3]:
-    pdf_url="https://www.housingauthority.gov.hk/en/common/pdf/business-partnerships/tenders/BP_Tender_Award_"+string+".pdf"
+# for string in [formatted_string,formatted_string_P1,formatted_string_P2,formatted_string_P3]:
+#     pdf_url="https://www.housingauthority.gov.hk/en/common/pdf/business-partnerships/tenders/BP_Tender_Award_"+string+".pdf"
 
-    try:
-        response = requests.get(pdf_url)
-        response.raise_for_status()
-        pdf_path = "BP_Tender_Award_"+string+".pdf"
+#     try:
+#         response = requests.get(pdf_url)
+#         response.raise_for_status()
+#         pdf_path = "BP_Tender_Award_"+string+".pdf"
 
-        path_obj = Path(pdf_path)
+#         path_obj = Path(pdf_path)
 
-        if not path_obj.exists():
-            with open(pdf_path, "wb") as f:
-                f.write(response.content)
-            #path_obj.write_text(content)
-        else:
-            print(f"The file '{pdf_path}' already exists. Not writing to it.")
+#         if not path_obj.exists():
+#             with open(pdf_path, "wb") as f:
+#                 f.write(response.content)
+#             #path_obj.write_text(content)
+#         else:
+#             print(f"The file '{pdf_path}' already exists. Not writing to it.")
 
-    except Exception as e:
-        print(f"No File exists: {pdf_url}")
+#     except Exception as e:
+#         print(f"No File exists: {pdf_url}")
 
 
 
@@ -244,7 +244,7 @@ def pdf_process(pdf_file, export_file):
     final_export=final_export.reset_index(drop=True).drop(columns=['index']) 
     #print(final_export)
 
-    final_export.to_csv('/Users/rowena/Other Projects/external_data_study/Result/HA/'+export_file+'.csv', index=False, encoding="utf-8")
+    final_export.to_csv('/Users/rowena/Other Projects/external_data_study/Result/Government Contract Extraction/HA/'+export_file+'.csv', index=False, encoding="utf-8")
 
 # im = page.to_image()
 
