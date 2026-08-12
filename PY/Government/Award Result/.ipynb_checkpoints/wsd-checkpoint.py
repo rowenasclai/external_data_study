@@ -4,6 +4,10 @@ from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, JsonCssExtractionStrateg
 from crawl4ai.extraction_strategy import JsonXPathExtractionStrategy
 import re
 
+import os
+
+os.chdir('/Users/rowena/Other Projects/external_data_study/Result/Government Contract Extraction/gov_cntract/Raw/data')
+
 # =====================================================================
 # 1. DEFINE SCHEMAS
 # =====================================================================
@@ -151,18 +155,18 @@ async def run_decoupled_crawl(l1_start_url: str):
                     
                 if isinstance(parsed_page_data, list):
                     for record in parsed_page_data:
-                        record['department'] = 'wsd'
+                        record['department'] = 'Water Supplies Department'
                         record['type'] = 'contract_awarded'
                         record['url'] = url
                         record['ref'] = ref
-                        record['award_dt'] = dt
+                        record['award_date'] = dt
                         record['pwp_no'] = pwp
-                        record['subject'] = title 
+                        record['description'] = title 
                         record['district'] = district
-                        record['contract_sum'] = contract_sum  
+                        record['sum'] = contract_sum  
                         record['responsible_division'] = responsible_division
 
-                        print(record)
+                        #print(record)
 
                         with open('gov_wsd.json', "a") as f:
                             #f.write(json.dumps(record, ensure_ascii=False) + '\n')
@@ -171,7 +175,7 @@ async def run_decoupled_crawl(l1_start_url: str):
                 
         
         print("\n=== FINAL EXTRACTED DATA ===")
-        print(json.dumps(final_dataset, indent=2))
+        #print(json.dumps(final_dataset, indent=2))
 
 # Run the pipeline with your initial L1 table input URL
 asyncio.run(run_decoupled_crawl("https://www.wsd.gov.hk/en/tenders-contracts-and-consultancies/contracts/active-wsd-capital-works-contracts/index.html"))

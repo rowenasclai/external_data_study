@@ -225,6 +225,8 @@ async def run_decoupled_crawl(l1_start_url: str):
                             record['type'] = type1
                             record['url'] = url
                             record['ref'] = ref
+                            record['description'] = desc
+                            record['period']=''
     
                         with open('gov_dsd.json', "a") as f:
                             f.write(json.dumps(record, ensure_ascii=False) + '\n')

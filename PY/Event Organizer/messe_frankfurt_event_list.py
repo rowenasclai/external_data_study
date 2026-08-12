@@ -1,6 +1,6 @@
 import asyncio
 import json
-from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, JsonCssExtractionStrategy, VirtualScrollConfig
+from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, JsonCssExtractionStrategy, VirtualScrollConfig, CacheMode
 from crawl4ai.extraction_strategy import JsonXPathExtractionStrategy
 import re
 from langchain_ollama import ChatOllama
@@ -42,34 +42,41 @@ l1_css_schema = {
     ]
 }
 
-js_infinite_scroll_life = """
-(async () => {
-    let lastHeight = document.body.scrollHeight;
+SENTRY_SCROLL_JS = """
+async () => {
+    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    
+    let lastEventCount = 0;
     let noChangeCount = 0;
+    const maxNoChange = 5;
 
-    while (noChangeCount < 4) {
-        // 1. Scroll to the bottom
-        window.scrollTo(0, document.body.scrollHeight);
+    for (let i = 0; i < 30; i++) { // Up to 30 page batches (25 events each)
+        // Locate the IntersectionObserver sentry element
+        const sentry = document.querySelector('.ex-event-search-results__sentry');
+        
+        if (sentry) {
+            // Bring sentry into view to trigger React's IntersectionObserver
+            sentry.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            await delay(1500); // Buffer for AJAX load to complete
+        } else {
+            window.scrollBy({ top: 1200, behavior: 'smooth' });
+            await delay(800);
+        }
 
-        // 2. Wait 1.5s for the #load_more spinner to process
-        await new Promise(resolve => setTimeout(resolve, 1500));
-
-        // 3. Check if new content was added
-        let currentHeight = document.body.scrollHeight;
-        if (currentHeight === lastHeight) {
+        // Count current rendered result items
+        const currentEventCount = document.querySelectorAll('.ex-event-search-result-item').length;
+        
+        if (currentEventCount === lastEventCount) {
             noChangeCount++;
+            if (noChangeCount >= maxNoChange) {
+                break; // Reached end of dynamic list
+            }
         } else {
             noChangeCount = 0;
-            lastHeight = currentHeight;
-        }
-
-        // 4. Monitor #load_more spinner state
-        const spinner = document.querySelector('#load_more');
-        if (spinner && window.getComputedStyle(spinner).display === 'none' && noChangeCount > 0) {
-            console.log('[JS] #load_more is hidden and height is stable.');
+            lastEventCount = currentEventCount;
         }
     }
-})();
+};
 """
 
 
@@ -84,7 +91,7 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
         print(f"[L1] Crawling index: {l1_start_url}")
 
         virtual_config = VirtualScrollConfig(
-            container_selector="div.m-search-result-item--event",      # CSS selector for scrollable container
+            container_selector="div.ex-event-search__container",      # CSS selector for scrollable container
             scroll_count=1000,                 # Number of scrolls to perform
             scroll_by="container_height",    # How much to scroll each time
             wait_after_scroll=0.8           # Wait time (seconds) after each scroll
@@ -94,13 +101,18 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
         l1_config = CrawlerRunConfig(
             #table_extraction=table_strategy, 
             extraction_strategy=JsonCssExtractionStrategy(l1_css_schema),
-            virtual_scroll_config=virtual_config,
-            cache_mode=True
+            #virtual_scroll_config=virtual_config,
+            #cache_mode=True,
+            cache_mode=CacheMode.BYPASS,
+            #scan_full_page=True,        # Natively triggers window scrolling down
+            #scroll_delay=3.8,
             #magic=True,
-            #wait_for="div.rl-light-container",  # Wait for table or content container
+            wait_for="#mf-ev-root",  # Wait for table or content container
+            delay_before_return_html=3.0,
+            js_code=SENTRY_SCROLL_JS
             #delay_before_return_html=3.0,                  # Allow 3s for dynamic JS to settle
             #js_code="window.scrollTo(0, document.body.scrollHeight);",
-            #js_code=js_infinite_scroll_life #,
+            #js_code=WINDOW_SCROLL_JS #,
             #scan_full_page=True
             #js_code=AUTO_SCROLL_JS
             #js_code=js_flatten_rowspan

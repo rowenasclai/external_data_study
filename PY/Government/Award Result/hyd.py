@@ -2,6 +2,10 @@ import asyncio
 import json
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, JsonCssExtractionStrategy
 
+import os
+
+os.chdir('/Users/rowena/Other Projects/external_data_study/Result/Government Contract Extraction/gov_cntract/Raw/data')
+
 async def main():
     # 1. Configure browser to handle potential firewall restrictions and preserve HTML structure
     browser_config = BrowserConfig(headless=True)
@@ -11,12 +15,12 @@ async def main():
         "name": "HYD Records Extractor",
         "baseSelector": "#content tbody tr", 
         "fields": [
-            {"name": "contract_no", "selector": "td:nth-child(1)", "type": "text"},
-            {"name": "contract_title", "selector": "td:nth-child(2)", "type": "text"},
+            {"name": "ref", "selector": "td:nth-child(1)", "type": "text"},
+            {"name": "description", "selector": "td:nth-child(2)", "type": "text"},
             {"name": "award_date", "selector": "td:nth-child(3)", "type": "text"},
-            {"name": "contractor_name", "selector": "td:nth-child(4)", "type": "text"},
+            {"name": "awardee", "selector": "td:nth-child(4)", "type": "text"},
             {"name": "type", "selector": "td:nth-child(5)", "type": "text"},
-            {"name": "contract_sum ($HK M)", "selector": "td:nth-child(6)", "type": "text"}
+            {"name": "sum", "selector": "td:nth-child(6)", "type": "text"}
         ]
     }
 
@@ -54,7 +58,7 @@ async def main():
                     #print(result.extracted_content)
                     if isinstance(data, list):
                         for record in data:
-                            record['department'] = 'hyd'
+                            record['department'] = 'Highways Department'
 
                         #print(record)
                             with open('gov_hyd.json', "a") as f:

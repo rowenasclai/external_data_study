@@ -4,9 +4,12 @@
 
 import asyncio
 import json
-from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, JsonCssExtractionStrategy
+from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, JsonCssExtractionStrategy,CacheMode
 from crawl4ai.extraction_strategy import JsonXPathExtractionStrategy
 import re
+import os
+
+os.chdir('/Users/rowena/Other Projects/external_data_study/Result/Government Contract Extraction/gov_cntract/Raw/data')
 
 # =====================================================================
 # 1. DEFINE SCHEMAS
@@ -24,8 +27,8 @@ l1_css_schema = {
             "attribute": "href"
         },
      {
-            "name": "Subject",
-            "selector": "td:nth-child(2) a",           # Selector for the actual L2 URL
+            "name": "l1_description",
+            "selector": "a",           # Selector for the actual L2 URL
             "type": "text"
         }
     ]
@@ -35,34 +38,34 @@ l1_css_schema = {
 # L2 Schema: Targets the deep data once we arrive at the 2nd URL
 l2_css_schema = {
     "name": "L2_Deep_Data_Extractor",
-    "baseSelector": "div.content table tbody tr",  # Targets field wrappers
+    "baseSelector": "div.node__content table.p-table tbody tr",  # Targets field wrappers
     "fields": [
         {
-            "name": "Tender Reference",
-            "selector": "td:nth-child(1) p",     # Extracts "Contractor :"
+            "name": "ref",
+            "selector": ":nth-child(1)",     # Extracts "Contractor :"
             "type": "text"
         },
         {
             "name": "Tendering Procedure",
-            "selector": "td:nth-child(2) p",       # Extracts ALL text inside <li> including value
+            "selector": ":nth-child(2)",       # Extracts ALL text inside <li> including value
             "type": "text"
         },
         {
-            "name": "Subject",
-            "selector": "td:nth-child(3) p",       # Extracts ALL text inside <li> including value
+            "name": "description",
+            "selector": ":nth-child(3)",       # Extracts ALL text inside <li> including value
             "type": "text"
         },
         {
             "name": "Contractor(s) and Address(es)",
-            "selector": "td:nth-child(4) p",       # Extracts ALL text inside <li> including value
+            "selector": ":nth-child(4)",       # Extracts ALL text inside <li> including value
             "type": "text"
         },
         {
-            "name": "Contractor(s)",
-            "selector": "td:nth-child(4) p",       # Extracts ALL text inside <li> including value
+            "name": "awardee",
+            "selector": ":nth-child(4) p",       # Extracts ALL text inside <li> including value
             #"type": "text"
             "type": "regex",
-            "regex": "<p>([^<]+?)*<br/>\\n" # Captures text right before a break/newline
+            "regex": "<p>([^<]+?)*(</p>|<br/>)\\n" # Captures text right before a break/newline
         },
         {
             "name": "Contractor Address(es)",
@@ -70,12 +73,12 @@ l2_css_schema = {
             "type": "text"
         },
         {
-            "name": "Awarded Period",
+            "name": "period",
             "selector": "td:nth-child(5) p",       # Extracts ALL text inside <li> including value
             "type": "text"
         },
         {
-            "name": "Estimated Awarded Sum",
+            "name": "sum",
             "selector": "td:nth-child(6) p",       # Extracts ALL text inside <li> including value
             "type": "text"
         }
@@ -109,9 +112,10 @@ async def run_decoupled_crawl(l1_start_url: str):
         # Parse the JSON string out of the L1 result
         l1_data = json.loads(l1_result.extracted_content)
 
-        #print(l1_data)
         # Flatten into a clean array of absolute URLs
         l2_urls = ['https://www.epd.gov.hk/epd/english/news_events/notices/'+item['Subject_Link'] for item in l1_data if item.get('Subject_Link')]
+
+        l2_desc=[item['l1_description'] for item in l1_data if item.get('l1_description')]
         
         
         print(f"[L1] Discovered {len(l2_urls)} deep links to process.")
@@ -122,10 +126,12 @@ async def run_decoupled_crawl(l1_start_url: str):
         print("[L2] Beginning batch crawl on extracted target links...")
         l2_config = CrawlerRunConfig(
             extraction_strategy=JsonCssExtractionStrategy(l2_css_schema),
-            cache_mode=True,
-            delay_before_return_html=3.0,  
-            wait_for="div.content",
-            js_code="window.scrollTo(0, document.body.scrollHeight);"
+            #cache_mode=CacheMode.BYPASS,
+            magic=True,
+            cache_mode=False,
+            delay_before_return_html=3.5,  
+            wait_for="div.content"#,
+            #js_code="window.scrollTo(0, document.body.scrollHeight);"
         )
         
         # arun_many executes the array concurrently across your browser instances
@@ -134,27 +140,40 @@ async def run_decoupled_crawl(l1_start_url: str):
         
         # Combine the results
         final_dataset = []
-        for url, res in zip(l2_urls, l2_results):
+        for url, res, desc in zip(l2_urls, l2_results, l2_desc):
             if res.success and res.extracted_content:
                 parsed_page_data = json.loads(res.extracted_content)
 
-
                 if isinstance(parsed_page_data, list):
                     for record in parsed_page_data:
-                        record['department'] = 'epd'
+                        record['department'] = 'Environmental Protection Department'
                         record['type'] = 'contract_awarded'
                         record['url'] = url
+                        #record['l1_desc']=desc
+                        if 'Awarded in ' in desc:
+                            record['award_date']=desc[desc.index('Awarded in ')+11:].replace(')','')
+                        elif 'Awarded In ' in desc:
+                            record['award_date']=desc[desc.index('Awarded In ')+11:].replace(')','')
+                        else:
+                            record['award_date']=desc
+                            
+                        if '<br/>' in record['awardee']:
+                            record['awardee']=record['awardee'][record['awardee'].index('<p>')+3:record['awardee'].index('<br/>')]
 
-                        try:
-                            record['Contractor(s)']=record['Contractor(s)'][record['Contractor(s)'].index('<p>')+3:record['Contractor(s)'].index('<br/>')]
 
-                        except:
-                            record['Contractor(s)']=record['Contractor(s)'][record['Contractor(s)'].index('<p>')+3:record['Contractor(s)'].index('</p>')]  
+                        elif '</p>' in record['awardee']:
+                            record['awardee']=record['awardee'][:record['awardee'].index('</p>')]
 
-                    with open('gov_epd.json', "a") as f:
+                        else:
+                            record['awardee']=record['awardee'][:record['awardee'].index('</p>')]
+
+                        record['awardee']=record['awardee'].replace('<p>','')
+
+
+                        with open('gov_epd.json', "a") as f:
                 
                 # 2. Dump individual record dictionary as a single JSON line
-                        f.write(json.dumps(record, ensure_ascii=False) + '\n')
+                            f.write(json.dumps(record, ensure_ascii=False) + '\n')
         
         #print("\n=== FINAL EXTRACTED DATA ===")
         #print(json.dumps(final_dataset, indent=2))

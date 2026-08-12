@@ -7,6 +7,10 @@ from langchain_ollama import ChatOllama
 from langchain_core.messages import SystemMessage, HumanMessage
 from crawl4ai import DefaultTableExtraction
 
+import os
+
+os.chdir('/Users/rowena/Other Projects/external_data_study/Result/Government Contract Extraction/gov_cntract/Raw/data')
+
 # =====================================================================
 # TSD
 # 1. DEFINE SCHEMAS
@@ -197,7 +201,7 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
                     record['Amount / Contract Award Date']=record["particulars"]
                     record['ref']=preserve_ref
                     record['tendering_procedure']=preserve_tendering_procedure
-                    record['particulars']=preserve_particulars
+                    record['description']=preserve_particulars
 
                 record['type'] = 'contract_award'
 
@@ -237,9 +241,9 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
                          # Validate that the final string output parses correctly back into Python
                         parsed_json = json.loads(full_response)
                         #print(parsed_json)
-                        record["contractor"] = parsed_json['award_contractor']
+                        record["awardee"] = parsed_json['award_contractor']
                         record["contractor_address"] = parsed_json['contractor address']
-                        record["amount"] = parsed_json['contract_amount']
+                        record["sum"] = parsed_json['contract_amount']
                         record["award_date"] = parsed_json['contract_award_date']
 
                     except:

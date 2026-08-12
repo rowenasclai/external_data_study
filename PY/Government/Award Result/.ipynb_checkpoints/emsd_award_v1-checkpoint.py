@@ -1,6 +1,9 @@
 import asyncio
 import json
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, JsonCssExtractionStrategy
+import os
+
+os.chdir('/Users/rowena/Other Projects/external_data_study/Result/Government Contract Extraction/gov_cntract/Raw/data')
 
 async def main():
     # 1. Configure browser to handle potential firewall restrictions and preserve HTML structure
@@ -11,11 +14,11 @@ async def main():
         "name": "EMSD Consultancy Records Extractor",
         "baseSelector": "div.table_wrapper", 
         "fields": [
-            {"name": "agreement_no", "selector": "tr:nth-child(1) td", "type": "text"},
-            {"name": "consultancy_title", "selector": "tr:nth-child(2) td a", "type": "text"},
-            {"name": "document_url", "selector": "tr:nth-child(2) td a", "type": "attribute", "attribute": "href"},
-            {"name": "consultancy_name", "selector": "tr:nth-child(3) td", "type": "text"},
-            {"name": "consultancy_cost", "selector": "tr:nth-child(4) td", "type": "text"},
+            {"name": "ref", "selector": "tr:nth-child(1) td", "type": "text"},
+            {"name": "description", "selector": "tr:nth-child(2) td a", "type": "text"},
+            {"name": "url", "selector": "tr:nth-child(2) td a", "type": "attribute", "attribute": "href"},
+            {"name": "awardee", "selector": "tr:nth-child(3) td", "type": "text"},
+            {"name": "sum", "selector": "tr:nth-child(4) td", "type": "text"},
             {"name": "award_date", "selector": "tr:nth-child(5) td", "type": "text"},
             {"name": "estimated_completion_date", "selector": "tr:nth-child(6) td", "type": "text"}
         ]
@@ -52,8 +55,6 @@ async def main():
                 # 2. Dump individual record dictionary as a single JSON line
                         f.write(json.dumps(record, ensure_ascii=False) + '\n')
 
-                #print(f"[+] Extracted {len(df)} exhibitor records from TAIROS 2026.")
-            #print(json.dumps(data, indent=2))
             
         else:
             print(f"Extraction failed: {result.error_message}")

@@ -4,6 +4,11 @@ from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, JsonCssExtractionStrateg
 from crawl4ai.extraction_strategy import JsonXPathExtractionStrategy
 import re
 
+import os
+
+os.chdir('/Users/rowena/Other Projects/external_data_study/Result/Government Contract Extraction/gov_cntract/Raw/data')
+
+
 # =====================================================================
 # TSD
 # 1. DEFINE SCHEMAS
@@ -21,17 +26,17 @@ l1_css_schema = {
             "type": "text"
         },
      {
-            "name": "date_of_award",
+            "name": "award_date",
             "selector": "td:nth-child(2)",           # Selector for the actual L2 URL
             "type": "text"
         },
         {
-            "name": "contractor",
+            "name": "awardee",
             "selector": "td:nth-child(3)",           # Selector for the actual L2 URL
             "type": "text"
         },
         {
-            "name": "contract_sum",
+            "name": "sum",
             "selector": "td:nth-child(4)",           # Selector for the actual L2 URL
             "type": "text"
         }
@@ -74,17 +79,17 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
 
         if isinstance(l1_data, list):
             for record in l1_data:
-                record['department'] = 'td'
+                record['department'] = 'Transport Department'
                 record['type'] = 'contract_award'
                 
                 try:
-                    record['subject']=record['ref'][record['ref'].index('<br/><br/>'):]
+                    record['description']=record['ref'][record['ref'].index('<br/><br/>'):]
                     record['ref']=record['ref'][:record['ref'].index('<br/>')]
 
                 except:
                     pass
                
-                print(record)
+                #print(record)
 
                 with open(file_name, "a") as f:
                     #f.write(json.dumps(record, ensure_ascii=False) + '\n')

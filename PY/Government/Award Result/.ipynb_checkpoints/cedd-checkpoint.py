@@ -1,124 +1,147 @@
 import asyncio
 import json
+from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, JsonCssExtractionStrategy
+from crawl4ai.extraction_strategy import JsonXPathExtractionStrategy
 import re
-from urllib.parse import urljoin
-from bs4 import BeautifulSoup
-from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
+import os
 
-class Crawl4AICEDDExtractor:
-    def __init__(self):
-        self.base_url = "https://www.cedd.gov.hk/eng/tender-notices/contracts/contracts-awarded/index.html"
-        
-        # Configure Crawl4AI Browser
-        self.browser_config = BrowserConfig(
-            headless=True,
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        )
-        
-        # Configure Crawl4AI Run Settings (Handles JS rendering)
-        self.run_config = CrawlerRunConfig(
-            wait_for="table, .content",
-            delay_before_return_html=2.0
-        )
+# =====================================================================
+# 1. DEFINE SCHEMAS
+# =====================================================================
 
-    def parse_index_table(self, html_content: str):
-        """Parse Stage 1 HTML table to extract summary fields & detail links."""
-        soup = BeautifulSoup(html_content, "html.parser")
-        records = []
+os.chdir('/Users/rowena/Other Projects/external_data_study/Result/Government Contract Extraction/gov_cntract/Raw/data')
 
-        table = soup.find("table")
-        if not table:
-            return records
-
-        rows = table.find_all("tr")
-        for row in rows:
-            cols = row.find_all(["td", "th"])
-            if len(cols) < 3:
-                continue
-
-            ref_text = cols[0].get_text(strip=True)
-            subject_text = cols[1].get_text(strip=True)
-            award_date = cols[2].get_text(strip=True)
-
-            if "Tender Reference" in ref_text or "Subject" in subject_text:
-                continue
-
-            # Extract 2nd URL (detail page link index-id-XXXX.html)
-            detail_a = cols[1].find("a", href=True) or cols[0].find("a", href=True)
-            detail_url = urljoin(self.base_url, detail_a["href"]) if detail_a else None
-
-            records.append({
-                "contract_no": ref_text,
-                "subject": subject_text,
-                "awarded_date": award_date,
-                "detail_url": detail_url
-            })
-
-        return records
-
-    def parse_detail_html(self, html_content: str):
-        """Parse Stage 2 detail page HTML for contractor and sum fields."""
-        soup = BeautifulSoup(html_content, "html.parser")
-        page_text = soup.get_text(" ", strip=True)
-
-        contractor_m = re.search(r"Contractor[:\s]*([^:\n]+?)(?=Contractor's Address|Quantity|Awarded Sum|$)", page_text, re.I)
-        address_m = re.search(r"Contractor's Address[:\s]*([^:\n]+?)(?=Quantity|Awarded Sum|Description|$)", page_text, re.I)
-        sum_m = re.search(r"Awarded Sum[^:\n]*[:\s]*([HK\$\d\.\sMmillion]+)", page_text, re.I)
-        desc_m = re.search(r"Description[:\s]*([^:\n]+?)(?=Contractor|Quantity|Awarded Sum|$)", page_text, re.I)
-
-        return {
-            "contractor": contractor_m.group(1).strip() if contractor_m else "N/A",
-            "contractor_address": address_m.group(1).strip() if address_m else "N/A",
-            "awarded_sum": sum_m.group(1).strip() if sum_m else "N/A",
-            "description": desc_m.group(1).strip() if desc_m else "N/A"
+# L1 Schema: Only targets the links we need to jump into
+l1_css_schema = {
+    "name": "L1_Link_Extractor",
+    "baseSelector": "#content table tbody tr",  # Selector for your L1 grid/table rows
+    "fields": [
+        {
+            "name": "Tender Reference",
+            "selector": "td:nth-child(1)",           # Selector for the actual L2 URL
+            "type": "text"
+        },
+     {
+            "name": "Subject",
+            "selector": "td:nth-child(2) a",           # Selector for the actual L2 URL
+            "type": "attribute",
+            "attribute": "href"
+        },
+        {
+            "name": "Awarded Date",
+            "selector": "td:nth-child(3)",           # Selector for the actual L2 URL
+            "type": "text"
         }
+    ]
+}
 
-    async def execute_pipeline(self, output_filename="gov_cedd.json"):
-        async with AsyncWebCrawler(config=self.browser_config) as crawler:
-            # 1. Crawl Stage 1 Index Page
-            print(f"[*] Crawling Index Page via Crawl4AI: {self.base_url}")
-            index_result = await crawler.arun(url=self.base_url, config=self.run_config)
+		
+# L2 Schema: Targets the deep data once we arrive at the 2nd URL
+l2_css_schema = {
+    "name": "L2_Deep_Data_Extractor",
+    "baseSelector": "#content",  # Targets field wrappers
+    "fields": [
+        {
+            "name": "label",
+            "selector": "h3:nth-child(5)",     # Extracts "Contractor :"
+            "type": "text"
+        },
+        {
+            "name": "full_text",
+            "selector": "",       # Extracts ALL text inside <li> including value
+            "type": "text"
+        }
+    ]
+}
 
-            if not index_result.success:
-                print(f"[-] Failed to crawl index page: {index_result.error_message}")
-                return
 
-            index_records = self.parse_index_table(index_result.cleaned_html or index_result.html)
-            print(f"[+] Extracted {len(index_records)} contract rows from Index.")
+# =====================================================================
+# 2. RUN PIPELINE
+# =====================================================================
 
-            # 2. Open JSON file for writing JSON Lines
-            with open(output_filename, "a", encoding="utf-8") as f:
-                for idx, item in enumerate(index_records, start=1):
-                    print(f"[*] Processing {idx}/{len(index_records)}: {item['contract_no']}")
+async def run_decoupled_crawl(l1_start_url: str):
+    async with AsyncWebCrawler() as crawler:
+        
+        # --- STAGE 1: Extract URLs from Level 1 ---
+        print(f"[L1] Crawling index: {l1_start_url}")
+        l1_config = CrawlerRunConfig(
+            extraction_strategy=JsonCssExtractionStrategy(l1_css_schema),
+            cache_mode=True,
+            magic=True,
+        wait_for="css:.table, table, .content_block",  # Wait for table or content container
+        delay_before_return_html=3.0,                  # Allow 3s for dynamic JS to settle
+        js_code="window.scrollTo(0, document.body.scrollHeight);"
+        )
+        l1_result = await crawler.arun(url=l1_start_url, config=l1_config)
+        
+        if not l1_result.success or not l1_result.extracted_content:
+            print("Failed to parse L1 or no URLs found.")
+            return
 
-                    detail_data = {}
-                    if item["detail_url"]:
-                        # Crawl Stage 2 Detail Page
-                        detail_result = await crawler.arun(url=item["detail_url"], config=self.run_config)
-                        if detail_result.success:
-                            detail_data = self.parse_detail_html(detail_result.cleaned_html or detail_result.html)
+        # Parse the JSON string out of the L1 result
+        l1_data = json.loads(l1_result.extracted_content)
 
-                    # 3. Construct dictionary record with required tags
-                    record = {
-                        "department": "cedd",
-                        "type": "contract_awarded",
-                        "contract_no": item["contract_no"],
-                        "subject": item["subject"],
-                        "awarded_date": item["awarded_date"],
-                        "contractor": detail_data.get("contractor", "N/A"),
-                        "contractor_address": detail_data.get("contractor_address", "N/A"),
-                        "awarded_sum": detail_data.get("awarded_sum", "N/A"),
-                        "description": detail_data.get("description", "N/A"),
-                        "detail_url": item["detail_url"]
-                    }
+        #print(l1_data)
+        # Flatten into a clean array of absolute URLs
+        l2_urls = ['https://www.cedd.gov.hk/'+item['Subject'] for item in l1_data if item.get('Subject')]
+        l2_ref = [item['Tender Reference'] for item in l1_data if item.get('Tender Reference')]
+        l2_dt = [item['Awarded Date'] for item in l1_data if item.get('Awarded Date')]
+        
+        
+        print(f"[L1] Discovered {len(l2_urls)} deep links to process.")
+        if not l2_urls:
+            return
 
-                    # 4. Save each record as a separate line in JSON format
-                    f.write(json.dumps(record, ensure_ascii=False) + "\n")
-                    await asyncio.sleep(0.5)
+        # --- STAGE 2: Mass Extract Data From Level 2 URLs ---
+        print("[L2] Beginning batch crawl on extracted target links...")
+        l2_config = CrawlerRunConfig(
+            #extraction_strategy=JsonCssExtractionStrategy(l2_css_schema),
+            cache_mode=True,
+            delay_before_return_html=3.0,  
+            wait_for="#content",
+            js_code="window.scrollTo(0, document.body.scrollHeight);"
+        )
+        
+        # arun_many executes the array concurrently across your browser instances
+        l2_results = await crawler.arun_many(urls=l2_urls, config=l2_config)
+        
+        
+        # Combine the results
+        final_dataset = []
+        for url, res, ref, dt in zip(l2_urls, l2_results, l2_ref,l2_dt):
+            if res.success : #and res.extracted_content:
+                #parsed_page_data = json.loads(res.extracted_content)
+                #items = parsed_page_data
+                #record = {"contractor_name": "N/A", "contractor_address": "N/A", "awarded_sum": "N/A"}
+                #print(res.markdown)
+                #res.markdown
 
-            print(f"[✓] Saved all records to '{output_filename}'")
+                raw_lines_list = [line.strip() for line in res.markdown.split('\n') if line.strip()]
+                #print(raw_lines_list[raw_lines_list.index("### Contractor :")+1])
 
-# Run Crawl4AI Pipeline
-if __name__ == "__main__":
-    extractor = Crawl4AICEDDExtractor()
-    asyncio.run(extractor.execute_pipeline())
+                # Inject the source URL so you know where this specific data came from
+                record={
+                    "department": "Civil Engineering and Development Department", "type": "contract_awarded",
+                    "ref":ref,
+                    "url": url,
+                    #"extracted_data": parsed_page_data              
+                    "description":raw_lines_list[raw_lines_list.index("### Subject :")+1],
+                    "awardee":raw_lines_list[raw_lines_list.index("### Contractor :")+1],
+                    "contractor_address":raw_lines_list[raw_lines_list.index("### Contractor's Address :")+1],
+                    "quantity":raw_lines_list[raw_lines_list.index("### Quantity :")+1],
+                    "sum":raw_lines_list[raw_lines_list.index("### Awarded Sum (million) :")+1],
+                    "award_date":dt
+                }
+
+                with open('gov_cedd.json', "a") as f:
+                
+                # 2. Dump individual record dictionary as a single JSON line
+                        f.write(json.dumps(record, ensure_ascii=False) + '\n')
+        
+        print("\n=== FINAL EXTRACTED DATA ===")
+        print(json.dumps(final_dataset, indent=2))
+
+# Run the pipeline with your initial L1 table input URL
+asyncio.run(run_decoupled_crawl("https://www.cedd.gov.hk/eng/tender-notices/contracts/contracts-awarded/index.html"))
+
+

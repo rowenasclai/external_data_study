@@ -3,10 +3,12 @@ import json
 from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, JsonCssExtractionStrategy, CacheMode
 from crawl4ai.extraction_strategy import JsonXPathExtractionStrategy
 import re
+import os
 
 # =====================================================================
 # DSD 1. DEFINE SCHEMAS
 # =====================================================================
+os.chdir('/Users/rowena/Other Projects/external_data_study/Result/Government Contract Extraction/gov_cntract/Raw/data')
 
 page_count_schema = {
     "name": "Get Max Pages",
@@ -31,6 +33,11 @@ l1_css_schema = {
             "selector": "td:nth-child(1) a",           # Selector for the actual L2 URL
             "type": "attribute",
             "attribute": "href"
+        },
+        {
+            "name": "description",
+            "selector": "td:nth-child(1) a",           # Selector for the actual L2 URL
+            "type": "text"
         },
         {
             "name": "type",
@@ -62,22 +69,22 @@ l2_css_schema = {
             "type": "text"
         },
         {
-            "name": "Contractor",
+            "name": "awardee",
             "selector": "div.row:nth-of-type(2) > div:nth-of-type(2)",       # Extracts ALL text inside <li> including value
             "type": "text"
         },
         {
-            "name": "date_of_commence",
+            "name": "start",
             "selector": "div.row:nth-of-type(3) > div:nth-of-type(2)",       # Extracts ALL text inside <li> including value
             "type": "text"
         },
         {
-            "name": "est_date_of_completion",
+            "name": "end",
             "selector": "div.row:nth-of-type(4) > div:nth-of-type(2)",       # Extracts ALL text inside <li> including value
             "type": "text"
         },
         {
-            "name": "contract_sum",
+            "name": "sum",
             "selector": "div.row:nth-of-type(5) > div:nth-of-type(2)",       # Extracts ALL text inside <li> including value
             "type": "text"
         },
@@ -185,6 +192,7 @@ async def run_decoupled_crawl(l1_start_url: str):
             l2_type = [item['type'] for item in l1_data if item.get('type')]
             l2_ref = [item['ref'] for item in l1_data if item.get('ref')]
             l2_dt = [item['award_date'] for item in l1_data if item.get('award_date')]
+            l2_desc = [item['description'] for item in l1_data if item.get('description')]
             
             
             print(f"[L1] Discovered {len(l2_urls)} deep links to process.")
@@ -207,13 +215,13 @@ async def run_decoupled_crawl(l1_start_url: str):
             
             # Combine the results
             final_dataset = []
-            for url, res, ref, dt, type1 in zip(l2_urls, l2_results, l2_ref,l2_dt, l2_type):
+            for url, res, ref, dt, type1, desc in zip(l2_urls, l2_results, l2_ref,l2_dt, l2_type,l2_desc):
                 if res.success and res.extracted_content:
                     parsed_page_data = json.loads(res.extracted_content)
                     
                     if isinstance(parsed_page_data, list):
                         for record in parsed_page_data:
-                            record['department'] = 'dsd'
+                            record['department'] = 'Drainage Services Department'
                             record['type'] = type1
                             record['url'] = url
                             record['ref'] = ref

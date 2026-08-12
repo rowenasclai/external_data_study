@@ -3,10 +3,13 @@ import json
 from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, JsonCssExtractionStrategy
 from crawl4ai.extraction_strategy import JsonXPathExtractionStrategy
 import re
+import os
 
 # =====================================================================
 # 1. DEFINE SCHEMAS
 # =====================================================================
+
+os.chdir('/Users/rowena/Other Projects/external_data_study/Result/Government Contract Extraction/gov_cntract/Raw/data')
 
 # L1 Schema: Only targets the links we need to jump into
 l1_css_schema = {
@@ -118,12 +121,12 @@ async def run_decoupled_crawl(l1_start_url: str):
 
                 # Inject the source URL so you know where this specific data came from
                 record={
-                    "department": "cedd", "type": "contract_awarded",
+                    "department": "Civil Engineering and Development Department", "type": "contract_awarded",
                     "ref":ref,
-                    "source_l2_url": url,
+                    "url": url,
                     #"extracted_data": parsed_page_data              
-                    "contract_title":raw_lines_list[raw_lines_list.index("### Subject :")+1],
-                    "contractor":raw_lines_list[raw_lines_list.index("### Contractor :")+1],
+                    "description":raw_lines_list[raw_lines_list.index("### Subject :")+1],
+                    "awardee":raw_lines_list[raw_lines_list.index("### Contractor :")+1],
                     "contractor_address":raw_lines_list[raw_lines_list.index("### Contractor's Address :")+1],
                     "quantity":raw_lines_list[raw_lines_list.index("### Quantity :")+1],
                     "award":raw_lines_list[raw_lines_list.index("### Awarded Sum (million) :")+1],

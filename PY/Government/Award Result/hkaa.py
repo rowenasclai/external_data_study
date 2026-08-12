@@ -7,6 +7,10 @@ from langchain_ollama import OllamaLLM
 from langchain_ollama import ChatOllama
 from langchain_core.messages import SystemMessage, HumanMessage
 
+import os
+
+os.chdir('/Users/rowena/Other Projects/external_data_study/Result/Government Contract Extraction/gov_cntract/Raw/data')
+
 # =====================================================================
 # 1. DEFINE SCHEMAS
 # =====================================================================
@@ -141,14 +145,14 @@ async def run_decoupled_crawl(l1_start_url: str):
         "You are a data transformation engine. Analyze the input data and organize it into a new JSON format. "
         "Your output must be a valid JSON object and nothing else. Do not include markdown code blocks like ```json. "
         "The output JSON structure MUST match this exact schema format:\n"
-        "{\n"
-        "  \"ref\": \"string\",\n"
-        "  \"award_contractor\": \"string\",\n"
-        "  \"contractor address\": \"string\",\n"
-        "  \"estimated contract value\": <currency>,\n"
-        "  \"project_summaries\": [\n"
-        "     { \"ref\": \"string\", \"short_title\": \"string\" }\n"
-        "  ]\n"
+        "{"
+        "  \"ref\": \"string\","
+        "  \"awardee\": \"string\","
+        "  \"contractor address\": \"string\","
+        "  \"sum\": [<currency>]"
+        # "  \"project_summaries\": [\n"
+        # "     { \"ref\": \"string\", \"short_title\": \"string\" }\n"
+        "  ]"
         "}"
     )
 
@@ -173,15 +177,16 @@ async def run_decoupled_crawl(l1_start_url: str):
                 try:
         # Validate that the final string output parses correctly back into Python
                     parsed_json = json.loads(full_response)
-                    parsed_json["department"] = "hkaa"
+                    parsed_json["department"] = "Hong Kong Airport Authority"
                     parsed_json["award_date"] = dt
                     parsed_json["url"] = url
                     parsed_json["type"] = type1
-                    parsed_json["subject"] = title
-
-                    with open('gov_hkaa.json', "a") as f:
+                    parsed_json["description"] = title.replace('\n',' ').replace('  ',' ')
+                   
+                    with open('gov_hkaa.json', "a", encoding='utf-8') as f:
                 # 2. Dump individual record dictionary as a single JSON line
-                        json.dump(parsed_json, f,indent=1, default=str,ensure_ascii=False)
+                        json.dump(parsed_json, f,#indent=4, default=str,
+                                  ensure_ascii=False)
                         f.write('\n')
 
                     

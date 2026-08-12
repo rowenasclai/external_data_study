@@ -4,6 +4,10 @@ from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, JsonCssExtractionStrateg
 from crawl4ai.extraction_strategy import JsonXPathExtractionStrategy
 import re
 
+import os
+
+os.chdir('/Users/rowena/Other Projects/external_data_study/Result/Government Contract Extraction/gov_cntract/Raw/data')
+
 # =====================================================================
 # 1. DEFINE SCHEMAS
 # =====================================================================
@@ -20,42 +24,30 @@ l1_css_schema = {
             "type": "text"
         },
         {
-            "name": "title",
+            "name": "description",
             "selector": "td:nth-child(2)",           # Selector for the actual L2 URL
             "type": "text"
         },
      {
-            "name": "contractor",
+            "name": "awardee",
             "selector": "td:nth-child(3) a",           # Selector for the actual L2 URL
             "type": "text"
         },
         {
-            "name": "contract_sum",
+            "name": "sum",
             "selector": "td:nth-child(4)",           # Selector for the actual L2 URL
             "type": "text"
         }
         ,
         {
-            "name": "date_of_commence",
+            "name": "award_date",
             "selector": "td:nth-child(5)",           # Selector for the actual L2 URL
             "type": "text"
         }
         ,
         {
-            "name": "contract_sum",
-            "selector": "td:nth-child(6)",           # Selector for the actual L2 URL
-            "type": "text"
-        }
-        ,
-        {
             "name": "est_complete_date",
-            "selector": "td:nth-child(7)",           # Selector for the actual L2 URL
-            "type": "text"
-        }
-        ,
-        {
-            "name": "responsible_division",
-            "selector": "td:nth-child(8)",           # Selector for the actual L2 URL
+            "selector": "td:nth-child(6)",           # Selector for the actual L2 URL
             "type": "text"
         }
     ]
@@ -91,7 +83,7 @@ async def run_decoupled_crawl(l1_start_url: str):
 
         if isinstance(l1_data, list):
             for record in l1_data:
-                record['department'] = 'wsd'
+                record['department'] = 'Water Supplies Department'
                 record['type'] = 'consultant'
                
                 print(record)
