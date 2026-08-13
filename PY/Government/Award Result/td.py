@@ -18,12 +18,24 @@ os.chdir('/Users/rowena/Other Projects/external_data_study/Result/Government Con
 
 l1_css_schema = {
     "name": "L1_Link_Extractor",
-    "baseSelector": "#content tr",  # Selector for your L1 grid/table rows
+    "baseSelector": "div#content table tbody tr",  # Selector for your L1 grid/table rows
     "fields": [
         {
-            "name": "ref",
+            "name": "ref1",
             "selector": "td:nth-child(1)",           # Selector for the actual L2 URL
             "type": "text"
+        },
+        {
+            "name": "ref desc",
+            "selector": "td:nth-child(1)",           # Selector for the actual L2 URL
+            "type": "regex",
+            "regex":"TD*<br/><br/>"
+        },
+        {
+            "name": "ref desc1",
+            "selector": "td:nth-child(1)",           # Selector for the actual L2 URL
+            "type": "regex",
+            "regex":"<br/><br/>*<br/><br/>"
         },
      {
             "name": "award_date",
@@ -64,7 +76,7 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
             extraction_strategy=JsonCssExtractionStrategy(l1_css_schema),
             cache_mode=True,
             magic=True,
-            wait_for="#mainContent",  # Wait for table or content container
+            wait_for="div#content",  # Wait for table or content container
             delay_before_return_html=3.0,                  # Allow 3s for dynamic JS to settle
             js_code="window.scrollTo(0, document.body.scrollHeight);"
         )
@@ -81,10 +93,11 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
             for record in l1_data:
                 record['department'] = 'Transport Department'
                 record['type'] = 'contract_award'
+                record['url'] = l1_start_url
                 
                 try:
-                    record['description']=record['ref'][record['ref'].index('<br/><br/>'):]
-                    record['ref']=record['ref'][:record['ref'].index('<br/>')]
+                    record['description']=record['ref desc'][record['ref desc'].index('<br/><br/>')+10:].replace('</span>','').replace('</p>','').replace('\n','').replace('</td>','').replace('<br/>','')
+                    record['ref']=record['ref desc'][record['ref desc'].index('TD'):record['ref desc'].index('<br/><br/>')]
 
                 except:
                     pass
@@ -93,15 +106,16 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
 
                 with open(file_name, "a") as f:
                     #f.write(json.dumps(record, ensure_ascii=False) + '\n')
-                    json.dump(record, f,indent=1, default=str,ensure_ascii=False)
+                    json.dump(record, f,#indent=1, default=str,
+                              ensure_ascii=False)
                     f.write('\n')     
         
         print("\n=== FINAL EXTRACTED DATA ===")
         #print(json.dumps(final_dataset, indent=2))
 
 # Run the pipeline with your initial L1 table input URL
-asyncio.run(run_decoupled_crawl("https://www.wsd.gov.hk/en/tenders-contracts-and-consultancies/consultancies/award-consultancies/index.html",'gov_td.json'))
+asyncio.run(run_decoupled_crawl("https://www.td.gov.hk/en/tender_notices/award_of_contracts_and_consultancies/works_contract/index.html",'gov_td.json'))
 
-asyncio.run(run_decoupled_crawl("https://www.wsd.gov.hk/en/tenders-contracts-and-consultancies/consultancies/award-consultancies/index.html",'gov_td_consultant.json'))
+asyncio.run(run_decoupled_crawl("https://www.td.gov.hk/en/tender_notices/award_of_contracts_and_consultancies/non_works_contract/index.html",'gov_td_consultant.json'))
 
 

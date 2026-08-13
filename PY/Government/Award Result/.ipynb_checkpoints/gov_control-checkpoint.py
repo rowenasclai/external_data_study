@@ -3,7 +3,7 @@ import glob, os, os.path
 
 ##Remove all files
 
-mydir="/Users/rowena/Other Projects/external_data_study/PY/Government/Award Result"
+mydir="/Users/rowena/Other Projects/external_data_study/Result/Government Contract Extraction/gov_cntract/Raw/data"
 
 filelist = glob.glob(os.path.join(mydir, "*.json"))
 for f in filelist:
@@ -91,6 +91,13 @@ result = subprocess.run(
 
 result = subprocess.run(
         ["python3", "gld.py"],
+        # input=t,
+        # text=True,
+        capture_output=True
+    )
+
+result = subprocess.run(
+        ["python3", "gov_format.py"],
         # input=t,
         # text=True,
         capture_output=True

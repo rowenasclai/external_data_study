@@ -30,7 +30,7 @@ l1_css_schema = {
         },
      {
             "name": "awardee",
-            "selector": "td:nth-child(3) a",           # Selector for the actual L2 URL
+            "selector": "td:nth-child(3)",           # Selector for the actual L2 URL
             "type": "text"
         },
         {
@@ -46,7 +46,7 @@ l1_css_schema = {
         }
         ,
         {
-            "name": "est_complete_date",
+            "name": "end",
             "selector": "td:nth-child(6)",           # Selector for the actual L2 URL
             "type": "text"
         }
@@ -86,11 +86,12 @@ async def run_decoupled_crawl(l1_start_url: str):
                 record['department'] = 'Water Supplies Department'
                 record['type'] = 'consultant'
                
-                print(record)
+                #print(record)
 
                 with open('gov_wsd_consultant.json', "a") as f:
                     #f.write(json.dumps(record, ensure_ascii=False) + '\n')
-                    json.dump(record, f,indent=1, default=str,ensure_ascii=False)
+                    json.dump(record, f,#indent=1, default=str,
+                              ensure_ascii=False)
                     f.write('\n')
 
                 

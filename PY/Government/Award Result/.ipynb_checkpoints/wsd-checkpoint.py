@@ -24,7 +24,7 @@ l1_css_schema = {
         },
         {
             "name": "ref",
-            "selector": "td:nth-child(1)",           # Selector for the actual L2 URL
+            "selector": "td:nth-child(2)",           # Selector for the actual L2 URL
             "type": "text"
         },
      {
@@ -35,18 +35,24 @@ l1_css_schema = {
         },
         {
             "name": "contract_title",
-            "selector": "td:nth-child(4)",           # Selector for the actual L2 URL
+            "selector": "td:nth-child(3)",           # Selector for the actual L2 URL
             "type": "text"
         }
         ,
         {
             "name": "district",
+            "selector": "td:nth-child(4)",           # Selector for the actual L2 URL
+            "type": "text"
+        }
+        ,
+        {
+            "name": "awardee",
             "selector": "td:nth-child(5)",           # Selector for the actual L2 URL
             "type": "text"
         }
         ,
         {
-            "name": "contract_sum",
+            "name": "sum",
             "selector": "td:nth-child(6)",           # Selector for the actual L2 URL
             "type": "text"
         }
@@ -69,21 +75,21 @@ l1_css_schema = {
 # L2 Schema: Targets the deep data once we arrive at the 2nd URL
 l2_css_schema = {
     "name": "L2_Deep_Data_Extractor",
-    "baseSelector": "#mainContent table tbody",  # Targets field wrappers
+    "baseSelector": "table#tblDetails tbody",  # Targets field wrappers
     "fields": [
         {
-            "name": "date_of_commence",
-            "selector": "tr:nth-child(8)",     # Extracts "Contractor :"
+            "name": "start",
+            "selector": "tr:nth-child(11) td",     # Extracts "Contractor :"
             "type": "text"
         },
         {
-            "name": "est_completion_date",
-            "selector": "tr:nth-child(9)",     # Extracts "Contractor :"
+            "name": "end",
+            "selector": "tr:nth-child(12) td",     # Extracts "Contractor :"
             "type": "text"
         },
         {
             "name": "status_of_work",
-            "selector": "tr:nth-child(10)",     # Extracts "Contractor :"
+            "selector": "tr:nth-child(13) td",     # Extracts "Contractor :"
             "type": "text"
         }
     ]
@@ -123,7 +129,8 @@ async def run_decoupled_crawl(l1_start_url: str):
         l2_ref = [item['ref'] for item in l1_data if item.get('ref')]
         l2_title = [item['contract_title'] for item in l1_data if item.get('contract_title')]
         l2_district = [item['district'] for item in l1_data if item.get('district')]
-        l2_contract_sum = [item['contract_sum'] for item in l1_data if item.get('contract_sum')]
+        l2_awardee = [item['awardee'] for item in l1_data if item.get('awardee')]
+        l2_contract_sum = [item['sum'] for item in l1_data if item.get('sum')]
         l2_dt = [item['award_date'] for item in l1_data if item.get('award_date')]
         l2_responsible_division = [item['responsible_division'] for item in l1_data if item.get('responsible_division')]
 
@@ -148,7 +155,7 @@ async def run_decoupled_crawl(l1_start_url: str):
         
         # Combine the results
         final_dataset = []
-        for url, res, ref, dt, pwp, title, district, contract_sum, responsible_division in zip(l2_urls, l2_results, l2_ref,l2_dt, l2_pwp, l2_title, l2_district, l2_contract_sum, l2_responsible_division):
+        for url, res, ref, dt, pwp, title, district, awardee, contract_sum, responsible_division in zip(l2_urls, l2_results, l2_ref,l2_dt, l2_pwp, l2_title, l2_district,l2_awardee, l2_contract_sum, l2_responsible_division):
             #print(res.extracted_content)
             if res.success: 
                 parsed_page_data = json.loads(res.extracted_content)
@@ -163,6 +170,7 @@ async def run_decoupled_crawl(l1_start_url: str):
                         record['pwp_no'] = pwp
                         record['description'] = title 
                         record['district'] = district
+                        record['awardee'] = awardee
                         record['sum'] = contract_sum  
                         record['responsible_division'] = responsible_division
 
@@ -170,8 +178,10 @@ async def run_decoupled_crawl(l1_start_url: str):
 
                         with open('gov_wsd.json', "a") as f:
                             #f.write(json.dumps(record, ensure_ascii=False) + '\n')
-                            json.dump(record, f,indent=1, default=str,ensure_ascii=False)
+                            json.dump(record, f,#indent=1, default=str,
+                                       ensure_ascii=False)
                             f.write('\n')
+                        #f.write(json.dumps(record, default=str, ensure_ascii=False) + '\n')
                 
         
         print("\n=== FINAL EXTRACTED DATA ===")
