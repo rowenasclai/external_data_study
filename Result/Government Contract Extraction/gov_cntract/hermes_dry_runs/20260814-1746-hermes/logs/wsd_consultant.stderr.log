@@ -1,0 +1,5 @@
+[INIT].... → Crawl4AI 0.9.2 
+[FETCH]... ↓ https://www.wsd.gov.hk/en/tenders-contracts-and-...ies/consultancies/award-consultancies/index.html  | ✓ | ⏱: 7.06s 
+[SCRAPE].. ◆ https://www.wsd.gov.hk/en/tenders-contracts-and-...ies/consultancies/award-consultancies/index.html  | ✓ | ⏱: 0.35s 
+[EXTRACT]. ■ https://www.wsd.gov.hk/en/tenders-contracts-and-...ies/consultancies/award-consultancies/index.html  | ✓ | ⏱: 0.31s 
+[COMPLETE] ● https://www.wsd.gov.hk/en/tenders-contracts-and-...ies/consultancies/award-consultancies/index.html  | ✓ | ⏱: 7.77s 

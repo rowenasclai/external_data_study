@@ -1,0 +1,503 @@
+{
+  "finished_at": "2026-08-14T18:06:19.702341+08:00",
+  "output": "Result/Government Contract Extraction/gov_cntract/gov_cntract_20260814-1746-hermes.csv",
+  "phase": "format",
+  "resume_events": [
+    {
+      "phase": "normalize",
+      "started_at": "2026-08-14T17:54:22.190399+08:00"
+    },
+    {
+      "phase": "format",
+      "started_at": "2026-08-14T17:54:33.607170+08:00"
+    },
+    {
+      "phase": "format",
+      "started_at": "2026-08-14T17:58:20.599373+08:00"
+    },
+    {
+      "phase": "format",
+      "started_at": "2026-08-14T17:59:25.469653+08:00"
+    },
+    {
+      "phase": "format",
+      "started_at": "2026-08-14T18:01:45.921132+08:00"
+    },
+    {
+      "phase": "format",
+      "started_at": "2026-08-14T18:05:51.465299+08:00"
+    },
+    {
+      "phase": "format",
+      "started_at": "2026-08-14T18:06:17.732300+08:00"
+    }
+  ],
+  "run_dir": "Result/Government Contract Extraction/gov_cntract/hermes_dry_runs/20260814-1746-hermes",
+  "run_id": "20260814-1746-hermes",
+  "stages": [
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/epd_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:45:37.786939+08:00",
+      "name": "epd",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_epd.json",
+          "rows": 23,
+          "sha256": "a06bed030cb4a2fab881e2d626dab540cf1175b3ee80f8fb7cc886fd571489d5",
+          "size": 18369
+        }
+      ],
+      "returncode": 0,
+      "script": "epd_hermes.py",
+      "started_at": "2026-08-14T17:45:01.964833+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/dsd_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:46:57.980137+08:00",
+      "name": "dsd",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_dsd.json",
+          "rows": 30,
+          "sha256": "0e36733c32cd0202574d35389d882de9bc2e2e79ac95bce005e4bbad5a7680c8",
+          "size": 19062
+        }
+      ],
+      "returncode": 0,
+      "script": "dsd_hermes.py",
+      "started_at": "2026-08-14T17:45:37.790404+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/cedd_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:47:38.185717+08:00",
+      "name": "cedd",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_cedd.json",
+          "rows": 20,
+          "sha256": "e0870b42444b34740d1b7ed24bc7b6dda0e70a71908e2f0b72b4438f56d1a007",
+          "size": 11748
+        }
+      ],
+      "returncode": 0,
+      "script": "cedd_hermes.py",
+      "started_at": "2026-08-14T17:46:57.984203+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/cedd_consultant_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:47:47.779067+08:00",
+      "name": "cedd_consultant",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_cedd_consultant.json",
+          "rows": 6,
+          "sha256": "4bb64bb43a6974bec4a4f1ce4b3d341a7d6e9dfba60020dfafc80f9e1c8966f5",
+          "size": 3094
+        }
+      ],
+      "returncode": 0,
+      "script": "cedd_consultant_hermes.py",
+      "started_at": "2026-08-14T17:47:38.190438+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/emsd_award_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:48:00.925822+08:00",
+      "name": "emsd_award",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_emsd.json",
+          "rows": 12,
+          "sha256": "6f78ff154ed7829b504764d93174cbf4369f88620e67d20238176d7308a91aa2",
+          "size": 5586
+        }
+      ],
+      "returncode": 0,
+      "script": "emsd_award_hermes.py",
+      "started_at": "2026-08-14T17:47:47.782346+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/emsd_award_construction_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:48:23.100387+08:00",
+      "name": "emsd_construction",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_emsd_construction.json",
+          "rows": 930,
+          "sha256": "a64d4383be446ea5ad7443f1a68dd9e5dad9d900c7f71259f051e22c5eb45061",
+          "size": 597033
+        }
+      ],
+      "returncode": 0,
+      "script": "emsd_award_construction_hermes.py",
+      "started_at": "2026-08-14T17:48:00.928572+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/hkaa_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:48:49.986823+08:00",
+      "name": "hkaa",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_hkaa_unstructured.json",
+          "rows": 7,
+          "sha256": "4e6533189198131db995bdf86b0dd93ec40d59a9a66669e640337058bd351b9d",
+          "size": 113332
+        }
+      ],
+      "returncode": 0,
+      "script": "hkaa_hermes.py",
+      "started_at": "2026-08-14T17:48:23.104166+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/hyd_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:49:08.166934+08:00",
+      "name": "hyd",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_hyd.json",
+          "rows": 19,
+          "sha256": "5337421c5a6089566886c12ffb67fbcbd901fd43d944c340c9b9ab1908e43bc9",
+          "size": 6243
+        }
+      ],
+      "returncode": 0,
+      "script": "hyd_hermes.py",
+      "started_at": "2026-08-14T17:48:49.992502+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/wsd_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:51:22.963986+08:00",
+      "name": "wsd",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_wsd.json",
+          "rows": 77,
+          "sha256": "76a5cdf15cff1fca21702d749a484d478abdad5638b6e491a68edfa2925cb8b6",
+          "size": 48376
+        }
+      ],
+      "returncode": 0,
+      "script": "wsd_hermes.py",
+      "started_at": "2026-08-14T17:49:08.171811+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/wsd_consultant_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:51:33.805279+08:00",
+      "name": "wsd_consultant",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_wsd_consultant.json",
+          "rows": 80,
+          "sha256": "0eba9b4da112bc24768ec2b55847e35c8c603f9b98577f7c365be0c472e1c1be",
+          "size": 28135
+        }
+      ],
+      "returncode": 0,
+      "script": "wsd_consultant_hermes.py",
+      "started_at": "2026-08-14T17:51:22.967956+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/td_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:51:54.296346+08:00",
+      "name": "td",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_td.json",
+          "rows": 8,
+          "sha256": "1745a5aef36b538a9f37b45217fa7b6690e346a196656ef7dd56a0696b4f4a2e",
+          "size": 7702
+        },
+        {
+          "exists": true,
+          "name": "gov_td_consultant.json",
+          "rows": 59,
+          "sha256": "58f0fd4bed96ff5322accee8c895bd75f05b683b063f06f6bf58d9e4500d995f",
+          "size": 58402
+        }
+      ],
+      "returncode": 0,
+      "script": "td_hermes.py",
+      "started_at": "2026-08-14T17:51:33.808522+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/gld_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:52:10.682292+08:00",
+      "name": "gld",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_gld_unstructured.json",
+          "rows": 146,
+          "sha256": "70704e53318bb50c365c84ea6e9d4442b18b3572a2f0d12a0f9119cd3456f134",
+          "size": 61073
+        }
+      ],
+      "returncode": 0,
+      "script": "gld_hermes.py",
+      "started_at": "2026-08-14T17:51:54.300605+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/normalize_unstructured_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:52:10.813632+08:00",
+      "name": "normalize_unstructured",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_hkaa.json",
+          "rows": 7,
+          "sha256": "0e82b4b886740fbdb5c2e45b5c18c6a1b99319f774e41ca3de1e954f6c0dfa83",
+          "size": 55787
+        },
+        {
+          "exists": true,
+          "name": "gov_gld.json",
+          "rows": 6,
+          "sha256": "b11c5d6a50bb353e030981399a1baebaba008877dd532ac682e087e9a37ea5f7",
+          "size": 6343
+        },
+        {
+          "exists": true,
+          "name": "normalization_rejects.json",
+          "rows": 140,
+          "sha256": "95ae6e22af662b705727d8b54b8bfeb87e8fde965090f1e4cd69a04442eed5cc",
+          "size": 69174
+        }
+      ],
+      "returncode": 1,
+      "script": "normalize_unstructured_hermes.py",
+      "started_at": "2026-08-14T17:52:10.685706+08:00",
+      "status": "failed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/normalize_unstructured_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:54:22.329334+08:00",
+      "name": "normalize_unstructured",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_hkaa.json",
+          "rows": 7,
+          "sha256": "0e82b4b886740fbdb5c2e45b5c18c6a1b99319f774e41ca3de1e954f6c0dfa83",
+          "size": 55787
+        },
+        {
+          "exists": true,
+          "name": "gov_gld.json",
+          "rows": 85,
+          "sha256": "6f52b2edd1b2db83c921ae90e89cb0306776defa1814a73971688081fd622707",
+          "size": 77441
+        },
+        {
+          "exists": true,
+          "name": "normalization_rejects.json",
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        },
+        {
+          "exists": true,
+          "name": "normalization_skipped.json",
+          "rows": 61,
+          "sha256": "ec39253ef81506fe4df72ce5e8d4135d4ea978312ae49b6874c6ac9320f378fe",
+          "size": 16420
+        }
+      ],
+      "returncode": 0,
+      "script": "normalize_unstructured_hermes.py",
+      "started_at": "2026-08-14T17:54:22.194404+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/gov_format_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:54:34.811492+08:00",
+      "name": "format",
+      "outputs": [
+        {
+          "exists": false,
+          "name": "gov_cntract_20260814-1746-hermes.csv",
+          "rows": 0,
+          "sha256": null,
+          "size": 0
+        }
+      ],
+      "returncode": 1,
+      "script": "gov_format_hermes.py",
+      "started_at": "2026-08-14T17:54:33.611552+08:00",
+      "status": "failed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/gov_format_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:58:22.058293+08:00",
+      "name": "format",
+      "outputs": [
+        {
+          "exists": false,
+          "name": "gov_cntract_20260814-1746-hermes.csv",
+          "rows": 0,
+          "sha256": null,
+          "size": 0
+        }
+      ],
+      "returncode": 1,
+      "script": "gov_format_hermes.py",
+      "started_at": "2026-08-14T17:58:20.603031+08:00",
+      "status": "failed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/gov_format_hermes.py"
+      ],
+      "finished_at": "2026-08-14T17:59:29.104299+08:00",
+      "name": "format",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_cntract_20260814-1746-hermes.csv",
+          "rows": 1305,
+          "sha256": "5d7da9253f511a07535edf0464a18585a9b76ce94ea9812a761525b6d9573b95",
+          "size": 507668
+        }
+      ],
+      "returncode": 0,
+      "script": "gov_format_hermes.py",
+      "started_at": "2026-08-14T17:59:25.473283+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/gov_format_hermes.py"
+      ],
+      "finished_at": "2026-08-14T18:02:18.843035+08:00",
+      "name": "format",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_cntract_20260814-1746-hermes.csv",
+          "rows": 1375,
+          "sha256": "d1ab1c722972ec78f1d2edc2c8f25dc5715004c6ca77fb72b422b1e28c568ff4",
+          "size": 618537359
+        }
+      ],
+      "returncode": 0,
+      "script": "gov_format_hermes.py",
+      "started_at": "2026-08-14T18:01:45.925799+08:00",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/gov_format_hermes.py"
+      ],
+      "finished_at": "2026-08-14T18:05:53.166036+08:00",
+      "name": "format",
+      "outputs": [
+        {
+          "exists": false,
+          "name": "gov_cntract_20260814-1746-hermes.csv",
+          "rows": 0,
+          "sha256": null,
+          "size": 0
+        }
+      ],
+      "returncode": 1,
+      "script": "gov_format_hermes.py",
+      "started_at": "2026-08-14T18:05:51.470347+08:00",
+      "status": "failed"
+    },
+    {
+      "command": [
+        "/home/admin/external_data_study/.venv-hermes/bin/python",
+        "/home/admin/external_data_study/PY/Government/Award Result/gov_format_hermes.py"
+      ],
+      "finished_at": "2026-08-14T18:06:19.692646+08:00",
+      "name": "format",
+      "outputs": [
+        {
+          "exists": true,
+          "name": "gov_cntract_20260814-1746-hermes.csv",
+          "rows": 1374,
+          "sha256": "d625b8231d4712f6e509631587f8b88fc69624d36ee66cea1f0fde42914076ac",
+          "size": 537997
+        }
+      ],
+      "returncode": 0,
+      "script": "gov_format_hermes.py",
+      "started_at": "2026-08-14T18:06:17.736192+08:00",
+      "status": "passed"
+    }
+  ],
+  "started_at": "2026-08-14T17:45:01.961768+08:00",
+  "status": "completed"
+}

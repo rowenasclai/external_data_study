@@ -1,0 +1,5 @@
+[INIT].... → Crawl4AI 0.9.2 
+[FETCH]... ↓ https://www.cedd.gov.hk/eng/tender-notices/consultancy-agreements/consultancies-awarded/index.html   | ✓ | ⏱: 6.28s 
+[SCRAPE].. ◆ https://www.cedd.gov.hk/eng/tender-notices/consultancy-agreements/consultancies-awarded/index.html   | ✓ | ⏱: 0.11s 
+[EXTRACT]. ■ https://www.cedd.gov.hk/eng/tender-notices/consultancy-agreements/consultancies-awarded/index.html   | ✓ | ⏱: 0.08s 
+[COMPLETE] ● https://www.cedd.gov.hk/eng/tender-notices/consultancy-agreements/consultancies-awarded/index.html   | ✓ | ⏱: 6.54s 
