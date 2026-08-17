@@ -1,0 +1,5 @@
+[INIT].... → Crawl4AI 0.9.2 
+[FETCH]... ↓ https://www.emsd.gov.hk/en/tenders_contracts_and...tender_notices/award_of_consultancies/index.html  | ✓ | ⏱: 9.59s 
+[SCRAPE].. ◆ https://www.emsd.gov.hk/en/tenders_contracts_and...tender_notices/award_of_consultancies/index.html  | ✓ | ⏱: 0.22s 
+[EXTRACT]. ■ https://www.emsd.gov.hk/en/tenders_contracts_and...tender_notices/award_of_consultancies/index.html  | ✓ | ⏱: 0.16s 
+[COMPLETE] ● https://www.emsd.gov.hk/en/tenders_contracts_and...tender_notices/award_of_consultancies/index.html  | ✓ | ⏱: 10.04s 

@@ -1,0 +1,5 @@
+[INIT].... → Crawl4AI 0.9.2 
+[FETCH]... ↓ https://pcms2.gld.gov.hk/iprod/#/scn00101                                                            | ✓ | ⏱: 12.49s 
+[SCRAPE].. ◆ https://pcms2.gld.gov.hk/iprod/#/scn00101                                                            | ✓ | ⏱: 0.30s 
+[EXTRACT]. ■ https://pcms2.gld.gov.hk/iprod/#/scn00101                                                            | ✓ | ⏱: 0.38s 
+[COMPLETE] ● https://pcms2.gld.gov.hk/iprod/#/scn00101                                                            | ✓ | ⏱: 13.21s 

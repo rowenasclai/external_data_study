@@ -1,0 +1,10 @@
+[INIT].... → Crawl4AI 0.9.2 
+[FETCH]... ↓ https://www.td.gov.hk/en/tender_notices/award_of...acts_and_consultancies/works_contract/index.html  | ✓ | ⏱: 7.72s 
+[SCRAPE].. ◆ https://www.td.gov.hk/en/tender_notices/award_of...acts_and_consultancies/works_contract/index.html  | ✓ | ⏱: 0.18s 
+[EXTRACT]. ■ https://www.td.gov.hk/en/tender_notices/award_of...acts_and_consultancies/works_contract/index.html  | ✓ | ⏱: 0.09s 
+[COMPLETE] ● https://www.td.gov.hk/en/tender_notices/award_of...acts_and_consultancies/works_contract/index.html  | ✓ | ⏱: 8.07s 
+[INIT].... → Crawl4AI 0.9.2 
+[FETCH]... ↓ https://www.td.gov.hk/en/tender_notices/award_of..._and_consultancies/non_works_contract/index.html  | ✓ | ⏱: 7.48s 
+[SCRAPE].. ◆ https://www.td.gov.hk/en/tender_notices/award_of..._and_consultancies/non_works_contract/index.html  | ✓ | ⏱: 0.24s 
+[EXTRACT]. ■ https://www.td.gov.hk/en/tender_notices/award_of..._and_consultancies/non_works_contract/index.html  | ✓ | ⏱: 0.23s 
+[COMPLETE] ● https://www.td.gov.hk/en/tender_notices/award_of..._and_consultancies/non_works_contract/index.html  | ✓ | ⏱: 8.00s 

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "rows": 1354,
+  "columns": [
+    "ref",
+    "department",
+    "description",
+    "awardee",
+    "award_date",
+    "sum",
+    "period",
+    "url",
+    "start",
+    "end"
+  ],
+  "exact_duplicates": 0,
+  "missing_award_dates": 79,
+  "date_min": "2007-06-01 00:00:00",
+  "date_max": "2026-08-12 00:00:00",
+  "transport_rows": 67,
+  "normalization_rejects": 0,
+  "max_field_length": 746,
+  "csv_size": 537997,
+  "warnings": [
+    "source omitted ref in 15 Transport rows",
+    "source omitted description in 9 Transport rows",
+    "WSD consultancy source omitted award_date in 79 rows"
+  ],
+  "errors": []
+}

@@ -1,0 +1,72 @@
+import asyncio
+import json
+from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, JsonCssExtractionStrategy
+import os
+
+from pathlib import Path
+
+RUN_DATA_DIR = Path(os.environ["GOV_HERMES_DATA_DIR"]).resolve()
+RUN_DATA_DIR.mkdir(parents=True, exist_ok=True)
+os.chdir(RUN_DATA_DIR)
+
+async def main():
+    # 1. Configure browser to handle potential firewall restrictions and preserve HTML structure
+    browser_config = BrowserConfig(headless=True, text_mode=False)
+
+    # 2. Define schema to map each .table_wrapper as a distinct record
+    emsd_schema = {
+        "name": "EMSD Consultancy Records Extractor",
+        "baseSelector": "div.table_wrapper", 
+        "fields": [
+            {"name": "ref", "selector": "tr:nth-child(1) td", "type": "text"},
+            {"name": "description", "selector": "tr:nth-child(2) td", "type": "text"},
+            {"name": "award_date", "selector": "tr:nth-child(3) td", "type": "text"},
+            {"name": "detail", "selector": "tr:nth-child(4) td", "type": "text"},
+            {"name": "tendering_procedure", "selector": "tr:nth-child(5) td", "type": "text"},
+            {"name": "awardee", "selector": "tr:nth-child(6) td", "type": "text"},
+            {"name": "sum", "selector": "tr:nth-child(6) td", "type": "text"}
+        ]
+    }
+
+    # 3. Apply configurations to extract data
+    run_config = CrawlerRunConfig(
+        word_count_threshold=0, 
+        #content_filter=None, 
+        extraction_strategy=JsonCssExtractionStrategy(schema=emsd_schema),
+        magic=True,
+        wait_for="css:.table, table, .content_block",  # Wait for table or content container
+        delay_before_return_html=3.0,                  # Allow 3s for dynamic JS to settle
+        js_code="window.scrollTo(0, document.body.scrollHeight);"
+    )
+
+    async with AsyncWebCrawler(config=browser_config) as crawler:
+        result = await crawler.arun(
+            url="https://www.emsd.gov.hk/en/tenders_contracts_and_consultancies/tender_notices/award_of_tender/index.html",
+            config=run_config
+        )
+        
+        if result.success:
+            data = json.loads(result.extracted_content)
+            #data['department']='emsd'
+
+            if isinstance(data, list):
+                for record in data:
+                    record['department'] = 'Electrical and Mechanical Services Department'
+                    record['type'] = 'construction'
+                    record['url'] = 'https://www.emsd.gov.hk/en/tenders_contracts_and_consultancies/tender_notices/award_of_tender/index.html'
+
+                    with open('gov_emsd_construction.json', "a") as f:
+                
+                # 2. Dump individual record dictionary as a single JSON line
+                        f.write(json.dumps(record, ensure_ascii=False) + '\n')
+
+                #print(f"[+] Extracted {len(df)} exhibitor records from TAIROS 2026.")
+            #print(json.dumps(data, indent=2))
+            
+        else:
+            print(f"Extraction failed: {result.error_message}")
+
+        
+
+if __name__ == "__main__":
+    asyncio.run(main())
