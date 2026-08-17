@@ -127,8 +127,8 @@ async def run_decoupled_crawl(l1_start_url: str):
         l2_config = CrawlerRunConfig(
             extraction_strategy=JsonCssExtractionStrategy(l2_css_schema),
             #cache_mode=CacheMode.BYPASS,
-            magic=True,
-            cache_mode=False,
+            #magic=True,
+            #cache_mode=False,
             delay_before_return_html=3.5,  
             wait_for="div.content"#,
             #js_code="window.scrollTo(0, document.body.scrollHeight);"
