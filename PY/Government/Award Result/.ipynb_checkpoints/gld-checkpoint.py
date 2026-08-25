@@ -212,12 +212,12 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
         "You are a data transformation engine. Analyze the input data and organize it into a new JSON format. "
         "Your output must be a valid JSON object and nothing else. Do not include markdown code blocks like ```json. "
         "The output JSON structure MUST match this exact schema format:\n"
-        "{\n"
-        "  \"award_contractor\": \"string\",\n"
-        "  \"contractor address\": \"string\",\n"
-        "  \"contract_amount\": \"string\",\n"
-        "  \"contract_award_date\": \"string\"\n"
-        "  ]\n"
+        "{"
+        "  \"award_contractor\": \"string\","
+        "  \"contractor address\": \"string\","
+        "  \"contract_amount\": \"string\","
+        "  \"contract_award_date\": \"string\""
+        "  ]"
         "}"
     )
                 #print(str(record.get('Amount / Contract Award Date')))
@@ -260,7 +260,8 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
 
                 with open(file_name, "a") as f:
                     #f.write(json.dumps(record, ensure_ascii=False) + '\n')
-                    json.dump(record, f,indent=1, default=str,ensure_ascii=False)
+                    json.dump(record, f,#indent=1, default=str,
+                              ensure_ascii=False)
                     f.write('\n')     
         
         print("\n=== FINAL EXTRACTED DATA ===")

@@ -93,10 +93,12 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
             #virtual_scroll_config=virtual_config,
             cache_mode=True,
             magic=True,
-            #wait_for="css:table.list-table tbody tr td div.limit2",  # Wait for table or content container
             wait_until="domcontentloaded",
-            wait_for="css:article.ckediter",
-            delay_before_return_html=3.0#,                  # Allow 3s for dynamic JS to settle
+            wait_for="css:article.ckediter, css:table.table--noborder",
+            #wait_for="css:table.list-table tbody tr td div.limit2",  # Wait for table or content container
+            #wait_until="domcontentloaded",
+            #wait_for="css:article.ckediter",
+            delay_before_return_html=1.2#,                  # Allow 3s for dynamic JS to settle
             #js_code="window.scrollTo(0, document.body.scrollHeight);",
             #js_code=js_infinite_scroll_life #,
             #scan_full_page=True
@@ -145,6 +147,9 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
                       ensure_ascii=False)             
             f.write('\n')  
         
+        delay = random.uniform(2.0, 6.0)
+        await asyncio.sleep(delay)
+        
         print("\n=== FINAL EXTRACTED DATA ===")
         #print(json.dumps(final_dataset, indent=2))
 
@@ -153,9 +158,9 @@ import pandas as pd
 df1 = pd.read_csv("/Users/rowena/furniture_list.csv")
 tmp=df1[df1['url'].isna()==False]
 
-for i in range(len(tmp)-1):
+for i in range(448,len(tmp)-1):
     url=tmp['url'].iloc[i]
 # Run the pipeline with your initial L1 table input URL
-    asyncio.run(run_decoupled_crawl(url,'furniture_l2.json'))
+    asyncio.run(run_decoupled_crawl(url,'furniture_l2_v2.json'))
 
 

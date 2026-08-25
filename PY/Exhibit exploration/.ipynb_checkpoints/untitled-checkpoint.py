@@ -16,46 +16,20 @@ from crawl4ai import DefaultTableExtraction
 
 l1_css_schema = {
     "name": "L1_Link_Extractor",
-    "baseSelector": "div.row.g-8",  # Selector for your L1 grid/table rows
+    "baseSelector": "table.table table-sm tr",  # Selector for your L1 grid/table rows
     "fields": [
         {
-            "name": "description",
-            "selector": "article.ckediter",
+            "name": "exhibitor",
+            "selector": "td:nth-child(2)",           # Selector for the actual L2 URL
             "type": "text"
         },
         {
-            "name": "established_in",
-            "selector": "table.table--noborder tr:nth-child(1) td",
-            "type": "text"
-        },
-        {
-            "name": "number_of_staff",
-            "selector": "table.table--noborder tr:nth-child(2) td",
-            "type": "text"
-        },
-        {
-            "name": "support_oem",
-            "selector": "table.table--noborder tr:nth-child(3) td",
-            "type": "text"
-        },
-        {
-            "name": "location",
-            "selector": "table.table--noborder tr:nth-child(4) td",
-            "type": "text"
-        },
-        {
-            "name": "brands",
-            "selector": "table.table--noborder tr:nth-child(5) td",
-            "type": "text"
-        },
-        {
-            "name": "website",
-            "selector": "table.table--noborder tr:nth-child(6) td",
+            "name": "booth",
+            "selector": "td:nth-child(3)",           # Selector for the actual L2 URL
             "type": "text"
         }
     ]
 }
-
 
 JS_CLICK_NEXT = """
 async () => {
@@ -92,16 +66,14 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
             extraction_strategy=JsonCssExtractionStrategy(l1_css_schema),
             #virtual_scroll_config=virtual_config,
             cache_mode=True,
-            magic=True,
-            #wait_for="css:table.list-table tbody tr td div.limit2",  # Wait for table or content container
-            wait_until="domcontentloaded",
-            wait_for="css:article.ckediter",
-            delay_before_return_html=3.0#,                  # Allow 3s for dynamic JS to settle
+            #magic=True,
+            #wait_for="div.rl-light-container",  # Wait for table or content container
+            #delay_before_return_html=3.0,                  # Allow 3s for dynamic JS to settle
             #js_code="window.scrollTo(0, document.body.scrollHeight);",
             #js_code=js_infinite_scroll_life #,
             #scan_full_page=True
             #js_code=AUTO_SCROLL_JS
-            #js_code=JS_CLICK_NEXT
+            js_code=JS_CLICK_NEXT
         )
         l1_result = await crawler.arun(url=l1_start_url, config=l1_config)
         
@@ -141,21 +113,13 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
         #             f.write('\n')    
 
         with open(file_name, "a") as f:
-            json.dump(l1_data, f,#indent=1, default=str,
-                      ensure_ascii=False)             
+            json.dump(l1_data, f,indent=1, default=str,ensure_ascii=False)             
             f.write('\n')  
         
         print("\n=== FINAL EXTRACTED DATA ===")
         #print(json.dumps(final_dataset, indent=2))
 
-import pandas as pd
-
-df1 = pd.read_csv("/Users/rowena/furniture_list.csv")
-tmp=df1[df1['url'].isna()==False]
-
-for i in range(len(tmp)-1):
-    url=tmp['url'].iloc[i]
 # Run the pipeline with your initial L1 table input URL
-    asyncio.run(run_decoupled_crawl(url,'furniture_l2.json'))
+asyncio.run(run_decoupled_crawl("https://sea2026.smallworldlabs.com/exhibitors",'seafood.json'))
 
 

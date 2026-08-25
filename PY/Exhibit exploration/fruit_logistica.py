@@ -169,4 +169,3 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
 asyncio.run(run_decoupled_crawl("https://www.asiafruitlogistica.com/catalogue/",'asia_fruit_logistica.json'))
 
 
-

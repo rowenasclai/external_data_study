@@ -1,35 +1,107 @@
 import asyncio
-from pydantic import BaseModel, Field
-from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, LLMExtractionStrategy, LLMConfig
+import json
+from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, JsonCssExtractionStrategy, VirtualScrollConfig
+from crawl4ai.extraction_strategy import JsonXPathExtractionStrategy
+import re
 from langchain_ollama import ChatOllama
 from langchain_core.messages import SystemMessage, HumanMessage
+from crawl4ai import DefaultTableExtraction
 
-L1_schema = {
-    "name": "Tender Notices Extractor",
-    # Target each individual repeating data row container
-    "baseSelector": "div.l-content div.lshowcase-thumb",
+# =====================================================================
+# TSD
+# 1. DEFINE SCHEMAS
+# =====================================================================
+
+# L1 Schema: Only targets the links we need to jump into
+
+l1_css_schema = {
+    "name": "L1_Link_Extractor",
+    "baseSelector": "div.row.g-8",  # Selector for your L1 grid/table rows
     "fields": [
         {
-            "name": "exhibitor_details",
-            "selector": "",
+            "name": "description",
+            "selector": "article.ckediter",
+            "type": "text"
+        },
+        {
+            "name": "established_in",
+            "selector": "table.table--noborder tr:nth-child(1) td",
+            "type": "text"
+        },
+        {
+            "name": "number_of_staff",
+            "selector": "table.table--noborder tr:nth-child(2) td",
+            "type": "text"
+        },
+        {
+            "name": "support_oem",
+            "selector": "table.table--noborder tr:nth-child(3) td",
+            "type": "text"
+        },
+        {
+            "name": "location",
+            "selector": "table.table--noborder tr:nth-child(4) td",
+            "type": "text"
+        },
+        {
+            "name": "brands",
+            "selector": "table.table--noborder tr:nth-child(5) td",
+            "type": "text"
+        },
+        {
+            "name": "website",
+            "selector": "table.table--noborder tr:nth-child(6) td",
             "type": "text"
         }
     ]
 }
 
-# 1. Define your strict data schema structure
-async def run_decoupled_crawl(l1_start_url: str):
+
+JS_CLICK_NEXT = """
+async () => {
+    const nextBtn = document.querySelector('a.pager-right-next, a[aria-label*="Next Page"]');
+    if (nextBtn && !nextBtn.classList.contains('disabled')) {
+        nextBtn.click();
+        // Wait for AJAX table content to start updating
+        await new Promise(r => setTimeout(r, 2000));
+    }
+};
+"""
+
+
+# =====================================================================
+# 2. RUN PIPELINE
+# =====================================================================
+
+async def run_decoupled_crawl(l1_start_url: str, file_name):
     async with AsyncWebCrawler() as crawler:
         
         # --- STAGE 1: Extract URLs from Level 1 ---
         print(f"[L1] Crawling index: {l1_start_url}")
+
+        virtual_config = VirtualScrollConfig(
+            container_selector="div.tree-row-right",      # CSS selector for scrollable container
+            scroll_count=1000,                 # Number of scrolls to perform
+            scroll_by="container_height",    # How much to scroll each time
+            wait_after_scroll=0.8           # Wait time (seconds) after each scroll
+        )
+
+        
         l1_config = CrawlerRunConfig(
-            extraction_strategy=JsonCssExtractionStrategy(L1_schema),
+            #table_extraction=table_strategy, 
+            extraction_strategy=JsonCssExtractionStrategy(l1_css_schema),
+            #virtual_scroll_config=virtual_config,
             cache_mode=True,
             magic=True,
-        wait_for="div.l-content",  # Wait for table or content container
-        delay_before_return_html=3.0,                  # Allow 3s for dynamic JS to settle
-        js_code="window.scrollTo(0, document.body.scrollHeight);"
+            #wait_for="css:table.list-table tbody tr td div.limit2",  # Wait for table or content container
+            wait_until="domcontentloaded",
+            wait_for="css:article.ckediter",
+            delay_before_return_html=3.0#,                  # Allow 3s for dynamic JS to settle
+            #js_code="window.scrollTo(0, document.body.scrollHeight);",
+            #js_code=js_infinite_scroll_life #,
+            #scan_full_page=True
+            #js_code=AUTO_SCROLL_JS
+            #js_code=JS_CLICK_NEXT
         )
         l1_result = await crawler.arun(url=l1_start_url, config=l1_config)
         
@@ -40,90 +112,50 @@ async def run_decoupled_crawl(l1_start_url: str):
         # Parse the JSON string out of the L1 result
         l1_data = json.loads(l1_result.extracted_content)
 
-        llm = ChatOllama(
-        base_url="http://localhost:11434/",
-        model="llama3.1:8b",     # Fast 8B parameter model
-        temperature=0,          # 0 prevents hallucinations in data extraction
-        format="json"           # CRITICAL: Hard enforces valid JSON output
-    )
+        # if isinstance(l1_data, list):
+        #     for record in l1_data:
+        #         # record['department'] = 'epd'
+        #         # record['type'] = 'contract_awarded'
+        #         # record['url'] = url
 
-         
-        # Combine the results
-        final_dataset = []
-        for res in zip(l1_data):
-            if res.success : 
-                #raw_lines_list = [line.strip() for line in res.markdown.split('\n') if line.strip()]
+        #         try:
+        #             record['exhibitor_name']=record['exhibitor'][:record['exhibitor'].index('<br/>')]
 
-                system_instruction = (
-        "You are a data transformation engine. Analyze the input data and organize it into a new JSON format. "
-        "Your output must be a valid JSON object and nothing else. Do not include markdown code blocks like ```json. "
-        "The output JSON structure MUST match this exact schema format:\n"
-        "{\n"
-        "  \"exhibitor\": \"string\",\n"
-        "  \"exhibitor_description\": \"string\",\n"
-        "  \"contractor address\": \"string\",\n"
-        "  \"estimated contract value\": <currency>,\n"
-        "  \"project_summaries\": [\n"
-        "     { \"ref\": \"string\", \"short_title\": \"string\" }\n"
-        "  ]\n"
-        "}"
-    )
+        #         except:
+        #             pass
 
-                human_query = f"Transform this paragraph: {json.dumps(res.extracted_content)}"
-
-                messages = [
-                    SystemMessage(content=system_instruction),
-                    HumanMessage(content=human_query)
-                ]
-
-                print("Requesting fast-structured JSON from Llama 3.1 8B...\n")
-                print("=== Raw Streaming JSON Output ===")
-    
-    # 4. Stream chunks in real-time
-                full_response = ""
-                for chunk in llm.stream(messages):
-                    content = chunk.content
-                    full_response += content
-                    #print(content, end="", flush=True)
-    
-                print("\n\n=== Verification ===")
-                try:
-        # Validate that the final string output parses correctly back into Python
-                    parsed_json = json.loads(full_response)
-                    parsed_json["department"] = "hkaa"
-                    parsed_json["award_date"] = dt
-                    parsed_json["url"] = url
-                    parsed_json["type"] = type1
-                    parsed_json["subject"] = title
-
-                    with open('gov_hkaa.json', "a") as f:
-                # 2. Dump individual record dictionary as a single JSON line
-                        json.dump(parsed_json, f,indent=1, default=str,ensure_ascii=False)
-                        f.write('\n')
-
+        #         try:
+        #             record['exhibitor_loc']=record['industry'][:record['industry'].index('<br/>')]
+        #             idx=record['industry'].index('<br/>')
+        #             record['exhibitor_industry']=record['industry'][record['industry'].index('<br/>'):record['industry'].index('<br/>',idx+1)]
+        #             idx2=record['industry'].index('<br/>',idx+1)
+        #             record['exhibitor_url']=record['industry'][record['industry'].index('<br/>',idx2+1):]
                     
-                    #print("Success! The output is 100% valid JSON.")
-                    #print(f"json.dumps({parsed_json}, indent=2)")
-                    #print(f"Total counted: {parsed_json.get('total_contracts_found')}")
-                except json.JSONDecodeError:
-                    print("Error: The output was structurally malformed.")
 
-                
+        #         except:
+        #             pass
+        #             #record['exhibitor']=record['exhibitor'][record['Contractor(s)'].index('<p>')+3:record['Contractor(s)'].index('</p>')] 
 
-                # with open('gov_hkaa.json', "a") as f:
-                # # 2. Dump individual record dictionary as a single JSON line
-                #     json.dump(record, f,indent=1, default=str)
-                #     f.write('\n')
+        #         with open(file_name, "a") as f:
+        #             json.dump(record, f,indent=1, default=str,ensure_ascii=False)
+        #             f.write('\n')    
 
-                # print(record)
-
+        with open(file_name, "a") as f:
+            json.dump(l1_data, f,#indent=1, default=str,
+                      ensure_ascii=False)             
+            f.write('\n')  
         
         print("\n=== FINAL EXTRACTED DATA ===")
-        #print(json.dumps(l1_data, indent=2))
+        #print(json.dumps(final_dataset, indent=2))
 
+import pandas as pd
+
+df1 = pd.read_csv("/Users/rowena/furniture_list.csv")
+tmp=df1[df1['url'].isna()==False]
+
+for i in range(len(tmp)-1):
+    url=tmp['url'].iloc[i]
 # Run the pipeline with your initial L1 table input URL
-asyncio.run(run_decoupled_crawl("https://techsposingapore.sg/exhibitors"))
+    asyncio.run(run_decoupled_crawl(url,'furniture_l2.json'))
 
 
-# Execute the local pipeline script
-asyncio.run(extract_with_local_ollama("https://techsposingapore.sg/exhibitors"))

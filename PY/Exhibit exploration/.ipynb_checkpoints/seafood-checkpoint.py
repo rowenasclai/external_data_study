@@ -16,42 +16,29 @@ from crawl4ai import DefaultTableExtraction
 
 l1_css_schema = {
     "name": "L1_Link_Extractor",
-    "baseSelector": "div.row.g-8",  # Selector for your L1 grid/table rows
+    "baseSelector": "table.list-table tbody tr",  # Selector for your L1 grid/table rows
     "fields": [
         {
-            "name": "description",
-            "selector": "article.ckediter",
+            "name": "exhibitor",
+            "selector": "td:nth-child(1) .limit2",           # Selector for the actual L2 URL
             "type": "text"
         },
         {
-            "name": "established_in",
-            "selector": "table.table--noborder tr:nth-child(1) td",
+            "name": "Country/Region",
+            "selector": "td:nth-child(2) .limit",           # Selector for the actual L2 URL
             "type": "text"
         },
         {
-            "name": "number_of_staff",
-            "selector": "table.table--noborder tr:nth-child(2) td",
+            "name": "booth",
+            "selector": "td:nth-child(3) .limit",           # Selector for the actual L2 URL
             "type": "text"
-        },
+        }
+        ,
         {
-            "name": "support_oem",
-            "selector": "table.table--noborder tr:nth-child(3) td",
-            "type": "text"
-        },
-        {
-            "name": "location",
-            "selector": "table.table--noborder tr:nth-child(4) td",
-            "type": "text"
-        },
-        {
-            "name": "brands",
-            "selector": "table.table--noborder tr:nth-child(5) td",
-            "type": "text"
-        },
-        {
-            "name": "website",
-            "selector": "table.table--noborder tr:nth-child(6) td",
-            "type": "text"
+            "name": "url",
+            "selector": "td:nth-child(4) a",           # Selector for the actual L2 URL
+            "type": "attribute",
+            "attribute":"href"
         }
     ]
 }
@@ -93,9 +80,7 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
             #virtual_scroll_config=virtual_config,
             cache_mode=True,
             magic=True,
-            #wait_for="css:table.list-table tbody tr td div.limit2",  # Wait for table or content container
-            wait_until="domcontentloaded",
-            wait_for="css:article.ckediter",
+            wait_for="css:table.list-table tbody tr td div.limit2",  # Wait for table or content container
             delay_before_return_html=3.0#,                  # Allow 3s for dynamic JS to settle
             #js_code="window.scrollTo(0, document.body.scrollHeight);",
             #js_code=js_infinite_scroll_life #,
@@ -112,8 +97,8 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
         # Parse the JSON string out of the L1 result
         l1_data = json.loads(l1_result.extracted_content)
 
-        # if isinstance(l1_data, list):
-        #     for record in l1_data:
+        if isinstance(l1_data, list):
+            for record in l1_data:
         #         # record['department'] = 'epd'
         #         # record['type'] = 'contract_awarded'
         #         # record['url'] = url
@@ -148,14 +133,8 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
         print("\n=== FINAL EXTRACTED DATA ===")
         #print(json.dumps(final_dataset, indent=2))
 
-import pandas as pd
-
-df1 = pd.read_csv("/Users/rowena/furniture_list.csv")
-tmp=df1[df1['url'].isna()==False]
-
-for i in range(len(tmp)-1):
-    url=tmp['url'].iloc[i]
+for i in range(1,95):
 # Run the pipeline with your initial L1 table input URL
-    asyncio.run(run_decoupled_crawl(url,'furniture_l2.json'))
+    asyncio.run(run_decoupled_crawl("https://dts.jiagle.com/furniturechina/featured-exhibitors/2026exhibitor/page/"+str(i),'furniture_v1.json'))
 
 
