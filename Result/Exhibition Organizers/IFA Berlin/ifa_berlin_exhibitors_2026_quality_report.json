@@ -1,0 +1,184 @@
+{
+  "status": "pass",
+  "csv": "Result/Exhibition Organizers/IFA Berlin/ifa_berlin_exhibitors_2026.csv",
+  "json": "Result/Exhibition Organizers/IFA Berlin/ifa_berlin_exhibitors_2026.json",
+  "checks": [
+    {
+      "name": "csv_readable",
+      "status": "pass",
+      "detail": "CSV parsed as UTF-8 with BOM support",
+      "rows": 1902
+    },
+    {
+      "name": "csv_field_order",
+      "status": "pass",
+      "detail": "CSV header matches the extraction schema",
+      "expected": [
+        "exhibitor_id",
+        "company_name",
+        "legal_company_name",
+        "country",
+        "show_areas",
+        "halls",
+        "booths",
+        "profile_description",
+        "website_url",
+        "detail_url",
+        "logo_url",
+        "source_page",
+        "source_position"
+      ],
+      "actual": [
+        "exhibitor_id",
+        "company_name",
+        "legal_company_name",
+        "country",
+        "show_areas",
+        "halls",
+        "booths",
+        "profile_description",
+        "website_url",
+        "detail_url",
+        "logo_url",
+        "source_page",
+        "source_position"
+      ]
+    },
+    {
+      "name": "json_readable",
+      "status": "pass",
+      "detail": "JSON parsed as UTF-8 array",
+      "rows": 1902
+    },
+    {
+      "name": "json_field_order",
+      "status": "pass",
+      "detail": "JSON object field order matches the extraction schema",
+      "expected": [
+        "exhibitor_id",
+        "company_name",
+        "legal_company_name",
+        "country",
+        "show_areas",
+        "halls",
+        "booths",
+        "profile_description",
+        "website_url",
+        "detail_url",
+        "logo_url",
+        "source_page",
+        "source_position"
+      ],
+      "actual": [
+        "exhibitor_id",
+        "company_name",
+        "legal_company_name",
+        "country",
+        "show_areas",
+        "halls",
+        "booths",
+        "profile_description",
+        "website_url",
+        "detail_url",
+        "logo_url",
+        "source_page",
+        "source_position"
+      ]
+    },
+    {
+      "name": "csv_json_equivalence",
+      "status": "pass",
+      "detail": "CSV and JSON are field-for-field equivalent",
+      "csv_rows": 1902,
+      "json_rows": 1902
+    },
+    {
+      "name": "stable_ids",
+      "status": "pass",
+      "detail": "Every row has one unique published exhibitor ID",
+      "missing_rows": [],
+      "duplicate_ids": []
+    },
+    {
+      "name": "company_names",
+      "status": "pass",
+      "detail": "Every row has a display company name",
+      "missing_rows": []
+    },
+    {
+      "name": "source_position_sequence",
+      "status": "pass",
+      "detail": "Source positions are sequential and deterministic",
+      "rows": 1902
+    },
+    {
+      "name": "detail_profile_urls",
+      "status": "pass",
+      "detail": "Non-empty exhibitor profile URLs are canonical IFA HTTPS/HTTP URLs",
+      "invalid_ids": []
+    },
+    {
+      "name": "source_urls",
+      "status": "pass",
+      "detail": "Every row retains a canonical IFA source-page URL",
+      "invalid_ids": []
+    },
+    {
+      "name": "website_url_syntax",
+      "status": "pass",
+      "detail": "Non-empty website_url values are absolute HTTP(S) URLs",
+      "invalid_ids": []
+    },
+    {
+      "name": "logo_url_syntax",
+      "status": "pass",
+      "detail": "Non-empty logo_url values are absolute HTTP(S) URLs",
+      "invalid_ids": []
+    },
+    {
+      "name": "description_plain_text",
+      "status": "pass",
+      "detail": "Profile descriptions contain normalized text rather than HTML markup",
+      "invalid_ids": []
+    }
+  ],
+  "warnings": [
+    {
+      "field": "legal_company_name",
+      "label": "legal company names",
+      "present": 1896,
+      "blank": 6,
+      "message": "Blank values are preserved where the public IFA profile did not publish the field."
+    },
+    {
+      "field": "profile_description",
+      "label": "profile descriptions",
+      "present": 1328,
+      "blank": 574,
+      "message": "Blank values are preserved where the public IFA profile did not publish the field."
+    },
+    {
+      "field": "website_url",
+      "label": "website URLs",
+      "present": 1206,
+      "blank": 696,
+      "message": "Blank values are preserved where the public IFA profile did not publish the field."
+    },
+    {
+      "field": "detail_url",
+      "label": "profile URLs",
+      "present": 1899,
+      "blank": 3,
+      "message": "Blank values are preserved where the public IFA profile did not publish the field."
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "records": 1902,
+    "unique_exhibitor_ids": 1902,
+    "legal_company_names_present": 1896,
+    "profile_descriptions_present": 1328,
+    "website_urls_present": 1206,
+    "profile_urls_present": 1899
+  }
+}

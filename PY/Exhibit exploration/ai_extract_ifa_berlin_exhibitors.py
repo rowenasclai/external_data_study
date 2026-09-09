@@ -117,10 +117,13 @@ class ListingParser(HTMLParser):
             {
                 "exhibitor_id": clean(str(self.current["exhibitor_id"])),
                 "company_name": clean(str(self.current["company_name"])),
+                "legal_company_name": "",
                 "country": clean(str(self.current.get("country") or "")),
                 "show_areas": " | ".join(dict.fromkeys(self.current["show_areas"])),
                 "halls": " | ".join(dict.fromkeys(self.current["halls"])),
                 "booths": " | ".join(dict.fromkeys(self.current["booths"])),
+                "profile_description": "",
+                "website_url": "",
                 "detail_url": str(self.current.get("detail_url") or ""),
                 "logo_url": str(self.current.get("logo_url") or ""),
                 "source_page": self.source_page,
