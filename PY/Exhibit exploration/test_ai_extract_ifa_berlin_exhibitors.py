@@ -41,6 +41,16 @@ class IFAParserTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "pagination"):
             MODULE.parse_listing(payload, MODULE.SOURCE_URL)
 
+    def test_profile_parser_extracts_description_and_website(self) -> None:
+        payload = """
+        <div class="social-link-text"><a href="https://www.example.com/">example.com</a></div>
+        <div class="social-link-text"><a href="https://twitter.com/example">twitter</a></div>
+        <div class="description">Example <strong>company</strong><br> profile.</div>
+        """
+        description, website = MODULE.parse_profile(payload)
+        self.assertEqual(description, "Example company profile.")
+        self.assertEqual(website, "https://www.example.com/")
+
     def test_write_outputs_round_trip(self) -> None:
         row = {field: "" for field in MODULE.FIELDS}
         row.update({"exhibitor_id": "42", "company_name": "Example", "source_position": "1"})

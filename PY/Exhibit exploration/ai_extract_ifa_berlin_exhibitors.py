@@ -12,6 +12,7 @@ import html
 import json
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from html.parser import HTMLParser
 from pathlib import Path
 from tempfile import NamedTemporaryFile
@@ -24,8 +25,11 @@ SOURCE_URL = "https://www.ifa-berlin.com/exhibitors"
 USER_AGENT = "external-data-study-ifa-exhibitor-extractor/1.0"
 FIELDS = (
     "exhibitor_id", "company_name", "country", "show_areas", "halls", "booths",
-    "detail_url", "logo_url", "source_page", "source_position",
+    "profile_description", "website_url", "detail_url", "logo_url", "source_page", "source_position",
 )
+PROFILE_DESCRIPTION_RE = re.compile(r'<div class="description">(.*?)</div>', re.S)
+PROFILE_LINK_RE = re.compile(r'<div class="social-link-text"><a href="([^"]+)"', re.S)
+SOCIAL_HOSTS = ("facebook.com", "instagram.com", "linkedin.com", "tiktok.com", "twitter.com", "x.com", "youtube.com")
 
 
 def clean(value: str) -> str:
@@ -145,6 +149,65 @@ def page_url(page_number: int) -> str:
     return SOURCE_URL if page_number == 1 else f"{SOURCE_URL}?{urlencode({'page': page_number})}"
 
 
+def text_from_fragment(fragment: str) -> str:
+    collector = HTMLParser(convert_charrefs=True)
+    chunks: list[str] = []
+    collector.handle_data = chunks.append  # type: ignore[method-assign]
+    collector.feed(fragment)
+    collector.close()
+    return clean(" ".join(chunks))
+
+
+def parse_profile(html_text: str) -> tuple[str, str]:
+    """Return the published company description and first non-social website URL."""
+    description_match = PROFILE_DESCRIPTION_RE.search(html_text)
+    description = text_from_fragment(description_match.group(1)) if description_match else ""
+    website = ""
+    for href in PROFILE_LINK_RE.findall(html_text):
+        lowered = href.lower()
+        if href.startswith(("http://", "https://")) and not any(host in lowered for host in SOCIAL_HOSTS):
+            website = html.unescape(href)
+            break
+    return description, website
+
+
+def fetch_profile(url: str, retries: int = 2) -> tuple[str, str]:
+    time.sleep(0.5)
+    request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html"})
+    last_error: Exception | None = None
+    for attempt in range(retries + 1):
+        try:
+            with urlopen(request, timeout=40) as response:
+                if response.status != 200:
+                    raise RuntimeError(f"profile {url}: HTTP {response.status}")
+                payload = response.read().decode(response.headers.get_content_charset() or "utf-8")
+            return parse_profile(payload)
+        except (HTTPError, URLError, TimeoutError) as error:
+            last_error = error
+            if isinstance(error, HTTPError) and error.code not in (408, 429, 500, 502, 503, 504):
+                raise RuntimeError(f"profile {url}: HTTP {error.code}") from error
+            if attempt < retries:
+                time.sleep(2**attempt)
+    raise RuntimeError(f"profile {url} failed after {retries + 1} attempts") from last_error
+
+
+def enrich_profiles(rows: list[dict[str, str]], workers: int = 3) -> None:
+    """Fetch public profile pages with bounded concurrency, preserving source order."""
+    targets = [(index, row["detail_url"]) for index, row in enumerate(rows) if row["detail_url"]]
+    for row in rows:
+        row["profile_description"] = ""
+        row["website_url"] = ""
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = {executor.submit(fetch_profile, url): index for index, url in targets}
+        for completed, future in enumerate(as_completed(futures), start=1):
+            index = futures[future]
+            description, website = future.result()
+            rows[index]["profile_description"] = description
+            rows[index]["website_url"] = website
+            if completed % 100 == 0 or completed == len(targets):
+                print(f"Fetched {completed}/{len(targets)} public exhibitor profiles")
+
+
 def fetch_page(page_number: int, retries: int = 2) -> tuple[list[dict[str, str]], int, str]:
     url = page_url(page_number)
     request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html"})
@@ -183,6 +246,7 @@ def extract() -> list[dict[str, str]]:
         raise ValueError(f"duplicate exhibitor IDs: {', '.join(duplicates[:10])}")
     for position, row in enumerate(ordered, start=1):
         row["source_position"] = str(position)
+    enrich_profiles(ordered)
     return ordered
 
 
