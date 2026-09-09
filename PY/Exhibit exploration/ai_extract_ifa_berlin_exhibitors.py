@@ -24,10 +24,11 @@ from urllib.request import Request, urlopen
 SOURCE_URL = "https://www.ifa-berlin.com/exhibitors"
 USER_AGENT = "external-data-study-ifa-exhibitor-extractor/1.0"
 FIELDS = (
-    "exhibitor_id", "company_name", "country", "show_areas", "halls", "booths",
+    "exhibitor_id", "company_name", "legal_company_name", "country", "show_areas", "halls", "booths",
     "profile_description", "website_url", "detail_url", "logo_url", "source_page", "source_position",
 )
 PROFILE_DESCRIPTION_RE = re.compile(r'<div class="description">(.*?)</div>', re.S)
+LEGAL_COMPANY_NAME_RE = re.compile(r'<div class="brand-detail-header-text gray">\s*<small>(.*?)</small>', re.S)
 PROFILE_LINK_RE = re.compile(r'<div class="social-link-text"><a href="([^"]+)"', re.S)
 SOCIAL_HOSTS = ("facebook.com", "instagram.com", "linkedin.com", "tiktok.com", "twitter.com", "x.com", "youtube.com")
 
@@ -158,8 +159,10 @@ def text_from_fragment(fragment: str) -> str:
     return clean(" ".join(chunks))
 
 
-def parse_profile(html_text: str) -> tuple[str, str]:
-    """Return the published company description and first non-social website URL."""
+def parse_profile(html_text: str) -> tuple[str, str, str]:
+    """Return the published legal/company name, description, and first non-social website."""
+    legal_name_match = LEGAL_COMPANY_NAME_RE.search(html_text)
+    legal_name = text_from_fragment(legal_name_match.group(1)) if legal_name_match else ""
     description_match = PROFILE_DESCRIPTION_RE.search(html_text)
     description = text_from_fragment(description_match.group(1)) if description_match else ""
     website = ""
@@ -168,10 +171,10 @@ def parse_profile(html_text: str) -> tuple[str, str]:
         if href.startswith(("http://", "https://")) and not any(host in lowered for host in SOCIAL_HOSTS):
             website = html.unescape(href)
             break
-    return description, website
+    return legal_name, description, website
 
 
-def fetch_profile(url: str, retries: int = 2) -> tuple[str, str]:
+def fetch_profile(url: str, retries: int = 2) -> tuple[str, str, str]:
     time.sleep(0.5)
     request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html"})
     last_error: Exception | None = None
@@ -195,13 +198,15 @@ def enrich_profiles(rows: list[dict[str, str]], workers: int = 3) -> None:
     """Fetch public profile pages with bounded concurrency, preserving source order."""
     targets = [(index, row["detail_url"]) for index, row in enumerate(rows) if row["detail_url"]]
     for row in rows:
+        row["legal_company_name"] = ""
         row["profile_description"] = ""
         row["website_url"] = ""
     with ThreadPoolExecutor(max_workers=workers) as executor:
         futures = {executor.submit(fetch_profile, url): index for index, url in targets}
         for completed, future in enumerate(as_completed(futures), start=1):
             index = futures[future]
-            description, website = future.result()
+            legal_name, description, website = future.result()
+            rows[index]["legal_company_name"] = legal_name
             rows[index]["profile_description"] = description
             rows[index]["website_url"] = website
             if completed % 100 == 0 or completed == len(targets):

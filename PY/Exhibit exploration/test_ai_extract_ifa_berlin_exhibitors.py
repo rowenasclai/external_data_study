@@ -43,11 +43,13 @@ class IFAParserTests(unittest.TestCase):
 
     def test_profile_parser_extracts_description_and_website(self) -> None:
         payload = """
+        <div class="brand-detail-header-text gray"><small>Example Technology GmbH</small></div>
         <div class="social-link-text"><a href="https://www.example.com/">example.com</a></div>
         <div class="social-link-text"><a href="https://twitter.com/example">twitter</a></div>
         <div class="description">Example <strong>company</strong><br> profile.</div>
         """
-        description, website = MODULE.parse_profile(payload)
+        legal_name, description, website = MODULE.parse_profile(payload)
+        self.assertEqual(legal_name, "Example Technology GmbH")
         self.assertEqual(description, "Example company profile.")
         self.assertEqual(website, "https://www.example.com/")
 
