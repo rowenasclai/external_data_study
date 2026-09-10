@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "updates": [
+    {
+      "event_name": "IFA Berlin 2026",
+      "status": "Done",
+      "extracted_file_name": "ifa_berlin_exhibitors_2026.csv"
+    },
+    {
+      "event_name": "IICIE 2026 (International Integrated Circuit Innovation Expo)",
+      "status": "Done",
+      "extracted_file_name": "iicie_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "Tech Week Singapore 2026",
+      "status": "Done",
+      "extracted_file_name": "tech_week_singapore_2026_exhibitors.csv"
+    }
+  ]
+}
