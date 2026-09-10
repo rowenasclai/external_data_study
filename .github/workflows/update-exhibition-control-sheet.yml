@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'Result/Exhibition Organizers/completion_manifest.json'
+      - 'scripts/update_control_sheet.py'
   workflow_dispatch:
 
 permissions:

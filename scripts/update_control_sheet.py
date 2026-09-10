@@ -33,6 +33,13 @@ def main() -> int:
         requested[name] = filename
 
     credentials_data = json.loads(os.environ["GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON"])
+    # GitHub secrets should contain the JSON object directly. Accept one extra
+    # JSON string layer so a harmlessly quoted/escaped secret fails neither
+    # cryptically nor by attempting to use a string as credential metadata.
+    if isinstance(credentials_data, str):
+        credentials_data = json.loads(credentials_data)
+    if not isinstance(credentials_data, dict):
+        raise ValueError("GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON must decode to a JSON object")
     credentials = Credentials.from_service_account_info(credentials_data, scopes=SCOPES)
     service = build("sheets", "v4", credentials=credentials, cache_discovery=False)
     spreadsheet = service.spreadsheets().get(spreadsheetId=SPREADSHEET_ID).execute()
