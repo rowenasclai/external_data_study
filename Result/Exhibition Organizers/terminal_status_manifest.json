@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "updates": [
+    {
+      "event_name": "elexcon 2026 (Shenzhen International Electronics Exhibition)",
+      "status": "Blocked: access denied (HTTP 403)",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Fi Asia Indonesia 2026 (Food Ingredients Asia Indonesia)",
+      "status": "Blocked: access denied (HTTP 403)",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Tokyo Game Show 2026 (TGS 2026)",
+      "status": "No public directory: supplied URL is not a directory",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Medical Fair Thailand 2026",
+      "status": "Invalid directory URL: page is for 2027",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Taiwan Innotech Expo 2026 (TIE 2026)",
+      "status": "No current 2026 directory: official list is for 2024",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "InnoTrans 2026",
+      "status": "Invalid directory URL: supplied page is an event overview",
+      "extracted_file_name": ""
+    }
+  ]
+}

@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'Result/Exhibition Organizers/completion_manifest.json'
+      - 'Result/Exhibition Organizers/terminal_status_manifest.json'
       - 'scripts/update_control_sheet.py'
   workflow_dispatch:
 
@@ -23,5 +24,5 @@ jobs:
       - name: Mark validated artifacts done
         env:
           GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON }}
-          COMPLETION_MANIFEST: Result/Exhibition Organizers/completion_manifest.json
+          CONTROL_MANIFESTS: Result/Exhibition Organizers/completion_manifest.json,Result/Exhibition Organizers/terminal_status_manifest.json
         run: python scripts/update_control_sheet.py

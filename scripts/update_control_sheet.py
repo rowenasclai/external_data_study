@@ -11,26 +11,43 @@ from googleapiclient.discovery import build
 
 SPREADSHEET_ID = "1WJHV8bBeiCJbY-zo5zFDUuYoUH_LNXPHuIqUlPqP0II"
 HEADERS = {"Event Name", "Status", "Extracted File Name"}
+ALLOWED_STATUSES = {
+    "Done",
+    "Blocked: access denied (HTTP 403)",
+    "No public directory: supplied URL is not a directory",
+    "Invalid directory URL: page is for 2027",
+    "No current 2026 directory: official list is for 2024",
+    "Invalid directory URL: supplied page is an event overview",
+}
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 
 def main() -> int:
-    manifest_path = Path(os.environ.get("COMPLETION_MANIFEST", "Result/Exhibition Organizers/completion_manifest.json"))
-    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    updates = manifest.get("updates")
-    if manifest.get("schema_version") != 1 or not isinstance(updates, list) or not updates:
-        raise ValueError("invalid completion manifest")
-
+    manifest_paths = [
+        Path(path.strip())
+        for path in os.environ.get(
+            "CONTROL_MANIFESTS",
+            "Result/Exhibition Organizers/completion_manifest.json",
+        ).split(",")
+        if path.strip()
+    ]
     requested = {}
-    for item in updates:
-        if set(item) != {"event_name", "status", "extracted_file_name"}:
-            raise ValueError("manifest item has unexpected fields")
-        name, status, filename = (str(item[key]).strip() for key in ("event_name", "status", "extracted_file_name"))
-        if not name or status != "Done" or not filename or "/" in filename or "\\" in filename:
-            raise ValueError("only non-empty filename and New -> Done updates are permitted")
-        if name in requested:
-            raise ValueError(f"duplicate event in manifest: {name}")
-        requested[name] = filename
+    for manifest_path in manifest_paths:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        updates = manifest.get("updates")
+        if manifest.get("schema_version") != 1 or not isinstance(updates, list) or not updates:
+            raise ValueError(f"invalid control manifest: {manifest_path}")
+        for item in updates:
+            if set(item) != {"event_name", "status", "extracted_file_name"}:
+                raise ValueError("manifest item has unexpected fields")
+            name, status, filename = (str(item[key]).strip() for key in ("event_name", "status", "extracted_file_name"))
+            if not name or status not in ALLOWED_STATUSES or "/" in filename or "\\" in filename:
+                raise ValueError("manifest contains an unapproved status or filename")
+            if (status == "Done") != bool(filename):
+                raise ValueError("Done requires a filename; terminal outcomes require it to be blank")
+            if name in requested:
+                raise ValueError(f"duplicate event in control manifests: {name}")
+            requested[name] = (status, filename)
 
     credentials_data = json.loads(os.environ["GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON"])
     # GitHub secrets should contain the JSON object directly. Accept one extra
@@ -59,10 +76,15 @@ def main() -> int:
                 event_name = record[event_col].strip() if len(record) > event_col else ""
                 if event_name not in requested:
                     continue
+                target_status, target_filename = requested[event_name]
                 current_status = record[status_col].strip() if len(record) > status_col else ""
+                current_filename = record[file_col].strip() if len(record) > file_col else ""
+                if current_status == target_status and current_filename == target_filename:
+                    found.add(event_name)
+                    continue
                 if current_status != "New":
                     raise ValueError(f"refusing to overwrite {event_name!r} with current status {current_status!r}")
-                for column, value in ((status_col, "Done"), (file_col, requested[event_name])):
+                for column, value in ((status_col, target_status), (file_col, target_filename)):
                     letter = chr(ord("A") + column)
                     batch.append({"range": f"'{title}'!{letter}{row_number}", "values": [[value]]})
                 found.add(event_name)
