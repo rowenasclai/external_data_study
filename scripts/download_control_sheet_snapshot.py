@@ -18,7 +18,9 @@ def download() -> bytes:
         content = response.read()
     if not content:
         raise ValueError("control sheet export was empty")
-    return content
+    # Normalize line endings so Git can diff the public CSV without treating
+    # every comma-terminated CRLF line as trailing whitespace.
+    return content.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
 
 
 def validate(content: bytes) -> None:
