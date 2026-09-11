@@ -19,6 +19,12 @@ ALLOWED_STATUSES = {
     "No current 2026 directory: official list is for 2024",
     "Invalid directory URL: supplied page is an event overview",
 }
+REOPENABLE_COMPLETIONS = {
+    (
+        "Taiwan Innotech Expo 2026 (TIE 2026)",
+        "No current 2026 directory: official list is for 2024",
+    ),
+}
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 
@@ -82,7 +88,8 @@ def main() -> int:
                 if current_status == target_status and current_filename == target_filename:
                     found.add(event_name)
                     continue
-                if current_status != "New":
+                reopenable = target_status == "Done" and (event_name, current_status) in REOPENABLE_COMPLETIONS
+                if current_status != "New" and not reopenable:
                     raise ValueError(f"refusing to overwrite {event_name!r} with current status {current_status!r}")
                 for column, value in ((status_col, target_status), (file_col, target_filename)):
                     letter = chr(ord("A") + column)

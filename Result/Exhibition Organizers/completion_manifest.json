@@ -2,6 +2,11 @@
   "schema_version": 1,
   "updates": [
     {
+      "event_name": "Taiwan Innotech Expo 2026 (TIE 2026)",
+      "status": "Done",
+      "extracted_file_name": "taiwan_innotech_expo_2026_exhibitors.csv"
+    },
+    {
       "event_name": "Medical Fair Asia 2026 / Medical Manufacturing Asia 2026",
       "status": "Done",
       "extracted_file_name": "medical_fair_asia_2026_exhibitors.csv"
