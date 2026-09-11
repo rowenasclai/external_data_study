@@ -2,6 +2,16 @@
   "schema_version": 1,
   "updates": [
     {
+      "event_name": "Medical Fair Asia 2026 / Medical Manufacturing Asia 2026",
+      "status": "Done",
+      "extracted_file_name": "medical_fair_asia_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "Mining Indonesia 2026 / Construction Indonesia 2026",
+      "status": "Done",
+      "extracted_file_name": "mining_indonesia_2026_exhibitors.csv"
+    },
+    {
       "event_name": "IFA Berlin 2026",
       "status": "Done",
       "extracted_file_name": "ifa_berlin_exhibitors_2026.csv"
