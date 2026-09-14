@@ -58,7 +58,12 @@ def main() -> int:
     found = set()
     batch = []
     for sheet in spreadsheet["sheets"]:
-        title = sheet["properties"]["title"]
+        properties = sheet["properties"]
+        # Interactive-map / chart sheets are non-grid objects. They have a
+        # title but cannot be addressed as A:Z ranges through the Values API.
+        if properties.get("sheetType", "GRID") != "GRID":
+            continue
+        title = properties["title"]
         values = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID, range=f"'{title}'!A:Z").execute().get("values", [])
         for index, row in enumerate(values):
             if not HEADERS.issubset(set(row)):
