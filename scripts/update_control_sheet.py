@@ -11,22 +11,7 @@ from googleapiclient.discovery import build
 
 SPREADSHEET_ID = "1WJHV8bBeiCJbY-zo5zFDUuYoUH_LNXPHuIqUlPqP0II"
 HEADERS = {"Event Name", "Status", "Extracted File Name"}
-ALLOWED_STATUSES = {
-    "Done",
-    "Blocked: access denied (HTTP 403)",
-    "No public directory: supplied URL is not a directory",
-    "Invalid directory URL: page is for 2027",
-    "No current 2026 directory: official list is for 2024",
-    "Invalid directory URL: supplied page is an event overview",
-    "Invalid directory URL: HTTP 404",
-    "Public directory failed validation: duplicate stable IDs",
-}
-REOPENABLE_COMPLETIONS = {
-    (
-        "Taiwan Innotech Expo 2026 (TIE 2026)",
-        "No current 2026 directory: official list is for 2024",
-    ),
-}
+ALLOWED_STATUSES = {"Agent Extraction", "Fail"}
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 
@@ -51,8 +36,9 @@ def main() -> int:
             name, status, filename = (str(item[key]).strip() for key in ("event_name", "status", "extracted_file_name"))
             if not name or status not in ALLOWED_STATUSES or "/" in filename or "\\" in filename:
                 raise ValueError("manifest contains an unapproved status or filename")
-            if (status == "Done") != bool(filename):
-                raise ValueError("Done requires a filename; terminal outcomes require it to be blank")
+            requires_filename = status == "Agent Extraction"
+            if requires_filename != bool(filename):
+                raise ValueError("Agent Extraction requires a filename; Fail requires it to be blank")
             if name in requested:
                 raise ValueError(f"duplicate event in control manifests: {name}")
             requested[name] = (status, filename)
@@ -90,8 +76,10 @@ def main() -> int:
                 if current_status == target_status and current_filename == target_filename:
                     found.add(event_name)
                     continue
-                reopenable = target_status == "Done" and (event_name, current_status) in REOPENABLE_COMPLETIONS
-                if current_status != "New" and not reopenable:
+                # The manifests are an explicit event allowlist. The requested
+                # standardized Agent Extraction/Fail labels may correct any
+                # previous workflow label for those named events.
+                if current_status != "New" and target_status not in ALLOWED_STATUSES:
                     raise ValueError(f"refusing to overwrite {event_name!r} with current status {current_status!r}")
                 for column, value in ((status_col, target_status), (file_col, target_filename)):
                     letter = chr(ord("A") + column)

@@ -3,57 +3,57 @@
   "updates": [
     {
       "event_name": "elexcon 2026 (Shenzhen International Electronics Exhibition)",
-      "status": "Blocked: access denied (HTTP 403)",
+      "status": "Fail",
       "extracted_file_name": ""
     },
     {
       "event_name": "Fi Asia Indonesia 2026 (Food Ingredients Asia Indonesia)",
-      "status": "Blocked: access denied (HTTP 403)",
+      "status": "Fail",
       "extracted_file_name": ""
     },
     {
       "event_name": "Tokyo Game Show 2026 (TGS 2026)",
-      "status": "No public directory: supplied URL is not a directory",
+      "status": "Fail",
       "extracted_file_name": ""
     },
     {
       "event_name": "Medical Fair Thailand 2026",
-      "status": "Invalid directory URL: page is for 2027",
+      "status": "Fail",
       "extracted_file_name": ""
     },
     {
       "event_name": "InnoTrans 2026",
-      "status": "Invalid directory URL: supplied page is an event overview",
+      "status": "Fail",
       "extracted_file_name": ""
     },
     {
       "event_name": "CPHI Worldwide 2026 (CPHI Milan)",
-      "status": "Invalid directory URL: HTTP 404",
+      "status": "Fail",
       "extracted_file_name": ""
     },
     {
       "event_name": "Global Sources Consumer Electronics Show 2026",
-      "status": "Blocked: access denied (HTTP 403)",
+      "status": "Fail",
       "extracted_file_name": ""
     },
     {
       "event_name": "Global Sources Gaming 2026",
-      "status": "Blocked: access denied (HTTP 403)",
+      "status": "Fail",
       "extracted_file_name": ""
     },
     {
       "event_name": "All in Print China 2026 (The 10th All in Print China)",
-      "status": "Invalid directory URL: supplied page is an event overview",
+      "status": "Fail",
       "extracted_file_name": ""
     },
     {
       "event_name": "CIIF 2026 (The 25th China International Industry Fair)",
-      "status": "Invalid directory URL: supplied page is an event overview",
+      "status": "Fail",
       "extracted_file_name": ""
     },
     {
       "event_name": "GovWare 2026 (Singapore International Cyber Week / SICW)",
-      "status": "Public directory failed validation: duplicate stable IDs",
+      "status": "Fail",
       "extracted_file_name": ""
     }
   ]

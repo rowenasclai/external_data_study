@@ -3,37 +3,37 @@
   "updates": [
     {
       "event_name": "Taiwan Innotech Expo 2026 (TIE 2026)",
-      "status": "Done",
+      "status": "Agent Extraction",
       "extracted_file_name": "taiwan_innotech_expo_2026_exhibitors.csv"
     },
     {
       "event_name": "Medical Fair Asia 2026 / Medical Manufacturing Asia 2026",
-      "status": "Done",
+      "status": "Agent Extraction",
       "extracted_file_name": "medical_fair_asia_2026_exhibitors.csv"
     },
     {
       "event_name": "Mining Indonesia 2026 / Construction Indonesia 2026",
-      "status": "Done",
+      "status": "Agent Extraction",
       "extracted_file_name": "mining_indonesia_2026_exhibitors.csv"
     },
     {
       "event_name": "IFA Berlin 2026",
-      "status": "Done",
+      "status": "Agent Extraction",
       "extracted_file_name": "ifa_berlin_exhibitors_2026.csv"
     },
     {
       "event_name": "IICIE 2026 (International Integrated Circuit Innovation Expo)",
-      "status": "Done",
+      "status": "Agent Extraction",
       "extracted_file_name": "iicie_2026_exhibitors.csv"
     },
     {
       "event_name": "Tech Week Singapore 2026",
-      "status": "Done",
+      "status": "Agent Extraction",
       "extracted_file_name": "tech_week_singapore_2026_exhibitors.csv"
     },
     {
       "event_name": "CEATEC 2026 (Combined Exhibition of Advanced Technologies)",
-      "status": "Done",
+      "status": "Agent Extraction",
       "extracted_file_name": "ceatec_2026_exhibitors.csv"
     }
   ]
