@@ -18,6 +18,8 @@ ALLOWED_STATUSES = {
     "Invalid directory URL: page is for 2027",
     "No current 2026 directory: official list is for 2024",
     "Invalid directory URL: supplied page is an event overview",
+    "Invalid directory URL: HTTP 404",
+    "Public directory failed validation: duplicate stable IDs",
 }
 REOPENABLE_COMPLETIONS = {
     (

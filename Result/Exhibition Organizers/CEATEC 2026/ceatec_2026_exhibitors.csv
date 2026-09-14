@@ -1,0 +1,757 @@
+﻿exhibitor_id,company_name,exhibitor_type,parent_exhibitor_id,area,hall,booth,detail_url,source_page,source_position
+parent:365,"01Booster, Inc.",parent,,X (Transformation) Park,|,6H135,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,1
+parent:49,346 Inc,parent,,General Exhibits,|,7H510,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,2
+parent:289,3D Incorporated,parent,,Next Generation Park,|,4H324,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,3
+parent:364,53M LLC,parent,,Next Generation Park,|,4H235,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,4
+parent:54,a.inc,parent,,General Exhibits,|,6H022,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,5
+parent:373,ABeam Consulting Ltd.,parent,,X (Transformation) Park,|,5H416,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,6
+parent:395,"Acoustic Professor Tech Co., Ltd",parent,,General Exhibits,|,7H321,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,7
+parent:1292,Active Retech Inc.,parent,,X (Transformation) Park,|,6H133,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,8
+parent:82,agile effect,parent,,Next Generation Park,|,4H422,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,9
+parent:252,"Agile-Tech Co., Ltd.",parent,,General Exhibits,|,8H226,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,10
+parent:1264,AIdeaLab inc.,parent,,Next Generation Park,|,4H148,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,11
+parent:128,"aiESG, Inc.",parent,,Next Generation Park,|,4H022,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,12
+parent:179,AISIN CORPORATION,parent,,General Exhibits,|,7H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,13
+parent:105,"AIsmiley, Inc.",parent,,X (Transformation) Park,|,5H118,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,14
+parent:225,"AIX JAPAN Co., Ltd.",parent,,Next Generation Park,|,4H430,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,15
+parent:143,Aixtal Corporation,parent,,Next Generation Park,|,4H019,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,16
+parent:122,"Alpha Vision Japan Co., Ltd.",parent,,General Exhibits,|,8H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,17
+parent:71,"Alphadrive Co., Ltd",parent,,X (Transformation) Park,|,6H131,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,18
+parent:197,Amazon Web Services Japan G.K.,parent,,X (Transformation) Park,|,4H535,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,19
+parent:197:co-exhibitor:1,▸ YASKAWA Electric Corporation,co_exhibitor,197,X (Transformation) Park,|,4H535,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,20
+parent:282,"amoibe Ltd,",parent,,General Exhibits,|,8H213,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,21
+parent:1269,AND Y CONCEPT,parent,,Next Generation Park,|,4H225,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,22
+parent:335,Animotech Inc.,parent,,Next Generation Park,|,4H436,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,23
+parent:273,ANKR DESIGN Inc.,parent,,Next Generation Park,|,4H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,24
+parent:22,ANRITSU CORPORATION,parent,,General Exhibits,|,4H550,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,25
+parent:217,Aoyama Gakuin University CMOS Circuit Applications Laboratory(Yokoshiki LAB),parent,,Next Generation Park,|,4H410,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,26
+parent:303,AquaFusion Inc.,parent,,General Exhibits,|,8H115,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,27
+parent:57,AREX Inc.,parent,,General Exhibits,|,7H506,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,28
+parent:212,"Artificial World Implementation Laboratory, Department of Robotics, Faculty of Advanced Engineering, Nippon Institute of Technology",parent,,Next Generation Park,|,4H409,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,29
+parent:149,ArtscollegeYokohama,parent,,Next Generation Park,|,4H124,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,30
+parent:33,Association of Radio Industries and Businesses,parent,,General Exhibits,|,8H306,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,31
+parent:129,"AVITA, Inc.",parent,,X (Transformation) Park,|,5H202,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,32
+parent:129:co-exhibitor:1,"▸ Booster Robotics Technology Co., Ltd.",co_exhibitor,129,X (Transformation) Park,|,5H202,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,33
+parent:129:co-exhibitor:2,▸ Fairy Devices Inc,co_exhibitor,129,X (Transformation) Park,|,5H202,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,34
+parent:295,Axworks Inc.,parent,,Next Generation Park,|,4H237,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,35
+parent:61,Battery Association for Supply Chain,parent,,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,36
+parent:61:co-exhibitor:1,"▸ Automotive and Battery Traceability Center Association, Inc.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,37
+parent:61:co-exhibitor:2,"▸ Central Glass Co., Ltd.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,38
+parent:61:co-exhibitor:3,▸ DENSO CORPORATION,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,39
+parent:61:co-exhibitor:4,"▸ FINECS CO., LTD.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,40
+parent:61:co-exhibitor:5,"▸ FUKUI BYORA Co., Ltd.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,41
+parent:61:co-exhibitor:6,▸ GS Yuasa Corporation,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,42
+parent:61:co-exhibitor:7,▸ HIRATA Corporation,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,43
+parent:61:co-exhibitor:8,▸ Hagihara Industries Inc.,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,44
+parent:61:co-exhibitor:9,"▸ Hitachi Plant Services Co.,Ltd.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,45
+parent:61:co-exhibitor:10,"▸ Hitachi, Ltd.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,46
+parent:61:co-exhibitor:11,▸ Iwatani Corporation,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,47
+parent:61:co-exhibitor:12,▸ JFE Engineering Corporation,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,48
+parent:61:co-exhibitor:13,▸ JTEKT Corporation,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,49
+parent:61:co-exhibitor:14,▸ JX Advanced Metals Corporation,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,50
+parent:61:co-exhibitor:15,▸ Jinnai Industries Inc.,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,51
+parent:61:co-exhibitor:16,▸ KOJIMA INDUSTRIES CORPORATION,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,52
+parent:61:co-exhibitor:17,▸ KUREHA CORPORATION,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,53
+parent:61:co-exhibitor:18,"▸ Kanto Denka Kogyo Co., Ltd.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,54
+parent:61:co-exhibitor:19,"▸ Kawasaki Heavy Industries, Ltd.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,55
+parent:61:co-exhibitor:20,▸ Komatsu NTC Ltd.,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,56
+parent:61:co-exhibitor:21,"▸ Kurimoto,Ltd.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,57
+parent:61:co-exhibitor:22,"▸ MARUYASU INDUSTRIES CO., LTD.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,58
+parent:61:co-exhibitor:23,"▸ MATSUDA SANGYO CO.,LTD.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,59
+parent:61:co-exhibitor:24,▸ MEC COMPANY LTD.,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,60
+parent:61:co-exhibitor:25,▸ MEIWA CORPORATION,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,61
+parent:61:co-exhibitor:26,"▸ MITSUI & CO., LTD.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,62
+parent:61:co-exhibitor:27,▸ MU Ionic Solutions Corporation,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,63
+parent:61:co-exhibitor:28,▸ Mito Kogyo Company Limited,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,64
+parent:61:co-exhibitor:29,▸ Mitsubishi Chemical Corporation,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,65
+parent:61:co-exhibitor:30,▸ Mitsubishi Materials Corporation,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,66
+parent:61:co-exhibitor:31,▸ NICHIA CORPORATION,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,67
+parent:61:co-exhibitor:32,"▸ NIHON KAGAKU SANGYO CO., LTD.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,68
+parent:61:co-exhibitor:33,"▸ NIPPON SHOKUBAI CO., LTD.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,69
+parent:61:co-exhibitor:34,▸ NSK Ltd.,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,70
+parent:61:co-exhibitor:35,▸ Nippon Recycle Center Corporation,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,71
+parent:61:co-exhibitor:36,"▸ OONO DEVELOPMENT CO.,LTD.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,72
+parent:61:co-exhibitor:37,"▸ Panasonic Energy Co., Ltd.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,73
+parent:61:co-exhibitor:38,"▸ Prime Planet Energy & Solutions, Inc.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,74
+parent:61:co-exhibitor:39,"▸ REVortex, Inc.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,75
+parent:61:co-exhibitor:40,"▸ Ricoh Company, Ltd. 🎓",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,76
+parent:61:co-exhibitor:41,"▸ SHIBAURA MACHINE CO., LTD.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,77
+parent:61:co-exhibitor:42,▸ SMC CORPORATION,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,78
+parent:61:co-exhibitor:43,"▸ Seibu Giken Co., Ltd.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,79
+parent:61:co-exhibitor:44,▸ Shimadzu Corporation,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,80
+parent:61:co-exhibitor:45,"▸ Sumitomo Metal Mining Co., Ltd.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,81
+parent:61:co-exhibitor:46,▸ Sumitomo Riko Company Limited,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,82
+parent:61:co-exhibitor:47,"▸ SwiftfabEnergySystems CO.,LTD.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,83
+parent:61:co-exhibitor:48,▸ TANABE Corporation,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,84
+parent:61:co-exhibitor:49,"▸ TOYOTA BATTERY Co., Ltd.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,85
+parent:61:co-exhibitor:50,▸ TOYOTA TSUSHO MATERIAL INCORPORATED,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,86
+parent:61:co-exhibitor:51,▸ Taikisha Ltd,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,87
+parent:61:co-exhibitor:52,▸ Techno Smart Corp.,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,88
+parent:61:co-exhibitor:53,"▸ Toshin Co.,Ltd.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,89
+parent:61:co-exhibitor:54,▸ Toyota Tsusho Corporation,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,90
+parent:61:co-exhibitor:55,"▸ Tsukishima Kikai Co., Ltd.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,91
+parent:61:co-exhibitor:56,▸ YUTAKA ELECTRONICS INDUSTRY COMPANY LIMITED,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,92
+parent:61:co-exhibitor:57,"▸ Yodogawa Hu-Tech Co., Ltd.",co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,93
+parent:61:co-exhibitor:58,▸ iCAD LIMITED,co_exhibitor,61,General Exhibits,|,6H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,94
+parent:1263,"Beff Co.,Ltd.",parent,,Next Generation Park,|,4H007,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,95
+parent:112,BHW Technologies Ltd,parent,,General Exhibits,|,7H421,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,96
+parent:1176,"Biodata Bank, Inc.",parent,,General Exhibits,|,8H214,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,97
+parent:384,"BIRD INITIATIVE, Inc.",parent,,Next Generation Park,|,4H231,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,98
+parent:298,"BizTech, Inc.",parent,,Next Generation Park,|,4H240,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,99
+parent:181,BKtel Pacific Rim (Japan) Inc.,parent,,General Exhibits,|,7H503,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,100
+parent:224,Blackmagic Design,parent,,X (Transformation) Park,|,6H201,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,101
+parent:387,BRAID,parent,,X (Transformation) Park,|,5H119,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,102
+parent:135,"C&T CO., Ltd",parent,,General Exhibits,|,7H414,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,103
+parent:322,CAD CENTER CORPORATION,parent,,General Exhibits,|,7H315,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,104
+parent:168,casaliz,parent,,General Exhibits,|,,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,105
+parent:209,"CASIL SEMICONDUCTOR CO.,LTD / CHIPHOW MICROELECTRONICS(HUIZHOU) CO.,LTD",parent,,General Exhibits,|,7H329,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,106
+parent:27,Central Nippon Expressway Company Limited,parent,,General Exhibits,|,5H260,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,107
+parent:109,CHANGING Information Technology Inc.,parent,,General Exhibits,|,7H413,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,108
+parent:109:co-exhibitor:1,"▸ Cybertrust Japan Co., Ltd.",co_exhibitor,109,General Exhibits,|,7H413,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,109
+parent:271,Chiba Institute of Technology,parent,,Next Generation Park,|,4H217,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,110
+parent:210,Chiba Prefectural Police,parent,,General Exhibits,|,7H512,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,111
+parent:50,Chiba Prefecture,parent,,General Exhibits,|,7H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,112
+parent:50:co-exhibitor:1,▸ Artience Lab Inc.,co_exhibitor,50,General Exhibits,|,7H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,113
+parent:50:co-exhibitor:2,▸ Bitbybit Inc.,co_exhibitor,50,General Exhibits,|,7H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,114
+parent:50:co-exhibitor:3,▸ COMZOW Inc.,co_exhibitor,50,General Exhibits,|,7H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,115
+parent:50:co-exhibitor:4,"▸ ESL Laboratory Co.,LTD",co_exhibitor,50,General Exhibits,|,7H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,116
+parent:50:co-exhibitor:5,▸ GRIPS Inc.,co_exhibitor,50,General Exhibits,|,7H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,117
+parent:50:co-exhibitor:6,▸ Ishiyama Production Medicine Inc.,co_exhibitor,50,General Exhibits,|,7H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,118
+parent:50:co-exhibitor:7,"▸ Kisui Co., Ltd",co_exhibitor,50,General Exhibits,|,7H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,119
+parent:50:co-exhibitor:8,"▸ Primesense Co.,Ltd",co_exhibitor,50,General Exhibits,|,7H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,120
+parent:50:co-exhibitor:9,▸ Smart Sensing Corporation,co_exhibitor,50,General Exhibits,|,7H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,121
+parent:50:co-exhibitor:10,"▸ TERRA Co.,Ltd., Japan",co_exhibitor,50,General Exhibits,|,7H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,122
+parent:293,Chiba University,parent,,Next Generation Park,|,4H216,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,123
+parent:278,"Chubu Electric Power Co., Inc.",parent,,X (Transformation) Park,|,5H415,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,124
+parent:278:co-exhibitor:1,▸ Tokyo University of Agriculture and Technology,co_exhibitor,278,X (Transformation) Park,|,5H415,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,125
+parent:173,CHUKYO UNIVERSITY,parent,,Next Generation Park,|,4H407,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,126
+parent:150,CHUO Institute of Information and Design,parent,,Next Generation Park,|,4H315,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,127
+parent:150:co-exhibitor:1,▸ Degital Transformation Design Laboratory.,co_exhibitor,150,Next Generation Park,|,4H315,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,128
+parent:264,CIAJ All Photonics Network Pavilion,parent,,General Exhibits,|,8H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,129
+parent:264:co-exhibitor:1,▸ 1FINITY Inc.,co_exhibitor,264,General Exhibits,|,8H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,130
+parent:264:co-exhibitor:2,▸ ANRITSU CORPORATION,co_exhibitor,264,General Exhibits,|,8H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,131
+parent:264:co-exhibitor:3,"▸ APRESIA Systems , Ltd.",co_exhibitor,264,General Exhibits,|,8H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,132
+parent:264:co-exhibitor:4,▸ Communications and Information Network Association of Japan (CIAJ),co_exhibitor,264,General Exhibits,|,8H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,133
+parent:264:co-exhibitor:5,"▸ Japan Aviation Electronics Industry, Ltd.",co_exhibitor,264,General Exhibits,|,8H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,134
+parent:264:co-exhibitor:6,▸ Ministry of Internal Affairs and Communications,co_exhibitor,264,General Exhibits,|,8H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,135
+parent:264:co-exhibitor:7,▸ NEC Corporation,co_exhibitor,264,General Exhibits,|,8H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,136
+parent:264:co-exhibitor:8,"▸ NTT, Inc.",co_exhibitor,264,General Exhibits,|,8H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,137
+parent:264:co-exhibitor:9,"▸ Oi Electric Co.,Ltd.",co_exhibitor,264,General Exhibits,|,8H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,138
+parent:264:co-exhibitor:10,▸ SANKYU ELECTRONICS CORPORATION,co_exhibitor,264,General Exhibits,|,8H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,139
+parent:264:co-exhibitor:11,▸ Yokogawa Test & Measurement Corporation,co_exhibitor,264,General Exhibits,|,8H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,140
+parent:279,CIAJ and HATS Forum,parent,,General Exhibits,|,7H301,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,141
+parent:279:co-exhibitor:1,▸ CIAJ Communications Quality Committee,co_exhibitor,279,General Exhibits,|,7H301,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,142
+parent:279:co-exhibitor:2,▸ CIAJ Image Data Comunications and Facsomile Committee,co_exhibitor,279,General Exhibits,|,7H301,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,143
+parent:279:co-exhibitor:3,▸ CIAJ User Network Systems Committee,co_exhibitor,279,General Exhibits,|,7H301,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,144
+parent:279:co-exhibitor:4,▸ Communications and Information Network Association of Japan,co_exhibitor,279,General Exhibits,|,7H301,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,145
+parent:279:co-exhibitor:5,▸ HATS Forum,co_exhibitor,279,General Exhibits,|,7H301,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,146
+parent:279:co-exhibitor:6,"▸ Hitachi Information & Telecommunication Engineering,Ltd.",co_exhibitor,279,General Exhibits,|,7H301,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,147
+parent:279:co-exhibitor:7,"▸ NEC Platforms, Ltd.",co_exhibitor,279,General Exhibits,|,7H301,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,148
+parent:279:co-exhibitor:8,"▸ Oki Electric Industry Co., Ltd.",co_exhibitor,279,General Exhibits,|,7H301,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,149
+parent:279:co-exhibitor:9,▸ Telecommunication Technology Committee,co_exhibitor,279,General Exhibits,|,7H301,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,150
+parent:96,CINCA Inc.,parent,,Next Generation Park,|,4H320,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,151
+parent:177,"City of Sapporo and City of Ishikari, Hokkaido",parent,,General Exhibits,|,8H110,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,152
+parent:185,City of Sendai,parent,,General Exhibits,|,7H331,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,153
+parent:58,"CMF Design Lab co., ltd",parent,,General Exhibits,|,7H123,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,154
+parent:175,"CoLabMix, Inc",parent,,Next Generation Park,|,4H331,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,155
+parent:162,COLLEGE OF COMPUTER AND MULTIMEDIA,parent,,Next Generation Park,|,4H313,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,156
+parent:110,"College of Science and Technology, Nihon University",parent,,Next Generation Park,|,4H211,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,157
+parent:165,common inc.,parent,,Next Generation Park,|,4H333,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,158
+parent:267,Consortium for Human-Centric Manufacturing Innobation,parent,,X (Transformation) Park,|,4H530,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,159
+parent:267:co-exhibitor:1,▸ Mitsubishi Electric Corporation,co_exhibitor,267,X (Transformation) Park,|,4H530,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,160
+parent:267:co-exhibitor:2,▸ NS Solutions Corporation,co_exhibitor,267,X (Transformation) Park,|,4H530,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,161
+parent:255,"Cooperative Robotics Laboratory, Tokyo Denki University",parent,,Next Generation Park,|,4H309,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,162
+parent:154,CORE CORPORATION,parent,,X (Transformation) Park,|,5H411,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,163
+parent:38,Cornes Technologies Limited,parent,,General Exhibits,|,5H130,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,164
+parent:131,"COSMO SOUND Co., Ltd.",parent,,General Exhibits,|,8H216,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,165
+parent:159,"Craftsman Software, Inc.",parent,,General Exhibits,|,8H016,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,166
+parent:80,CREATION DRIVE,parent,,Next Generation Park,|,4H342,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,167
+parent:79,Creative Vision Ltd.,parent,,General Exhibits,|,7H332,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,168
+parent:51,CURIO SCHOOL,parent,,General Exhibits,|,7H401,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,169
+parent:192,"CyberneX Co.,Ltd.",parent,,Next Generation Park,|,4H151,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,170
+parent:121,Cygbot,parent,,General Exhibits,|,8H024,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,171
+parent:244,"D.O.N CO.,LTD",parent,,X (Transformation) Park,|,5H309,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,172
+parent:244:co-exhibitor:1,"▸ TAION CO.,LTD",co_exhibitor,244,X (Transformation) Park,|,5H309,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,173
+parent:1181,Daiwa Institute of Research Ltd.,parent,,General Exhibits,|,7H411,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,174
+parent:216,Dawnlight LLC.,parent,,Next Generation Park,|,4H149,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,175
+parent:332,"DEGIMA AI, Inc.",parent,,Next Generation Park,|,4H434,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,176
+parent:48,"DELTA TOOLING CO., LTD.",parent,,General Exhibits,|,5H131,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,177
+parent:138,Denso CORP.,parent,,General Exhibits,|,7H406,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,178
+parent:281,"dentall Japan Co., Ltd.",parent,,Next Generation Park,|,4H431,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,179
+parent:167,DENTSU INC.,parent,,General Exhibits,|,7H317,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,180
+parent:97,Development of the Resilient Smart Network System against Natural Disaster,parent,,X (Transformation) Park,|,5H320,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,181
+parent:254,Digital Mobility Society Pavilion,parent,,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,182
+parent:254:co-exhibitor:1,"▸ Cadence Design Systems, Japan",co_exhibitor,254,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,183
+parent:254:co-exhibitor:2,"▸ ITS Business Committee, Advanced Transportation Systems Division, JEITA",co_exhibitor,254,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,184
+parent:254:co-exhibitor:3,▸ ITS Technology Enhancement Association,co_exhibitor,254,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,185
+parent:254:co-exhibitor:4,"▸ Institute of Science Tokyo, School of Engineering, Sakaguchi-Tran Lab",co_exhibitor,254,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,186
+parent:254:co-exhibitor:5,"▸ KINGWAYTEK TECHNOLOGY CO., LTD.",co_exhibitor,254,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,187
+parent:254:co-exhibitor:6,"▸ MLIT Ministry of Land, Infrastructure, Transport and Tourism Road Bureau",co_exhibitor,254,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,188
+parent:254:co-exhibitor:7,▸ MONET Technologies Inc.,co_exhibitor,254,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,189
+parent:254:co-exhibitor:8,"▸ Megago Tech Co., Ltd.",co_exhibitor,254,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,190
+parent:254:co-exhibitor:9,"▸ Rakuten Mobile, Inc.",co_exhibitor,254,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,191
+parent:254:co-exhibitor:10,▸ SYSTEMS AND TECHNOLOGY CORPORATION,co_exhibitor,254,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,192
+parent:254:co-exhibitor:11,"▸ Smart Mobility Initiative, Super Smart Society Promotion Consortium",co_exhibitor,254,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,193
+parent:254:co-exhibitor:12,▸ Sompo Japan Insurance Inc.,co_exhibitor,254,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,194
+parent:254:co-exhibitor:13,▸ TURING DRIVE INC.,co_exhibitor,254,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,195
+parent:254:co-exhibitor:14,"▸ Terasilic Co., Ltd.",co_exhibitor,254,X (Transformation) Park,|,6H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,196
+parent:196,DINGTALK LIMITED,parent,,X (Transformation) Park,|,5H204,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,197
+parent:124,"DKE Holding Co., Ltd.",parent,,General Exhibits,|,7H434,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,198
+parent:133,DONGGUAN CE LINK LIMITED,parent,,General Exhibits,|,6H021,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,199
+parent:137,"Dongguan Y-Star Precision Manufacturing Co.,Ltd.",parent,,General Exhibits,|,7H207,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,200
+parent:376,DREAMBEER,parent,,General Exhibits,|,7H209,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,201
+parent:262,DX Pavilion for Everyday Life,parent,,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,202
+parent:262:co-exhibitor:1,"▸ ACCESS CO., LTD.",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,203
+parent:262:co-exhibitor:2,▸ Connectivity Standards Alliance Japan Interest Group,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,204
+parent:262:co-exhibitor:3,▸ ACCEL LAB Ltd.,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,205
+parent:262:co-exhibitor:4,"▸ ACCESS CO., LTD.",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,206
+parent:262:co-exhibitor:5,▸ Allion Japan Inc.,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,207
+parent:262:co-exhibitor:6,"▸ Cybertrust Co., Ltd.",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,208
+parent:262:co-exhibitor:7,"▸ DSR ASIA, CO., LTD",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,209
+parent:262:co-exhibitor:8,"▸ HOMETACT Co., Ltd.",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,210
+parent:262:co-exhibitor:9,"▸ LifeSmart Co., Ltd.",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,211
+parent:262:co-exhibitor:10,"▸ MIWA LOCK CO., LTD.",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,212
+parent:262:co-exhibitor:11,"▸ NEC Platforms, Ltd.",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,213
+parent:262:co-exhibitor:12,▸ NXP Japan Ltd.,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,214
+parent:262:co-exhibitor:13,▸ Nordic Semiconductor,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,215
+parent:262:co-exhibitor:14,▸ Panasonic Corporation,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,216
+parent:262:co-exhibitor:15,▸ SEALSQ Japan K.K.,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,217
+parent:262:co-exhibitor:16,▸ STMicroelectronics K.K.,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,218
+parent:262:co-exhibitor:17,"▸ Shibutani Co., Ltd.",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,219
+parent:262:co-exhibitor:18,▸ Silicon Labs,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,220
+parent:262:co-exhibitor:19,"▸ SwitchBot, Co., Ltd.",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,221
+parent:262:co-exhibitor:20,▸ TOPPAN INC.,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,222
+parent:262:co-exhibitor:21,▸ TÜV Rheinland Japan Ltd.,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,223
+parent:262:co-exhibitor:22,▸ X-HEMISTRY Inc.,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,224
+parent:262:co-exhibitor:23,▸ YKK AP Inc.,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,225
+parent:262:co-exhibitor:24,▸ conol Inc,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,226
+parent:262:co-exhibitor:25,"▸ mui Lab, Inc.",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,227
+parent:262:co-exhibitor:26,▸ ECHONET Consortium,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,228
+parent:262:co-exhibitor:27,▸ EDION Corporation,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,229
+parent:262:co-exhibitor:28,"▸ JC-STAR System (IPA / Ministry of Economy, Trade and Industry)",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,230
+parent:262:co-exhibitor:29,▸ BUFFALO INC.,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,231
+parent:262:co-exhibitor:30,▸ Panasonic Corporation,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,232
+parent:262:co-exhibitor:31,"▸ SECOM CO., LTD.",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,233
+parent:262:co-exhibitor:32,▸ SHARP CORPORATION,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,234
+parent:262:co-exhibitor:33,▸ JEITA Healthcare Industries Board,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,235
+parent:262:co-exhibitor:34,"▸ Fukuda Denshi Co., Ltd.",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,236
+parent:262:co-exhibitor:35,"▸ Honda Motor Co., Ltd.",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,237
+parent:262:co-exhibitor:36,"▸ Ministry of Land, Infrastructure, Transport and Tourism",co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,238
+parent:262:co-exhibitor:37,▸ JEITA SMART HOME BOARD,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,239
+parent:262:co-exhibitor:38,▸ EDION Corporation,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,240
+parent:262:co-exhibitor:39,▸ Mitsubishi Electric Corporation,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,241
+parent:262:co-exhibitor:40,▸ National Research Institute for Earth Science and Disaster Resilience,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,242
+parent:262:co-exhibitor:41,▸ Rinnai Corporation,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,243
+parent:262:co-exhibitor:42,▸ SHARP CORPORATION,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,244
+parent:262:co-exhibitor:43,▸ TIGER CORPORATION 🎓,co_exhibitor,262,X (Transformation) Park,|,5H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,245
+parent:260,East Japan Railway Company,parent,,X (Transformation) Park,|,5H323,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,246
+parent:93,EGGHEAD Inc.,parent,,General Exhibits,|,7H417,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,247
+parent:269,Ehime Prefectural Government,parent,,General Exhibits,|,7H203,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,248
+parent:59,EHOMEWEI,parent,,General Exhibits,|,8H131,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,249
+parent:94,Elup System Corp.,parent,,Next Generation Park,|,4H155,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,250
+parent:368,"EmbodyMe, Inc",parent,,General Exhibits,|,7H515,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,251
+parent:237,"EnergyColoring, inc.",parent,,Next Generation Park,|,4H437,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,252
+parent:360,"Engineering Design Project, Institute of Science Tokyo",parent,,Next Generation Park,|,4H414,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,253
+parent:157,"eTRUST Co., Ltd.",parent,,X (Transformation) Park,|,5H322,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,254
+parent:1028,EU Pavilion,parent,,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,255
+parent:1028:co-exhibitor:1,▸ EU-Japan Centre for Industrial Cooperation / Enterprise Europe Network Japan,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,256
+parent:1028:co-exhibitor:2,▸ Apeiron Intelligence,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,257
+parent:1028:co-exhibitor:3,▸ Axelera AI BV,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,258
+parent:1028:co-exhibitor:4,▸ Cynteract GmbH,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,259
+parent:1028:co-exhibitor:5,▸ Druid Software Limited,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,260
+parent:1028:co-exhibitor:6,▸ Durance AI,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,261
+parent:1028:co-exhibitor:7,▸ FACIL'iti,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,262
+parent:1028:co-exhibitor:8,▸ GReD,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,263
+parent:1028:co-exhibitor:9,▸ InnoviGuard AB,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,264
+parent:1028:co-exhibitor:10,"▸ Ministry of Energy, Commerce & Industry of Cyprus / Cyprus Trade Center in Japan",co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,265
+parent:1028:co-exhibitor:11,▸ NATIXAR,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,266
+parent:1028:co-exhibitor:12,▸ Neuralio,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,267
+parent:1028:co-exhibitor:13,▸ RIoT Secure,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,268
+parent:1028:co-exhibitor:14,▸ Scriptide,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,269
+parent:1028:co-exhibitor:15,▸ Softech,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,270
+parent:1028:co-exhibitor:16,▸ Sparsity Technologies,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,271
+parent:1028:co-exhibitor:17,▸ Spinnistart OU,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,272
+parent:1028:co-exhibitor:18,▸ Think Ahead Technologies GmbH,co_exhibitor,1028,Global Park,|,4H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,273
+parent:305,"EVORIX Co., Ltd.",parent,,General Exhibits,|,5H431,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,274
+parent:292,Fenrir,parent,,General Exhibits,|,8H404,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,275
+parent:92,Findy Inc.,parent,,General Exhibits,|,4H620,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,276
+parent:316,"Flexible Electronics, Innovation Center for Organic Electronics, Yamagata University",parent,,Next Generation Park,|,4H418,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,277
+parent:153,"Flora Co., Ltd",parent,,Next Generation Park,|,4H427,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,278
+parent:65,"Flyby Co., Ltd.",parent,,Next Generation Park,|,4H337,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,279
+parent:170,"Flyle, inc.",parent,,X (Transformation) Park,|,4H537,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,280
+parent:114,"FORUM8 Co., Ltd.",parent,,General Exhibits,|,7H115,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,281
+parent:1179,"FSMC Co., Ltd.",parent,,Next Generation Park,|,4H335,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,282
+parent:256,FUJIFILM Business Innovation Corp.,parent,,General Exhibits,|,8H123,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,283
+parent:183,Fujitsu Limited,parent,,General Exhibits,|,6H251,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,284
+parent:399,FUKUOKA Smart EAST Promotion Consortium,parent,,General Exhibits,|,5H434,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,285
+parent:151,Fukuoka City Government,parent,,General Exhibits,|,5H433,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,286
+parent:219,Fukuoka Prefectural Semiconductor & Digital Industry Development Council,parent,,General Exhibits,|,7H313,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,287
+parent:219:co-exhibitor:1,▸ Advantech Japan Corp.,co_exhibitor,219,General Exhibits,|,7H313,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,288
+parent:219:co-exhibitor:2,"▸ Braveridge Co., Ltd.",co_exhibitor,219,General Exhibits,|,7H313,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,289
+parent:219:co-exhibitor:3,"▸ FDsystem Co.,Ltd.",co_exhibitor,219,General Exhibits,|,7H313,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,290
+parent:219:co-exhibitor:4,"▸ INAK SYSTEM Co.,Ltd",co_exhibitor,219,General Exhibits,|,7H313,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,291
+parent:219:co-exhibitor:5,"▸ Kobot,lnc",co_exhibitor,219,General Exhibits,|,7H313,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,292
+parent:219:co-exhibitor:6,▸ LOGICAL PRODUCT CORPORATION,co_exhibitor,219,General Exhibits,|,7H313,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,293
+parent:232,Fukushima Prefecture,parent,,General Exhibits,|,7H318,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,294
+parent:266,FUTATSU SHOJI CORPORATION,parent,,General Exhibits,|,7H403,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,295
+parent:140,"GC-PF Co., Ltd.",parent,,Next Generation Park,|,4H135,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,296
+parent:195,"GENSEKI Co.,Ltd.",parent,,Next Generation Park,|,4H336,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,297
+parent:304,"Gicho business communications Co.,Ltd.",parent,,General Exhibits,|,8H119,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,298
+parent:294,"Gijutsu-Hyoron Co., Ltd.",parent,,General Exhibits,|,8H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,299
+parent:321,Global Digital Innovation Network,parent,,General Exhibits,|,7H214,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,300
+parent:321:co-exhibitor:1,▸ AM Management CORP.,co_exhibitor,321,General Exhibits,|,7H214,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,301
+parent:321:co-exhibitor:2,▸ BUPTLE,co_exhibitor,321,General Exhibits,|,7H214,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,302
+parent:321:co-exhibitor:3,"▸ DeepSearch, Inc.",co_exhibitor,321,General Exhibits,|,7H214,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,303
+parent:321:co-exhibitor:4,"▸ IPIN LABS Co., LTD",co_exhibitor,321,General Exhibits,|,7H214,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,304
+parent:321:co-exhibitor:5,"▸ Korea Body Information Co., Ltd.",co_exhibitor,321,General Exhibits,|,7H214,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,305
+parent:321:co-exhibitor:6,▸ Neurofusion Inc.,co_exhibitor,321,General Exhibits,|,7H214,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,306
+parent:321:co-exhibitor:7,"▸ Sendbird, Inc.",co_exhibitor,321,General Exhibits,|,7H214,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,307
+parent:321:co-exhibitor:8,▸ VCAT AI,co_exhibitor,321,General Exhibits,|,7H214,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,308
+parent:349,"Good Planning Co., Ltd.",parent,,General Exhibits,|,7H516,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,309
+parent:1261,"Graduate School of Information Science and Technology, Hokkaido University",parent,,Next Generation Park,|,4H129,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,310
+parent:200,"HAMAI ELECTRIC LAMP CO., LTD.",parent,,General Exhibits,|,8H008,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,311
+parent:377,"Haneishi Industrial Intelligence Institute, Inc.",parent,,Next Generation Park,|,4H139,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,312
+parent:1291,Hellohas Robotics inc.,parent,,General Exhibits,|,8H018,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,313
+parent:231,HIBARI Inc.,parent,,Next Generation Park,|,4H327,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,314
+parent:223,"Hitachi, Ltd.",parent,,General Exhibits,|,7H010,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,315
+parent:34,"HOKURIKU ELECTRIC INDUSTRY CO., LTD.",parent,,General Exhibits,|,7H206,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,316
+parent:56,"Honda R&D Co.,Ltd.",parent,,General Exhibits,|,8H225,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,317
+parent:180,Hong Kong Trade Development Council,parent,,General Exhibits,|,7H420,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,318
+parent:207,"Hosei University/Kyushu Institute of Technology/Tokyo University of Agriculture and Technology/University of Nagasaki/Wakayama University, ""CREST: Privacy-centric Information Infrastructure""",parent,,Next Generation Park,|,4H213,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,319
+parent:90,Human Academy IT＆Business College,parent,,Next Generation Park,|,4H305,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,320
+parent:89,Hutzper inc.,parent,,Next Generation Park,|,4H150,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,321
+parent:67,"Ideascale Japan, Inc.",parent,,Next Generation Park,|,4H419,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,322
+parent:55,"Imanaga Electric Ind.co.,LTD./ENG Electric Co., Ltd.",parent,,General Exhibits,|,7H323,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,323
+parent:53,Industrial Property Cooperation Center,parent,,General Exhibits,|,8H026,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,324
+parent:248,Information Processing Society of Japan,parent,,General Exhibits,|,7H405,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,325
+parent:72,inMirrors Inc.,parent,,General Exhibits,|,7H412,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,326
+parent:103,INMO,parent,,X (Transformation) Park,|,6H204,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,327
+parent:288,Innov8 Inc,parent,,X (Transformation) Park,|,5H115,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,328
+parent:288:co-exhibitor:1,▸ Otoz.Ai Japan Inc,co_exhibitor,288,X (Transformation) Park,|,5H115,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,329
+parent:263,"Innovation Platform Agency, Japan",parent,,X (Transformation) Park,|,6H111,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,330
+parent:247,"INOEL/ROEL, Yamagata University",parent,,Next Generation Park,|,4H416,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,331
+parent:277,Institute of SCIENCE TOKYO; Nakamoto Lab.,parent,,Next Generation Park,|,4H415,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,332
+parent:318,"Interverse Social Implementation Promotion Meta-Consortium（National Institute of Advanced Industrial Science and Technology）, Human Augmentation Consortium（NTT DOCOMO）",parent,,X (Transformation) Park,|,6H242,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,333
+parent:318:co-exhibitor:1,"▸ NTT DOCOMO, INC.",co_exhibitor,318,X (Transformation) Park,|,6H242,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,334
+parent:318:co-exhibitor:2,▸ National Institute of Advanced Industrial Science and Technology,co_exhibitor,318,X (Transformation) Park,|,6H242,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,335
+parent:391,"iPX Co., Ltd.",parent,,General Exhibits,|,8H208,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,336
+parent:385,"ISCEC-Japan Co.,Ltd",parent,,General Exhibits,|,7H509,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,337
+parent:148,"ISHII HYOKI CO., LTD.",parent,,General Exhibits,|,8H116,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,338
+parent:372,Ishikawa Prefecture（Noto area）,parent,,General Exhibits,|,7H513,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,339
+parent:398,Itumo.inc,parent,,Next Generation Park,|,4H429,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,340
+parent:163,"IVIS, Inc.",parent,,General Exhibits,|,8H015,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,341
+parent:307,Iwasaki Gakuen Information Science College,parent,,Next Generation Park,|,4H126,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,342
+parent:251,Iwate Prefectural University,parent,,Next Generation Park,|,4H001-006,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,343
+parent:251:co-exhibitor:1,"▸ Defios Co., Ltd.",co_exhibitor,251,Next Generation Park,|,4H001-006,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,344
+parent:251:co-exhibitor:2,"▸ Fukken Gijyutsu Consultants Co.,Ltd",co_exhibitor,251,Next Generation Park,|,4H001-006,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,345
+parent:251:co-exhibitor:3,▸ Ihatov Area Information Management,co_exhibitor,251,Next Generation Park,|,4H001-006,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,346
+parent:251:co-exhibitor:4,▸ Innove Bridge Takizawa,co_exhibitor,251,Next Generation Park,|,4H001-006,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,347
+parent:251:co-exhibitor:5,▸ People Corporation,co_exhibitor,251,Next Generation Park,|,4H001-006,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,348
+parent:251:co-exhibitor:6,"▸ Sustinere Co., Ltd.",co_exhibitor,251,Next Generation Park,|,4H001-006,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,349
+parent:251:co-exhibitor:7,▸ TAKIZAWA CITY,co_exhibitor,251,Next Generation Park,|,4H001-006,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,350
+parent:251:co-exhibitor:8,▸ TakizawaRoboticsLLC.,co_exhibitor,251,Next Generation Park,|,4H001-006,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,351
+parent:178,Japan Atomic Energy Agency,parent,,Next Generation Park,|,4H316,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,352
+parent:91,Japan Federation Of Electronic Parts Distributors & Dealers,parent,,General Exhibits,|,8H304,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,353
+parent:253,Japan Institute of Invention and Innovation/Japan Institute for Promoting Invention and Innovation,parent,,General Exhibits,|,8H111,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,354
+parent:76,Japan Manned Space Systems Corporation,parent,,General Exhibits,|,7H319,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,355
+parent:142,JCCL,parent,,Next Generation Park,|,4H020,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,356
+parent:379,"JCOM Co., Ltd.",parent,,Next Generation Park,|,4H226,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,357
+parent:314,JEITA Semiconductor Forum 2026,parent,,X (Transformation) Park,|,6H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,358
+parent:314:co-exhibitor:1,▸ KIOXIA corporation,co_exhibitor,314,X (Transformation) Park,|,6H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,359
+parent:314:co-exhibitor:2,"▸ Micron Memory Japan, K.K.",co_exhibitor,314,X (Transformation) Park,|,6H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,360
+parent:314:co-exhibitor:3,▸ Mitsubishi Electric Corporation,co_exhibitor,314,X (Transformation) Park,|,6H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,361
+parent:314:co-exhibitor:4,▸ Nuvoton Technology Corporation Japan,co_exhibitor,314,X (Transformation) Park,|,6H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,362
+parent:314:co-exhibitor:5,"▸ ROHM Co., Ltd.",co_exhibitor,314,X (Transformation) Park,|,6H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,363
+parent:314:co-exhibitor:6,▸ Renesas Electronics Corporation,co_exhibitor,314,X (Transformation) Park,|,6H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,364
+parent:314:co-exhibitor:7,"▸ Sanken Electric Co., Ltd.",co_exhibitor,314,X (Transformation) Park,|,6H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,365
+parent:314:co-exhibitor:8,▸ Semiconductor Board,co_exhibitor,314,X (Transformation) Park,|,6H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,366
+parent:314:co-exhibitor:9,▸ Sony Semiconductor Solutions Corporation,co_exhibitor,314,X (Transformation) Park,|,6H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,367
+parent:314:co-exhibitor:10,▸ Toshiba Electronic Devices & Storage Corporation,co_exhibitor,314,X (Transformation) Park,|,6H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,368
+parent:215,"JiangXi GuiDe Technology Co., Ltd.",parent,,General Exhibits,|,7H327,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,369
+parent:290,Joso City AI-powered regional revitalization Consortium,parent,,X (Transformation) Park,|,6H237,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,370
+parent:290:co-exhibitor:1,"▸ Honda R&D Co., Ltd.",co_exhibitor,290,X (Transformation) Park,|,6H237,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,371
+parent:290:co-exhibitor:2,▸ Joso City,co_exhibitor,290,X (Transformation) Park,|,6H237,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,372
+parent:290:co-exhibitor:3,▸ Wing-AI Lab,co_exhibitor,290,X (Transformation) Park,|,6H237,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,373
+parent:290:co-exhibitor:4,▸ ima Inc.,co_exhibitor,290,X (Transformation) Park,|,6H237,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,374
+parent:284,JTB Corp.,parent,,X (Transformation) Park,|,6H010,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,375
+parent:396,"Kaibo Audio Co., Ltd.",parent,,General Exhibits,|,7H208,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,376
+parent:182,KANAZAWA UNIVERSITY,parent,,Next Generation Park,|,4H117,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,377
+parent:220,KEIAN,parent,,X (Transformation) Park,|,5H117,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,378
+parent:160,Keio University Haptics Research Center,parent,,Next Generation Park,|,4H009-012,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,379
+parent:160:co-exhibitor:1,▸ MotionLib Inc.,co_exhibitor,160,Next Generation Park,|,4H009-012,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,380
+parent:101,Kikuvi Inc.,parent,,X (Transformation) Park,|,4H603,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,381
+parent:393,"Kirin Holdings Company, Limited",parent,,X (Transformation) Park,|,5H311,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,382
+parent:301,KISCO LTD.,parent,,General Exhibits,|,6H023,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,383
+parent:25,KODENSHI CORP.,parent,,General Exhibits,|,8H411,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,384
+parent:43,"KOSHIBU PRECISION CO., LTD.",parent,,General Exhibits,|,7H325,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,385
+parent:75,"Kotozna, Inc.",parent,,X (Transformation) Park,|,5H112,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,386
+parent:102,"KUMU Works, Inc./Z2Data",parent,,General Exhibits,|,8H227,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,387
+parent:119,"KYODO CO., LTD.",parent,,General Exhibits,|,8H305,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,388
+parent:370,Kyoto College of Design and Technology,parent,,Next Generation Park,|,4H130,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,389
+parent:265,Kyoto Universtiy,parent,,Next Generation Park,|,4H209,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,390
+parent:1046,Latvia Pavilion,parent,,Global Park,|,5H105,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,391
+parent:1046:co-exhibitor:1,▸ Investment and Development Agency of Latvia (LIAA),co_exhibitor,1046,Global Park,|,5H105,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,392
+parent:1046:co-exhibitor:2,▸ GaloGroup,co_exhibitor,1046,Global Park,|,5H105,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,393
+parent:1046:co-exhibitor:3,▸ Latvijas Mobilais Telefons,co_exhibitor,1046,Global Park,|,5H105,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,394
+parent:1046:co-exhibitor:4,▸ McCann Riga,co_exhibitor,1046,Global Park,|,5H105,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,395
+parent:1046:co-exhibitor:5,▸ Raden Solutions,co_exhibitor,1046,Global Park,|,5H105,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,396
+parent:1046:co-exhibitor:6,▸ Snippets AI,co_exhibitor,1046,Global Park,|,5H105,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,397
+parent:155,LEAG Solutions Corp.,parent,,General Exhibits,|,7H404,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,398
+parent:141,LensLink,parent,,Next Generation Park,|,4H433,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,399
+parent:313,LimX Dynamics,parent,,General Exhibits,|,8H319,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,400
+parent:86,Location Business&Marketing Association Japan,parent,,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,401
+parent:86:co-exhibitor:1,"▸ Ashirase, Inc.",co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,402
+parent:86:co-exhibitor:2,▸ Data Insight Inc.,co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,403
+parent:86:co-exhibitor:3,"▸ GeoTechnologies, Inc.",co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,404
+parent:86:co-exhibitor:4,"▸ HATSUKAZE Co., Ltd.",co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,405
+parent:86:co-exhibitor:5,"▸ Hino Computer System Co., Ltd.",co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,406
+parent:86:co-exhibitor:6,"▸ IOTBANK Co., Ltd.",co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,407
+parent:86:co-exhibitor:7,"▸ Kokusai Kogyo Co., Ltd.",co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,408
+parent:86:co-exhibitor:8,"▸ MAPPLE, Inc.",co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,409
+parent:86:co-exhibitor:9,"▸ MULTISOUP CO., LTD.",co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,410
+parent:86:co-exhibitor:10,▸ PrivacyTech Inc.,co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,411
+parent:86:co-exhibitor:11,▸ SoftBank Corp.,co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,412
+parent:86:co-exhibitor:12,▸ TomTom Sales B.V.,co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,413
+parent:86:co-exhibitor:13,▸ Yokohama City University,co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,414
+parent:86:co-exhibitor:14,"▸ ZENRIN CO.,LTD.",co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,415
+parent:86:co-exhibitor:15,"▸ ZENRIN DataCom CO., LTD.",co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,416
+parent:86:co-exhibitor:16,"▸ unerry, Inc.",co_exhibitor,86,X (Transformation) Park,|,6H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,417
+parent:193,lotsful Inc.,parent,,Next Generation Park,|,4H153,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,418
+parent:189,MatrixFlow,parent,,Next Generation Park,|,4H334,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,419
+parent:20,"Merci Co., Ltd.",parent,,General Exhibits,|,5H430,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,420
+parent:23,"MIE ELECTRONICS CO., LTD.",parent,,General Exhibits,|,7H320,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,421
+parent:23:co-exhibitor:1,▸ POWERTIP TECHNOLOGY CORPORATION,co_exhibitor,23,General Exhibits,|,7H320,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,422
+parent:1178,MinebeaMitsumi Inc.,parent,,X (Transformation) Park,|,4H521,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,423
+parent:1270,Ministry of Internal Affairs and Communications,parent,,X (Transformation) Park,|,5H302,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,424
+parent:42,MIRAIT ONE Group,parent,,General Exhibits,|,7H003,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,425
+parent:120,mitdir Inc.,parent,,Next Generation Park,|,4H134,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,426
+parent:28,Mitsubishi Electric Group,parent,,General Exhibits,|,8H412,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,427
+parent:107,"MIXI, Inc.",parent,,X (Transformation) Park,|,4H531,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,428
+parent:184,MIYAKONOJO CITY,parent,,General Exhibits,|,7H431,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,429
+parent:374,"MK CO.,LTD",parent,,General Exhibits,|,8H217,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,430
+parent:222,"Mobile Computing Lab. (Yamaguchi Lab.), the University of Osaka",parent,,Next Generation Park,|,4H301-303,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,431
+parent:88,Monotechnos corp./Tokyo University of Information Sciences,parent,,General Exhibits,|,7H407,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,432
+parent:327,MOPIC CO LTD,parent,,General Exhibits,|,,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,433
+parent:78,MORISO,parent,,General Exhibits,|,7H502,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,434
+parent:203,"Motion Control Laboratory, University of Tsukuba",parent,,X (Transformation) Park,|,5H201,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,435
+parent:30,"Murata Manufacturing Co., Ltd.",parent,,General Exhibits,|,7H340,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,436
+parent:194,Musignal Inc.,parent,,General Exhibits,|,7H314,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,437
+parent:306,Nagoya Kogakuin College of Technology,parent,,Next Generation Park,|,4H317,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,438
+parent:206,Nagoya University,parent,,Next Generation Park,|,4H311,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,439
+parent:394,National Agriculture and Food Research Organization／Innovation Promotion Council for Smart Agriculture（IPCSA）,parent,,General Exhibits,|,8H202,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,440
+parent:36,National Institute of Advanced Industrial Science and Technology,parent,,General Exhibits,|,4H621,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,441
+parent:104,"National Institute of Informatics/Kyoto University/Institute of Information Security/Tokyo Information Design Professional University, ""The ZT-IoT Project""",parent,,Next Generation Park,|,4H207,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,442
+parent:104:co-exhibitor:1,▸ CREST ZT-IoT,co_exhibitor,104,Next Generation Park,|,4H207,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,443
+parent:83,National Institute of Information and Communications Technology,parent,,Next Generation Park,|,4H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,444
+parent:83:co-exhibitor:1,▸ Aromajoin Corporation,co_exhibitor,83,Next Generation Park,|,4H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,445
+parent:83:co-exhibitor:2,▸ BearBell Inc.,co_exhibitor,83,Next Generation Park,|,4H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,446
+parent:83:co-exhibitor:3,"▸ IDDK Co., Ltd.",co_exhibitor,83,Next Generation Park,|,4H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,447
+parent:83:co-exhibitor:4,"▸ Kick Space Technologies, Inc.",co_exhibitor,83,Next Generation Park,|,4H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,448
+parent:83:co-exhibitor:5,▸ LOOVIC Inc. 🎓,co_exhibitor,83,Next Generation Park,|,4H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,449
+parent:83:co-exhibitor:6,▸ MI-6 Ltd.,co_exhibitor,83,Next Generation Park,|,4H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,450
+parent:83:co-exhibitor:7,▸ Muzaihoumen,co_exhibitor,83,Next Generation Park,|,4H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,451
+parent:83:co-exhibitor:8,▸ National Institute of Information and Communications Technology,co_exhibitor,83,Next Generation Park,|,4H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,452
+parent:83:co-exhibitor:9,"▸ New Space Intelligence,Inc.",co_exhibitor,83,Next Generation Park,|,4H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,453
+parent:83:co-exhibitor:10,▸ RAYVEN Inc.,co_exhibitor,83,Next Generation Park,|,4H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,454
+parent:83:co-exhibitor:11,"▸ SPViolet, Kanazawa Medical University",co_exhibitor,83,Next Generation Park,|,4H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,455
+parent:83:co-exhibitor:12,▸ Space Weather Company,co_exhibitor,83,Next Generation Park,|,4H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,456
+parent:83:co-exhibitor:13,▸ asai inc.,co_exhibitor,83,Next Generation Park,|,4H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,457
+parent:45,National Institute of Information and Communications Technology (Innovative ICT Fund Projects for Beyond 5G/6G),parent,,X (Transformation) Park,|,6H224,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,458
+parent:29,National Institute of Information and Communications Technology(NICT),parent,,X (Transformation) Park,|,6H208,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,459
+parent:130,"National Institute of Technology ,Tokyo College/National Institute of Technology ,Sendai College/Tycoh & Co.,Ltd.",parent,,Next Generation Park,|,4H114,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,460
+parent:95,"National Space Policy Secretariat, Cabinet Office and Quasi-Zenith Satellite System Services Inc.",parent,,General Exhibits,|,8H130,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,461
+parent:24,NEC Corporation,parent,,General Exhibits,|,8H230,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,462
+parent:31,"NEC Personal Computers, Ltd.",parent,,General Exhibits,|,7H004,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,463
+parent:1259,NemoTek Inc.,parent,,Next Generation Park,|,4H241,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,464
+parent:234,Neolix,parent,,General Exhibits,|,8H301,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,465
+parent:371,Nestle Japan Ltd.,parent,,General Exhibits,|,7H322,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,466
+parent:287,"Network Engineering Laboratory, Faculty of Environmental and Urban Engineering, Kansai University",parent,,Next Generation Park,|,4H120,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,467
+parent:337,Neubility Inc.,parent,,General Exhibits,|,,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,468
+parent:311,Neurogica inc.,parent,,Next Generation Park,|,4H425,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,469
+parent:40,New Energy and Industrial Technology Development Organization,parent,,General Exhibits,|,5H440,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,470
+parent:47,NHK Foundation,parent,,General Exhibits,|,8H318,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,471
+parent:190,"Nikkei Business Publications, Inc",parent,,General Exhibits,|,7H430,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,472
+parent:315,NIPPON ALGORITHM COMPANY LTD.,parent,,X (Transformation) Park,|,5H116,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,473
+parent:111,"Nippon Sheet Glass Co., Ltd.",parent,,General Exhibits,|,6H020,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,474
+parent:326,Nirik Inc.,parent,,Next Generation Park,|,4H325,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,475
+parent:164,"NISSHO INTERNATIONAL CO., LTD.",parent,,General Exhibits,|,8H222,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,476
+parent:118,NITI Technology Inc.,parent,,Next Generation Park,|,4H340,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,477
+parent:257,"NJC NetCommunications Co.,Ltd.",parent,,Next Generation Park,|,4H319,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,478
+parent:1257,NOEOTE,parent,,Next Generation Park,|,4H017,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,479
+parent:116,NPR-RIKEN CORPORATION,parent,,General Exhibits,|,7H508,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,480
+parent:146,"Numata City, Gunma Prefecture",parent,,General Exhibits,|,8H212,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,481
+parent:362,numoment Inc.,parent,,Next Generation Park,|,4H329,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,482
+parent:74,"OBIC BUSINESS CONSULTANTS CO., LTD.",parent,,General Exhibits,|,8H133,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,483
+parent:236,OCC Educational Corporation The Graduate School of Management and Education Technology,parent,,Next Generation Park,|,4H128,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,484
+parent:275,Ocean Digital Society Pavillion,parent,,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,485
+parent:275:co-exhibitor:1,▸ ALAN Consortium,co_exhibitor,275,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,486
+parent:275:co-exhibitor:2,▸ Fujitsu Limited,co_exhibitor,275,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,487
+parent:275:co-exhibitor:3,"▸ ISE Co.,Ltd.",co_exhibitor,275,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,488
+parent:275:co-exhibitor:4,▸ Japan Agency for Marine-Earth Science and Technology,co_exhibitor,275,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,489
+parent:275:co-exhibitor:5,▸ Japan Underwater Drone Association,co_exhibitor,275,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,490
+parent:275:co-exhibitor:6,▸ Marine Open Innovation Institute/City of Shizuoka,co_exhibitor,275,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,491
+parent:275:co-exhibitor:7,▸ New Energy and Industrial Technology Development Organization,co_exhibitor,275,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,492
+parent:275:co-exhibitor:8,▸ Nōka.AI,co_exhibitor,275,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,493
+parent:275:co-exhibitor:9,▸ Potentialight Inc.,co_exhibitor,275,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,494
+parent:275:co-exhibitor:10,"▸ Robotics Sailing Lab. Co., Ltd.",co_exhibitor,275,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,495
+parent:275:co-exhibitor:11,"▸ SPACEONE Co.,Ltd",co_exhibitor,275,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,496
+parent:275:co-exhibitor:12,"▸ UMIAILE Co., Ltd.",co_exhibitor,275,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,497
+parent:275:co-exhibitor:13,"▸ artTunes Co.,Ltd.",co_exhibitor,275,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,498
+parent:330,Okinawa Prefectural Government,parent,,X (Transformation) Park,|,6H008,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,499
+parent:330:co-exhibitor:1,▸ Ginoza Village,co_exhibitor,330,X (Transformation) Park,|,6H008,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,500
+parent:330:co-exhibitor:2,▸ nago city,co_exhibitor,330,X (Transformation) Park,|,6H008,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,501
+parent:381,"openpage Co.,Ltd.",parent,,General Exhibits,|,7H408,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,502
+parent:324,OPTAGE Inc.,parent,,General Exhibits,|,8H316,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,503
+parent:63,OPTO PLUS TECHNOLOGIES CORPORATION,parent,,General Exhibits,|,7H204,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,504
+parent:328,Osaka Prefecture /Osaka City,parent,,X (Transformation) Park,|,6H238,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,505
+parent:68,Osaka Sangyo University,parent,,Next Generation Park,|,4H116,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,506
+parent:98,OSTIARIES,parent,,General Exhibits,|,7H201,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,507
+parent:64,OUTSENSE Inc.,parent,,Next Generation Park,|,4H442,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,508
+parent:392,Pactom,parent,,Next Generation Park,|,4H435,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,509
+parent:397,Panhouse,parent,,X (Transformation) Park,|,4H526,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,510
+parent:238,Peetslist Inc.,parent,,Next Generation Park,|,4H328,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,511
+parent:1223,PEN Ventures Korea,parent,,X (Transformation) Park,|,5H305,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,512
+parent:386,PHIDRIX Inc.,parent,,Next Generation Park,|,4H133,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,513
+parent:126,"Pionero,Inc",parent,,General Exhibits,|,8H113,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,514
+parent:134,"PLAUD Co., Ltd",parent,,X (Transformation) Park,|,5H301,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,515
+parent:1053,polisee Inc.,parent,,Next Generation Park,|,4H332,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,516
+parent:218,Portus AI Inc.,parent,,Next Generation Park,|,4H428,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,517
+parent:100,"PowerManagement Co., Ltd.",parent,,General Exhibits,|,7H418,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,518
+parent:84,"Preferred Networks, Inc.",parent,,X (Transformation) Park,|,5H206,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,519
+parent:375,PREMIUM WATER,parent,,General Exhibits,|,8H114,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,520
+parent:250,"QD Laser, Inc.",parent,,General Exhibits,|,8H122,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,521
+parent:250:co-exhibitor:1,"▸ Ultimems, Inc.",co_exhibitor,250,General Exhibits,|,8H122,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,522
+parent:1146,"QTnet,Inc.",parent,,X (Transformation) Park,|,5H412,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,523
+parent:1303,"Qualiteg Inc.,",parent,,Next Generation Park,|,4H338,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,524
+parent:132,"Quanmatic, Inc",parent,,Next Generation Park,|,4H021,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,525
+parent:240,Quantum Resistant Cryptography JP,parent,,Next Generation Park,|,4H424,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,526
+parent:227,"Quectel Wireless Solutions Co., Ltd.",parent,,General Exhibits,|,7H324,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,527
+parent:1313,Radventurers CO LLC,parent,,General Exhibits,|,,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,528
+parent:172,RainScales Japan K.K,parent,,General Exhibits,|,7H326,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,529
+parent:205,RCL DISPLAY LTD.,parent,,General Exhibits,|,7H316,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,530
+parent:317,"REAS AI CO., LTD.",parent,,X (Transformation) Park,|,4H525,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,531
+parent:317:co-exhibitor:1,▸ AIAA,co_exhibitor,317,X (Transformation) Park,|,4H525,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,532
+parent:106,"Recho, Inc.",parent,,Next Generation Park,|,4H137,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,533
+parent:274,Relic inc.,parent,,X (Transformation) Park,|,4H601,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,534
+parent:1266,"Research Coordinate, Inc.",parent,,Next Generation Park,|,4H122,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,535
+parent:85,"Resilire, Inc.",parent,,Next Generation Park,|,4H248,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,536
+parent:241,ResorTech EXPO 2026 in Okinawa,parent,,X (Transformation) Park,|,6H004,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,537
+parent:241:co-exhibitor:1,"▸ Copro System Co., Ltd.",co_exhibitor,241,X (Transformation) Park,|,6H004,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,538
+parent:241:co-exhibitor:2,▸ SCSK Corporation,co_exhibitor,241,X (Transformation) Park,|,6H004,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,539
+parent:241:co-exhibitor:3,▸ Testbedislandokinawa,co_exhibitor,241,X (Transformation) Park,|,6H004,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,540
+parent:389,Ribbonsystems Ltd.,parent,,Next Generation Park,|,4H230,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,541
+parent:1262,"Ricoh Company, Ltd.",parent,,Next Generation Park,|,4H123,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,542
+parent:1262:co-exhibitor:1,▸ PILLAR Corporation,co_exhibitor,1262,Next Generation Park,|,4H123,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,543
+parent:1262:co-exhibitor:2,▸ Sassor Inc.,co_exhibitor,1262,Next Generation Park,|,4H123,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,544
+parent:285,RIKEN Center for Computational Science,parent,,X (Transformation) Park,|,6H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,545
+parent:199,Rinnai Corporation,parent,,General Exhibits,|,8H027,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,546
+parent:186,RISE-A/Mitsui Fudosan,parent,,X (Transformation) Park,|,5H402,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,547
+parent:147,Ritsumeikan University,parent,,Next Generation Park,|,4H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,548
+parent:87,RoboSapiens Inc.,parent,,General Exhibits,|,7H409,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,549
+parent:378,RobotMateHub,parent,,Next Generation Park,|,4H142,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,550
+parent:1177,"Rokkou A. R. Q. C. CO., LTD.",parent,,General Exhibits,|,8H023,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,551
+parent:320,Rozetta Corp.,parent,,General Exhibits,|,8H203,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,552
+parent:245,SANGYO TIMES INC.,parent,,General Exhibits,|,8H313,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,553
+parent:400,"Sanko - Giken Co., Ltd",parent,,General Exhibits,|,8H002,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,554
+parent:117,SANKOSHA Corporation,parent,,General Exhibits,|,8H201,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,555
+parent:1249,"Sansan, Inc.",parent,,General Exhibits,|,7H116,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,556
+parent:32,Santek Japan Corporation,parent,,General Exhibits,|,8H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,557
+parent:214,SCIVAX Corporation,parent,,General Exhibits,|,8H025,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,558
+parent:188,SCraft Inc.,parent,,General Exhibits,|,7H410,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,559
+parent:383,SCSK Corporation,parent,,General Exhibits,|,7H415,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,560
+parent:233,"Secafy Co., Ltd.",parent,,Next Generation Park,|,4H330,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,561
+parent:286,SEEKINK,parent,,General Exhibits,|,7H433,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,562
+parent:286:co-exhibitor:1,"▸ SHENZHEN MINEW TECHNOLOGIES CO., LTD.",co_exhibitor,286,General Exhibits,|,7H433,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,563
+parent:235,"SEIREN CO., LTD.",parent,,General Exhibits,|,7H205,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,564
+parent:229,"Shanghai Super Vibe Technology Co., Ltd.",parent,,Next Generation Park,|,4H228,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,565
+parent:41,SHARP CORPORATION,parent,,General Exhibits,|,5H340,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,566
+parent:334,"Shenzhen Cenker Technology Group Co., Ltd",parent,,General Exhibits,|,8H124,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,567
+parent:390,"Shenzhen Grepow Battery Co., Ltd.",parent,,General Exhibits,|,8H317,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,568
+parent:99,"Shenzhen Magoo Technology Co., Ltd",parent,,General Exhibits,|,8H302,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,569
+parent:351,SHIFT Inc.,parent,,General Exhibits,|,7H419,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,570
+parent:268,"Shiyue (Shanghai) Technical Service Co., Ltd.",parent,,X (Transformation) Park,|,5H113,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,571
+parent:272,Shonan Institute of Technology,parent,,Next Generation Park,|,4H013-016,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,572
+parent:52,"Sinko Co., Ltd.",parent,,General Exhibits,|,8H128,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,573
+parent:249,"SK FINE Co., ltd.",parent,,Next Generation Park,|,4H236,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,574
+parent:213,SkySense,parent,,Next Generation Park,|,4H147,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,575
+parent:1312,SmartDrive Inc.,parent,,X (Transformation) Park,|,,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,576
+parent:297,"Smoothie Studio Co., Ltd.",parent,,Next Generation Park,|,4H239,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,577
+parent:191,"SoftRoad Co., Ltd.",parent,,General Exhibits,|,8H120,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,578
+parent:361,Software Association of Japan,parent,,X (Transformation) Park,|,4H605,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,579
+parent:361:co-exhibitor:1,▸ Discoveries Inc.,co_exhibitor,361,X (Transformation) Park,|,4H605,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,580
+parent:361:co-exhibitor:2,▸ Intelligent Wave Inc.,co_exhibitor,361,X (Transformation) Park,|,4H605,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,581
+parent:361:co-exhibitor:3,"▸ Postman, Inc.",co_exhibitor,361,X (Transformation) Park,|,4H605,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,582
+parent:361:co-exhibitor:4,▸ SAKURA internet Inc.,co_exhibitor,361,X (Transformation) Park,|,4H605,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,583
+parent:361:co-exhibitor:5,▸ Science Park Corporation,co_exhibitor,361,X (Transformation) Park,|,4H605,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,584
+parent:361:co-exhibitor:6,"▸ TOKYO SYSTEM HOUSE Co., Ltd.",co_exhibitor,361,X (Transformation) Park,|,4H605,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,585
+parent:361:co-exhibitor:7,▸ UNIRITA Inc.,co_exhibitor,361,X (Transformation) Park,|,4H605,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,586
+parent:361:co-exhibitor:8,"▸ ZenmuTech, Inc.",co_exhibitor,361,X (Transformation) Park,|,4H605,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,587
+parent:380,SOLO Wellbeing Ltd.,parent,,Next Generation Park,|,4H136,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,588
+parent:176,"Sony Biz Networks, Inc.",parent,,General Exhibits,|,8H403,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,589
+parent:300,Sony Group Corporation,parent,,Next Generation Park,|,4H450,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,590
+parent:66,"Souya Co., Ltd.",parent,,General Exhibits,|,7H422,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,591
+parent:66:co-exhibitor:1,"▸ Alpain Design Machine Co., Ltd.",co_exhibitor,66,General Exhibits,|,7H422,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,592
+parent:296,Space Co-Creation Pavilion,parent,,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,593
+parent:296:co-exhibitor:1,▸ ABeam Consulting Ltd.,co_exhibitor,296,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,594
+parent:296:co-exhibitor:2,▸ Fujitsu Limited,co_exhibitor,296,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,595
+parent:296:co-exhibitor:3,▸ Manufacturo,co_exhibitor,296,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,596
+parent:296:co-exhibitor:4,▸ Mitsubishi Electric Corporation,co_exhibitor,296,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,597
+parent:296:co-exhibitor:5,▸ Space BD Inc.,co_exhibitor,296,X (Transformation) Park,|,5H210,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,598
+parent:44,Speeda,parent,,General Exhibits,|,6H250,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,599
+parent:239,SPONTO,parent,,Next Generation Park,|,4H233,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,600
+parent:246,"STACC Co., ltd.",parent,,General Exhibits,|,8H126,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,601
+parent:382,"STARBIT Innovation Technology Co., Ltd.",parent,,General Exhibits,|,7H402,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,602
+parent:69,Stockmark Inc.,parent,,X (Transformation) Park,|,4H533,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,603
+parent:81,SUGINO EICHI CORPORATION,parent,,Next Generation Park,|,4H243,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,604
+parent:211,"SuhyunTech Co., Ltd.",parent,,Next Generation Park,|,4H144,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,605
+parent:136,"Sumitomo Electric System Solutions Co., Ltd.",parent,,General Exhibits,|,5H132,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,606
+parent:1233,SYNC Inc.,parent,,X (Transformation) Park,|,5H405,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,607
+parent:108,T2Laboratory Corporation,parent,,Next Generation Park,|,4H440,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,608
+parent:280,"TA FRONTIER CO., LTD.",parent,,X (Transformation) Park,|,5H312,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,609
+parent:336,Taiwan Electrical and Electronic Manufacturers' Association,parent,,General Exhibits,|,7H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,610
+parent:336:co-exhibitor:1,"▸ CONQUER ELECTRONICS CO., LTD.",co_exhibitor,336,General Exhibits,|,7H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,611
+parent:336:co-exhibitor:2,▸ EDISON OPTO CORPORATION,co_exhibitor,336,General Exhibits,|,7H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,612
+parent:336:co-exhibitor:3,"▸ EXPLUS CO., LTD.",co_exhibitor,336,General Exhibits,|,7H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,613
+parent:336:co-exhibitor:4,"▸ GT CONTACT CO., LTD.",co_exhibitor,336,General Exhibits,|,7H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,614
+parent:336:co-exhibitor:5,▸ HITPOINT INC.,co_exhibitor,336,General Exhibits,|,7H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,615
+parent:336:co-exhibitor:6,▸ KINGSTATE ELECTRONICS CORPORATION,co_exhibitor,336,General Exhibits,|,7H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,616
+parent:336:co-exhibitor:7,"▸ LENOO ELECTRONICS CO., LTD.",co_exhibitor,336,General Exhibits,|,7H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,617
+parent:336:co-exhibitor:8,▸ MAX ECHO TECHNOLOGY CORPORATION,co_exhibitor,336,General Exhibits,|,7H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,618
+parent:336:co-exhibitor:9,"▸ PROJECT AUTOPARTS CO., LTD.",co_exhibitor,336,General Exhibits,|,7H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,619
+parent:336:co-exhibitor:10,▸ TAIWAN EXTERNAL TRADE DEVELOPMENT COUNCIL,co_exhibitor,336,General Exhibits,|,7H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,620
+parent:336:co-exhibitor:11,▸ Taiwan Electrical and Electronic Manufacturers’ Association,co_exhibitor,336,General Exhibits,|,7H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,621
+parent:336:co-exhibitor:12,"▸ UPBEAT TECHNOLOGY Co., Ltd.",co_exhibitor,336,General Exhibits,|,7H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,622
+parent:336:co-exhibitor:13,▸ YIC Corporation,co_exhibitor,336,General Exhibits,|,7H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,623
+parent:339,Taiwan Excellence,parent,,General Exhibits,|,7H005,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,624
+parent:339:co-exhibitor:1,▸ AIFA Technology,co_exhibitor,339,General Exhibits,|,7H005,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,625
+parent:339:co-exhibitor:2,▸ ARBOR Technology Corp.,co_exhibitor,339,General Exhibits,|,7H005,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,626
+parent:339:co-exhibitor:3,"▸ Delta Electronics, Inc.",co_exhibitor,339,General Exhibits,|,7H005,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,627
+parent:339:co-exhibitor:4,▸ EverFocus Electronics Corp.,co_exhibitor,339,General Exhibits,|,7H005,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,628
+parent:339:co-exhibitor:5,"▸ Good Way Technology Co., LTD",co_exhibitor,339,General Exhibits,|,7H005,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,629
+parent:339:co-exhibitor:6,▸ In Win Development Inc.,co_exhibitor,339,General Exhibits,|,7H005,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,630
+parent:339:co-exhibitor:7,▸ Innodisk Corporation,co_exhibitor,339,General Exhibits,|,7H005,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,631
+parent:339:co-exhibitor:8,"▸ JIYONSON CO., LTD",co_exhibitor,339,General Exhibits,|,7H005,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,632
+parent:339:co-exhibitor:9,▸ Litemax Electronics Inc.,co_exhibitor,339,General Exhibits,|,7H005,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,633
+parent:339:co-exhibitor:10,"▸ Makalot Industrial Co., Ltd.",co_exhibitor,339,General Exhibits,|,7H005,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,634
+parent:339:co-exhibitor:11,▸ Sauber Technolgy Co. Ltd.,co_exhibitor,339,General Exhibits,|,7H005,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,635
+parent:339:co-exhibitor:12,▸ Team Group Inc,co_exhibitor,339,General Exhibits,|,7H005,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,636
+parent:339:co-exhibitor:13,"▸ Transcend Information, Inc.",co_exhibitor,339,General Exhibits,|,7H005,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,637
+parent:166,"TAIYO YUDEN CO., LTD.",parent,,General Exhibits,|,8H030,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,638
+parent:338,"taiziii Co., Ltd.",parent,,Next Generation Park,|,4H132,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,639
+parent:283,Tamagawa University and Academy,parent,,Next Generation Park,|,4H201-203,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,640
+parent:125,"TATSUTA Electric Wire and Cable Co., Ltd.",parent,,General Exhibits,|,8H017,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,641
+parent:174,tayo Inc.,parent,,General Exhibits,|,7H505,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,642
+parent:26,TDK Corporation,parent,,General Exhibits,|,5H261,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,643
+parent:1265,TechFirm Inc.,parent,,X (Transformation) Park,|,5H120,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,644
+parent:270,TechThinker Inc.,parent,,Next Generation Park,|,4H138,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,645
+parent:158,Techtouch,parent,,X (Transformation) Park,|,5H114,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,646
+parent:144,Teikyo University,parent,,Next Generation Park,|,4H118,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,647
+parent:60,TERAMOTO,parent,,General Exhibits,|,8H315,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,648
+parent:242,THE INSTITUTE OF ELECTRICAL ENGINEERS OF JAPAN,parent,,General Exhibits,|,8H112,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,649
+parent:331,"The University of Osaka, Research Center on Ethical, Legal and Social Issues",parent,,Next Generation Park,|,4H304,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,650
+parent:202,The University of Tokyo/Keio University/Shizuoka University (D3-AI Project),parent,,Next Generation Park,|,4H307,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,651
+parent:201,Thelemaassist corporation,parent,,General Exhibits,|,8H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,652
+parent:333,"THINKING Electronic Industrial Co., Ltd.",parent,,General Exhibits,|,8H019,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,653
+parent:123,Third Base,parent,,Next Generation Park,|,4H244,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,654
+parent:329,TOKI Trading Ltd.,parent,,General Exhibits,|,7H202,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,655
+parent:310,Tokyo Digital Twin Project,parent,,General Exhibits,|,8H211,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,656
+parent:366,Tokyo Metropolitan Government,parent,,General Exhibits,|,7H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,657
+parent:73,Tokyo Metropolitan Small and Medium Enterprise Support Center (Tokyo Business Frontier),parent,,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,658
+parent:73:co-exhibitor:1,▸ AMX Inc.,co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,659
+parent:73:co-exhibitor:2,▸ COLORCHIPS Inc.,co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,660
+parent:73:co-exhibitor:3,▸ Climb Inc.,co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,661
+parent:73:co-exhibitor:4,▸ DAVVERO Inc.,co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,662
+parent:73:co-exhibitor:5,▸ Datailo.K.K,co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,663
+parent:73:co-exhibitor:6,▸ DayBridge Inc.,co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,664
+parent:73:co-exhibitor:7,"▸ Denshijiki Industry Co.,Ltd.",co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,665
+parent:73:co-exhibitor:8,"▸ ELPJ TECHNOLOGY CO., LTD.",co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,666
+parent:73:co-exhibitor:9,▸ IDEOJ Inc.,co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,667
+parent:73:co-exhibitor:10,"▸ Koyo Denshi Co.,Ltd.",co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,668
+parent:73:co-exhibitor:11,"▸ Muramatsu Sisakusho, K.K.",co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,669
+parent:73:co-exhibitor:12,"▸ NISHIKAWA SEIKI SEISAKUSHO CO.,LTD.",co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,670
+parent:73:co-exhibitor:13,▸ Novelvalue Technology Corp.,co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,671
+parent:73:co-exhibitor:14,▸ Plus Insight Inc.,co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,672
+parent:73:co-exhibitor:15,"▸ Power Diamond Systems, Inc.",co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,673
+parent:73:co-exhibitor:16,"▸ Shinei Screen Co.,Ltd.",co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,674
+parent:73:co-exhibitor:17,▸ Spatial Creation Institute,co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,675
+parent:73:co-exhibitor:18,"▸ TOKUSHU KINZOKU EXCEL CO., LTD.",co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,676
+parent:73:co-exhibitor:19,▸ Telepower Inc.,co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,677
+parent:73:co-exhibitor:20,▸ Zitte Inc.,co_exhibitor,73,General Exhibits,|,6H140,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,678
+parent:228,TOKYO UNIVERSITY OF SCIENCE,parent,,Next Generation Park,|,4H204-206,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,679
+parent:127,Tokyo University of Technology,parent,,Next Generation Park,|,4H401-406,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,680
+parent:37,TOME R&D Inc.,parent,,General Exhibits,|,7H328,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,681
+parent:276,TopoLogic Inc.,parent,,Next Generation Park,|,4H141,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,682
+parent:401,TOPPAN Inc.,parent,,General Exhibits,|,8H127,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,683
+parent:401:co-exhibitor:1,▸ Mitsubishi UFJ Trust and Banking Corporation,co_exhibitor,401,General Exhibits,|,8H127,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,684
+parent:226,TORNEX,parent,,General Exhibits,|,8H121,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,685
+parent:171,Tourism Forecast Platform Promotion Team,parent,,General Exhibits,|,7H122,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,686
+parent:171:co-exhibitor:1,▸ Blogwatcher Inc.,co_exhibitor,171,General Exhibits,|,7H122,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,687
+parent:171:co-exhibitor:2,▸ JAPAN TRAVEL AND TOURISM ASSOCIATION,co_exhibitor,171,General Exhibits,|,7H122,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,688
+parent:171:co-exhibitor:3,▸ JTB Corp.,co_exhibitor,171,General Exhibits,|,7H122,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,689
+parent:171:co-exhibitor:4,"▸ Jorudan Co.,Ltd.",co_exhibitor,171,General Exhibits,|,7H122,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,690
+parent:171:co-exhibitor:5,▸ MACAGUA Co. Ltd.,co_exhibitor,171,General Exhibits,|,7H122,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,691
+parent:171:co-exhibitor:6,"▸ OPEN TONE Co., Ltd",co_exhibitor,171,General Exhibits,|,7H122,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,692
+parent:171:co-exhibitor:7,"▸ Sumitomo Mitsui Card Company, Limited",co_exhibitor,171,General Exhibits,|,7H122,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,693
+parent:171:co-exhibitor:8,▸ pacific consultants,co_exhibitor,171,General Exhibits,|,7H122,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,694
+parent:221,TransferJet Consortium,parent,,General Exhibits,|,8H223,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,695
+parent:35,TRENSER TECHNOLOGY SOLUTIONS,parent,,General Exhibits,|,7H432,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,696
+parent:299,"TRIALPARK CO.,LTD.",parent,,General Exhibits,|,8H007,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,697
+parent:299:co-exhibitor:1,"▸ Systems Planning Co.,Ltd.",co_exhibitor,299,General Exhibits,|,8H007,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,698
+parent:1185,UAE Pavilion,parent,,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,699
+parent:1185:co-exhibitor:1,▸ Embassy of the United Arab Emirates in Japan,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,700
+parent:1185:co-exhibitor:2,▸ AR Engineering,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,701
+parent:1185:co-exhibitor:3,▸ Aqua Development,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,702
+parent:1185:co-exhibitor:4,▸ Circa Biotech,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,703
+parent:1185:co-exhibitor:5,▸ Innovation floor,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,704
+parent:1185:co-exhibitor:6,▸ Key2Enable,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,705
+parent:1185:co-exhibitor:7,▸ Manhat,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,706
+parent:1185:co-exhibitor:8,▸ Matregenix,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,707
+parent:1185:co-exhibitor:9,▸ Narrativa,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,708
+parent:1185:co-exhibitor:10,▸ Noornation,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,709
+parent:1185:co-exhibitor:11,▸ Responsive Drip Irrigation,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,710
+parent:1185:co-exhibitor:12,▸ Snapp Ocean Data Solutions,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,711
+parent:1185:co-exhibitor:13,▸ Squirrel Education,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,712
+parent:1185:co-exhibitor:14,▸ The AM lab,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,713
+parent:1185:co-exhibitor:15,▸ Theion,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,714
+parent:1185:co-exhibitor:16,▸ Tokenyze (Warehaus),co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,715
+parent:1185:co-exhibitor:17,▸ peaq,co_exhibitor,1185,Global Park,|,4H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,716
+parent:1306,Ukraine IT Pavilion,parent,,Global Park,|,5H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,717
+parent:1306:co-exhibitor:1,▸ ELEKS,co_exhibitor,1306,Global Park,|,5H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,718
+parent:1306:co-exhibitor:2,▸ IT Ukraine Association,co_exhibitor,1306,Global Park,|,5H101,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,719
+parent:230,"Umezu Lab., Waseda University",parent,,Next Generation Park,|,4H310,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,720
+parent:161,VALUENEX Japan Inc.,parent,,General Exhibits,|,7H517,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,721
+parent:208,Vantiq K.K.,parent,,General Exhibits,|,8H132,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,722
+parent:77,VCCI Council,parent,,General Exhibits,|,8H125,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,723
+parent:259,VHEXLAB,parent,,Next Generation Park,|,4H017,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,724
+parent:152,Vigorousone,parent,,Next Generation Park,|,4H421,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,725
+parent:39,VisasQ Inc.,parent,,General Exhibits,|,7H330,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,726
+parent:145,"Visual Semiconductor,Inc.",parent,,General Exhibits,|,7H435,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,727
+parent:169,VMFi Inc,parent,,Next Generation Park,|,4H246,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,728
+parent:258,"Wada Laboratory, Institute of Science Tokyo",parent,,Next Generation Park,|,4H413,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,729
+parent:312,WASEDA University,parent,,Next Generation Park,|,4H215,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,730
+parent:243,Weather Business Consortium,parent,,General Exhibits,|,7H504,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,731
+parent:309,West Japan Railway Company,parent,,General Exhibits,|,7H110,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,732
+parent:1305,WhiteLab,parent,,Next Generation Park,|,,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,733
+parent:1232,WineBank Corp.,parent,,Next Generation Park,|,4H238,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,734
+parent:198,Wireless Power Transfer Consortium for Practical Applications,parent,,General Exhibits,|,7H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,735
+parent:198:co-exhibitor:1,▸ Asahi Kasei Microdevices Corporation,co_exhibitor,198,General Exhibits,|,7H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,736
+parent:198:co-exhibitor:2,"▸ DKK Co., Ltd.",co_exhibitor,198,General Exhibits,|,7H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,737
+parent:198:co-exhibitor:3,▸ NICHICON CORPORATION,co_exhibitor,198,General Exhibits,|,7H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,738
+parent:198:co-exhibitor:4,▸ Panasonic Holdings Corporation,co_exhibitor,198,General Exhibits,|,7H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,739
+parent:198:co-exhibitor:5,"▸ Panasonic System Networks R&D Lab. Co., Ltd.",co_exhibitor,198,General Exhibits,|,7H501,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,740
+parent:70,"WIZAPPLY Co., Ltd",parent,,X (Transformation) Park,|,5H406,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,741
+parent:1052,WOTA CORP.,parent,,General Exhibits,|,8H405,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,742
+parent:113,"Wovn Technologies, Inc.",parent,,General Exhibits,|,8H402,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,743
+parent:139,"XGRIDS JAPAN Co., Ltd.",parent,,General Exhibits,|,7H001,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,744
+parent:62,xMEMS,parent,,General Exhibits,|,5H432,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,745
+parent:204,"Y's Assist Co., Ltd",parent,,Next Generation Park,|,4H146,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,746
+parent:369,"Yamagata University INOEL, Organic & Next-generation Solar Cell Division",parent,,Next Generation Park,|,4H417,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,747
+parent:350,Yamaguchi Prefectural Government,parent,,General Exhibits,|,8H117,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,748
+parent:261,yellba Inc.,parent,,Next Generation Park,|,4H234,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,749
+parent:187,Yokohama National University,parent,,Next Generation Park,|,4H411,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,750
+parent:1260,YPLASMA,parent,,Next Generation Park,|,4H145,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,751
+parent:46,Yukai Engineering Inc.,parent,,General Exhibits,|,8H129,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,752
+parent:115,Zero To One Lab Inc.,parent,,Next Generation Park,|,4H338,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,753
+parent:302,"Zerokyori Co., Ltd.",parent,,Next Generation Park,|,4H322,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,754
+parent:291,ZeroOne lnc.,parent,,Next Generation Park,|,4H143,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,755
+parent:308,"Zeteoh, Inc.",parent,,Next Generation Park,|,4H242,,https://www.ceatec.com/en/exhibition/exhibitor-list.php,756

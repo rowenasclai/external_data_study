@@ -25,6 +25,36 @@
       "event_name": "InnoTrans 2026",
       "status": "Invalid directory URL: supplied page is an event overview",
       "extracted_file_name": ""
+    },
+    {
+      "event_name": "CPHI Worldwide 2026 (CPHI Milan)",
+      "status": "Invalid directory URL: HTTP 404",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Global Sources Consumer Electronics Show 2026",
+      "status": "Blocked: access denied (HTTP 403)",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Global Sources Gaming 2026",
+      "status": "Blocked: access denied (HTTP 403)",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "All in Print China 2026 (The 10th All in Print China)",
+      "status": "Invalid directory URL: supplied page is an event overview",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "CIIF 2026 (The 25th China International Industry Fair)",
+      "status": "Invalid directory URL: supplied page is an event overview",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "GovWare 2026 (Singapore International Cyber Week / SICW)",
+      "status": "Public directory failed validation: duplicate stable IDs",
+      "extracted_file_name": ""
     }
   ]
 }
