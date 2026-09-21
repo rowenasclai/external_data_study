@@ -45,6 +45,11 @@
       "event_name": "MEGA SHOW Hong Kong 2026 (Part 1)",
       "status": "Agent Extraction",
       "extracted_file_name": "mega_show_hong_kong_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "TAITRONICS & AIoT Taiwan 2026",
+      "status": "Agent Extraction",
+      "extracted_file_name": "taitronics_2026_exhibitors.csv"
     }
   ]
 }
