@@ -35,6 +35,11 @@
       "event_name": "CEATEC 2026 (Combined Exhibition of Advanced Technologies)",
       "status": "Agent Extraction",
       "extracted_file_name": "ceatec_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "CMEF Autumn 2026 (The 94th China International Medical Equipment Fair)",
+      "status": "Agent Extraction",
+      "extracted_file_name": "cmef_autumn_2026_exhibitors.csv"
     }
   ]
 }
