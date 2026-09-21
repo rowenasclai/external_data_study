@@ -55,6 +55,46 @@
       "event_name": "GovWare 2026 (Singapore International Cyber Week / SICW)",
       "status": "Fail",
       "extracted_file_name": ""
+    },
+    {
+      "event_name": "CIHS 2026 (China International Hardware Show)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "CMEF Autumn 2026 (The 94th China International Medical Equipment Fair)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "The 140th Canton Fair (Autumn 2026 - Phase 1)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Global Sources Mobile Electronics Show 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "MEGA SHOW Hong Kong 2026 (Part 1)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "The 33rd China (Shenzhen) International Gifts and Home Products Fair (Shenzhen Gift Fair Autumn 2026)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "TAITRONICS & AIoT Taiwan 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "ITB Asia 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
     }
   ]
 }
