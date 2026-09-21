@@ -40,6 +40,11 @@
       "event_name": "CMEF Autumn 2026 (The 94th China International Medical Equipment Fair)",
       "status": "Agent Extraction",
       "extracted_file_name": "cmef_autumn_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "MEGA SHOW Hong Kong 2026 (Part 1)",
+      "status": "Agent Extraction",
+      "extracted_file_name": "mega_show_hong_kong_2026_exhibitors.csv"
     }
   ]
 }
