@@ -40,7 +40,7 @@ def main():
  for path,kind in ((Path(x.output),'csv'),(Path(x.json_output),'json')):
   path.parent.mkdir(parents=True,exist_ok=True)
   if kind=='csv':
-   with path.open('w',encoding='utf-8-sig',newline='') as f:w=csv.DictWriter(f,fieldnames=FIELDS);w.writeheader();w.writerows(rows)
+   with path.open('w',encoding='utf-8-sig',newline='') as f:w=csv.DictWriter(f,fieldnames=FIELDS,lineterminator='\n');w.writeheader();w.writerows(rows)
   else:path.write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  print(json.dumps({'records':len(rows),'pages':pages,'unique_ids':len({r['exhibitor_id'] for r in rows})}))
 if __name__=='__main__':main()
