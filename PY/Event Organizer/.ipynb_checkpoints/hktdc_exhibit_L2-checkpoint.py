@@ -110,47 +110,108 @@ def run(playwright: Playwright) -> None:
     
     for j in range(0,l,1):
         print('Processing '+str(20*j+1)+' to '+str(20*j+20+1)+' out of '+str(len(df2_L1)))
-        page1.goto(domain+df2_L1['url'][20*j+1], wait_until="domcontentloaded")
-        page2.goto(domain+df2_L1['url'][20*j+2], wait_until="domcontentloaded")
-        page3.goto(domain+df2_L1['url'][20*j+3], wait_until="domcontentloaded")
-        page4.goto(domain+df2_L1['url'][20*j+4], wait_until="domcontentloaded")
-        page5.goto(domain+df2_L1['url'][20*j+5], wait_until="domcontentloaded")
-        page6.goto(domain+df2_L1['url'][20*j+6], wait_until="domcontentloaded")
-        page7.goto(domain+df2_L1['url'][20*j+7], wait_until="domcontentloaded")
-        page8.goto(domain+df2_L1['url'][20*j+8], wait_until="domcontentloaded")
-        page9.goto(domain+df2_L1['url'][20*j+9], wait_until="domcontentloaded")
-        page10.goto(domain+df2_L1['url'][20*j+10], wait_until="domcontentloaded")
-        page11.goto(domain+df2_L1['url'][20*j+11], wait_until="domcontentloaded")
-        page12.goto(domain+df2_L1['url'][20*j+12], wait_until="domcontentloaded")
-        page13.goto(domain+df2_L1['url'][20*j+13], wait_until="domcontentloaded")
-        page14.goto(domain+df2_L1['url'][20*j+14], wait_until="domcontentloaded")
-        page15.goto(domain+df2_L1['url'][20*j+15], wait_until="domcontentloaded")
-        page16.goto(domain+df2_L1['url'][20*j+16], wait_until="domcontentloaded")
-        page17.goto(domain+df2_L1['url'][20*j+17], wait_until="domcontentloaded")
-        page18.goto(domain+df2_L1['url'][20*j+18], wait_until="domcontentloaded")
-        page19.goto(domain+df2_L1['url'][20*j+19], wait_until="domcontentloaded")
-        page20.goto(domain+df2_L1['url'][20*j+20], wait_until="domcontentloaded")
+        
+        try:
+            page1.goto(domain+df2_L1['url'][20*j+1], wait_until="domcontentloaded")
+            scrape(page1)
+        except:
+            pass
+        try:
+            page2.goto(domain+df2_L1['url'][20*j+2], wait_until="domcontentloaded")
+            scrape(page2)
+        except:
+            pass
+        try:
+            page3.goto(domain+df2_L1['url'][20*j+3], wait_until="domcontentloaded")
+            scrape(page3)
+        except:
+            pass
+        try:
+            page4.goto(domain+df2_L1['url'][20*j+4], wait_until="domcontentloaded")
+            scrape(page4)
+        except:
+            pass
+        try:
+            page5.goto(domain+df2_L1['url'][20*j+5], wait_until="domcontentloaded")
+            scrape(page5)
+        except:
+            pass 
+        try:
+            page6.goto(domain+df2_L1['url'][20*j+6], wait_until="domcontentloaded")
+            scrape(page6)
+        except:
+            pass
+        try:
+            page7.goto(domain+df2_L1['url'][20*j+7], wait_until="domcontentloaded")
+            scrape(page7)
+        except:
+            pass
+        try:
+            page8.goto(domain+df2_L1['url'][20*j+8], wait_until="domcontentloaded")
+            scrape(page8)
+        except:
+            pass       
+        try:
+            page9.goto(domain+df2_L1['url'][20*j+9], wait_until="domcontentloaded")
+            scrape(page9)
+        except:
+            pass        
+        try:
+            page10.goto(domain+df2_L1['url'][20*j+10], wait_until="domcontentloaded")
+            scrape(page10)
+        except:
+            pass        
+        try:
+            page11.goto(domain+df2_L1['url'][20*j+11], wait_until="domcontentloaded")
+            scrape(page11)
+        except:
+            pass
+        try:
+            page12.goto(domain+df2_L1['url'][20*j+12], wait_until="domcontentloaded")
+            scrape(page12)
+        except:
+            pass       
+        try:
+            page13.goto(domain+df2_L1['url'][20*j+13], wait_until="domcontentloaded")
+            scrape(page13)
+        except:
+            pass        
+        try:
+            page14.goto(domain+df2_L1['url'][20*j+14], wait_until="domcontentloaded")
+            scrape(page14)
+        except:
+            pass     
+        try:
+            page15.goto(domain+df2_L1['url'][20*j+15], wait_until="domcontentloaded")
+            scrape(page15)
+        except:
+            pass     
+        try:
+            page16.goto(domain+df2_L1['url'][20*j+16], wait_until="domcontentloaded")
+            scrape(page16)
+        except:
+            pass
+        try:
+            page17.goto(domain+df2_L1['url'][20*j+17], wait_until="domcontentloaded")
+            scrape(page17)
+        except:
+            pass
+        try:
+            page18.goto(domain+df2_L1['url'][20*j+18], wait_until="domcontentloaded")
+            scrape(page18)
+        except:
+            pass 
+        try:
+            page19.goto(domain+df2_L1['url'][20*j+19], wait_until="domcontentloaded")
+            scrape(page19)
+        except:
+            pass   
+        try:
+            page20.goto(domain+df2_L1['url'][20*j+20], wait_until="domcontentloaded")
+            scrape(page20)
+        except:
+            pass     
 
-        scrape(page1)
-        scrape(page2)
-        scrape(page3)
-        scrape(page4)
-        scrape(page5)
-        scrape(page6)
-        scrape(page7)
-        scrape(page8)
-        scrape(page9)
-        scrape(page10)
-        scrape(page11)
-        scrape(page12)
-        scrape(page13)
-        scrape(page14)
-        scrape(page15)
-        scrape(page16)
-        scrape(page17)
-        scrape(page18)
-        scrape(page19)
-        scrape(page20)
 
     r=len(df2_L1) %20
     
@@ -163,8 +224,11 @@ def run(playwright: Playwright) -> None:
 
     print('Processing '+str(20*l+1)+' to '+str(20*l+f)+' out of '+str(len(df2_L1)))
     for i in range(1,f,1):
-        page1.goto(domain+df2_L1['url'][20*l+i])
-        scrape(page1)
+        try:
+            page1.goto(domain+df2_L1['url'][20*l+i])
+            scrape(page1)
+        except:
+            pass
         #print(20*l+i)
         
     # ---------------------

@@ -6,6 +6,7 @@ import re
 from langchain_ollama import ChatOllama
 from langchain_core.messages import SystemMessage, HumanMessage
 from crawl4ai import DefaultTableExtraction
+import random
 
 # =====================================================================
 # TSD
@@ -94,7 +95,7 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
             cache_mode=True,
             magic=True,
             wait_until="domcontentloaded",
-            wait_for="css:article.ckediter, css:table.table--noborder",
+            #wait_for="css:article.ckediter, css:table.table--noborder",
             #wait_for="css:table.list-table tbody tr td div.limit2",  # Wait for table or content container
             #wait_until="domcontentloaded",
             #wait_for="css:article.ckediter",
@@ -155,7 +156,7 @@ async def run_decoupled_crawl(l1_start_url: str, file_name):
 
 import pandas as pd
 
-df1 = pd.read_csv("/Users/rowena/furniture_list.csv")
+df1 = pd.read_csv("/Users/rowena/Documents/furniture_list.csv")
 tmp=df1[df1['url'].isna()==False]
 
 for i in range(448,len(tmp)-1):
