@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "updates": [
+    {
+      "event_name": "elexcon 2026 (Shenzhen International Electronics Exhibition)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Fi Asia Indonesia 2026 (Food Ingredients Asia Indonesia)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Tokyo Game Show 2026 (TGS 2026)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Medical Fair Thailand 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "InnoTrans 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "CPHI Worldwide 2026 (CPHI Milan)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Global Sources Consumer Electronics Show 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Global Sources Gaming 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "All in Print China 2026 (The 10th All in Print China)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "CIIF 2026 (The 25th China International Industry Fair)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "GovWare 2026 (Singapore International Cyber Week / SICW)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "CIHS 2026 (China International Hardware Show)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "The 140th Canton Fair (Autumn 2026 - Phase 1)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Global Sources Mobile Electronics Show 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "The 33rd China (Shenzhen) International Gifts and Home Products Fair (Shenzhen Gift Fair Autumn 2026)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "ITB Asia 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    }
+  ]
+}

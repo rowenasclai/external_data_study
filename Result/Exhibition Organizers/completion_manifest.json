@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "updates": [
+    {
+      "event_name": "Taiwan Innotech Expo 2026 (TIE 2026)",
+      "status": "Agent Extraction",
+      "extracted_file_name": "taiwan_innotech_expo_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "Medical Fair Asia 2026 / Medical Manufacturing Asia 2026",
+      "status": "Agent Extraction",
+      "extracted_file_name": "medical_fair_asia_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "Mining Indonesia 2026 / Construction Indonesia 2026",
+      "status": "Agent Extraction",
+      "extracted_file_name": "mining_indonesia_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "IFA Berlin 2026",
+      "status": "Agent Extraction",
+      "extracted_file_name": "ifa_berlin_exhibitors_2026.csv"
+    },
+    {
+      "event_name": "IICIE 2026 (International Integrated Circuit Innovation Expo)",
+      "status": "Agent Extraction",
+      "extracted_file_name": "iicie_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "Tech Week Singapore 2026",
+      "status": "Agent Extraction",
+      "extracted_file_name": "tech_week_singapore_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "CEATEC 2026 (Combined Exhibition of Advanced Technologies)",
+      "status": "Agent Extraction",
+      "extracted_file_name": "ceatec_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "CMEF Autumn 2026 (The 94th China International Medical Equipment Fair)",
+      "status": "Agent Extraction",
+      "extracted_file_name": "cmef_autumn_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "MEGA SHOW Hong Kong 2026 (Part 1)",
+      "status": "Agent Extraction",
+      "extracted_file_name": "mega_show_hong_kong_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "TAITRONICS & AIoT Taiwan 2026",
+      "status": "Agent Extraction",
+      "extracted_file_name": "taitronics_2026_exhibitors.csv"
+    }
+  ]
+}

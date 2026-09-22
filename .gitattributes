@@ -1,0 +1,2 @@
+# Spreadsheet exports are stored with stable LF line endings for Git review.
+*.csv text eol=lf
