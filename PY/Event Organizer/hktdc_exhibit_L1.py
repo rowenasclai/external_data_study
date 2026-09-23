@@ -11,13 +11,16 @@ import pandas as pd
 #url='https://www.hktdc.com/event/hkjewellery/en/exhibitor-list?pageNum=1&pageSize=50'
 domain='https://www.hktdc.com'
 
+from pathlib import Path
+
 prefix=input('What is the prefix of your exhibition?')
-os.chdir("/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/") 
-os.makedirs(prefix, exist_ok=True)
-os.chdir("/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/"+prefix) 
+OUTPUT_ROOT = Path(__file__).resolve().parents[2] / 'Result' / 'Exhibition Organizers' / 'HKTDC'
+OUTPUT_DIR = OUTPUT_ROOT / prefix
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+os.chdir(OUTPUT_DIR)
 
 def run(playwright: Playwright) -> None:
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
     #l=page.locator("div").filter(has_text=re.compile(r"^Total Result$"))
@@ -110,7 +113,5 @@ def run(playwright: Playwright) -> None:
 
 with sync_playwright() as playwright:
     run(playwright)
-    
-    df = pd.read_json('/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/'+prefix+'/hktdc_'+prefix+'_L1.json', orient='records', lines=True)
-
-    df.to_csv('/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/'+prefix+'/hktdc_'+prefix+'_L1.csv',index=False)
+    df = pd.read_json(OUTPUT_DIR / ('hktdc_'+prefix+'_L1.json'), orient='records', lines=True)
+    df.to_csv(OUTPUT_DIR / ('hktdc_'+prefix+'_L1.csv'),index=False)
