@@ -26,58 +26,61 @@ from datetime import datetime, timedelta
 #print(two_months_ago)
 
 
-current_datetime = datetime.now()
-current_datetime = datetime.now()- timedelta(days=60)
+today_datetime = datetime.now()
+p2m_datetime = datetime.now()- timedelta(days=60)
+
+mth_list=months.strftime("%b%y").tolist()
 
 # Format as "YYYY-MM-DD HH:MM:SS"
-formatted_string = current_datetime.strftime("%b%y")
+#formatted_string = current_datetime.strftime("%b%y")
 
 #print(formatted_string)
 
 #formatted_string="Feb26"
 
+for formatted_string in mth_list:
 
 # In[13]:
 
 
-url="https://www.mtr.com.hk/en/corporate/tenders/"+formatted_string+".html"
+    url="https://www.mtr.com.hk/en/corporate/tenders/"+formatted_string+".html"
 
-try:
+    try:
 
-    response = requests.get(url)
-    soup = BeautifulSoup(response.content, 'html.parser')
+        response = requests.get(url)
+        soup = BeautifulSoup(response.content, 'html.parser')
 
-except requests.exceptions.HTTPError as errh:
+    except requests.exceptions.HTTPError as errh:
     #target_table=pd.DataFrame()
-    pass
+        pass
 
 
 # In[16]:
 
 
 # 1. Locate ALL <table> elements on the page
-all_tables = soup.find_all('table')
+    all_tables = soup.find_all('table')
 
 # 2. Select the specific table by its position (index)
 # --- IMPORTANT: You will need to try different indices (0, 1, 2, etc.) ---
 
 # Example: If the tender data is in the FIRST table:
-if all_tables:
-    target_table = all_tables[0] 
-elif len(all_tables) > 1:
+    if all_tables:
+        target_table = all_tables[0] 
+    elif len(all_tables) > 1:
     # Example: If the tender data is in the SECOND table (index 1):
-    target_table = all_tables[1]
-else:
-    target_table =pd.DataFrame()
+        target_table = all_tables[1]
+    else:
+        target_table =pd.DataFrame()
 
 
 # In[5]:
 
 
-import requests
-from bs4 import BeautifulSoup
+    import requests
+    from bs4 import BeautifulSoup
 
-def handle_merged_table_rows(table_element):
+    def handle_merged_table_rows(table_element):
     """
     Parses an HTML table, handling cells merged with 'rowspan' and 'colspan'.
 
@@ -87,82 +90,82 @@ def handle_merged_table_rows(table_element):
     Returns:
         A list of lists, where each inner list is a full, non-merged row.
     """
-    rows = table_element.find_all('tr')
+        rows = table_element.find_all('tr')
 
     # 1. Initialize the virtual grid
     # This list will track which slots in each row are already filled by a spanned cell.
-    grid = []
+        grid = []
 
-    for row_index, row in enumerate(rows):
-        cells = row.find_all(['td', 'th'])
-        cell_index = 0
+        for row_index, row in enumerate(rows):
+            cells = row.find_all(['td', 'th'])
+            cell_index = 0
 
         # Ensure the current row has a placeholder in the grid
-        if len(grid) <= row_index:
-            grid.append([])
+            if len(grid) <= row_index:
+                grid.append([])
 
-        for cell in cells:
-            rowspan = int(cell.get('rowspan', 1))
-            colspan = int(cell.get('colspan', 1))
-            cell_text = cell.get_text(strip=True)
+            for cell in cells:
+                rowspan = int(cell.get('rowspan', 1))
+                colspan = int(cell.get('colspan', 1))
+                cell_text = cell.get_text(strip=True)
 
             # 2. Find the first available column slot in the current row
-            while len(grid[row_index]) > cell_index and grid[row_index][cell_index] is not None:
-                cell_index += 1
+                while len(grid[row_index]) > cell_index and grid[row_index][cell_index] is not None:
+                    cell_index += 1
 
             # 3. Fill the current slot(s) and mark subsequent slots as occupied
-            for i in range(rowspan):
-                current_row = row_index + i
+                for i in range(rowspan):
+                    current_row = row_index + i
 
                 # Ensure the target row exists in the grid
-                while len(grid) <= current_row:
-                    grid.append([None] * cell_index) # Pad with None up to the current column
+                    while len(grid) <= current_row:
+                        grid.append([None] * cell_index) # Pad with None up to the current column
 
                 # Pad the current row if needed
-                while len(grid[current_row]) < cell_index + colspan:
-                    grid[current_row].append(None)
+                    while len(grid[current_row]) < cell_index + colspan:
+                        grid[current_row].append(None)
 
                 # Place the cell text across the column span (horizontal merge)
-                for j in range(colspan):
+                    for j in range(colspan):
                     # For the first row (i=0), we put the content.
                     # For subsequent rows (i>0), we simply mark the space as occupied (None).
-                    if i == 0:
-                        grid[current_row][cell_index + j] = cell_text
-                    else:
+                        if i == 0:
+                            grid[current_row][cell_index + j] = cell_text
+                        else:
                         # This marks the space as 'taken' by a rowspan cell from an earlier row
-                        grid[current_row][cell_index + j] = None 
+                            grid[current_row][cell_index + j] = None 
 
             # Advance the column index by the colspan amount
-            cell_index += colspan
+                cell_index += colspan
 
     # 4. Clean up the grid: Replace 'None' (occupied slots) with the value
     #    from the cell that spans into them (this handles the rowspan values).
-    final_data = []
-    for r_idx, grid_row in enumerate(grid):
-        processed_row = []
-        for c_idx, cell_value in enumerate(grid_row):
-            if cell_value is None:
+        final_data = []
+        for r_idx, grid_row in enumerate(grid):
+            processed_row = []
+            for c_idx, cell_value in enumerate(grid_row):
+                if cell_value is None:
                 # Look upwards to find the cell that spanned into this slot
                 # This assumes the spanned cell value should be copied down
-                for prev_r_idx in range(r_idx - 1, -1, -1):
+                    for prev_r_idx in range(r_idx - 1, -1, -1):
                     # Check if the cell above exists and is the one that spanned down
-                    if c_idx < len(grid[prev_r_idx]) and grid[prev_r_idx][c_idx] is not None:
+                        if c_idx < len(grid[prev_r_idx]) and grid[prev_r_idx][c_idx] is not None:
                          # We found the spanning value; copy it to the current cell
-                         cell_value = grid[prev_r_idx][c_idx]
-                         break
+                             cell_value = grid[prev_r_idx][c_idx]
+                             break
 
             # Handle cells that were marked as occupied but didn't have a direct spanning value
             # (This is mostly a safeguard, the previous logic should cover it)
-            if cell_value is None:
-                cell_value = '' # Default to empty string if no content is found
+                if cell_value is None:
+                    cell_value = '' # Default to empty string if no content is found
 
-            processed_row.append(cell_value)
+                processed_row.append(cell_value)
 
         # Only add the row if it contains data (not just empty placeholders)
-        if any(processed_row):
-            final_data.append(processed_row)
+            if any(processed_row):
+                final_data.append(processed_row)
 
-    return final_data
+        return final_data
 
 # --- How to use this function with your MTR script: ---
 
@@ -179,26 +182,26 @@ def handle_merged_table_rows(table_element):
 # In[24]:
 
 
-target_table.empty
+    target_table.empty
 
 
 # In[26]:
 
 
-if target_table.empty==False:
-    extracted_data = handle_merged_table_rows(target_table)
-    tmp_df=pd.DataFrame(extracted_data)
-    tmp=pd.DataFrame(tmp_df.iloc[1:,:])
-    tmp.columns=list(tmp_df.iloc[0,:])
+    if target_table.empty==False:
+        extracted_data = handle_merged_table_rows(target_table)
+        tmp_df=pd.DataFrame(extracted_data)
+        tmp=pd.DataFrame(tmp_df.iloc[1:,:])
+        tmp.columns=list(tmp_df.iloc[0,:])
 
-    df_mtr=tmp
+        df_mtr=tmp
 
 
 # In[27]:
 
 
 # A list of legal suffixes (ensure they are in all caps for easy matching)
-SUFFIX_KEYWORDS = [
+    SUFFIX_KEYWORDS = [
     'LIMITED', 'LTD', 'COMPANY', 'CO.', 'CORPORATION', 'CORP', 
     'INC', 'GROUP', 'HONG KONG', 'SAR', 'LLC', 
     'PTE LTD', 'PLC', '&' # Ampersand is often a key name component
@@ -266,20 +269,20 @@ def extract_name_by_suffix(text):
 # In[31]:
 
 
-try:
+    try:
 
 # Assuming your clean DataFrame from the previous step is named 'df'
     formatted_file_string = current_datetime.strftime("%Y-%m-01")
 # Apply the function to the 'Contractor' column and create two new columns
-    df_mtr[['Contractor Name', 'Address']] = df_mtr['Contractor(s) and Address(es)'].apply(lambda x: pd.Series(extract_name_by_suffix(x)))
-    df_mtr['Month']=formatted_file_string
+        df_mtr[['Contractor Name', 'Address']] = df_mtr['Contractor(s) and Address(es)'].apply(lambda x: pd.Series(extract_name_by_suffix(x)))
+        df_mtr['Month']=formatted_file_string
 
-    final_df=pd.DataFrame([])
+        final_df=pd.DataFrame([])
 
-    final_df=pd.concat([df_mtr, final_df], axis=0)
-except:
-    final_df=pd.DataFrame([])
-    pass
+        final_df=pd.concat([df_mtr, final_df], axis=0)
+    except:
+        final_df=pd.DataFrame([])
+        pass
 # You now have two new columns with the separated data
 #print(df[['Contractor', 'Contractor Name', 'Address']].head())
 
@@ -287,8 +290,8 @@ except:
 # In[32]:
 
 
-if len(final_df):
-    final_df.to_csv('/Users/rowena/Other Projects/external_data_study/Result/mtr/mtr_'+formatted_string+'.csv', index=False, encoding="utf-8") 
+    if len(final_df):
+        final_df.to_csv('/Users/rowena/Other Projects/external_data_study/Result/mtr/mtr_'+formatted_string+'.csv', index=False, encoding="utf-8") 
 
 
 # In[ ]:
