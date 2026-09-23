@@ -5,7 +5,7 @@
 
 
 #from seleniumbase import Driver
-from PIL import Image
+#from PIL import Image
 from bs4 import BeautifulSoup
 import pandas as pd
 from urllib.parse import urljoin
@@ -32,6 +32,7 @@ from datetime import datetime, timedelta
 today_datetime = datetime.now()
 p2m_datetime = datetime.now()- timedelta(days=60)
 
+months = pd.period_range(start=p2m_datetime, end=today_datetime, freq="M")
 mth_list=months.strftime("%b%y").tolist()
 
 # Format as "YYYY-MM-DD HH:MM:SS"
