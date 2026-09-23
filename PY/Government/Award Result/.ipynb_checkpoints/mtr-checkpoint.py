@@ -248,7 +248,7 @@ for formatted_string in mth_list:
 # In[26]:
 
 
-    if target_table.empty==False:
+    if target_table is not None:
         extracted_data = handle_merged_table_rows(target_table)
         tmp_df=pd.DataFrame(extracted_data)
         tmp=pd.DataFrame(tmp_df.iloc[1:,:])
@@ -276,7 +276,7 @@ for formatted_string in mth_list:
     try:
 
 # Assuming your clean DataFrame from the previous step is named 'df'
-        formatted_file_string = formatted_string.strftime("%Y-%m-01")
+        formatted_file_string = pd.to_datetime(formatted_string], format="%b%y").strftime("%Y-%m-%d")
 # Apply the function to the 'Contractor' column and create two new columns
         df_mtr[['Contractor Name', 'Address']] = df_mtr['Contractor(s) and Address(es)'].apply(lambda x: pd.Series(extract_name_by_suffix(x)))
         df_mtr['Month']=formatted_file_string
