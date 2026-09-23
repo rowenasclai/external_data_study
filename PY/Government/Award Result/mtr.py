@@ -80,7 +80,7 @@ for formatted_string in mth_list:
     import requests
     from bs4 import BeautifulSoup
 
-    def handle_merged_table_rows(table_element):
+def handle_merged_table_rows(table_element):
     """
     Parses an HTML table, handling cells merged with 'rowspan' and 'colspan'.
 
@@ -94,78 +94,78 @@ for formatted_string in mth_list:
 
     # 1. Initialize the virtual grid
     # This list will track which slots in each row are already filled by a spanned cell.
-        grid = []
+    grid = []
 
-        for row_index, row in enumerate(rows):
-            cells = row.find_all(['td', 'th'])
-            cell_index = 0
+    for row_index, row in enumerate(rows):
+        cells = row.find_all(['td', 'th'])
+        cell_index = 0
 
         # Ensure the current row has a placeholder in the grid
-            if len(grid) <= row_index:
-                grid.append([])
+        if len(grid) <= row_index:
+            grid.append([])
 
-            for cell in cells:
-                rowspan = int(cell.get('rowspan', 1))
-                colspan = int(cell.get('colspan', 1))
-                cell_text = cell.get_text(strip=True)
+        for cell in cells:
+            rowspan = int(cell.get('rowspan', 1))
+            colspan = int(cell.get('colspan', 1))
+            cell_text = cell.get_text(strip=True)
 
             # 2. Find the first available column slot in the current row
-                while len(grid[row_index]) > cell_index and grid[row_index][cell_index] is not None:
-                    cell_index += 1
+            while len(grid[row_index]) > cell_index and grid[row_index][cell_index] is not None:
+                cell_index += 1
 
             # 3. Fill the current slot(s) and mark subsequent slots as occupied
-                for i in range(rowspan):
-                    current_row = row_index + i
+            for i in range(rowspan):
+                current_row = row_index + i
 
                 # Ensure the target row exists in the grid
-                    while len(grid) <= current_row:
-                        grid.append([None] * cell_index) # Pad with None up to the current column
+                while len(grid) <= current_row:
+                    grid.append([None] * cell_index) # Pad with None up to the current column
 
                 # Pad the current row if needed
-                    while len(grid[current_row]) < cell_index + colspan:
-                        grid[current_row].append(None)
+                while len(grid[current_row]) < cell_index + colspan:
+                    grid[current_row].append(None)
 
                 # Place the cell text across the column span (horizontal merge)
-                    for j in range(colspan):
+                for j in range(colspan):
                     # For the first row (i=0), we put the content.
                     # For subsequent rows (i>0), we simply mark the space as occupied (None).
-                        if i == 0:
-                            grid[current_row][cell_index + j] = cell_text
-                        else:
+                    if i == 0:
+                        grid[current_row][cell_index + j] = cell_text
+                    else:
                         # This marks the space as 'taken' by a rowspan cell from an earlier row
-                            grid[current_row][cell_index + j] = None 
+                        grid[current_row][cell_index + j] = None 
 
             # Advance the column index by the colspan amount
-                cell_index += colspan
+            cell_index += colspan
 
     # 4. Clean up the grid: Replace 'None' (occupied slots) with the value
     #    from the cell that spans into them (this handles the rowspan values).
-        final_data = []
-        for r_idx, grid_row in enumerate(grid):
-            processed_row = []
-            for c_idx, cell_value in enumerate(grid_row):
-                if cell_value is None:
+    final_data = []
+    for r_idx, grid_row in enumerate(grid):
+        processed_row = []
+        for c_idx, cell_value in enumerate(grid_row):
+            if cell_value is None:
                 # Look upwards to find the cell that spanned into this slot
                 # This assumes the spanned cell value should be copied down
-                    for prev_r_idx in range(r_idx - 1, -1, -1):
+                for prev_r_idx in range(r_idx - 1, -1, -1):
                     # Check if the cell above exists and is the one that spanned down
-                        if c_idx < len(grid[prev_r_idx]) and grid[prev_r_idx][c_idx] is not None:
+                    if c_idx < len(grid[prev_r_idx]) and grid[prev_r_idx][c_idx] is not None:
                          # We found the spanning value; copy it to the current cell
-                             cell_value = grid[prev_r_idx][c_idx]
-                             break
+                        cell_value = grid[prev_r_idx][c_idx]
+                        break
 
             # Handle cells that were marked as occupied but didn't have a direct spanning value
             # (This is mostly a safeguard, the previous logic should cover it)
-                if cell_value is None:
-                    cell_value = '' # Default to empty string if no content is found
+            if cell_value is None:
+                cell_value = '' # Default to empty string if no content is found
 
-                processed_row.append(cell_value)
+            processed_row.append(cell_value)
 
         # Only add the row if it contains data (not just empty placeholders)
-            if any(processed_row):
-                final_data.append(processed_row)
+        if any(processed_row):
+            final_data.append(processed_row)
 
-        return final_data
+    return final_data
 
 # --- How to use this function with your MTR script: ---
 
