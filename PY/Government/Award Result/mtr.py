@@ -13,6 +13,9 @@ import csv, time, re, math
 
 import requests
 
+import requests
+from bs4 import BeautifulSoup
+
 
 # In[2]:
 
@@ -220,8 +223,7 @@ for formatted_string in mth_list:
 # In[5]:
 
 
-import requests
-from bs4 import BeautifulSoup
+
 
 
 # --- How to use this function with your MTR script: ---
@@ -239,7 +241,7 @@ from bs4 import BeautifulSoup
 # In[24]:
 
 
-    target_table.empty
+    #target_table.empty
 
 
 # In[26]:
