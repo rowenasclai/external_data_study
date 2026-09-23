@@ -5,11 +5,11 @@
 
 
 #from seleniumbase import Driver
-#from PIL import Image
 from bs4 import BeautifulSoup
 import pandas as pd
 from urllib.parse import urljoin
 import csv, time, re, math
+from pathlib import Path
 
 import requests
 
@@ -54,7 +54,7 @@ def extract_name_by_suffix(text):
     found_suffix_length = 0
 
     for suffix in SUFFIX_KEYWORDS:
-        # We look for the suffix followed by a space or end-of-string 
+        # We look for the suffix followed by a space or end-of-string
         # to avoid matching 'Limited' inside a word.
         search_term = suffix + ' '
 
@@ -87,7 +87,7 @@ def extract_name_by_suffix(text):
              pass
 
     else:
-        # If no key suffix is found, assume the first part is the company name 
+        # If no key suffix is found, assume the first part is the company name
         # and try to split by the first comma or a maximum of 4 words.
         parts = text.split(',', 1)
         if len(parts) > 1:
@@ -213,7 +213,7 @@ for formatted_string in mth_list:
 
 # Example: If the tender data is in the FIRST table:
     if all_tables:
-        target_table = all_tables[0] 
+        target_table = all_tables[0]
     elif len(all_tables) > 1:
     # Example: If the tender data is in the SECOND table (index 1):
         target_table = all_tables[1]
@@ -295,7 +295,9 @@ for formatted_string in mth_list:
 
 
     if len(final_df):
-        final_df.to_csv('/Users/rowena/Other Projects/external_data_study/Result/mtr/mtr_'+formatted_string+'.csv', index=False, encoding="utf-8") 
+        output_dir = Path(__file__).resolve().parents[3] / 'Result' / 'mtr'
+        output_dir.mkdir(parents=True, exist_ok=True)
+        final_df.to_csv(output_dir / ('mtr_' + formatted_string + '.csv'), index=False, encoding='utf-8')
 
 
 # In[ ]:
