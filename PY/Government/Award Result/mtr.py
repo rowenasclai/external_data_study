@@ -38,48 +38,65 @@ mth_list=months.strftime("%b%y").tolist()
 
 #formatted_string="Feb26"
 
-for formatted_string in mth_list:
+def extract_name_by_suffix(text):
+    if not isinstance(text, str) or not text.strip():
+        return (None, None) # Return None for empty/invalid input
+
+    # Standardize the text for searching (makes matching easier)
+    upper_text = text.upper()
+
+    # Find the position of the last occurring key suffix
+    last_suffix_index = -1
+    found_suffix_length = 0
+
+    for suffix in SUFFIX_KEYWORDS:
+        # We look for the suffix followed by a space or end-of-string 
+        # to avoid matching 'Limited' inside a word.
+        search_term = suffix + ' '
+
+        # Use rfind to find the LAST occurrence of the suffix in the string
+        index = upper_text.rfind(search_term)
+
+        if index > last_suffix_index:
+            last_suffix_index = index
+            found_suffix_length = len(search_term) - 1 # Length of the word itself
+
+    # --- Separation Logic ---
+
+    if last_suffix_index != -1:
+        # The split point is AFTER the last found suffix
+        split_end_index = last_suffix_index + found_suffix_length
+
+        # Company Name: Everything up to (and including) the suffix and one following word (optional space)
+        contractor_name = text[:split_end_index].strip()
+
+        # Address: The rest of the string
+        address = text[split_end_index:].strip().lstrip(',; ')
+
+        # Fallback check: Sometimes the suffix is the last word in the name,
+        # and the address starts after the next space.
+        if address and not address[0].isdigit() and any(c in address.upper() for c in ['RD', 'ST', 'FL']):
+             # Address starts cleanly with a number or address indicator, so the split is good.
+             pass
+        elif address and contractor_name and len(contractor_name.split()) < 2:
+             # If the name is too short, the split might be wrong, but we prioritize the suffix rule.
+             pass
+
+    else:
+        # If no key suffix is found, assume the first part is the company name 
+        # and try to split by the first comma or a maximum of 4 words.
+        parts = text.split(',', 1)
+        if len(parts) > 1:
+            contractor_name = parts[0].strip()
+            address = parts[1].strip()
+        else:
+            # Final fallback: Assume the entire string is the contractor name
+            contractor_name = text.strip()
+            address = ''
+
+    return (contractor_name, address)
 
 # In[13]:
-
-
-    url="https://www.mtr.com.hk/en/corporate/tenders/"+formatted_string+".html"
-
-    try:
-
-        response = requests.get(url)
-        soup = BeautifulSoup(response.content, 'html.parser')
-
-    except requests.exceptions.HTTPError as errh:
-    #target_table=pd.DataFrame()
-        pass
-
-
-# In[16]:
-
-
-# 1. Locate ALL <table> elements on the page
-    all_tables = soup.find_all('table')
-
-# 2. Select the specific table by its position (index)
-# --- IMPORTANT: You will need to try different indices (0, 1, 2, etc.) ---
-
-# Example: If the tender data is in the FIRST table:
-    if all_tables:
-        target_table = all_tables[0] 
-    elif len(all_tables) > 1:
-    # Example: If the tender data is in the SECOND table (index 1):
-        target_table = all_tables[1]
-    else:
-        target_table =pd.DataFrame()
-
-
-# In[5]:
-
-
-    import requests
-    from bs4 import BeautifulSoup
-
 def handle_merged_table_rows(table_element):
     """
     Parses an HTML table, handling cells merged with 'rowspan' and 'colspan'.
@@ -90,7 +107,7 @@ def handle_merged_table_rows(table_element):
     Returns:
         A list of lists, where each inner list is a full, non-merged row.
     """
-        rows = table_element.find_all('tr')
+    rows = table_element.find_all('tr')
 
     # 1. Initialize the virtual grid
     # This list will track which slots in each row are already filled by a spanned cell.
@@ -151,8 +168,8 @@ def handle_merged_table_rows(table_element):
                     # Check if the cell above exists and is the one that spanned down
                     if c_idx < len(grid[prev_r_idx]) and grid[prev_r_idx][c_idx] is not None:
                          # We found the spanning value; copy it to the current cell
-                        cell_value = grid[prev_r_idx][c_idx]
-                        break
+                         cell_value = grid[prev_r_idx][c_idx]
+                         break
 
             # Handle cells that were marked as occupied but didn't have a direct spanning value
             # (This is mostly a safeguard, the previous logic should cover it)
@@ -166,6 +183,46 @@ def handle_merged_table_rows(table_element):
             final_data.append(processed_row)
 
     return final_data
+
+
+for formatted_string in mth_list:
+    url="https://www.mtr.com.hk/en/corporate/tenders/"+formatted_string+".html"
+
+    try:
+
+        response = requests.get(url)
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+    except requests.exceptions.HTTPError as errh:
+    #target_table=pd.DataFrame()
+        pass
+
+
+# In[16]:
+
+
+# 1. Locate ALL <table> elements on the page
+    all_tables = soup.find_all('table')
+
+# 2. Select the specific table by its position (index)
+# --- IMPORTANT: You will need to try different indices (0, 1, 2, etc.) ---
+
+# Example: If the tender data is in the FIRST table:
+    if all_tables:
+        target_table = all_tables[0] 
+    elif len(all_tables) > 1:
+    # Example: If the tender data is in the SECOND table (index 1):
+        target_table = all_tables[1]
+    else:
+        target_table =pd.DataFrame()
+
+
+# In[5]:
+
+
+import requests
+from bs4 import BeautifulSoup
+
 
 # --- How to use this function with your MTR script: ---
 
@@ -207,63 +264,7 @@ def handle_merged_table_rows(table_element):
     'PTE LTD', 'PLC', '&' # Ampersand is often a key name component
 ]
 
-def extract_name_by_suffix(text):
-    if not isinstance(text, str) or not text.strip():
-        return (None, None) # Return None for empty/invalid input
 
-    # Standardize the text for searching (makes matching easier)
-    upper_text = text.upper()
-
-    # Find the position of the last occurring key suffix
-    last_suffix_index = -1
-    found_suffix_length = 0
-
-    for suffix in SUFFIX_KEYWORDS:
-        # We look for the suffix followed by a space or end-of-string 
-        # to avoid matching 'Limited' inside a word.
-        search_term = suffix + ' '
-
-        # Use rfind to find the LAST occurrence of the suffix in the string
-        index = upper_text.rfind(search_term)
-
-        if index > last_suffix_index:
-            last_suffix_index = index
-            found_suffix_length = len(search_term) - 1 # Length of the word itself
-
-    # --- Separation Logic ---
-
-    if last_suffix_index != -1:
-        # The split point is AFTER the last found suffix
-        split_end_index = last_suffix_index + found_suffix_length
-
-        # Company Name: Everything up to (and including) the suffix and one following word (optional space)
-        contractor_name = text[:split_end_index].strip()
-
-        # Address: The rest of the string
-        address = text[split_end_index:].strip().lstrip(',; ')
-
-        # Fallback check: Sometimes the suffix is the last word in the name,
-        # and the address starts after the next space.
-        if address and not address[0].isdigit() and any(c in address.upper() for c in ['RD', 'ST', 'FL']):
-             # Address starts cleanly with a number or address indicator, so the split is good.
-             pass
-        elif address and contractor_name and len(contractor_name.split()) < 2:
-             # If the name is too short, the split might be wrong, but we prioritize the suffix rule.
-             pass
-
-    else:
-        # If no key suffix is found, assume the first part is the company name 
-        # and try to split by the first comma or a maximum of 4 words.
-        parts = text.split(',', 1)
-        if len(parts) > 1:
-            contractor_name = parts[0].strip()
-            address = parts[1].strip()
-        else:
-            # Final fallback: Assume the entire string is the contractor name
-            contractor_name = text.strip()
-            address = ''
-
-    return (contractor_name, address)
 
 
 # In[31]:
@@ -272,7 +273,7 @@ def extract_name_by_suffix(text):
     try:
 
 # Assuming your clean DataFrame from the previous step is named 'df'
-    formatted_file_string = current_datetime.strftime("%Y-%m-01")
+        formatted_file_string = formatted_string.strftime("%Y-%m-01")
 # Apply the function to the 'Contractor' column and create two new columns
         df_mtr[['Contractor Name', 'Address']] = df_mtr['Contractor(s) and Address(es)'].apply(lambda x: pd.Series(extract_name_by_suffix(x)))
         df_mtr['Month']=formatted_file_string
