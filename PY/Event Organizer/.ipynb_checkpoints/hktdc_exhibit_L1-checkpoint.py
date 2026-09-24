@@ -24,10 +24,25 @@ def run(playwright: Playwright) -> None:
     #print(l.inner_text())
     url='https://www.hktdc.com/event/'+prefix+'/en/exhibitor-list?pageNum=1&pageSize=50'
     page.goto(url, wait_until="domcontentloaded")
-    check_figure=page.locator("div").filter(has_text=re.compile(r"^Shown.*Total Result"))
-    final_figure_text=check_figure.text_content()
-    result_l=final_figure_text.find('Total Result')
-    l_div=int(final_figure_text[result_l+13:])
+    locator = page.locator(".vep-exhibitor-result-status span").first
+
+# 2. Wait explicitly for the text to appear (handles dynamic AJAX loading)
+    locator.wait_for(state="visible", timeout=15000)
+    final_figure_text = locator.text_content()
+
+    match = re.search(r"Total Result\s+(\d+)", final_figure_text)
+
+    l_div=int(match.group(1))
+    #if match:
+     #   total_result = int(match.group(1))
+        #print(f"Total Exhibitors: {total_result}")
+    #else:
+        #print(f"Could not parse count from: {final_figure_text}")
+
+    #check_figure=page.locator("div").filter(has_text=re.compile(r"^Shown.*Total Result"))
+    #final_figure_text=check_figure.text_content()
+    #result_l=final_figure_text.find('Total Result')
+    #l_div=int(final_figure_text[result_l+13:])
 
     print('Processing '+str(1)+' - '+str(50)+' out of '+str(l_div))
 

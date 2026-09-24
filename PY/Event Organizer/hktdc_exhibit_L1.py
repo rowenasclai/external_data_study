@@ -11,26 +11,38 @@ import pandas as pd
 #url='https://www.hktdc.com/event/hkjewellery/en/exhibitor-list?pageNum=1&pageSize=50'
 domain='https://www.hktdc.com'
 
-from pathlib import Path
-
 prefix=input('What is the prefix of your exhibition?')
-OUTPUT_ROOT = Path(__file__).resolve().parents[2] / 'Result' / 'Exhibition Organizers' / 'HKTDC'
-OUTPUT_DIR = OUTPUT_ROOT / prefix
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-os.chdir(OUTPUT_DIR)
+os.chdir("/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/") 
+os.makedirs(prefix, exist_ok=True)
+os.chdir("/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/"+prefix) 
 
 def run(playwright: Playwright) -> None:
-    browser = playwright.chromium.launch(headless=True)
+    browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
     page = context.new_page()
     #l=page.locator("div").filter(has_text=re.compile(r"^Total Result$"))
     #print(l.inner_text())
     url='https://www.hktdc.com/event/'+prefix+'/en/exhibitor-list?pageNum=1&pageSize=50'
     page.goto(url, wait_until="domcontentloaded")
-    check_figure=page.locator("div").filter(has_text=re.compile(r"^Shown.*Total Result"))
-    final_figure_text=check_figure.text_content()
-    result_l=final_figure_text.find('Total Result')
-    l_div=int(final_figure_text[result_l+13:])
+    locator = page.locator(".vep-exhibitor-result-status span").first
+
+# 2. Wait explicitly for the text to appear (handles dynamic AJAX loading)
+    locator.wait_for(state="visible", timeout=15000)
+    final_figure_text = locator.text_content()
+
+    match = re.search(r"Total Result\s+(\d+)", final_figure_text)
+
+    l_div=int(match.group(1))
+    #if match:
+     #   total_result = int(match.group(1))
+        #print(f"Total Exhibitors: {total_result}")
+    #else:
+        #print(f"Could not parse count from: {final_figure_text}")
+
+    #check_figure=page.locator("div").filter(has_text=re.compile(r"^Shown.*Total Result"))
+    #final_figure_text=check_figure.text_content()
+    #result_l=final_figure_text.find('Total Result')
+    #l_div=int(final_figure_text[result_l+13:])
 
     print('Processing '+str(1)+' - '+str(50)+' out of '+str(l_div))
 
@@ -113,5 +125,7 @@ def run(playwright: Playwright) -> None:
 
 with sync_playwright() as playwright:
     run(playwright)
-    df = pd.read_json(OUTPUT_DIR / ('hktdc_'+prefix+'_L1.json'), orient='records', lines=True)
-    df.to_csv(OUTPUT_DIR / ('hktdc_'+prefix+'_L1.csv'),index=False)
+    
+    df = pd.read_json('/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/'+prefix+'/hktdc_'+prefix+'_L1.json', orient='records', lines=True)
+
+    df.to_csv('/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/'+prefix+'/hktdc_'+prefix+'_L1.csv',index=False)
