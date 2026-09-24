@@ -23,7 +23,7 @@ def run(playwright: Playwright) -> None:
     #l=page.locator("div").filter(has_text=re.compile(r"^Total Result$"))
     #print(l.inner_text())
     url='https://www.hktdc.com/event/'+prefix+'/en/exhibitor-list?pageNum=1&pageSize=50'
-    page.goto(url)
+    page.goto(url, wait_until="domcontentloaded")
     check_figure=page.locator("div").filter(has_text=re.compile(r"^Shown.*Total Result"))
     final_figure_text=check_figure.text_content()
     result_l=final_figure_text.find('Total Result')
@@ -34,7 +34,7 @@ def run(playwright: Playwright) -> None:
     for j in range(1,int(l_div/50)+2,1):
         url='https://www.hktdc.com/event/'+prefix+'/en/exhibitor-list?pageNum='+str(j)+'&pageSize=50'
         print('Processing '+str((j-1)*50+1)+' - '+str((j-1)*50+49)+' out of '+str(l_div))
-        page.goto(url)
+        page.goto(url, wait_until="domcontentloaded")
         data={}
     #test=page.locator(".d-flex.flex-column.vep-p-4")
     #check=page.locator(".d-flex.flex-column.vep-p-4.div").filter(has_text=True).first
