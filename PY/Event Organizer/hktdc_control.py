@@ -5,13 +5,13 @@
 
 
 import pandas as pd
+from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[2]
+SCRIPT_DIR = Path(__file__).resolve().parent
+CONTROL_CSV = ROOT / 'Result' / 'Exhibition Organizers' / 'HKTDC' / 'Event_Schedule' / 'event_control.csv'
 
-# In[4]:
-
-
-df=pd.read_csv('/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/Event_Schedule/event_control.csv')
-
+df=pd.read_csv(CONTROL_CSV)
 
 # In[13]:
 
@@ -38,6 +38,12 @@ tmp=df[((df['event_start_date']< start_day) | (df['event_start_date']== week_t2)
 
 
 import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+SCRIPT_DIR = Path(__file__).resolve().parent
+CONTROL_CSV = ROOT / 'Result' / 'Exhibition Organizers' / 'HKTDC' / 'Event_Schedule' / 'event_control.csv'
 
 #all_events=['hkelectronicsfairae']
 
@@ -49,7 +55,7 @@ for t in all_events:
 
 # Execute the python script as a subprocess
     result_l1 = subprocess.run(
-        ["python3", "/Users/rowena/Other Projects/external_data_study/PY/Event Organizer/hktdc_exhibit_L1.py"],
+        [sys.executable, str(SCRIPT_DIR / "hktdc_exhibit_L1.py")],
         input=t,
         text=True,
         capture_output=True
@@ -62,7 +68,7 @@ for t in all_events:
         print(f"✅ L1 執行成功。標準輸出：\n{result_l1.stdout}")
 
     result_l2 = subprocess.run(
-        ["python3", "/Users/rowena/Other Projects/external_data_study/PY/Event Organizer/hktdc_exhibit_L2.py"],
+        [sys.executable, str(SCRIPT_DIR / "hktdc_exhibit_L2.py")],
         input=t,
         text=True,
         capture_output=True
@@ -75,7 +81,7 @@ for t in all_events:
         print(f"✅ L2 執行成功。標準輸出：\n{result_l2.stdout}")
 
     result_l3 = subprocess.run(
-        ["python3", "/Users/rowena/Other Projects/external_data_study/PY/Event Organizer/hktdc_exhibit_L3.py"],
+        [sys.executable, str(SCRIPT_DIR / "hktdc_exhibit_L3.py")],
         input=t,
         text=True,
         capture_output=True
@@ -88,7 +94,7 @@ for t in all_events:
         print(f"✅ L3 執行成功。標準輸出：\n{result_l3.stdout}")
 
     result_format = subprocess.run(
-        ["python3", "/Users/rowena/Other Projects/external_data_study/PY/Event Organizer/hktdc_format.py"],
+        [sys.executable, str(SCRIPT_DIR / "hktdc_format.py")],
         input=t,
         text=True,
         capture_output=True

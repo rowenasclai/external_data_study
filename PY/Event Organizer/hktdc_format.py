@@ -14,10 +14,12 @@ import pandas as pd
 # In[8]:
 
 
+from pathlib import Path
+
 prefix=input('What is the prefix of your exhibition?')
-os.chdir("/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/") 
-os.makedirs(prefix, exist_ok=True)
-os.chdir("/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/"+prefix) 
+OUTPUT_DIR = Path(__file__).resolve().parents[2] / 'Result' / 'Exhibition Organizers' / 'HKTDC' / prefix
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+os.chdir(OUTPUT_DIR)
 
 
 # In[9]:
