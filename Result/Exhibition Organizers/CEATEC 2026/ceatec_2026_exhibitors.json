@@ -2400,6 +2400,18 @@
     "source_position": "200"
   },
   {
+    "exhibitor_id": "parent:1351",
+    "company_name": "doubleO Co., Ltd.",
+    "exhibitor_type": "parent",
+    "parent_exhibitor_id": "",
+    "area": "Next Generation Park",
+    "hall": "|",
+    "booth": "4H223",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "201"
+  },
+  {
     "exhibitor_id": "parent:376",
     "company_name": "DREAMBEER",
     "exhibitor_type": "parent",
@@ -2409,7 +2421,7 @@
     "booth": "7H209",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "201"
+    "source_position": "202"
   },
   {
     "exhibitor_id": "parent:262",
@@ -2421,11 +2433,11 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "202"
+    "source_position": "203"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:1",
-    "company_name": "▸ ACCESS CO., LTD.",
+    "company_name": "▸ ACCESS CO., LTD. 🎓",
     "exhibitor_type": "co_exhibitor",
     "parent_exhibitor_id": "262",
     "area": "X (Transformation) Park",
@@ -2433,7 +2445,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "203"
+    "source_position": "204"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:2",
@@ -2445,7 +2457,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "204"
+    "source_position": "205"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:3",
@@ -2457,7 +2469,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "205"
+    "source_position": "206"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:4",
@@ -2469,7 +2481,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "206"
+    "source_position": "207"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:5",
@@ -2481,7 +2493,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "207"
+    "source_position": "208"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:6",
@@ -2493,7 +2505,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "208"
+    "source_position": "209"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:7",
@@ -2505,7 +2517,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "209"
+    "source_position": "210"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:8",
@@ -2517,7 +2529,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "210"
+    "source_position": "211"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:9",
@@ -2529,7 +2541,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "211"
+    "source_position": "212"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:10",
@@ -2541,7 +2553,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "212"
+    "source_position": "213"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:11",
@@ -2553,7 +2565,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "213"
+    "source_position": "214"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:12",
@@ -2565,7 +2577,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "214"
+    "source_position": "215"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:13",
@@ -2577,7 +2589,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "215"
+    "source_position": "216"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:14",
@@ -2589,7 +2601,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "216"
+    "source_position": "217"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:15",
@@ -2601,7 +2613,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "217"
+    "source_position": "218"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:16",
@@ -2613,7 +2625,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "218"
+    "source_position": "219"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:17",
@@ -2625,7 +2637,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "219"
+    "source_position": "220"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:18",
@@ -2637,7 +2649,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "220"
+    "source_position": "221"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:19",
@@ -2649,7 +2661,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "221"
+    "source_position": "222"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:20",
@@ -2661,7 +2673,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "222"
+    "source_position": "223"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:21",
@@ -2673,7 +2685,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "223"
+    "source_position": "224"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:22",
@@ -2685,7 +2697,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "224"
+    "source_position": "225"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:23",
@@ -2697,7 +2709,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "225"
+    "source_position": "226"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:24",
@@ -2709,7 +2721,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "226"
+    "source_position": "227"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:25",
@@ -2721,7 +2733,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "227"
+    "source_position": "228"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:26",
@@ -2733,7 +2745,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "228"
+    "source_position": "229"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:27",
@@ -2745,7 +2757,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "229"
+    "source_position": "230"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:28",
@@ -2757,7 +2769,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "230"
+    "source_position": "231"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:29",
@@ -2769,7 +2781,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "231"
+    "source_position": "232"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:30",
@@ -2781,7 +2793,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "232"
+    "source_position": "233"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:31",
@@ -2793,7 +2805,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "233"
+    "source_position": "234"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:32",
@@ -2805,11 +2817,11 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "234"
+    "source_position": "235"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:33",
-    "company_name": "▸ JEITA Healthcare Industries Board",
+    "company_name": "▸ JEITA Healthcare Industries Board 🎓",
     "exhibitor_type": "co_exhibitor",
     "parent_exhibitor_id": "262",
     "area": "X (Transformation) Park",
@@ -2817,7 +2829,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "235"
+    "source_position": "236"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:34",
@@ -2829,7 +2841,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "236"
+    "source_position": "237"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:35",
@@ -2841,7 +2853,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "237"
+    "source_position": "238"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:36",
@@ -2853,7 +2865,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "238"
+    "source_position": "239"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:37",
@@ -2865,7 +2877,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "239"
+    "source_position": "240"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:38",
@@ -2877,7 +2889,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "240"
+    "source_position": "241"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:39",
@@ -2889,7 +2901,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "241"
+    "source_position": "242"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:40",
@@ -2901,7 +2913,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "242"
+    "source_position": "243"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:41",
@@ -2913,7 +2925,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "243"
+    "source_position": "244"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:42",
@@ -2925,7 +2937,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "244"
+    "source_position": "245"
   },
   {
     "exhibitor_id": "parent:262:co-exhibitor:43",
@@ -2937,7 +2949,7 @@
     "booth": "5H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "245"
+    "source_position": "246"
   },
   {
     "exhibitor_id": "parent:260",
@@ -2949,7 +2961,7 @@
     "booth": "5H323",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "246"
+    "source_position": "247"
   },
   {
     "exhibitor_id": "parent:93",
@@ -2961,7 +2973,7 @@
     "booth": "7H417",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "247"
+    "source_position": "248"
   },
   {
     "exhibitor_id": "parent:269",
@@ -2973,7 +2985,7 @@
     "booth": "7H203",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "248"
+    "source_position": "249"
   },
   {
     "exhibitor_id": "parent:59",
@@ -2985,7 +2997,7 @@
     "booth": "8H131",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "249"
+    "source_position": "250"
   },
   {
     "exhibitor_id": "parent:94",
@@ -2997,7 +3009,7 @@
     "booth": "4H155",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "250"
+    "source_position": "251"
   },
   {
     "exhibitor_id": "parent:368",
@@ -3009,7 +3021,7 @@
     "booth": "7H515",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "251"
+    "source_position": "252"
   },
   {
     "exhibitor_id": "parent:237",
@@ -3021,7 +3033,7 @@
     "booth": "4H437",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "252"
+    "source_position": "253"
   },
   {
     "exhibitor_id": "parent:360",
@@ -3033,7 +3045,7 @@
     "booth": "4H414",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "253"
+    "source_position": "254"
   },
   {
     "exhibitor_id": "parent:157",
@@ -3045,7 +3057,7 @@
     "booth": "5H322",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "254"
+    "source_position": "255"
   },
   {
     "exhibitor_id": "parent:1028",
@@ -3057,7 +3069,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "255"
+    "source_position": "256"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:1",
@@ -3069,7 +3081,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "256"
+    "source_position": "257"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:2",
@@ -3081,7 +3093,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "257"
+    "source_position": "258"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:3",
@@ -3093,7 +3105,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "258"
+    "source_position": "259"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:4",
@@ -3105,7 +3117,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "259"
+    "source_position": "260"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:5",
@@ -3117,7 +3129,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "260"
+    "source_position": "261"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:6",
@@ -3129,7 +3141,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "261"
+    "source_position": "262"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:7",
@@ -3141,7 +3153,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "262"
+    "source_position": "263"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:8",
@@ -3153,7 +3165,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "263"
+    "source_position": "264"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:9",
@@ -3165,7 +3177,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "264"
+    "source_position": "265"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:10",
@@ -3177,7 +3189,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "265"
+    "source_position": "266"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:11",
@@ -3189,7 +3201,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "266"
+    "source_position": "267"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:12",
@@ -3201,7 +3213,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "267"
+    "source_position": "268"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:13",
@@ -3213,7 +3225,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "268"
+    "source_position": "269"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:14",
@@ -3225,7 +3237,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "269"
+    "source_position": "270"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:15",
@@ -3237,7 +3249,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "270"
+    "source_position": "271"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:16",
@@ -3249,7 +3261,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "271"
+    "source_position": "272"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:17",
@@ -3261,7 +3273,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "272"
+    "source_position": "273"
   },
   {
     "exhibitor_id": "parent:1028:co-exhibitor:18",
@@ -3273,7 +3285,7 @@
     "booth": "4H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "273"
+    "source_position": "274"
   },
   {
     "exhibitor_id": "parent:305",
@@ -3285,7 +3297,7 @@
     "booth": "5H431",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "274"
+    "source_position": "275"
   },
   {
     "exhibitor_id": "parent:292",
@@ -3297,7 +3309,7 @@
     "booth": "8H404",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "275"
+    "source_position": "276"
   },
   {
     "exhibitor_id": "parent:92",
@@ -3309,7 +3321,7 @@
     "booth": "4H620",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "276"
+    "source_position": "277"
   },
   {
     "exhibitor_id": "parent:316",
@@ -3321,7 +3333,7 @@
     "booth": "4H418",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "277"
+    "source_position": "278"
   },
   {
     "exhibitor_id": "parent:153",
@@ -3333,7 +3345,7 @@
     "booth": "4H427",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "278"
+    "source_position": "279"
   },
   {
     "exhibitor_id": "parent:65",
@@ -3345,7 +3357,7 @@
     "booth": "4H337",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "279"
+    "source_position": "280"
   },
   {
     "exhibitor_id": "parent:170",
@@ -3357,7 +3369,7 @@
     "booth": "4H537",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "280"
+    "source_position": "281"
   },
   {
     "exhibitor_id": "parent:114",
@@ -3369,7 +3381,7 @@
     "booth": "7H115",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "281"
+    "source_position": "282"
   },
   {
     "exhibitor_id": "parent:1179",
@@ -3381,7 +3393,7 @@
     "booth": "4H335",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "282"
+    "source_position": "283"
   },
   {
     "exhibitor_id": "parent:256",
@@ -3393,7 +3405,7 @@
     "booth": "8H123",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "283"
+    "source_position": "284"
   },
   {
     "exhibitor_id": "parent:183",
@@ -3405,7 +3417,7 @@
     "booth": "6H251",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "284"
+    "source_position": "285"
   },
   {
     "exhibitor_id": "parent:399",
@@ -3417,7 +3429,7 @@
     "booth": "5H434",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "285"
+    "source_position": "286"
   },
   {
     "exhibitor_id": "parent:151",
@@ -3429,7 +3441,7 @@
     "booth": "5H433",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "286"
+    "source_position": "287"
   },
   {
     "exhibitor_id": "parent:219",
@@ -3441,7 +3453,7 @@
     "booth": "7H313",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "287"
+    "source_position": "288"
   },
   {
     "exhibitor_id": "parent:219:co-exhibitor:1",
@@ -3453,7 +3465,7 @@
     "booth": "7H313",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "288"
+    "source_position": "289"
   },
   {
     "exhibitor_id": "parent:219:co-exhibitor:2",
@@ -3465,7 +3477,7 @@
     "booth": "7H313",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "289"
+    "source_position": "290"
   },
   {
     "exhibitor_id": "parent:219:co-exhibitor:3",
@@ -3477,7 +3489,7 @@
     "booth": "7H313",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "290"
+    "source_position": "291"
   },
   {
     "exhibitor_id": "parent:219:co-exhibitor:4",
@@ -3489,7 +3501,7 @@
     "booth": "7H313",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "291"
+    "source_position": "292"
   },
   {
     "exhibitor_id": "parent:219:co-exhibitor:5",
@@ -3501,7 +3513,7 @@
     "booth": "7H313",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "292"
+    "source_position": "293"
   },
   {
     "exhibitor_id": "parent:219:co-exhibitor:6",
@@ -3513,7 +3525,7 @@
     "booth": "7H313",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "293"
+    "source_position": "294"
   },
   {
     "exhibitor_id": "parent:232",
@@ -3525,7 +3537,7 @@
     "booth": "7H318",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "294"
+    "source_position": "295"
   },
   {
     "exhibitor_id": "parent:266",
@@ -3537,7 +3549,7 @@
     "booth": "7H403",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "295"
+    "source_position": "296"
   },
   {
     "exhibitor_id": "parent:140",
@@ -3549,7 +3561,7 @@
     "booth": "4H135",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "296"
+    "source_position": "297"
   },
   {
     "exhibitor_id": "parent:195",
@@ -3561,7 +3573,7 @@
     "booth": "4H336",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "297"
+    "source_position": "298"
   },
   {
     "exhibitor_id": "parent:304",
@@ -3573,7 +3585,7 @@
     "booth": "8H119",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "298"
+    "source_position": "299"
   },
   {
     "exhibitor_id": "parent:294",
@@ -3585,7 +3597,7 @@
     "booth": "8H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "299"
+    "source_position": "300"
   },
   {
     "exhibitor_id": "parent:321",
@@ -3597,7 +3609,7 @@
     "booth": "7H214",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "300"
+    "source_position": "301"
   },
   {
     "exhibitor_id": "parent:321:co-exhibitor:1",
@@ -3609,7 +3621,7 @@
     "booth": "7H214",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "301"
+    "source_position": "302"
   },
   {
     "exhibitor_id": "parent:321:co-exhibitor:2",
@@ -3621,7 +3633,7 @@
     "booth": "7H214",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "302"
+    "source_position": "303"
   },
   {
     "exhibitor_id": "parent:321:co-exhibitor:3",
@@ -3633,7 +3645,7 @@
     "booth": "7H214",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "303"
+    "source_position": "304"
   },
   {
     "exhibitor_id": "parent:321:co-exhibitor:4",
@@ -3645,7 +3657,7 @@
     "booth": "7H214",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "304"
+    "source_position": "305"
   },
   {
     "exhibitor_id": "parent:321:co-exhibitor:5",
@@ -3657,7 +3669,7 @@
     "booth": "7H214",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "305"
+    "source_position": "306"
   },
   {
     "exhibitor_id": "parent:321:co-exhibitor:6",
@@ -3669,7 +3681,7 @@
     "booth": "7H214",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "306"
+    "source_position": "307"
   },
   {
     "exhibitor_id": "parent:321:co-exhibitor:7",
@@ -3681,7 +3693,7 @@
     "booth": "7H214",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "307"
+    "source_position": "308"
   },
   {
     "exhibitor_id": "parent:321:co-exhibitor:8",
@@ -3693,7 +3705,7 @@
     "booth": "7H214",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "308"
+    "source_position": "309"
   },
   {
     "exhibitor_id": "parent:349",
@@ -3705,7 +3717,7 @@
     "booth": "7H516",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "309"
+    "source_position": "310"
   },
   {
     "exhibitor_id": "parent:1261",
@@ -3717,7 +3729,7 @@
     "booth": "4H129",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "310"
+    "source_position": "311"
   },
   {
     "exhibitor_id": "parent:200",
@@ -3729,7 +3741,7 @@
     "booth": "8H008",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "311"
+    "source_position": "312"
   },
   {
     "exhibitor_id": "parent:377",
@@ -3741,7 +3753,7 @@
     "booth": "4H139",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "312"
+    "source_position": "313"
   },
   {
     "exhibitor_id": "parent:1291",
@@ -3753,7 +3765,7 @@
     "booth": "8H018",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "313"
+    "source_position": "314"
   },
   {
     "exhibitor_id": "parent:231",
@@ -3765,7 +3777,7 @@
     "booth": "4H327",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "314"
+    "source_position": "315"
   },
   {
     "exhibitor_id": "parent:223",
@@ -3777,7 +3789,7 @@
     "booth": "7H010",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "315"
+    "source_position": "316"
   },
   {
     "exhibitor_id": "parent:34",
@@ -3789,7 +3801,7 @@
     "booth": "7H206",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "316"
+    "source_position": "317"
   },
   {
     "exhibitor_id": "parent:56",
@@ -3801,7 +3813,7 @@
     "booth": "8H225",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "317"
+    "source_position": "318"
   },
   {
     "exhibitor_id": "parent:180",
@@ -3813,7 +3825,7 @@
     "booth": "7H420",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "318"
+    "source_position": "319"
   },
   {
     "exhibitor_id": "parent:207",
@@ -3825,7 +3837,7 @@
     "booth": "4H213",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "319"
+    "source_position": "320"
   },
   {
     "exhibitor_id": "parent:90",
@@ -3837,7 +3849,7 @@
     "booth": "4H305",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "320"
+    "source_position": "321"
   },
   {
     "exhibitor_id": "parent:89",
@@ -3849,7 +3861,7 @@
     "booth": "4H150",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "321"
+    "source_position": "322"
   },
   {
     "exhibitor_id": "parent:67",
@@ -3861,7 +3873,7 @@
     "booth": "4H419",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "322"
+    "source_position": "323"
   },
   {
     "exhibitor_id": "parent:55",
@@ -3873,7 +3885,7 @@
     "booth": "7H323",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "323"
+    "source_position": "324"
   },
   {
     "exhibitor_id": "parent:53",
@@ -3885,7 +3897,7 @@
     "booth": "8H026",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "324"
+    "source_position": "325"
   },
   {
     "exhibitor_id": "parent:248",
@@ -3897,7 +3909,7 @@
     "booth": "7H405",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "325"
+    "source_position": "326"
   },
   {
     "exhibitor_id": "parent:72",
@@ -3909,7 +3921,7 @@
     "booth": "7H412",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "326"
+    "source_position": "327"
   },
   {
     "exhibitor_id": "parent:103",
@@ -3921,7 +3933,7 @@
     "booth": "6H204",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "327"
+    "source_position": "328"
   },
   {
     "exhibitor_id": "parent:288",
@@ -3933,7 +3945,7 @@
     "booth": "5H115",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "328"
+    "source_position": "329"
   },
   {
     "exhibitor_id": "parent:288:co-exhibitor:1",
@@ -3945,7 +3957,7 @@
     "booth": "5H115",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "329"
+    "source_position": "330"
   },
   {
     "exhibitor_id": "parent:263",
@@ -3957,7 +3969,7 @@
     "booth": "6H111",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "330"
+    "source_position": "331"
   },
   {
     "exhibitor_id": "parent:247",
@@ -3969,7 +3981,7 @@
     "booth": "4H416",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "331"
+    "source_position": "332"
   },
   {
     "exhibitor_id": "parent:277",
@@ -3981,7 +3993,7 @@
     "booth": "4H415",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "332"
+    "source_position": "333"
   },
   {
     "exhibitor_id": "parent:318",
@@ -3993,7 +4005,7 @@
     "booth": "6H242",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "333"
+    "source_position": "334"
   },
   {
     "exhibitor_id": "parent:318:co-exhibitor:1",
@@ -4005,7 +4017,7 @@
     "booth": "6H242",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "334"
+    "source_position": "335"
   },
   {
     "exhibitor_id": "parent:318:co-exhibitor:2",
@@ -4017,7 +4029,7 @@
     "booth": "6H242",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "335"
+    "source_position": "336"
   },
   {
     "exhibitor_id": "parent:391",
@@ -4029,7 +4041,7 @@
     "booth": "8H208",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "336"
+    "source_position": "337"
   },
   {
     "exhibitor_id": "parent:385",
@@ -4041,7 +4053,7 @@
     "booth": "7H509",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "337"
+    "source_position": "338"
   },
   {
     "exhibitor_id": "parent:148",
@@ -4053,7 +4065,7 @@
     "booth": "8H116",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "338"
+    "source_position": "339"
   },
   {
     "exhibitor_id": "parent:372",
@@ -4065,7 +4077,7 @@
     "booth": "7H513",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "339"
+    "source_position": "340"
   },
   {
     "exhibitor_id": "parent:398",
@@ -4077,7 +4089,7 @@
     "booth": "4H429",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "340"
+    "source_position": "341"
   },
   {
     "exhibitor_id": "parent:163",
@@ -4089,7 +4101,7 @@
     "booth": "8H015",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "341"
+    "source_position": "342"
   },
   {
     "exhibitor_id": "parent:307",
@@ -4101,7 +4113,7 @@
     "booth": "4H126",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "342"
+    "source_position": "343"
   },
   {
     "exhibitor_id": "parent:251",
@@ -4113,7 +4125,7 @@
     "booth": "4H001-006",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "343"
+    "source_position": "344"
   },
   {
     "exhibitor_id": "parent:251:co-exhibitor:1",
@@ -4125,7 +4137,7 @@
     "booth": "4H001-006",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "344"
+    "source_position": "345"
   },
   {
     "exhibitor_id": "parent:251:co-exhibitor:2",
@@ -4137,7 +4149,7 @@
     "booth": "4H001-006",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "345"
+    "source_position": "346"
   },
   {
     "exhibitor_id": "parent:251:co-exhibitor:3",
@@ -4149,7 +4161,7 @@
     "booth": "4H001-006",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "346"
+    "source_position": "347"
   },
   {
     "exhibitor_id": "parent:251:co-exhibitor:4",
@@ -4161,7 +4173,7 @@
     "booth": "4H001-006",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "347"
+    "source_position": "348"
   },
   {
     "exhibitor_id": "parent:251:co-exhibitor:5",
@@ -4173,7 +4185,7 @@
     "booth": "4H001-006",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "348"
+    "source_position": "349"
   },
   {
     "exhibitor_id": "parent:251:co-exhibitor:6",
@@ -4185,7 +4197,7 @@
     "booth": "4H001-006",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "349"
+    "source_position": "350"
   },
   {
     "exhibitor_id": "parent:251:co-exhibitor:7",
@@ -4197,7 +4209,7 @@
     "booth": "4H001-006",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "350"
+    "source_position": "351"
   },
   {
     "exhibitor_id": "parent:251:co-exhibitor:8",
@@ -4209,7 +4221,7 @@
     "booth": "4H001-006",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "351"
+    "source_position": "352"
   },
   {
     "exhibitor_id": "parent:178",
@@ -4221,7 +4233,7 @@
     "booth": "4H316",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "352"
+    "source_position": "353"
   },
   {
     "exhibitor_id": "parent:91",
@@ -4233,7 +4245,7 @@
     "booth": "8H304",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "353"
+    "source_position": "354"
   },
   {
     "exhibitor_id": "parent:253",
@@ -4245,7 +4257,7 @@
     "booth": "8H111",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "354"
+    "source_position": "355"
   },
   {
     "exhibitor_id": "parent:76",
@@ -4257,7 +4269,7 @@
     "booth": "7H319",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "355"
+    "source_position": "356"
   },
   {
     "exhibitor_id": "parent:142",
@@ -4269,7 +4281,7 @@
     "booth": "4H020",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "356"
+    "source_position": "357"
   },
   {
     "exhibitor_id": "parent:379",
@@ -4281,7 +4293,7 @@
     "booth": "4H226",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "357"
+    "source_position": "358"
   },
   {
     "exhibitor_id": "parent:314",
@@ -4293,7 +4305,7 @@
     "booth": "6H002",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "358"
+    "source_position": "359"
   },
   {
     "exhibitor_id": "parent:314:co-exhibitor:1",
@@ -4305,7 +4317,7 @@
     "booth": "6H002",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "359"
+    "source_position": "360"
   },
   {
     "exhibitor_id": "parent:314:co-exhibitor:2",
@@ -4317,7 +4329,7 @@
     "booth": "6H002",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "360"
+    "source_position": "361"
   },
   {
     "exhibitor_id": "parent:314:co-exhibitor:3",
@@ -4329,7 +4341,7 @@
     "booth": "6H002",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "361"
+    "source_position": "362"
   },
   {
     "exhibitor_id": "parent:314:co-exhibitor:4",
@@ -4341,7 +4353,7 @@
     "booth": "6H002",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "362"
+    "source_position": "363"
   },
   {
     "exhibitor_id": "parent:314:co-exhibitor:5",
@@ -4353,7 +4365,7 @@
     "booth": "6H002",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "363"
+    "source_position": "364"
   },
   {
     "exhibitor_id": "parent:314:co-exhibitor:6",
@@ -4365,7 +4377,7 @@
     "booth": "6H002",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "364"
+    "source_position": "365"
   },
   {
     "exhibitor_id": "parent:314:co-exhibitor:7",
@@ -4377,7 +4389,7 @@
     "booth": "6H002",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "365"
+    "source_position": "366"
   },
   {
     "exhibitor_id": "parent:314:co-exhibitor:8",
@@ -4389,7 +4401,7 @@
     "booth": "6H002",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "366"
+    "source_position": "367"
   },
   {
     "exhibitor_id": "parent:314:co-exhibitor:9",
@@ -4401,7 +4413,7 @@
     "booth": "6H002",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "367"
+    "source_position": "368"
   },
   {
     "exhibitor_id": "parent:314:co-exhibitor:10",
@@ -4413,7 +4425,7 @@
     "booth": "6H002",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "368"
+    "source_position": "369"
   },
   {
     "exhibitor_id": "parent:215",
@@ -4425,7 +4437,7 @@
     "booth": "7H327",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "369"
+    "source_position": "370"
   },
   {
     "exhibitor_id": "parent:290",
@@ -4437,7 +4449,7 @@
     "booth": "6H237",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "370"
+    "source_position": "371"
   },
   {
     "exhibitor_id": "parent:290:co-exhibitor:1",
@@ -4449,7 +4461,7 @@
     "booth": "6H237",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "371"
+    "source_position": "372"
   },
   {
     "exhibitor_id": "parent:290:co-exhibitor:2",
@@ -4461,7 +4473,7 @@
     "booth": "6H237",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "372"
+    "source_position": "373"
   },
   {
     "exhibitor_id": "parent:290:co-exhibitor:3",
@@ -4473,7 +4485,7 @@
     "booth": "6H237",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "373"
+    "source_position": "374"
   },
   {
     "exhibitor_id": "parent:290:co-exhibitor:4",
@@ -4485,7 +4497,7 @@
     "booth": "6H237",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "374"
+    "source_position": "375"
   },
   {
     "exhibitor_id": "parent:284",
@@ -4497,7 +4509,7 @@
     "booth": "6H010",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "375"
+    "source_position": "376"
   },
   {
     "exhibitor_id": "parent:396",
@@ -4509,7 +4521,7 @@
     "booth": "7H208",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "376"
+    "source_position": "377"
   },
   {
     "exhibitor_id": "parent:182",
@@ -4521,7 +4533,7 @@
     "booth": "4H117",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "377"
+    "source_position": "378"
   },
   {
     "exhibitor_id": "parent:220",
@@ -4533,7 +4545,7 @@
     "booth": "5H117",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "378"
+    "source_position": "379"
   },
   {
     "exhibitor_id": "parent:160",
@@ -4545,7 +4557,7 @@
     "booth": "4H009-012",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "379"
+    "source_position": "380"
   },
   {
     "exhibitor_id": "parent:160:co-exhibitor:1",
@@ -4557,7 +4569,7 @@
     "booth": "4H009-012",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "380"
+    "source_position": "381"
   },
   {
     "exhibitor_id": "parent:101",
@@ -4569,7 +4581,7 @@
     "booth": "4H603",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "381"
+    "source_position": "382"
   },
   {
     "exhibitor_id": "parent:393",
@@ -4581,7 +4593,7 @@
     "booth": "5H311",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "382"
+    "source_position": "383"
   },
   {
     "exhibitor_id": "parent:301",
@@ -4593,7 +4605,7 @@
     "booth": "6H023",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "383"
+    "source_position": "384"
   },
   {
     "exhibitor_id": "parent:25",
@@ -4605,7 +4617,7 @@
     "booth": "8H411",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "384"
+    "source_position": "385"
   },
   {
     "exhibitor_id": "parent:43",
@@ -4617,7 +4629,7 @@
     "booth": "7H325",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "385"
+    "source_position": "386"
   },
   {
     "exhibitor_id": "parent:75",
@@ -4629,7 +4641,7 @@
     "booth": "5H112",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "386"
+    "source_position": "387"
   },
   {
     "exhibitor_id": "parent:102",
@@ -4641,7 +4653,7 @@
     "booth": "8H227",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "387"
+    "source_position": "388"
   },
   {
     "exhibitor_id": "parent:119",
@@ -4653,7 +4665,7 @@
     "booth": "8H305",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "388"
+    "source_position": "389"
   },
   {
     "exhibitor_id": "parent:370",
@@ -4665,7 +4677,7 @@
     "booth": "4H130",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "389"
+    "source_position": "390"
   },
   {
     "exhibitor_id": "parent:265",
@@ -4677,7 +4689,7 @@
     "booth": "4H209",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "390"
+    "source_position": "391"
   },
   {
     "exhibitor_id": "parent:1046",
@@ -4689,7 +4701,7 @@
     "booth": "5H105",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "391"
+    "source_position": "392"
   },
   {
     "exhibitor_id": "parent:1046:co-exhibitor:1",
@@ -4701,7 +4713,7 @@
     "booth": "5H105",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "392"
+    "source_position": "393"
   },
   {
     "exhibitor_id": "parent:1046:co-exhibitor:2",
@@ -4713,7 +4725,7 @@
     "booth": "5H105",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "393"
+    "source_position": "394"
   },
   {
     "exhibitor_id": "parent:1046:co-exhibitor:3",
@@ -4725,7 +4737,7 @@
     "booth": "5H105",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "394"
+    "source_position": "395"
   },
   {
     "exhibitor_id": "parent:1046:co-exhibitor:4",
@@ -4737,7 +4749,7 @@
     "booth": "5H105",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "395"
+    "source_position": "396"
   },
   {
     "exhibitor_id": "parent:1046:co-exhibitor:5",
@@ -4749,7 +4761,7 @@
     "booth": "5H105",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "396"
+    "source_position": "397"
   },
   {
     "exhibitor_id": "parent:1046:co-exhibitor:6",
@@ -4761,7 +4773,7 @@
     "booth": "5H105",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "397"
+    "source_position": "398"
   },
   {
     "exhibitor_id": "parent:155",
@@ -4773,7 +4785,7 @@
     "booth": "7H404",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "398"
+    "source_position": "399"
   },
   {
     "exhibitor_id": "parent:141",
@@ -4785,7 +4797,7 @@
     "booth": "4H433",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "399"
+    "source_position": "400"
   },
   {
     "exhibitor_id": "parent:313",
@@ -4797,7 +4809,7 @@
     "booth": "8H319",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "400"
+    "source_position": "401"
   },
   {
     "exhibitor_id": "parent:86",
@@ -4809,7 +4821,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "401"
+    "source_position": "402"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:1",
@@ -4821,7 +4833,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "402"
+    "source_position": "403"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:2",
@@ -4833,7 +4845,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "403"
+    "source_position": "404"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:3",
@@ -4845,7 +4857,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "404"
+    "source_position": "405"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:4",
@@ -4857,7 +4869,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "405"
+    "source_position": "406"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:5",
@@ -4869,7 +4881,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "406"
+    "source_position": "407"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:6",
@@ -4881,7 +4893,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "407"
+    "source_position": "408"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:7",
@@ -4893,7 +4905,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "408"
+    "source_position": "409"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:8",
@@ -4905,7 +4917,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "409"
+    "source_position": "410"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:9",
@@ -4917,7 +4929,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "410"
+    "source_position": "411"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:10",
@@ -4929,7 +4941,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "411"
+    "source_position": "412"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:11",
@@ -4941,7 +4953,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "412"
+    "source_position": "413"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:12",
@@ -4953,7 +4965,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "413"
+    "source_position": "414"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:13",
@@ -4965,7 +4977,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "414"
+    "source_position": "415"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:14",
@@ -4977,7 +4989,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "415"
+    "source_position": "416"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:15",
@@ -4989,7 +5001,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "416"
+    "source_position": "417"
   },
   {
     "exhibitor_id": "parent:86:co-exhibitor:16",
@@ -5001,7 +5013,7 @@
     "booth": "6H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "417"
+    "source_position": "418"
   },
   {
     "exhibitor_id": "parent:193",
@@ -5013,7 +5025,7 @@
     "booth": "4H153",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "418"
+    "source_position": "419"
   },
   {
     "exhibitor_id": "parent:189",
@@ -5025,7 +5037,7 @@
     "booth": "4H334",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "419"
+    "source_position": "420"
   },
   {
     "exhibitor_id": "parent:20",
@@ -5037,7 +5049,7 @@
     "booth": "5H430",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "420"
+    "source_position": "421"
   },
   {
     "exhibitor_id": "parent:23",
@@ -5049,7 +5061,7 @@
     "booth": "7H320",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "421"
+    "source_position": "422"
   },
   {
     "exhibitor_id": "parent:23:co-exhibitor:1",
@@ -5061,7 +5073,7 @@
     "booth": "7H320",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "422"
+    "source_position": "423"
   },
   {
     "exhibitor_id": "parent:1178",
@@ -5073,7 +5085,7 @@
     "booth": "4H521",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "423"
+    "source_position": "424"
   },
   {
     "exhibitor_id": "parent:1270",
@@ -5085,7 +5097,7 @@
     "booth": "5H302",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "424"
+    "source_position": "425"
   },
   {
     "exhibitor_id": "parent:42",
@@ -5097,7 +5109,7 @@
     "booth": "7H003",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "425"
+    "source_position": "426"
   },
   {
     "exhibitor_id": "parent:120",
@@ -5109,7 +5121,7 @@
     "booth": "4H134",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "426"
+    "source_position": "427"
   },
   {
     "exhibitor_id": "parent:28",
@@ -5121,7 +5133,7 @@
     "booth": "8H412",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "427"
+    "source_position": "428"
   },
   {
     "exhibitor_id": "parent:107",
@@ -5133,7 +5145,7 @@
     "booth": "4H531",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "428"
+    "source_position": "429"
   },
   {
     "exhibitor_id": "parent:184",
@@ -5145,7 +5157,7 @@
     "booth": "7H431",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "429"
+    "source_position": "430"
   },
   {
     "exhibitor_id": "parent:374",
@@ -5157,7 +5169,7 @@
     "booth": "8H217",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "430"
+    "source_position": "431"
   },
   {
     "exhibitor_id": "parent:222",
@@ -5169,7 +5181,7 @@
     "booth": "4H301-303",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "431"
+    "source_position": "432"
   },
   {
     "exhibitor_id": "parent:88",
@@ -5181,7 +5193,7 @@
     "booth": "7H407",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "432"
+    "source_position": "433"
   },
   {
     "exhibitor_id": "parent:327",
@@ -5193,7 +5205,7 @@
     "booth": "",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "433"
+    "source_position": "434"
   },
   {
     "exhibitor_id": "parent:78",
@@ -5205,7 +5217,7 @@
     "booth": "7H502",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "434"
+    "source_position": "435"
   },
   {
     "exhibitor_id": "parent:203",
@@ -5217,7 +5229,19 @@
     "booth": "5H201",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "435"
+    "source_position": "436"
+  },
+  {
+    "exhibitor_id": "parent:1318",
+    "company_name": "mui Lab, Inc.",
+    "exhibitor_type": "parent",
+    "parent_exhibitor_id": "",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "8H207",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "437"
   },
   {
     "exhibitor_id": "parent:30",
@@ -5229,7 +5253,7 @@
     "booth": "7H340",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "436"
+    "source_position": "438"
   },
   {
     "exhibitor_id": "parent:194",
@@ -5241,7 +5265,7 @@
     "booth": "7H314",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "437"
+    "source_position": "439"
   },
   {
     "exhibitor_id": "parent:306",
@@ -5253,7 +5277,7 @@
     "booth": "4H317",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "438"
+    "source_position": "440"
   },
   {
     "exhibitor_id": "parent:206",
@@ -5265,7 +5289,7 @@
     "booth": "4H311",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "439"
+    "source_position": "441"
   },
   {
     "exhibitor_id": "parent:394",
@@ -5277,7 +5301,7 @@
     "booth": "8H202",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "440"
+    "source_position": "442"
   },
   {
     "exhibitor_id": "parent:36",
@@ -5289,7 +5313,7 @@
     "booth": "4H621",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "441"
+    "source_position": "443"
   },
   {
     "exhibitor_id": "parent:104",
@@ -5301,7 +5325,7 @@
     "booth": "4H207",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "442"
+    "source_position": "444"
   },
   {
     "exhibitor_id": "parent:104:co-exhibitor:1",
@@ -5313,7 +5337,7 @@
     "booth": "4H207",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "443"
+    "source_position": "445"
   },
   {
     "exhibitor_id": "parent:83",
@@ -5325,7 +5349,7 @@
     "booth": "4H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "444"
+    "source_position": "446"
   },
   {
     "exhibitor_id": "parent:83:co-exhibitor:1",
@@ -5337,7 +5361,7 @@
     "booth": "4H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "445"
+    "source_position": "447"
   },
   {
     "exhibitor_id": "parent:83:co-exhibitor:2",
@@ -5349,7 +5373,7 @@
     "booth": "4H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "446"
+    "source_position": "448"
   },
   {
     "exhibitor_id": "parent:83:co-exhibitor:3",
@@ -5361,7 +5385,7 @@
     "booth": "4H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "447"
+    "source_position": "449"
   },
   {
     "exhibitor_id": "parent:83:co-exhibitor:4",
@@ -5373,7 +5397,7 @@
     "booth": "4H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "448"
+    "source_position": "450"
   },
   {
     "exhibitor_id": "parent:83:co-exhibitor:5",
@@ -5385,7 +5409,7 @@
     "booth": "4H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "449"
+    "source_position": "451"
   },
   {
     "exhibitor_id": "parent:83:co-exhibitor:6",
@@ -5397,7 +5421,7 @@
     "booth": "4H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "450"
+    "source_position": "452"
   },
   {
     "exhibitor_id": "parent:83:co-exhibitor:7",
@@ -5409,7 +5433,7 @@
     "booth": "4H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "451"
+    "source_position": "453"
   },
   {
     "exhibitor_id": "parent:83:co-exhibitor:8",
@@ -5421,7 +5445,7 @@
     "booth": "4H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "452"
+    "source_position": "454"
   },
   {
     "exhibitor_id": "parent:83:co-exhibitor:9",
@@ -5433,7 +5457,7 @@
     "booth": "4H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "453"
+    "source_position": "455"
   },
   {
     "exhibitor_id": "parent:83:co-exhibitor:10",
@@ -5445,11 +5469,11 @@
     "booth": "4H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "454"
+    "source_position": "456"
   },
   {
     "exhibitor_id": "parent:83:co-exhibitor:11",
-    "company_name": "▸ SPViolet, Kanazawa Medical University",
+    "company_name": "▸ SPViolet, Kanazawa Medical University 🎓",
     "exhibitor_type": "co_exhibitor",
     "parent_exhibitor_id": "83",
     "area": "Next Generation Park",
@@ -5457,7 +5481,7 @@
     "booth": "4H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "455"
+    "source_position": "457"
   },
   {
     "exhibitor_id": "parent:83:co-exhibitor:12",
@@ -5469,7 +5493,7 @@
     "booth": "4H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "456"
+    "source_position": "458"
   },
   {
     "exhibitor_id": "parent:83:co-exhibitor:13",
@@ -5481,7 +5505,7 @@
     "booth": "4H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "457"
+    "source_position": "459"
   },
   {
     "exhibitor_id": "parent:45",
@@ -5493,7 +5517,7 @@
     "booth": "6H224",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "458"
+    "source_position": "460"
   },
   {
     "exhibitor_id": "parent:29",
@@ -5505,7 +5529,7 @@
     "booth": "6H208",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "459"
+    "source_position": "461"
   },
   {
     "exhibitor_id": "parent:130",
@@ -5517,7 +5541,7 @@
     "booth": "4H114",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "460"
+    "source_position": "462"
   },
   {
     "exhibitor_id": "parent:95",
@@ -5529,7 +5553,7 @@
     "booth": "8H130",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "461"
+    "source_position": "463"
   },
   {
     "exhibitor_id": "parent:24",
@@ -5541,7 +5565,7 @@
     "booth": "8H230",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "462"
+    "source_position": "464"
   },
   {
     "exhibitor_id": "parent:31",
@@ -5553,7 +5577,7 @@
     "booth": "7H004",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "463"
+    "source_position": "465"
   },
   {
     "exhibitor_id": "parent:1259",
@@ -5565,7 +5589,7 @@
     "booth": "4H241",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "464"
+    "source_position": "466"
   },
   {
     "exhibitor_id": "parent:234",
@@ -5577,7 +5601,7 @@
     "booth": "8H301",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "465"
+    "source_position": "467"
   },
   {
     "exhibitor_id": "parent:371",
@@ -5589,7 +5613,7 @@
     "booth": "7H322",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "466"
+    "source_position": "468"
   },
   {
     "exhibitor_id": "parent:287",
@@ -5601,7 +5625,7 @@
     "booth": "4H120",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "467"
+    "source_position": "469"
   },
   {
     "exhibitor_id": "parent:337",
@@ -5613,7 +5637,7 @@
     "booth": "",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "468"
+    "source_position": "470"
   },
   {
     "exhibitor_id": "parent:311",
@@ -5625,7 +5649,7 @@
     "booth": "4H425",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "469"
+    "source_position": "471"
   },
   {
     "exhibitor_id": "parent:40",
@@ -5637,7 +5661,307 @@
     "booth": "5H440",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "470"
+    "source_position": "472"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:1",
+    "company_name": "▸ AI Robot Association",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "473"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:2",
+    "company_name": "▸ Advanced Telecommunications Research Institute International (ATR)",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "474"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:3",
+    "company_name": "▸ Automotive and Battery Traceability Center Association, Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "475"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:4",
+    "company_name": "▸ Chitose Robotics Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "476"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:5",
+    "company_name": "▸ DENSO CORPORATION",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "477"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:6",
+    "company_name": "▸ Direava Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "478"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:7",
+    "company_name": "▸ HIMEJI RIKA CO.,LTD.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "479"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:8",
+    "company_name": "▸ Japan Automobile Research Institute",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "480"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:9",
+    "company_name": "▸ Karakuri, Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "481"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:10",
+    "company_name": "▸ Kyoto Institute of Technology",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "482"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:11",
+    "company_name": "▸ MagneDesign Co., Ltd.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "483"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:12",
+    "company_name": "▸ NABLAS Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "484"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:13",
+    "company_name": "▸ NIIGATA INSTITUTE OF TECHNOLOGY",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "485"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:14",
+    "company_name": "▸ NTT DOCOMO BUSINESS, Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "486"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:15",
+    "company_name": "▸ Nagoya University",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "487"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:16",
+    "company_name": "▸ National Institute of Advanced Industrial Science and Technology",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "488"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:17",
+    "company_name": "▸ OLM Digital, Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "489"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:18",
+    "company_name": "▸ Precision Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "490"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:19",
+    "company_name": "▸ Saitama University",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "491"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:20",
+    "company_name": "▸ Shibaura Institute of Technology",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "492"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:21",
+    "company_name": "▸ Sumitomo Rubber Industries, Ltd.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "493"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:22",
+    "company_name": "▸ TIER IV, Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "494"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:23",
+    "company_name": "▸ Thinker Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "495"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:24",
+    "company_name": "▸ Toray Industries, Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "496"
+  },
+  {
+    "exhibitor_id": "parent:40:co-exhibitor:25",
+    "company_name": "▸ Yokohama National University",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "40",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "5H440",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "497"
   },
   {
     "exhibitor_id": "parent:47",
@@ -5649,7 +5973,7 @@
     "booth": "8H318",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "471"
+    "source_position": "498"
   },
   {
     "exhibitor_id": "parent:190",
@@ -5661,7 +5985,7 @@
     "booth": "7H430",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "472"
+    "source_position": "499"
   },
   {
     "exhibitor_id": "parent:315",
@@ -5673,7 +5997,7 @@
     "booth": "5H116",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "473"
+    "source_position": "500"
   },
   {
     "exhibitor_id": "parent:111",
@@ -5685,7 +6009,7 @@
     "booth": "6H020",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "474"
+    "source_position": "501"
   },
   {
     "exhibitor_id": "parent:326",
@@ -5697,7 +6021,7 @@
     "booth": "4H325",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "475"
+    "source_position": "502"
   },
   {
     "exhibitor_id": "parent:164",
@@ -5709,7 +6033,7 @@
     "booth": "8H222",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "476"
+    "source_position": "503"
   },
   {
     "exhibitor_id": "parent:118",
@@ -5721,7 +6045,7 @@
     "booth": "4H340",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "477"
+    "source_position": "504"
   },
   {
     "exhibitor_id": "parent:257",
@@ -5733,7 +6057,7 @@
     "booth": "4H319",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "478"
+    "source_position": "505"
   },
   {
     "exhibitor_id": "parent:1257",
@@ -5745,7 +6069,7 @@
     "booth": "4H017",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "479"
+    "source_position": "506"
   },
   {
     "exhibitor_id": "parent:116",
@@ -5757,7 +6081,7 @@
     "booth": "7H508",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "480"
+    "source_position": "507"
   },
   {
     "exhibitor_id": "parent:146",
@@ -5769,7 +6093,7 @@
     "booth": "8H212",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "481"
+    "source_position": "508"
   },
   {
     "exhibitor_id": "parent:362",
@@ -5781,7 +6105,7 @@
     "booth": "4H329",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "482"
+    "source_position": "509"
   },
   {
     "exhibitor_id": "parent:74",
@@ -5793,7 +6117,7 @@
     "booth": "8H133",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "483"
+    "source_position": "510"
   },
   {
     "exhibitor_id": "parent:236",
@@ -5805,7 +6129,7 @@
     "booth": "4H128",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "484"
+    "source_position": "511"
   },
   {
     "exhibitor_id": "parent:275",
@@ -5817,7 +6141,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "485"
+    "source_position": "512"
   },
   {
     "exhibitor_id": "parent:275:co-exhibitor:1",
@@ -5829,7 +6153,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "486"
+    "source_position": "513"
   },
   {
     "exhibitor_id": "parent:275:co-exhibitor:2",
@@ -5841,7 +6165,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "487"
+    "source_position": "514"
   },
   {
     "exhibitor_id": "parent:275:co-exhibitor:3",
@@ -5853,7 +6177,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "488"
+    "source_position": "515"
   },
   {
     "exhibitor_id": "parent:275:co-exhibitor:4",
@@ -5865,7 +6189,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "489"
+    "source_position": "516"
   },
   {
     "exhibitor_id": "parent:275:co-exhibitor:5",
@@ -5877,7 +6201,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "490"
+    "source_position": "517"
   },
   {
     "exhibitor_id": "parent:275:co-exhibitor:6",
@@ -5889,7 +6213,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "491"
+    "source_position": "518"
   },
   {
     "exhibitor_id": "parent:275:co-exhibitor:7",
@@ -5901,7 +6225,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "492"
+    "source_position": "519"
   },
   {
     "exhibitor_id": "parent:275:co-exhibitor:8",
@@ -5913,7 +6237,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "493"
+    "source_position": "520"
   },
   {
     "exhibitor_id": "parent:275:co-exhibitor:9",
@@ -5925,7 +6249,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "494"
+    "source_position": "521"
   },
   {
     "exhibitor_id": "parent:275:co-exhibitor:10",
@@ -5937,7 +6261,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "495"
+    "source_position": "522"
   },
   {
     "exhibitor_id": "parent:275:co-exhibitor:11",
@@ -5949,7 +6273,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "496"
+    "source_position": "523"
   },
   {
     "exhibitor_id": "parent:275:co-exhibitor:12",
@@ -5961,7 +6285,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "497"
+    "source_position": "524"
   },
   {
     "exhibitor_id": "parent:275:co-exhibitor:13",
@@ -5973,7 +6297,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "498"
+    "source_position": "525"
   },
   {
     "exhibitor_id": "parent:330",
@@ -5985,7 +6309,7 @@
     "booth": "6H008",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "499"
+    "source_position": "526"
   },
   {
     "exhibitor_id": "parent:330:co-exhibitor:1",
@@ -5997,7 +6321,7 @@
     "booth": "6H008",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "500"
+    "source_position": "527"
   },
   {
     "exhibitor_id": "parent:330:co-exhibitor:2",
@@ -6009,7 +6333,7 @@
     "booth": "6H008",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "501"
+    "source_position": "528"
   },
   {
     "exhibitor_id": "parent:381",
@@ -6021,7 +6345,7 @@
     "booth": "7H408",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "502"
+    "source_position": "529"
   },
   {
     "exhibitor_id": "parent:324",
@@ -6033,7 +6357,7 @@
     "booth": "8H316",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "503"
+    "source_position": "530"
   },
   {
     "exhibitor_id": "parent:63",
@@ -6045,7 +6369,7 @@
     "booth": "7H204",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "504"
+    "source_position": "531"
   },
   {
     "exhibitor_id": "parent:328",
@@ -6057,7 +6381,7 @@
     "booth": "6H238",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "505"
+    "source_position": "532"
   },
   {
     "exhibitor_id": "parent:68",
@@ -6069,7 +6393,7 @@
     "booth": "4H116",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "506"
+    "source_position": "533"
   },
   {
     "exhibitor_id": "parent:98",
@@ -6081,7 +6405,7 @@
     "booth": "7H201",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "507"
+    "source_position": "534"
   },
   {
     "exhibitor_id": "parent:64",
@@ -6093,7 +6417,7 @@
     "booth": "4H442",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "508"
+    "source_position": "535"
   },
   {
     "exhibitor_id": "parent:392",
@@ -6105,7 +6429,7 @@
     "booth": "4H435",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "509"
+    "source_position": "536"
   },
   {
     "exhibitor_id": "parent:397",
@@ -6117,7 +6441,7 @@
     "booth": "4H526",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "510"
+    "source_position": "537"
   },
   {
     "exhibitor_id": "parent:238",
@@ -6129,7 +6453,7 @@
     "booth": "4H328",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "511"
+    "source_position": "538"
   },
   {
     "exhibitor_id": "parent:1223",
@@ -6141,7 +6465,43 @@
     "booth": "5H305",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "512"
+    "source_position": "539"
+  },
+  {
+    "exhibitor_id": "parent:1223:co-exhibitor:1",
+    "company_name": "▸ AETECH Co., Ltd.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "1223",
+    "area": "X (Transformation) Park",
+    "hall": "|",
+    "booth": "5H305",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "540"
+  },
+  {
+    "exhibitor_id": "parent:1223:co-exhibitor:2",
+    "company_name": "▸ InvaLab Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "1223",
+    "area": "X (Transformation) Park",
+    "hall": "|",
+    "booth": "5H305",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "541"
+  },
+  {
+    "exhibitor_id": "parent:1223:co-exhibitor:3",
+    "company_name": "▸ allmytour",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "1223",
+    "area": "X (Transformation) Park",
+    "hall": "|",
+    "booth": "5H305",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "542"
   },
   {
     "exhibitor_id": "parent:386",
@@ -6153,7 +6513,7 @@
     "booth": "4H133",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "513"
+    "source_position": "543"
   },
   {
     "exhibitor_id": "parent:126",
@@ -6165,7 +6525,7 @@
     "booth": "8H113",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "514"
+    "source_position": "544"
   },
   {
     "exhibitor_id": "parent:134",
@@ -6177,7 +6537,7 @@
     "booth": "5H301",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "515"
+    "source_position": "545"
   },
   {
     "exhibitor_id": "parent:1053",
@@ -6189,7 +6549,7 @@
     "booth": "4H332",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "516"
+    "source_position": "546"
   },
   {
     "exhibitor_id": "parent:218",
@@ -6201,7 +6561,7 @@
     "booth": "4H428",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "517"
+    "source_position": "547"
   },
   {
     "exhibitor_id": "parent:100",
@@ -6213,7 +6573,7 @@
     "booth": "7H418",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "518"
+    "source_position": "548"
   },
   {
     "exhibitor_id": "parent:84",
@@ -6225,7 +6585,7 @@
     "booth": "5H206",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "519"
+    "source_position": "549"
   },
   {
     "exhibitor_id": "parent:375",
@@ -6237,7 +6597,7 @@
     "booth": "8H114",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "520"
+    "source_position": "550"
   },
   {
     "exhibitor_id": "parent:250",
@@ -6249,7 +6609,7 @@
     "booth": "8H122",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "521"
+    "source_position": "551"
   },
   {
     "exhibitor_id": "parent:250:co-exhibitor:1",
@@ -6261,7 +6621,7 @@
     "booth": "8H122",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "522"
+    "source_position": "552"
   },
   {
     "exhibitor_id": "parent:1146",
@@ -6273,7 +6633,7 @@
     "booth": "5H412",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "523"
+    "source_position": "553"
   },
   {
     "exhibitor_id": "parent:1303",
@@ -6285,7 +6645,7 @@
     "booth": "4H338",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "524"
+    "source_position": "554"
   },
   {
     "exhibitor_id": "parent:132",
@@ -6297,7 +6657,7 @@
     "booth": "4H021",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "525"
+    "source_position": "555"
   },
   {
     "exhibitor_id": "parent:240",
@@ -6309,7 +6669,7 @@
     "booth": "4H424",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "526"
+    "source_position": "556"
   },
   {
     "exhibitor_id": "parent:227",
@@ -6321,7 +6681,7 @@
     "booth": "7H324",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "527"
+    "source_position": "557"
   },
   {
     "exhibitor_id": "parent:1313",
@@ -6330,10 +6690,10 @@
     "parent_exhibitor_id": "",
     "area": "General Exhibits",
     "hall": "|",
-    "booth": "",
+    "booth": "7H511",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "528"
+    "source_position": "558"
   },
   {
     "exhibitor_id": "parent:172",
@@ -6345,7 +6705,7 @@
     "booth": "7H326",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "529"
+    "source_position": "559"
   },
   {
     "exhibitor_id": "parent:205",
@@ -6357,7 +6717,7 @@
     "booth": "7H316",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "530"
+    "source_position": "560"
   },
   {
     "exhibitor_id": "parent:317",
@@ -6369,10 +6729,22 @@
     "booth": "4H525",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "531"
+    "source_position": "561"
   },
   {
     "exhibitor_id": "parent:317:co-exhibitor:1",
+    "company_name": "▸ 8 Interactive Taiwan Limited",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "317",
+    "area": "X (Transformation) Park",
+    "hall": "|",
+    "booth": "4H525",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "562"
+  },
+  {
+    "exhibitor_id": "parent:317:co-exhibitor:2",
     "company_name": "▸ AIAA",
     "exhibitor_type": "co_exhibitor",
     "parent_exhibitor_id": "317",
@@ -6381,7 +6753,43 @@
     "booth": "4H525",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "532"
+    "source_position": "563"
+  },
+  {
+    "exhibitor_id": "parent:317:co-exhibitor:3",
+    "company_name": "▸ ARDGE Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "317",
+    "area": "X (Transformation) Park",
+    "hall": "|",
+    "booth": "4H525",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "564"
+  },
+  {
+    "exhibitor_id": "parent:317:co-exhibitor:4",
+    "company_name": "▸ Chisen Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "317",
+    "area": "X (Transformation) Park",
+    "hall": "|",
+    "booth": "4H525",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "565"
+  },
+  {
+    "exhibitor_id": "parent:317:co-exhibitor:5",
+    "company_name": "▸ Yun-X Tek CO., LTD.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "317",
+    "area": "X (Transformation) Park",
+    "hall": "|",
+    "booth": "4H525",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "566"
   },
   {
     "exhibitor_id": "parent:106",
@@ -6393,7 +6801,7 @@
     "booth": "4H137",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "533"
+    "source_position": "567"
   },
   {
     "exhibitor_id": "parent:274",
@@ -6405,7 +6813,7 @@
     "booth": "4H601",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "534"
+    "source_position": "568"
   },
   {
     "exhibitor_id": "parent:1266",
@@ -6417,7 +6825,7 @@
     "booth": "4H122",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "535"
+    "source_position": "569"
   },
   {
     "exhibitor_id": "parent:85",
@@ -6429,7 +6837,7 @@
     "booth": "4H248",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "536"
+    "source_position": "570"
   },
   {
     "exhibitor_id": "parent:241",
@@ -6441,7 +6849,7 @@
     "booth": "6H004",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "537"
+    "source_position": "571"
   },
   {
     "exhibitor_id": "parent:241:co-exhibitor:1",
@@ -6453,7 +6861,7 @@
     "booth": "6H004",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "538"
+    "source_position": "572"
   },
   {
     "exhibitor_id": "parent:241:co-exhibitor:2",
@@ -6465,7 +6873,7 @@
     "booth": "6H004",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "539"
+    "source_position": "573"
   },
   {
     "exhibitor_id": "parent:241:co-exhibitor:3",
@@ -6477,7 +6885,7 @@
     "booth": "6H004",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "540"
+    "source_position": "574"
   },
   {
     "exhibitor_id": "parent:389",
@@ -6489,7 +6897,7 @@
     "booth": "4H230",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "541"
+    "source_position": "575"
   },
   {
     "exhibitor_id": "parent:1262",
@@ -6501,7 +6909,7 @@
     "booth": "4H123",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "542"
+    "source_position": "576"
   },
   {
     "exhibitor_id": "parent:1262:co-exhibitor:1",
@@ -6513,7 +6921,7 @@
     "booth": "4H123",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "543"
+    "source_position": "577"
   },
   {
     "exhibitor_id": "parent:1262:co-exhibitor:2",
@@ -6525,7 +6933,7 @@
     "booth": "4H123",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "544"
+    "source_position": "578"
   },
   {
     "exhibitor_id": "parent:285",
@@ -6537,7 +6945,7 @@
     "booth": "6H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "545"
+    "source_position": "579"
   },
   {
     "exhibitor_id": "parent:199",
@@ -6549,7 +6957,7 @@
     "booth": "8H027",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "546"
+    "source_position": "580"
   },
   {
     "exhibitor_id": "parent:186",
@@ -6561,7 +6969,7 @@
     "booth": "5H402",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "547"
+    "source_position": "581"
   },
   {
     "exhibitor_id": "parent:147",
@@ -6573,7 +6981,7 @@
     "booth": "4H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "548"
+    "source_position": "582"
   },
   {
     "exhibitor_id": "parent:87",
@@ -6585,7 +6993,7 @@
     "booth": "7H409",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "549"
+    "source_position": "583"
   },
   {
     "exhibitor_id": "parent:378",
@@ -6597,7 +7005,7 @@
     "booth": "4H142",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "550"
+    "source_position": "584"
   },
   {
     "exhibitor_id": "parent:1177",
@@ -6609,7 +7017,7 @@
     "booth": "8H023",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "551"
+    "source_position": "585"
   },
   {
     "exhibitor_id": "parent:320",
@@ -6621,7 +7029,7 @@
     "booth": "8H203",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "552"
+    "source_position": "586"
   },
   {
     "exhibitor_id": "parent:245",
@@ -6633,7 +7041,7 @@
     "booth": "8H313",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "553"
+    "source_position": "587"
   },
   {
     "exhibitor_id": "parent:400",
@@ -6645,7 +7053,7 @@
     "booth": "8H002",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "554"
+    "source_position": "588"
   },
   {
     "exhibitor_id": "parent:117",
@@ -6657,7 +7065,7 @@
     "booth": "8H201",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "555"
+    "source_position": "589"
   },
   {
     "exhibitor_id": "parent:1249",
@@ -6669,7 +7077,7 @@
     "booth": "7H116",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "556"
+    "source_position": "590"
   },
   {
     "exhibitor_id": "parent:32",
@@ -6681,7 +7089,7 @@
     "booth": "8H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "557"
+    "source_position": "591"
   },
   {
     "exhibitor_id": "parent:214",
@@ -6693,7 +7101,7 @@
     "booth": "8H025",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "558"
+    "source_position": "592"
   },
   {
     "exhibitor_id": "parent:188",
@@ -6705,7 +7113,7 @@
     "booth": "7H410",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "559"
+    "source_position": "593"
   },
   {
     "exhibitor_id": "parent:383",
@@ -6717,7 +7125,7 @@
     "booth": "7H415",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "560"
+    "source_position": "594"
   },
   {
     "exhibitor_id": "parent:233",
@@ -6729,7 +7137,7 @@
     "booth": "4H330",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "561"
+    "source_position": "595"
   },
   {
     "exhibitor_id": "parent:286",
@@ -6741,7 +7149,7 @@
     "booth": "7H433",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "562"
+    "source_position": "596"
   },
   {
     "exhibitor_id": "parent:286:co-exhibitor:1",
@@ -6753,7 +7161,7 @@
     "booth": "7H433",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "563"
+    "source_position": "597"
   },
   {
     "exhibitor_id": "parent:235",
@@ -6765,7 +7173,7 @@
     "booth": "7H205",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "564"
+    "source_position": "598"
   },
   {
     "exhibitor_id": "parent:229",
@@ -6777,7 +7185,7 @@
     "booth": "4H228",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "565"
+    "source_position": "599"
   },
   {
     "exhibitor_id": "parent:41",
@@ -6789,7 +7197,7 @@
     "booth": "5H340",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "566"
+    "source_position": "600"
   },
   {
     "exhibitor_id": "parent:334",
@@ -6801,7 +7209,7 @@
     "booth": "8H124",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "567"
+    "source_position": "601"
   },
   {
     "exhibitor_id": "parent:390",
@@ -6813,7 +7221,7 @@
     "booth": "8H317",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "568"
+    "source_position": "602"
   },
   {
     "exhibitor_id": "parent:99",
@@ -6825,7 +7233,7 @@
     "booth": "8H302",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "569"
+    "source_position": "603"
   },
   {
     "exhibitor_id": "parent:351",
@@ -6837,7 +7245,7 @@
     "booth": "7H419",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "570"
+    "source_position": "604"
   },
   {
     "exhibitor_id": "parent:268",
@@ -6849,7 +7257,7 @@
     "booth": "5H113",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "571"
+    "source_position": "605"
   },
   {
     "exhibitor_id": "parent:272",
@@ -6861,7 +7269,7 @@
     "booth": "4H013-016",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "572"
+    "source_position": "606"
   },
   {
     "exhibitor_id": "parent:52",
@@ -6873,7 +7281,7 @@
     "booth": "8H128",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "573"
+    "source_position": "607"
   },
   {
     "exhibitor_id": "parent:249",
@@ -6885,7 +7293,7 @@
     "booth": "4H236",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "574"
+    "source_position": "608"
   },
   {
     "exhibitor_id": "parent:213",
@@ -6897,7 +7305,7 @@
     "booth": "4H147",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "575"
+    "source_position": "609"
   },
   {
     "exhibitor_id": "parent:1312",
@@ -6909,7 +7317,7 @@
     "booth": "",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "576"
+    "source_position": "610"
   },
   {
     "exhibitor_id": "parent:297",
@@ -6921,7 +7329,7 @@
     "booth": "4H239",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "577"
+    "source_position": "611"
   },
   {
     "exhibitor_id": "parent:191",
@@ -6933,7 +7341,7 @@
     "booth": "8H120",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "578"
+    "source_position": "612"
   },
   {
     "exhibitor_id": "parent:361",
@@ -6945,7 +7353,7 @@
     "booth": "4H605",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "579"
+    "source_position": "613"
   },
   {
     "exhibitor_id": "parent:361:co-exhibitor:1",
@@ -6957,7 +7365,7 @@
     "booth": "4H605",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "580"
+    "source_position": "614"
   },
   {
     "exhibitor_id": "parent:361:co-exhibitor:2",
@@ -6969,7 +7377,7 @@
     "booth": "4H605",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "581"
+    "source_position": "615"
   },
   {
     "exhibitor_id": "parent:361:co-exhibitor:3",
@@ -6981,7 +7389,7 @@
     "booth": "4H605",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "582"
+    "source_position": "616"
   },
   {
     "exhibitor_id": "parent:361:co-exhibitor:4",
@@ -6993,7 +7401,7 @@
     "booth": "4H605",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "583"
+    "source_position": "617"
   },
   {
     "exhibitor_id": "parent:361:co-exhibitor:5",
@@ -7005,7 +7413,7 @@
     "booth": "4H605",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "584"
+    "source_position": "618"
   },
   {
     "exhibitor_id": "parent:361:co-exhibitor:6",
@@ -7017,7 +7425,7 @@
     "booth": "4H605",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "585"
+    "source_position": "619"
   },
   {
     "exhibitor_id": "parent:361:co-exhibitor:7",
@@ -7029,7 +7437,7 @@
     "booth": "4H605",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "586"
+    "source_position": "620"
   },
   {
     "exhibitor_id": "parent:361:co-exhibitor:8",
@@ -7041,7 +7449,7 @@
     "booth": "4H605",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "587"
+    "source_position": "621"
   },
   {
     "exhibitor_id": "parent:380",
@@ -7053,7 +7461,7 @@
     "booth": "4H136",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "588"
+    "source_position": "622"
   },
   {
     "exhibitor_id": "parent:176",
@@ -7065,7 +7473,7 @@
     "booth": "8H403",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "589"
+    "source_position": "623"
   },
   {
     "exhibitor_id": "parent:300",
@@ -7077,7 +7485,7 @@
     "booth": "4H450",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "590"
+    "source_position": "624"
   },
   {
     "exhibitor_id": "parent:66",
@@ -7089,7 +7497,7 @@
     "booth": "7H422",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "591"
+    "source_position": "625"
   },
   {
     "exhibitor_id": "parent:66:co-exhibitor:1",
@@ -7101,7 +7509,7 @@
     "booth": "7H422",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "592"
+    "source_position": "626"
   },
   {
     "exhibitor_id": "parent:296",
@@ -7113,7 +7521,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "593"
+    "source_position": "627"
   },
   {
     "exhibitor_id": "parent:296:co-exhibitor:1",
@@ -7125,7 +7533,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "594"
+    "source_position": "628"
   },
   {
     "exhibitor_id": "parent:296:co-exhibitor:2",
@@ -7137,7 +7545,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "595"
+    "source_position": "629"
   },
   {
     "exhibitor_id": "parent:296:co-exhibitor:3",
@@ -7149,7 +7557,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "596"
+    "source_position": "630"
   },
   {
     "exhibitor_id": "parent:296:co-exhibitor:4",
@@ -7161,7 +7569,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "597"
+    "source_position": "631"
   },
   {
     "exhibitor_id": "parent:296:co-exhibitor:5",
@@ -7173,7 +7581,7 @@
     "booth": "5H210",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "598"
+    "source_position": "632"
   },
   {
     "exhibitor_id": "parent:44",
@@ -7185,7 +7593,7 @@
     "booth": "6H250",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "599"
+    "source_position": "633"
   },
   {
     "exhibitor_id": "parent:239",
@@ -7197,7 +7605,19 @@
     "booth": "4H233",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "600"
+    "source_position": "634"
+  },
+  {
+    "exhibitor_id": "parent:1319",
+    "company_name": "sss-entertainment inc.",
+    "exhibitor_type": "parent",
+    "parent_exhibitor_id": "",
+    "area": "Next Generation Park",
+    "hall": "|",
+    "booth": "4H222",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "635"
   },
   {
     "exhibitor_id": "parent:246",
@@ -7209,7 +7629,7 @@
     "booth": "8H126",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "601"
+    "source_position": "636"
   },
   {
     "exhibitor_id": "parent:382",
@@ -7221,7 +7641,7 @@
     "booth": "7H402",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "602"
+    "source_position": "637"
   },
   {
     "exhibitor_id": "parent:69",
@@ -7233,7 +7653,7 @@
     "booth": "4H533",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "603"
+    "source_position": "638"
   },
   {
     "exhibitor_id": "parent:81",
@@ -7245,7 +7665,7 @@
     "booth": "4H243",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "604"
+    "source_position": "639"
   },
   {
     "exhibitor_id": "parent:211",
@@ -7257,7 +7677,7 @@
     "booth": "4H144",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "605"
+    "source_position": "640"
   },
   {
     "exhibitor_id": "parent:136",
@@ -7269,7 +7689,7 @@
     "booth": "5H132",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "606"
+    "source_position": "641"
   },
   {
     "exhibitor_id": "parent:1233",
@@ -7281,7 +7701,7 @@
     "booth": "5H405",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "607"
+    "source_position": "642"
   },
   {
     "exhibitor_id": "parent:108",
@@ -7293,7 +7713,7 @@
     "booth": "4H440",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "608"
+    "source_position": "643"
   },
   {
     "exhibitor_id": "parent:280",
@@ -7305,7 +7725,7 @@
     "booth": "5H312",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "609"
+    "source_position": "644"
   },
   {
     "exhibitor_id": "parent:336",
@@ -7317,7 +7737,7 @@
     "booth": "7H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "610"
+    "source_position": "645"
   },
   {
     "exhibitor_id": "parent:336:co-exhibitor:1",
@@ -7329,7 +7749,7 @@
     "booth": "7H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "611"
+    "source_position": "646"
   },
   {
     "exhibitor_id": "parent:336:co-exhibitor:2",
@@ -7341,7 +7761,7 @@
     "booth": "7H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "612"
+    "source_position": "647"
   },
   {
     "exhibitor_id": "parent:336:co-exhibitor:3",
@@ -7353,7 +7773,7 @@
     "booth": "7H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "613"
+    "source_position": "648"
   },
   {
     "exhibitor_id": "parent:336:co-exhibitor:4",
@@ -7365,7 +7785,7 @@
     "booth": "7H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "614"
+    "source_position": "649"
   },
   {
     "exhibitor_id": "parent:336:co-exhibitor:5",
@@ -7377,7 +7797,7 @@
     "booth": "7H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "615"
+    "source_position": "650"
   },
   {
     "exhibitor_id": "parent:336:co-exhibitor:6",
@@ -7389,7 +7809,7 @@
     "booth": "7H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "616"
+    "source_position": "651"
   },
   {
     "exhibitor_id": "parent:336:co-exhibitor:7",
@@ -7401,7 +7821,7 @@
     "booth": "7H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "617"
+    "source_position": "652"
   },
   {
     "exhibitor_id": "parent:336:co-exhibitor:8",
@@ -7413,7 +7833,7 @@
     "booth": "7H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "618"
+    "source_position": "653"
   },
   {
     "exhibitor_id": "parent:336:co-exhibitor:9",
@@ -7425,7 +7845,7 @@
     "booth": "7H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "619"
+    "source_position": "654"
   },
   {
     "exhibitor_id": "parent:336:co-exhibitor:10",
@@ -7437,7 +7857,7 @@
     "booth": "7H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "620"
+    "source_position": "655"
   },
   {
     "exhibitor_id": "parent:336:co-exhibitor:11",
@@ -7449,7 +7869,7 @@
     "booth": "7H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "621"
+    "source_position": "656"
   },
   {
     "exhibitor_id": "parent:336:co-exhibitor:12",
@@ -7461,7 +7881,7 @@
     "booth": "7H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "622"
+    "source_position": "657"
   },
   {
     "exhibitor_id": "parent:336:co-exhibitor:13",
@@ -7473,7 +7893,7 @@
     "booth": "7H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "623"
+    "source_position": "658"
   },
   {
     "exhibitor_id": "parent:339",
@@ -7485,7 +7905,7 @@
     "booth": "7H005",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "624"
+    "source_position": "659"
   },
   {
     "exhibitor_id": "parent:339:co-exhibitor:1",
@@ -7497,7 +7917,7 @@
     "booth": "7H005",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "625"
+    "source_position": "660"
   },
   {
     "exhibitor_id": "parent:339:co-exhibitor:2",
@@ -7509,7 +7929,7 @@
     "booth": "7H005",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "626"
+    "source_position": "661"
   },
   {
     "exhibitor_id": "parent:339:co-exhibitor:3",
@@ -7521,7 +7941,7 @@
     "booth": "7H005",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "627"
+    "source_position": "662"
   },
   {
     "exhibitor_id": "parent:339:co-exhibitor:4",
@@ -7533,7 +7953,7 @@
     "booth": "7H005",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "628"
+    "source_position": "663"
   },
   {
     "exhibitor_id": "parent:339:co-exhibitor:5",
@@ -7545,7 +7965,7 @@
     "booth": "7H005",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "629"
+    "source_position": "664"
   },
   {
     "exhibitor_id": "parent:339:co-exhibitor:6",
@@ -7557,7 +7977,7 @@
     "booth": "7H005",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "630"
+    "source_position": "665"
   },
   {
     "exhibitor_id": "parent:339:co-exhibitor:7",
@@ -7569,7 +7989,7 @@
     "booth": "7H005",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "631"
+    "source_position": "666"
   },
   {
     "exhibitor_id": "parent:339:co-exhibitor:8",
@@ -7581,7 +8001,7 @@
     "booth": "7H005",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "632"
+    "source_position": "667"
   },
   {
     "exhibitor_id": "parent:339:co-exhibitor:9",
@@ -7593,7 +8013,7 @@
     "booth": "7H005",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "633"
+    "source_position": "668"
   },
   {
     "exhibitor_id": "parent:339:co-exhibitor:10",
@@ -7605,7 +8025,7 @@
     "booth": "7H005",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "634"
+    "source_position": "669"
   },
   {
     "exhibitor_id": "parent:339:co-exhibitor:11",
@@ -7617,7 +8037,7 @@
     "booth": "7H005",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "635"
+    "source_position": "670"
   },
   {
     "exhibitor_id": "parent:339:co-exhibitor:12",
@@ -7629,7 +8049,7 @@
     "booth": "7H005",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "636"
+    "source_position": "671"
   },
   {
     "exhibitor_id": "parent:339:co-exhibitor:13",
@@ -7641,7 +8061,7 @@
     "booth": "7H005",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "637"
+    "source_position": "672"
   },
   {
     "exhibitor_id": "parent:166",
@@ -7653,7 +8073,7 @@
     "booth": "8H030",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "638"
+    "source_position": "673"
   },
   {
     "exhibitor_id": "parent:338",
@@ -7665,7 +8085,7 @@
     "booth": "4H132",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "639"
+    "source_position": "674"
   },
   {
     "exhibitor_id": "parent:283",
@@ -7677,7 +8097,7 @@
     "booth": "4H201-203",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "640"
+    "source_position": "675"
   },
   {
     "exhibitor_id": "parent:125",
@@ -7689,7 +8109,7 @@
     "booth": "8H017",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "641"
+    "source_position": "676"
   },
   {
     "exhibitor_id": "parent:174",
@@ -7701,7 +8121,7 @@
     "booth": "7H505",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "642"
+    "source_position": "677"
   },
   {
     "exhibitor_id": "parent:26",
@@ -7713,7 +8133,7 @@
     "booth": "5H261",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "643"
+    "source_position": "678"
   },
   {
     "exhibitor_id": "parent:1265",
@@ -7725,7 +8145,7 @@
     "booth": "5H120",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "644"
+    "source_position": "679"
   },
   {
     "exhibitor_id": "parent:270",
@@ -7737,7 +8157,7 @@
     "booth": "4H138",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "645"
+    "source_position": "680"
   },
   {
     "exhibitor_id": "parent:158",
@@ -7749,7 +8169,7 @@
     "booth": "5H114",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "646"
+    "source_position": "681"
   },
   {
     "exhibitor_id": "parent:144",
@@ -7761,7 +8181,7 @@
     "booth": "4H118",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "647"
+    "source_position": "682"
   },
   {
     "exhibitor_id": "parent:60",
@@ -7773,7 +8193,7 @@
     "booth": "8H315",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "648"
+    "source_position": "683"
   },
   {
     "exhibitor_id": "parent:242",
@@ -7785,7 +8205,7 @@
     "booth": "8H112",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "649"
+    "source_position": "684"
   },
   {
     "exhibitor_id": "parent:331",
@@ -7797,7 +8217,7 @@
     "booth": "4H304",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "650"
+    "source_position": "685"
   },
   {
     "exhibitor_id": "parent:202",
@@ -7809,7 +8229,7 @@
     "booth": "4H307",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "651"
+    "source_position": "686"
   },
   {
     "exhibitor_id": "parent:201",
@@ -7821,7 +8241,7 @@
     "booth": "8H001",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "652"
+    "source_position": "687"
   },
   {
     "exhibitor_id": "parent:333",
@@ -7833,7 +8253,7 @@
     "booth": "8H019",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "653"
+    "source_position": "688"
   },
   {
     "exhibitor_id": "parent:123",
@@ -7845,7 +8265,7 @@
     "booth": "4H244",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "654"
+    "source_position": "689"
   },
   {
     "exhibitor_id": "parent:329",
@@ -7857,7 +8277,7 @@
     "booth": "7H202",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "655"
+    "source_position": "690"
   },
   {
     "exhibitor_id": "parent:310",
@@ -7869,7 +8289,7 @@
     "booth": "8H211",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "656"
+    "source_position": "691"
   },
   {
     "exhibitor_id": "parent:366",
@@ -7881,7 +8301,55 @@
     "booth": "7H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "657"
+    "source_position": "692"
+  },
+  {
+    "exhibitor_id": "parent:366:co-exhibitor:1",
+    "company_name": "▸ CalTa Co., Ltd.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "366",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "7H101",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "693"
+  },
+  {
+    "exhibitor_id": "parent:366:co-exhibitor:2",
+    "company_name": "▸ Green Carbon Inc.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "366",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "7H101",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "694"
+  },
+  {
+    "exhibitor_id": "parent:366:co-exhibitor:3",
+    "company_name": "▸ SPACEONE Co.,Ltd",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "366",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "7H101",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "695"
+  },
+  {
+    "exhibitor_id": "parent:366:co-exhibitor:4",
+    "company_name": "▸ inQs Co., Ltd.",
+    "exhibitor_type": "co_exhibitor",
+    "parent_exhibitor_id": "366",
+    "area": "General Exhibits",
+    "hall": "|",
+    "booth": "7H101",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "696"
   },
   {
     "exhibitor_id": "parent:73",
@@ -7893,7 +8361,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "658"
+    "source_position": "697"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:1",
@@ -7905,7 +8373,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "659"
+    "source_position": "698"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:2",
@@ -7917,7 +8385,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "660"
+    "source_position": "699"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:3",
@@ -7929,7 +8397,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "661"
+    "source_position": "700"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:4",
@@ -7941,7 +8409,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "662"
+    "source_position": "701"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:5",
@@ -7953,7 +8421,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "663"
+    "source_position": "702"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:6",
@@ -7965,7 +8433,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "664"
+    "source_position": "703"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:7",
@@ -7977,7 +8445,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "665"
+    "source_position": "704"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:8",
@@ -7989,7 +8457,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "666"
+    "source_position": "705"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:9",
@@ -8001,7 +8469,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "667"
+    "source_position": "706"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:10",
@@ -8013,7 +8481,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "668"
+    "source_position": "707"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:11",
@@ -8025,7 +8493,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "669"
+    "source_position": "708"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:12",
@@ -8037,7 +8505,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "670"
+    "source_position": "709"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:13",
@@ -8049,7 +8517,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "671"
+    "source_position": "710"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:14",
@@ -8061,7 +8529,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "672"
+    "source_position": "711"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:15",
@@ -8073,7 +8541,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "673"
+    "source_position": "712"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:16",
@@ -8085,7 +8553,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "674"
+    "source_position": "713"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:17",
@@ -8097,7 +8565,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "675"
+    "source_position": "714"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:18",
@@ -8109,7 +8577,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "676"
+    "source_position": "715"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:19",
@@ -8121,7 +8589,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "677"
+    "source_position": "716"
   },
   {
     "exhibitor_id": "parent:73:co-exhibitor:20",
@@ -8133,7 +8601,7 @@
     "booth": "6H140",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "678"
+    "source_position": "717"
   },
   {
     "exhibitor_id": "parent:228",
@@ -8145,7 +8613,7 @@
     "booth": "4H204-206",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "679"
+    "source_position": "718"
   },
   {
     "exhibitor_id": "parent:127",
@@ -8157,7 +8625,7 @@
     "booth": "4H401-406",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "680"
+    "source_position": "719"
   },
   {
     "exhibitor_id": "parent:37",
@@ -8169,7 +8637,7 @@
     "booth": "7H328",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "681"
+    "source_position": "720"
   },
   {
     "exhibitor_id": "parent:276",
@@ -8181,7 +8649,7 @@
     "booth": "4H141",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "682"
+    "source_position": "721"
   },
   {
     "exhibitor_id": "parent:401",
@@ -8193,7 +8661,7 @@
     "booth": "8H127",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "683"
+    "source_position": "722"
   },
   {
     "exhibitor_id": "parent:401:co-exhibitor:1",
@@ -8205,7 +8673,7 @@
     "booth": "8H127",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "684"
+    "source_position": "723"
   },
   {
     "exhibitor_id": "parent:226",
@@ -8217,7 +8685,7 @@
     "booth": "8H121",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "685"
+    "source_position": "724"
   },
   {
     "exhibitor_id": "parent:171",
@@ -8229,7 +8697,7 @@
     "booth": "7H122",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "686"
+    "source_position": "725"
   },
   {
     "exhibitor_id": "parent:171:co-exhibitor:1",
@@ -8241,7 +8709,7 @@
     "booth": "7H122",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "687"
+    "source_position": "726"
   },
   {
     "exhibitor_id": "parent:171:co-exhibitor:2",
@@ -8253,7 +8721,7 @@
     "booth": "7H122",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "688"
+    "source_position": "727"
   },
   {
     "exhibitor_id": "parent:171:co-exhibitor:3",
@@ -8265,7 +8733,7 @@
     "booth": "7H122",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "689"
+    "source_position": "728"
   },
   {
     "exhibitor_id": "parent:171:co-exhibitor:4",
@@ -8277,7 +8745,7 @@
     "booth": "7H122",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "690"
+    "source_position": "729"
   },
   {
     "exhibitor_id": "parent:171:co-exhibitor:5",
@@ -8289,7 +8757,7 @@
     "booth": "7H122",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "691"
+    "source_position": "730"
   },
   {
     "exhibitor_id": "parent:171:co-exhibitor:6",
@@ -8301,7 +8769,7 @@
     "booth": "7H122",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "692"
+    "source_position": "731"
   },
   {
     "exhibitor_id": "parent:171:co-exhibitor:7",
@@ -8313,7 +8781,7 @@
     "booth": "7H122",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "693"
+    "source_position": "732"
   },
   {
     "exhibitor_id": "parent:171:co-exhibitor:8",
@@ -8325,7 +8793,7 @@
     "booth": "7H122",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "694"
+    "source_position": "733"
   },
   {
     "exhibitor_id": "parent:221",
@@ -8337,7 +8805,7 @@
     "booth": "8H223",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "695"
+    "source_position": "734"
   },
   {
     "exhibitor_id": "parent:35",
@@ -8349,7 +8817,7 @@
     "booth": "7H432",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "696"
+    "source_position": "735"
   },
   {
     "exhibitor_id": "parent:299",
@@ -8361,7 +8829,7 @@
     "booth": "8H007",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "697"
+    "source_position": "736"
   },
   {
     "exhibitor_id": "parent:299:co-exhibitor:1",
@@ -8373,7 +8841,7 @@
     "booth": "8H007",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "698"
+    "source_position": "737"
   },
   {
     "exhibitor_id": "parent:1185",
@@ -8385,7 +8853,7 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "699"
+    "source_position": "738"
   },
   {
     "exhibitor_id": "parent:1185:co-exhibitor:1",
@@ -8397,7 +8865,7 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "700"
+    "source_position": "739"
   },
   {
     "exhibitor_id": "parent:1185:co-exhibitor:2",
@@ -8409,7 +8877,7 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "701"
+    "source_position": "740"
   },
   {
     "exhibitor_id": "parent:1185:co-exhibitor:3",
@@ -8421,7 +8889,7 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "702"
+    "source_position": "741"
   },
   {
     "exhibitor_id": "parent:1185:co-exhibitor:4",
@@ -8433,7 +8901,7 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "703"
+    "source_position": "742"
   },
   {
     "exhibitor_id": "parent:1185:co-exhibitor:5",
@@ -8445,7 +8913,7 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "704"
+    "source_position": "743"
   },
   {
     "exhibitor_id": "parent:1185:co-exhibitor:6",
@@ -8457,34 +8925,10 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "705"
+    "source_position": "744"
   },
   {
     "exhibitor_id": "parent:1185:co-exhibitor:7",
-    "company_name": "▸ Manhat",
-    "exhibitor_type": "co_exhibitor",
-    "parent_exhibitor_id": "1185",
-    "area": "Global Park",
-    "hall": "|",
-    "booth": "4H501",
-    "detail_url": "",
-    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "706"
-  },
-  {
-    "exhibitor_id": "parent:1185:co-exhibitor:8",
-    "company_name": "▸ Matregenix",
-    "exhibitor_type": "co_exhibitor",
-    "parent_exhibitor_id": "1185",
-    "area": "Global Park",
-    "hall": "|",
-    "booth": "4H501",
-    "detail_url": "",
-    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "707"
-  },
-  {
-    "exhibitor_id": "parent:1185:co-exhibitor:9",
     "company_name": "▸ Narrativa",
     "exhibitor_type": "co_exhibitor",
     "parent_exhibitor_id": "1185",
@@ -8493,10 +8937,10 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "708"
+    "source_position": "745"
   },
   {
-    "exhibitor_id": "parent:1185:co-exhibitor:10",
+    "exhibitor_id": "parent:1185:co-exhibitor:8",
     "company_name": "▸ Noornation",
     "exhibitor_type": "co_exhibitor",
     "parent_exhibitor_id": "1185",
@@ -8505,11 +8949,11 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "709"
+    "source_position": "746"
   },
   {
-    "exhibitor_id": "parent:1185:co-exhibitor:11",
-    "company_name": "▸ Responsive Drip Irrigation",
+    "exhibitor_id": "parent:1185:co-exhibitor:9",
+    "company_name": "▸ Sheraa",
     "exhibitor_type": "co_exhibitor",
     "parent_exhibitor_id": "1185",
     "area": "Global Park",
@@ -8517,10 +8961,10 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "710"
+    "source_position": "747"
   },
   {
-    "exhibitor_id": "parent:1185:co-exhibitor:12",
+    "exhibitor_id": "parent:1185:co-exhibitor:10",
     "company_name": "▸ Snapp Ocean Data Solutions",
     "exhibitor_type": "co_exhibitor",
     "parent_exhibitor_id": "1185",
@@ -8529,10 +8973,10 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "711"
+    "source_position": "748"
   },
   {
-    "exhibitor_id": "parent:1185:co-exhibitor:13",
+    "exhibitor_id": "parent:1185:co-exhibitor:11",
     "company_name": "▸ Squirrel Education",
     "exhibitor_type": "co_exhibitor",
     "parent_exhibitor_id": "1185",
@@ -8541,10 +8985,10 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "712"
+    "source_position": "749"
   },
   {
-    "exhibitor_id": "parent:1185:co-exhibitor:14",
+    "exhibitor_id": "parent:1185:co-exhibitor:12",
     "company_name": "▸ The AM lab",
     "exhibitor_type": "co_exhibitor",
     "parent_exhibitor_id": "1185",
@@ -8553,10 +8997,10 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "713"
+    "source_position": "750"
   },
   {
-    "exhibitor_id": "parent:1185:co-exhibitor:15",
+    "exhibitor_id": "parent:1185:co-exhibitor:13",
     "company_name": "▸ Theion",
     "exhibitor_type": "co_exhibitor",
     "parent_exhibitor_id": "1185",
@@ -8565,11 +9009,11 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "714"
+    "source_position": "751"
   },
   {
-    "exhibitor_id": "parent:1185:co-exhibitor:16",
-    "company_name": "▸ Tokenyze (Warehaus)",
+    "exhibitor_id": "parent:1185:co-exhibitor:14",
+    "company_name": "▸ Warehaus",
     "exhibitor_type": "co_exhibitor",
     "parent_exhibitor_id": "1185",
     "area": "Global Park",
@@ -8577,19 +9021,7 @@
     "booth": "4H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "715"
-  },
-  {
-    "exhibitor_id": "parent:1185:co-exhibitor:17",
-    "company_name": "▸ peaq",
-    "exhibitor_type": "co_exhibitor",
-    "parent_exhibitor_id": "1185",
-    "area": "Global Park",
-    "hall": "|",
-    "booth": "4H501",
-    "detail_url": "",
-    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "716"
+    "source_position": "752"
   },
   {
     "exhibitor_id": "parent:1306",
@@ -8601,7 +9033,7 @@
     "booth": "5H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "717"
+    "source_position": "753"
   },
   {
     "exhibitor_id": "parent:1306:co-exhibitor:1",
@@ -8613,7 +9045,7 @@
     "booth": "5H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "718"
+    "source_position": "754"
   },
   {
     "exhibitor_id": "parent:1306:co-exhibitor:2",
@@ -8625,7 +9057,7 @@
     "booth": "5H101",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "719"
+    "source_position": "755"
   },
   {
     "exhibitor_id": "parent:230",
@@ -8637,7 +9069,7 @@
     "booth": "4H310",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "720"
+    "source_position": "756"
   },
   {
     "exhibitor_id": "parent:161",
@@ -8649,7 +9081,7 @@
     "booth": "7H517",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "721"
+    "source_position": "757"
   },
   {
     "exhibitor_id": "parent:208",
@@ -8661,7 +9093,7 @@
     "booth": "8H132",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "722"
+    "source_position": "758"
   },
   {
     "exhibitor_id": "parent:77",
@@ -8673,7 +9105,7 @@
     "booth": "8H125",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "723"
+    "source_position": "759"
   },
   {
     "exhibitor_id": "parent:259",
@@ -8685,7 +9117,7 @@
     "booth": "4H017",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "724"
+    "source_position": "760"
   },
   {
     "exhibitor_id": "parent:152",
@@ -8697,7 +9129,7 @@
     "booth": "4H421",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "725"
+    "source_position": "761"
   },
   {
     "exhibitor_id": "parent:39",
@@ -8709,7 +9141,7 @@
     "booth": "7H330",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "726"
+    "source_position": "762"
   },
   {
     "exhibitor_id": "parent:145",
@@ -8721,7 +9153,7 @@
     "booth": "7H435",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "727"
+    "source_position": "763"
   },
   {
     "exhibitor_id": "parent:169",
@@ -8733,7 +9165,7 @@
     "booth": "4H246",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "728"
+    "source_position": "764"
   },
   {
     "exhibitor_id": "parent:258",
@@ -8745,7 +9177,7 @@
     "booth": "4H413",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "729"
+    "source_position": "765"
   },
   {
     "exhibitor_id": "parent:312",
@@ -8757,7 +9189,7 @@
     "booth": "4H215",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "730"
+    "source_position": "766"
   },
   {
     "exhibitor_id": "parent:243",
@@ -8769,7 +9201,7 @@
     "booth": "7H504",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "731"
+    "source_position": "767"
   },
   {
     "exhibitor_id": "parent:309",
@@ -8781,7 +9213,19 @@
     "booth": "7H110",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "732"
+    "source_position": "768"
+  },
+  {
+    "exhibitor_id": "parent:1320",
+    "company_name": "Whale AI",
+    "exhibitor_type": "parent",
+    "parent_exhibitor_id": "",
+    "area": "Next Generation Park",
+    "hall": "|",
+    "booth": "4H224",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "769"
   },
   {
     "exhibitor_id": "parent:1305",
@@ -8793,7 +9237,7 @@
     "booth": "",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "733"
+    "source_position": "770"
   },
   {
     "exhibitor_id": "parent:1232",
@@ -8805,7 +9249,19 @@
     "booth": "4H238",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "734"
+    "source_position": "771"
+  },
+  {
+    "exhibitor_id": "parent:1314",
+    "company_name": "Wintermute Technologies, Inc.",
+    "exhibitor_type": "parent",
+    "parent_exhibitor_id": "",
+    "area": "Next Generation Park",
+    "hall": "|",
+    "booth": "",
+    "detail_url": "",
+    "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
+    "source_position": "772"
   },
   {
     "exhibitor_id": "parent:198",
@@ -8817,7 +9273,7 @@
     "booth": "7H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "735"
+    "source_position": "773"
   },
   {
     "exhibitor_id": "parent:198:co-exhibitor:1",
@@ -8829,7 +9285,7 @@
     "booth": "7H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "736"
+    "source_position": "774"
   },
   {
     "exhibitor_id": "parent:198:co-exhibitor:2",
@@ -8841,7 +9297,7 @@
     "booth": "7H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "737"
+    "source_position": "775"
   },
   {
     "exhibitor_id": "parent:198:co-exhibitor:3",
@@ -8853,7 +9309,7 @@
     "booth": "7H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "738"
+    "source_position": "776"
   },
   {
     "exhibitor_id": "parent:198:co-exhibitor:4",
@@ -8865,7 +9321,7 @@
     "booth": "7H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "739"
+    "source_position": "777"
   },
   {
     "exhibitor_id": "parent:198:co-exhibitor:5",
@@ -8877,7 +9333,7 @@
     "booth": "7H501",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "740"
+    "source_position": "778"
   },
   {
     "exhibitor_id": "parent:70",
@@ -8889,7 +9345,7 @@
     "booth": "5H406",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "741"
+    "source_position": "779"
   },
   {
     "exhibitor_id": "parent:1052",
@@ -8901,7 +9357,7 @@
     "booth": "8H405",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "742"
+    "source_position": "780"
   },
   {
     "exhibitor_id": "parent:113",
@@ -8913,7 +9369,7 @@
     "booth": "8H402",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "743"
+    "source_position": "781"
   },
   {
     "exhibitor_id": "parent:139",
@@ -8925,7 +9381,7 @@
     "booth": "7H001",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "744"
+    "source_position": "782"
   },
   {
     "exhibitor_id": "parent:62",
@@ -8937,7 +9393,7 @@
     "booth": "5H432",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "745"
+    "source_position": "783"
   },
   {
     "exhibitor_id": "parent:204",
@@ -8949,7 +9405,7 @@
     "booth": "4H146",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "746"
+    "source_position": "784"
   },
   {
     "exhibitor_id": "parent:369",
@@ -8961,7 +9417,7 @@
     "booth": "4H417",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "747"
+    "source_position": "785"
   },
   {
     "exhibitor_id": "parent:350",
@@ -8973,7 +9429,7 @@
     "booth": "8H117",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "748"
+    "source_position": "786"
   },
   {
     "exhibitor_id": "parent:261",
@@ -8985,7 +9441,7 @@
     "booth": "4H234",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "749"
+    "source_position": "787"
   },
   {
     "exhibitor_id": "parent:187",
@@ -8997,7 +9453,7 @@
     "booth": "4H411",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "750"
+    "source_position": "788"
   },
   {
     "exhibitor_id": "parent:1260",
@@ -9009,7 +9465,7 @@
     "booth": "4H145",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "751"
+    "source_position": "789"
   },
   {
     "exhibitor_id": "parent:46",
@@ -9021,7 +9477,7 @@
     "booth": "8H129",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "752"
+    "source_position": "790"
   },
   {
     "exhibitor_id": "parent:115",
@@ -9033,7 +9489,7 @@
     "booth": "4H338",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "753"
+    "source_position": "791"
   },
   {
     "exhibitor_id": "parent:302",
@@ -9045,7 +9501,7 @@
     "booth": "4H322",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "754"
+    "source_position": "792"
   },
   {
     "exhibitor_id": "parent:291",
@@ -9057,7 +9513,7 @@
     "booth": "4H143",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "755"
+    "source_position": "793"
   },
   {
     "exhibitor_id": "parent:308",
@@ -9069,6 +9525,6 @@
     "booth": "4H242",
     "detail_url": "",
     "source_page": "https://www.ceatec.com/en/exhibition/exhibitor-list.php",
-    "source_position": "756"
+    "source_position": "794"
   }
 ]

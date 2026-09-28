@@ -25,9 +25,16 @@ def parse(s,url):
  return rows
 def main():
  p=argparse.ArgumentParser();p.add_argument('--output',required=True);p.add_argument('--json-output',required=True);a=p.parse_args();rows=[]
- for page in range(1,27):
-  s,u=get(page);rows.extend(parse(s,u));time.sleep(.1)
- if len(rows)!=252:raise ValueError(f'index count mismatch: {len(rows)} != 252')
+ # The public server-rendered directory does not report a total.  Follow its
+ # native ten-row pages to the documented empty terminal page instead of
+ # retaining a stale hard-coded count.
+ for page in range(1,1001):
+  s,u=get(page);batch=parse(s,u)
+  if not batch: break
+  if len(batch)>10:raise ValueError(f'unexpected page size on page {page}')
+  rows.extend(batch);time.sleep(.1)
+ else:raise ValueError('pagination limit exceeded')
+ if not rows:raise ValueError('directory has no rows')
  ids=[r['exhibitor_id'] for r in rows]
  if len(set(ids))!=len(ids):raise ValueError('duplicate stable IDs')
  for n,r in enumerate(rows,1):r['source_position']=n

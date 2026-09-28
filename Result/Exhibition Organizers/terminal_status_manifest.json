@@ -80,6 +80,16 @@
       "event_name": "ITB Asia 2026",
       "status": "Fail",
       "extracted_file_name": ""
+    },
+    {
+      "event_name": "The 140th Canton Fair (Autumn 2026 - Phase 2)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "SWITCH 2026 (Singapore Week of Innovation and Technology)",
+      "status": "Fail",
+      "extracted_file_name": ""
     }
   ]
 }
