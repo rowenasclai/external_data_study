@@ -90,6 +90,11 @@
       "event_name": "SWITCH 2026 (Singapore Week of Innovation and Technology)",
       "status": "Fail",
       "extracted_file_name": ""
+    },
+    {
+      "event_name": "MEGA SHOW Hong Kong 2026 (Part 2)",
+      "status": "Fail",
+      "extracted_file_name": ""
     }
   ]
 }
