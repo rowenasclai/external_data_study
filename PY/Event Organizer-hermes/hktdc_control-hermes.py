@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
-"""Hermes-safe controller for the portable HKTDC L1/L2/L3 pipeline.
-
-This is the unattended counterpart to ``PY/Event Organizer/hktdc_control.py``.
-It keeps the same imminent-event rule, but uses repository-relative paths,
-explicit runtimes, a non-interactive child interface, bounded subprocesses,
-and fail-closed stage propagation.
-"""
+"""Hermes-safe daily controller for the HKTDC L1/L2/L3/format pipeline."""
 from __future__ import annotations
 
 import argparse
@@ -13,13 +7,13 @@ import csv
 import json
 import os
 import subprocess
-import sys
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[2]
 LEGACY_DIR = ROOT / "PY" / "Event Organizer"
+HERE = Path(__file__).resolve().parent
 CONTROL_CSV = ROOT / "Result" / "Exhibition Organizers" / "HKTDC" / "Event_Schedule" / "event_control.csv"
 CRAWL_PYTHON = ROOT / ".venv-crawl4ai" / "bin" / "python"
 PLAYWRIGHT_PYTHON = ROOT / ".venv-playwright" / "bin" / "python"
@@ -28,33 +22,32 @@ TIMEZONE = ZoneInfo("Asia/Hong_Kong")
 LEAD_DAYS = (3, 7, 10, 14, 30)
 DATE_FORMATS = ("%m/%d/%y %H:%M", "%m/%d/%Y %H:%M", "%Y-%m-%d", "%Y-%m-%d %H:%M:%S")
 STAGES = (
-    ("L1", CRAWL_PYTHON, "hktdc_exhibit_L1.py"),
-    ("L2", CRAWL_PYTHON, "hktdc_exhibit_L2.py"),
-    ("L3", CRAWL_PYTHON, "hktdc_exhibit_L3.py"),
-    ("format", PLAYWRIGHT_PYTHON, "hktdc_format.py"),
+    ("L1", CRAWL_PYTHON, LEGACY_DIR / "hktdc_exhibit_L1.py", "interactive"),
+    ("L2", PLAYWRIGHT_PYTHON, HERE / "hktdc_exhibit_L2_hermes.py", "argument"),
+    ("L3", PLAYWRIGHT_PYTHON, HERE / "hktdc_exhibit_L3_hermes.py", "argument"),
+    ("format", PLAYWRIGHT_PYTHON, HERE / "hktdc_format_hermes.py", "argument"),
 )
 
 
 def parse_start_date(value: str) -> date:
-    value = value.strip()
     for fmt in DATE_FORMATS:
         try:
-            return datetime.strptime(value, fmt).date()
+            return datetime.strptime(value.strip(), fmt).date()
         except ValueError:
             pass
     raise ValueError(f"unsupported event_start_date: {value!r}")
 
 
 def select_events(rows: list[dict[str, str]], today: date) -> list[str]:
-    selected: list[str] = []
-    target_dates = {today + timedelta(days=days) for days in LEAD_DAYS}
+    targets = {today + timedelta(days=days) for days in LEAD_DAYS}
+    selected = []
     for row_number, row in enumerate(rows, start=2):
         prefix = (row.get("prefix") or "").strip()
         if not prefix:
             continue
         if not prefix.replace("-", "").isalnum() or prefix.lower() != prefix:
             raise ValueError(f"row {row_number}: invalid prefix {prefix!r}")
-        if parse_start_date(row.get("event_start_date") or "") in target_dates:
+        if parse_start_date(row.get("event_start_date") or "") in targets:
             selected.append(prefix)
     return selected
 
@@ -64,40 +57,35 @@ def child_environment() -> dict[str, str]:
         raise RuntimeError(f"missing repository-local browser runtime: {BROWSER_PATH}")
     env = dict(os.environ)
     env.pop("PYTHONHOME", None)
-    # Crawl4AI is in its dedicated venv while its compatible Pandas/Pydantic
-    # stack is installed in the repository Playwright venv.  Replace inherited
-    # agent paths rather than appending them, avoiding incompatible system wheels.
     env["PYTHONPATH"] = str(ROOT / ".venv-playwright" / "lib" / "python3.14" / "site-packages")
     env["PLAYWRIGHT_BROWSERS_PATH"] = str(BROWSER_PATH)
     return env
 
 
-def run_stage(stage: str, interpreter: Path, script_name: str, prefix: str, env: dict[str, str], timeout: int) -> dict[str, object]:
-    script = LEGACY_DIR / script_name
+def run_stage(name: str, interpreter: Path, script: Path, mode: str, prefix: str, env: dict[str, str], timeout: int) -> None:
     if not interpreter.is_file() or not script.is_file():
-        raise RuntimeError(f"{stage}: missing interpreter or script")
+        raise RuntimeError(f"{name}: missing interpreter or script")
     command = [str(interpreter), str(script)]
+    kwargs: dict[str, object] = {"cwd": ROOT, "env": env, "text": True, "capture_output": True, "timeout": timeout}
+    if mode == "interactive":
+        kwargs["input"] = prefix + "\n"
+    else:
+        command.extend(["--prefix", prefix])
     try:
-        completed = subprocess.run(
-            command, input=prefix + "\n", text=True,
-            cwd=LEGACY_DIR, env=env, capture_output=True, timeout=timeout,
-        )
+        completed = subprocess.run(command, **kwargs)
     except subprocess.TimeoutExpired as error:
-        result = {"stage": stage, "status": "timed_out", "timeout_seconds": timeout,
-                  "stdout": (error.stdout or "")[-2000:], "stderr": (error.stderr or "")[-2000:]}
-        raise RuntimeError(json.dumps(result, ensure_ascii=False, default=str)) from error
-    result = {"stage": stage, "returncode": completed.returncode, "stdout": completed.stdout[-2000:], "stderr": completed.stderr[-2000:]}
+        raise RuntimeError(json.dumps({"stage": name, "status": "timed_out", "timeout_seconds": timeout, "stdout": (error.stdout or "")[-2000:], "stderr": (error.stderr or "")[-2000:]}, default=str)) from error
     if completed.returncode:
-        raise RuntimeError(json.dumps(result, ensure_ascii=False))
-    return result
+        raise RuntimeError(json.dumps({"stage": name, "returncode": completed.returncode, "stdout": completed.stdout[-2000:], "stderr": completed.stderr[-2000:]}, ensure_ascii=False))
+    print(json.dumps({"prefix": prefix, "stage": name, "status": "passed"}))
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--as-of", help="deterministic HKT date (YYYY-MM-DD)")
-    parser.add_argument("--dry-run", action="store_true", help="select events only")
-    parser.add_argument("--prefix", action="append", help="explicit prefix; may be supplied more than once")
-    parser.add_argument("--stage-timeout", type=int, default=1800)
+    parser.add_argument("--as-of", help="deterministic Hong Kong date (YYYY-MM-DD)")
+    parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--prefix", action="append", help="explicit prefix; repeatable")
+    parser.add_argument("--stage-timeout", type=int, default=7200)
     args = parser.parse_args()
     if args.stage_timeout <= 0:
         parser.error("--stage-timeout must be positive")
@@ -111,9 +99,8 @@ def main() -> int:
         return 0
     env = child_environment()
     for prefix in selected:
-        for stage, interpreter, script_name in STAGES:
-            run_stage(stage, interpreter, script_name, prefix, env, args.stage_timeout)
-            print(json.dumps({"prefix": prefix, "stage": stage, "status": "passed"}))
+        for stage in STAGES:
+            run_stage(*stage, prefix, env, args.stage_timeout)
     return 0
 
 
