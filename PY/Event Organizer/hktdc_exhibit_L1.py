@@ -1,131 +1,145 @@
-import re
-from playwright.sync_api import Playwright, sync_playwright, expect
-import os
+"""Extract public HKTDC exhibitor-list cards with Crawl4AI in headless mode."""
+from __future__ import annotations
 
 import asyncio
+import csv
 import json
-import pandas as pd
+import re
+import sys
+import time
+from pathlib import Path
+from urllib.parse import urljoin
 
-#page.locator("div").filter(has_text=re.compile(r"^Shown 11-20 of Total Result 1820$"))
+from bs4 import BeautifulSoup
+from crawl4ai import AsyncWebCrawler, BrowserConfig, CacheMode, CrawlerRunConfig
 
-#url='https://www.hktdc.com/event/hkjewellery/en/exhibitor-list?pageNum=1&pageSize=50'
-domain='https://www.hktdc.com'
+ROOT = Path(__file__).resolve().parents[2]
+OUTPUT_ROOT = ROOT / 'Result' / 'Exhibition Organizers' / 'HKTDC'
+PAGE_SIZE = 50
+MAX_RETRIES = 2
+STATUS_RE = re.compile(r'^Shown\s+(\d+)-(\d+)\s+of\s+Total Result\s+(\d+)$')
+FIELDS = ['Company Name', 'Location', 'Booth', 'url']
 
-prefix=input('What is the prefix of your exhibition?')
-os.chdir("/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/") 
-os.makedirs(prefix, exist_ok=True)
-os.chdir("/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/"+prefix) 
 
-def run(playwright: Playwright) -> None:
-    browser = playwright.chromium.launch(headless=False)
-    context = browser.new_context()
-    page = context.new_page()
-    #l=page.locator("div").filter(has_text=re.compile(r"^Total Result$"))
-    #print(l.inner_text())
-    url='https://www.hktdc.com/event/'+prefix+'/en/exhibitor-list?pageNum=1&pageSize=50'
-    page.goto(url, wait_until="domcontentloaded")
-    locator = page.locator(".vep-exhibitor-result-status span").first
+def page_url(prefix: str, page_number: int) -> str:
+    return (
+        f'https://www.hktdc.com/event/{prefix}/en/exhibitor-list'
+        f'?pageNum={page_number}&pageSize={PAGE_SIZE}'
+    )
 
-# 2. Wait explicitly for the text to appear (handles dynamic AJAX loading)
-    locator.wait_for(state="visible", timeout=15000)
-    final_figure_text = locator.text_content()
 
-    match = re.search(r"Total Result\s+(\d+)", final_figure_text)
+def parse_page(html: str, page_number: int, expected_total: int | None = None) -> tuple[int, list[dict[str, str]]]:
+    soup = BeautifulSoup(html, 'html.parser')
+    statuses = [node.get_text(' ', strip=True) for node in soup.select('.vep-exhibitor-result-status span')]
+    count_text = next((text for text in statuses if STATUS_RE.fullmatch(text)), None)
+    if not count_text:
+        raise ValueError(f'page {page_number}: public result-count status was not found')
+    _, _, total_text = STATUS_RE.fullmatch(count_text).groups()
+    total = int(total_text)
+    if expected_total is not None and total != expected_total:
+        raise ValueError(f'page {page_number}: total changed from {expected_total} to {total}')
 
-    l_div=int(match.group(1))
-    #if match:
-     #   total_result = int(match.group(1))
-        #print(f"Total Exhibitors: {total_result}")
-    #else:
-        #print(f"Could not parse count from: {final_figure_text}")
+    records = []
+    for position, card in enumerate(soup.select('.d-flex.flex-column.vep-p-4'), start=1):
+        # Crawl4AI returns the whole DOM, including hidden bookmark-modal text.
+        # Select the published card fields explicitly rather than card.get_text().
+        company = card.select_one('span.text-level-subtitle.text-font-bold')
+        location = card.select_one('span.text-decoration-underline')
+        booth = card.select_one('span[class*="exhibitors_formatDtl"]')
+        if not company or not location:
+            raise ValueError(f'page {page_number}, card {position}: missing company or location')
+        company_link = company.find_parent('a', href=True)
+        records.append({
+            'Company Name': company.get_text(' ', strip=True),
+            'Location': location.get_text(' ', strip=True),
+            'Booth': booth.get_text(' ', strip=True) if booth else '',
+            'url': urljoin('https://www.hktdc.com', company_link['href']) if company_link else '',
+        })
+    if not records:
+        raise ValueError(f'page {page_number}: no exhibitor cards')
+    return total, records
 
-    #check_figure=page.locator("div").filter(has_text=re.compile(r"^Shown.*Total Result"))
-    #final_figure_text=check_figure.text_content()
-    #result_l=final_figure_text.find('Total Result')
-    #l_div=int(final_figure_text[result_l+13:])
 
-    print('Processing '+str(1)+' - '+str(50)+' out of '+str(l_div))
+def browser_config() -> BrowserConfig:
+    return BrowserConfig(
+        headless=True,
+        verbose=False,
+        # A fresh single-process browser is used for each bounded page batch.
+        extra_args=['--disable-gpu', '--single-process'],
+    )
 
-    for j in range(1,int(l_div/50)+2,1):
-        url='https://www.hktdc.com/event/'+prefix+'/en/exhibitor-list?pageNum='+str(j)+'&pageSize=50'
-        print('Processing '+str((j-1)*50+1)+' - '+str((j-1)*50+49)+' out of '+str(l_div))
-        page.goto(url, wait_until="domcontentloaded")
-        data={}
-    #test=page.locator(".d-flex.flex-column.vep-p-4")
-    #check=page.locator(".d-flex.flex-column.vep-p-4.div").filter(has_text=True).first
-    #link=check.get_by_role("link", name=check).get_attribute("href")
-    #check1=page.locator("div").filter(has_text=True).nth(1)
-    #check1=page.locator("div:nth-child(1) > .d-flex.flex-column.vep-p-4")
+
+async def fetch_page(prefix: str, page_number: int, expected_total: int | None) -> tuple[int, list[dict[str, str]]]:
+    """Fetch one page in its own browser process; never reuse a crashed context."""
+    url = page_url(prefix, page_number)
+    last_error: Exception | None = None
+    for attempt in range(1, MAX_RETRIES + 1):
         try:
-            check1=page.locator(".d-flex.flex-column.vep-p-4").first
-            my_list=check1.inner_text().split('\n')
-            data['Company Name']=check1.inner_text().split('\n')[0]
-            data['Location']=check1.inner_text().split('\n')[1]
-            pattern = r'^Booth.*'  # Matches items ending with "berry"
-            # Create a new list containing only the items that match the pattern
-            matching_items = [item for item in my_list if re.search(pattern, item)]
-            data['Booth']=matching_items
-            data['url']=check1.get_by_role('link', name= check1.inner_text().split('\n')[0]).get_attribute("href")
-
-            with open('hktdc_'+prefix+'_L1.json', "a") as f:
-                json_record = json.dumps(data)
-                f.write(json_record + '\n')
-        except:
-            pass
-    #print(check1.inner_text())
-    #print(data)
-
-        for i in range(2,51,1):  
-            if (j-1)*50+i-1<l_div:
-                #print('Processing '+str((j-1)*50+1)+' - '+str((j-1)*50+49)+' out of '+str(l_div))
-                check=page.locator("div:nth-child("+str(i)+") > .d-flex.flex-column.vep-p-4")
-        #print(check.inner_text())
-                data['Company Name']=check.inner_text().split('\n')[0]
-                data['Location']=check.inner_text().split('\n')[1]
-                pattern = r'^Booth.*'  # Matches items ending with "berry"
-            # Create a new list containing only the items that match the pattern
-                matching_items = [item for item in my_list if re.search(pattern, item)]
-                data['Booth']=matching_items
-                
-                try:
-                    data['url']=check.get_by_role('link', name= data['Company Name']).get_attribute("href")
-                except:
-                    pass
-                
-                with open('hktdc_'+prefix+'_L1.json', "a") as f:
-                    json_record = json.dumps(data)
-                    f.write(json_record + '\n')
-            else:
-                pass
-        #print(data)
-    
-    #print(check1.inner_text())
-    #print(link)
-
-    
-    #page.locator("div:nth-child(2) > .d-flex.flex-column.vep-p-4")
-    #all_links=test.get_by_role('link').get_attribute("href")
-
-    # card_box=page.get_by_text("Company DetailsNature of")
-    # all_text=card_box.inner_text()
-    # data[all_text.split('\n')[1]]=all_text.split('\n')[2]
-    #card_box=page.locator(".d-flex.flex-column.col-12")
-
-    #print(all_links)
-
-    #print(data)
-
-    #print(name_el.inner_text().split('\n')[3])
-    #data['company_name'] = name_el
-
-    # ---------------------
-    context.close()
-    browser.close()
+            async with AsyncWebCrawler(config=browser_config()) as crawler:
+                result = await crawler.arun(
+                    url=url,
+                    config=CrawlerRunConfig(
+                        wait_for='css:.vep-exhibitor-result-status span',
+                        cache_mode=CacheMode.BYPASS,
+                    ),
+                )
+            if not result.success or result.status_code != 200:
+                raise RuntimeError(f'HTTP/status failure: success={result.success}, status={result.status_code}')
+            return parse_page(result.html, page_number, expected_total)
+        except Exception as exc:
+            last_error = exc
+            if attempt < MAX_RETRIES:
+                await asyncio.sleep(attempt * 2)
+    raise RuntimeError(f'page {page_number} failed after {MAX_RETRIES} fresh-browser attempts: {last_error}')
 
 
-with sync_playwright() as playwright:
-    run(playwright)
-    
-    df = pd.read_json('/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/'+prefix+'/hktdc_'+prefix+'_L1.json', orient='records', lines=True)
+async def extract(prefix: str) -> list[dict[str, str]]:
+    total, records = await fetch_page(prefix, 1, None)
+    print(f'Processing 1-{min(PAGE_SIZE, total)} out of {total}', flush=True)
+    page_count = (total + PAGE_SIZE - 1) // PAGE_SIZE
+    if page_count > 1:
+        await asyncio.sleep(3)  # conservative delay between public page requests
+    for page_number in range(2, page_count + 1):
+        _, page_records = await fetch_page(prefix, page_number, total)
+        expected = min(PAGE_SIZE, total - (page_number - 1) * PAGE_SIZE)
+        if len(page_records) != expected:
+            raise ValueError(f'page {page_number}: expected {expected} cards, parsed {len(page_records)}')
+        records.extend(page_records)
+        print(f'Processing {(page_number - 1) * PAGE_SIZE + 1}-{min(page_number * PAGE_SIZE, total)} out of {total}', flush=True)
+        if page_number < page_count:
+            await asyncio.sleep(3)  # conservative delay between public page requests
+    if len(records) != total:
+        raise ValueError(f'expected {total} exhibitors, parsed {len(records)}')
+    if any(not record['Company Name'] for record in records):
+        raise ValueError('one or more records have a blank company name')
+    return records
 
-    df.to_csv('/Users/rowena/Other Projects/external_data_study/Result/Exhibition Organizers/HKTDC/'+prefix+'/hktdc_'+prefix+'_L1.csv',index=False)
+
+def write_artifacts(prefix: str, records: list[dict[str, str]]) -> None:
+    output_dir = OUTPUT_ROOT / prefix
+    output_dir.mkdir(parents=True, exist_ok=True)
+    json_path = output_dir / f'hktdc_{prefix}_L1.json'
+    csv_path = output_dir / f'hktdc_{prefix}_L1.csv'
+    temporary_json = json_path.with_suffix('.json.tmp')
+    temporary_csv = csv_path.with_suffix('.csv.tmp')
+    with temporary_json.open('w', encoding='utf-8') as handle:
+        for record in records:
+            handle.write(json.dumps(record, ensure_ascii=False) + '\n')
+    with temporary_csv.open('w', encoding='utf-8-sig', newline='') as handle:
+        writer = csv.DictWriter(handle, fieldnames=FIELDS, lineterminator='\n')
+        writer.writeheader()
+        writer.writerows(records)
+    temporary_json.replace(json_path)
+    temporary_csv.replace(csv_path)
+    print(json.dumps({'records': len(records), 'json': str(json_path), 'csv': str(csv_path)}))
+
+
+def main() -> None:
+    prefix = input('What is the prefix of your exhibition?').strip()
+    if not prefix:
+        raise ValueError('an exhibition prefix is required')
+    write_artifacts(prefix, asyncio.run(extract(prefix)))
+
+
+if __name__ == '__main__':
+    main()

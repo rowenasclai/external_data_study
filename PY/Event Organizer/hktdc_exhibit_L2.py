@@ -1,246 +1,133 @@
-import re
-from playwright.sync_api import Playwright, sync_playwright, expect
+"""HKTDC L2 public detail enrichment with Crawl4AI and explicit outcomes."""
+from __future__ import annotations
+
+import asyncio
 import csv
-
-#import asyncio
 import json
-
-import os
-#from playwright.async_api import async_playwright
-
-#from concurrent.futures.thread import ThreadPoolExecutor
-
-import pandas as pd
-
+import time
 from pathlib import Path
+from urllib.parse import urljoin, urlsplit, urlunsplit
 
-prefix=input('What is the prefix of your exhibition?')
-OUTPUT_DIR = Path(__file__).resolve().parents[2] / 'Result' / 'Exhibition Organizers' / 'HKTDC' / prefix
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-os.chdir(OUTPUT_DIR)
-df2_L1=pd.read_csv('hktdc_'+prefix+'_L1.csv')
-#df2_L1=pd.read_csv('hktdc_hkdgp_L1.csv')
-domain='https://www.hktdc.com'
+from bs4 import BeautifulSoup
+from crawl4ai import AsyncWebCrawler, BrowserConfig, CacheMode, CrawlerRunConfig
 
-def scrape(page):
-    df={}
-
-    try:
-        card_box=page.locator(".d-flex.flex-column.col-12")
-        all_text=card_box.inner_text().split('\n')
-
-    # Locate all direct child div elements using the child combinator (>)
-    # The selector will be '#parent_div > div'
-        child_div_locator = card_box.locator("> div")
-
-    # Use the count() method to get the number of matching elements
-        count = child_div_locator.count()
-
-    #print(count)
-
-        card_box1=page.locator(".d-flex.flex-column.col-12 > div:nth-child(1)")
-        content=card_box1.inner_text().split('\n')
-        df['company name']= ' '.join(content[0:])
-
-        card_box1=page.locator(".d-flex.flex-column.col-12 > div:nth-child(2)")
-        content=card_box1.inner_text().split('\n')
-        df['location']= ' '.join(content[0:])
-
-        card_box1=page.locator(".d-flex.flex-column.col-12 > div:nth-child(3)")
-        content=card_box1.inner_text().split('\n')
-        if 'Booth:' in content==True:
-            df['Booth']= ' '.join(content[0:])
-
-        for i in range(4,count+1,1):
-            card_box1=page.locator(".d-flex.flex-column.col-12 > div:nth-child("+str(i)+")")
-            content=card_box1.inner_text().split('\n')
-            if 'Booth:' in content[0]==True:
-                df['Booth']=content[0]
-            else:
-                df[content[0]]=' '.join(content[1:])
-    
-       
-        if card_box.get_by_role('link', name= 'View more about this company').count()>0:
-            supplier_url=card_box.get_by_role('link', name= 'View more about this company').get_attribute("href")
-            df['supplier_url']=supplier_url
-        else:
-            df['supplier_url']='N/A'
-
-        df['exhibitor_url']=page.url
-    
-    except:
-        df={}
-
-    with open('hktdc_'+prefix+'_L2.json', "a") as f:
-        json_record = json.dumps(df)
-        f.write(json_record + '\n')
-        
-
-def run(playwright: Playwright) -> None:
-    browser = playwright.chromium.launch(headless=True)
-    context = browser.new_context()
-
-    j=0
-    page = context.new_page()
-    page.goto(domain+df2_L1['url'][0])
-    scrape(page)
-
-    page1 = context.new_page()
-    page2 = context.new_page()
-    page3 = context.new_page()
-    page4 = context.new_page()
-    page5 = context.new_page()
-    page6 = context.new_page()
-    page7 = context.new_page()
-    page8 = context.new_page()
-    page9 = context.new_page()
-    page10 = context.new_page()
-    page11 = context.new_page()
-    page12 = context.new_page()
-    page13 = context.new_page()
-    page14 = context.new_page()
-    page15 = context.new_page()
-    page16 = context.new_page()
-    page17 = context.new_page()
-    page18 = context.new_page()
-    page19 = context.new_page()
-    page20 = context.new_page()
+ROOT = Path(__file__).resolve().parents[2]
+OUTPUT_ROOT = ROOT / 'Result' / 'Exhibition Organizers' / 'HKTDC'
+DOMAIN = 'https://www.hktdc.com'
+REQUEST_DELAY_SECONDS = 1
+MAX_RETRIES = 2
+BATCH_SIZE = 3
+QUEUE_SIZE = 10
 
 
+def canonical_exhibitor_url(url: str) -> str:
+    parts = urlsplit(urljoin(DOMAIN, url))
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, '', ''))
 
-    l=int(len(df2_L1)/20)
-    #for j in range(55,l+1,1):
-    
-    for j in range(0,l,1):
-        print('Processing '+str(20*j+1)+' to '+str(20*j+20+1)+' out of '+str(len(df2_L1)))
-        
+
+def blocked_record(l1: dict[str, str], url: str, status: int) -> dict[str, str]:
+    return {'source_company_name': l1['Company Name'], 'source_location': l1['Location'], 'supplier_url': '', 'exhibitor_url': url, 'l2_status': f'blocked_{status}'}
+
+
+def parse_detail(html: str, l1: dict[str, str], url: str) -> dict[str, str]:
+    soup = BeautifulSoup(html, 'html.parser')
+    card = soup.select_one('.d-flex.flex-column.col-12')
+    if not card:
+        raise ValueError(f'{url}: detail card missing from HTTP 200 response')
+    record = {'source_company_name': l1['Company Name'], 'source_location': l1['Location'], 'supplier_url': '', 'exhibitor_url': url, 'l2_status': 'extracted'}
+    booth = card.select_one('span[class*="exhibitors_formatDtl"]')
+    if booth:
+        record['Booth'] = booth.get_text(' ', strip=True)
+    for label in card.select('span.text-level-detail-caption.text-font-bold'):
+        value = label.find_next('span', class_='text-font-normal')
+        if value:
+            record[label.get_text(' ', strip=True)] = value.get_text(' ', strip=True)
+    supplier = next((a.get('href') for a in card.select('a[href]') if 'View more about this company' in a.get_text(' ', strip=True)), '')
+    record['supplier_url'] = urljoin(DOMAIN, supplier) if supplier else ''
+    return record
+
+
+def browser_config() -> BrowserConfig:
+    return BrowserConfig(headless=True, verbose=False, extra_args=['--disable-gpu', '--single-process'])
+
+
+async def fetch_from_crawler(crawler: AsyncWebCrawler, l1: dict[str, str]) -> dict[str, str]:
+    url = canonical_exhibitor_url(l1['url'])
+    result = await crawler.arun(url, config=CrawlerRunConfig(cache_mode=CacheMode.BYPASS))
+    if result.status_code == 403:
+        return blocked_record(l1, url, 403)
+    if not result.success or result.status_code != 200:
+        raise RuntimeError(f'{url}: success={result.success}, status={result.status_code}')
+    return parse_detail(result.html, l1, url)
+
+
+async def fetch_one(l1: dict[str, str]) -> dict[str, str]:
+    last_error: Exception | None = None
+    for attempt in range(1, MAX_RETRIES + 1):
         try:
-            page1.goto(domain+df2_L1['url'][20*j+1], wait_until="domcontentloaded")
-            scrape(page1)
-        except:
-            pass
-        try:
-            page2.goto(domain+df2_L1['url'][20*j+2], wait_until="domcontentloaded")
-            scrape(page2)
-        except:
-            pass
-        try:
-            page3.goto(domain+df2_L1['url'][20*j+3], wait_until="domcontentloaded")
-            scrape(page3)
-        except:
-            pass
-        try:
-            page4.goto(domain+df2_L1['url'][20*j+4], wait_until="domcontentloaded")
-            scrape(page4)
-        except:
-            pass
-        try:
-            page5.goto(domain+df2_L1['url'][20*j+5], wait_until="domcontentloaded")
-            scrape(page5)
-        except:
-            pass 
-        try:
-            page6.goto(domain+df2_L1['url'][20*j+6], wait_until="domcontentloaded")
-            scrape(page6)
-        except:
-            pass
-        try:
-            page7.goto(domain+df2_L1['url'][20*j+7], wait_until="domcontentloaded")
-            scrape(page7)
-        except:
-            pass
-        try:
-            page8.goto(domain+df2_L1['url'][20*j+8], wait_until="domcontentloaded")
-            scrape(page8)
-        except:
-            pass       
-        try:
-            page9.goto(domain+df2_L1['url'][20*j+9], wait_until="domcontentloaded")
-            scrape(page9)
-        except:
-            pass        
-        try:
-            page10.goto(domain+df2_L1['url'][20*j+10], wait_until="domcontentloaded")
-            scrape(page10)
-        except:
-            pass        
-        try:
-            page11.goto(domain+df2_L1['url'][20*j+11], wait_until="domcontentloaded")
-            scrape(page11)
-        except:
-            pass
-        try:
-            page12.goto(domain+df2_L1['url'][20*j+12], wait_until="domcontentloaded")
-            scrape(page12)
-        except:
-            pass       
-        try:
-            page13.goto(domain+df2_L1['url'][20*j+13], wait_until="domcontentloaded")
-            scrape(page13)
-        except:
-            pass        
-        try:
-            page14.goto(domain+df2_L1['url'][20*j+14], wait_until="domcontentloaded")
-            scrape(page14)
-        except:
-            pass     
-        try:
-            page15.goto(domain+df2_L1['url'][20*j+15], wait_until="domcontentloaded")
-            scrape(page15)
-        except:
-            pass     
-        try:
-            page16.goto(domain+df2_L1['url'][20*j+16], wait_until="domcontentloaded")
-            scrape(page16)
-        except:
-            pass
-        try:
-            page17.goto(domain+df2_L1['url'][20*j+17], wait_until="domcontentloaded")
-            scrape(page17)
-        except:
-            pass
-        try:
-            page18.goto(domain+df2_L1['url'][20*j+18], wait_until="domcontentloaded")
-            scrape(page18)
-        except:
-            pass 
-        try:
-            page19.goto(domain+df2_L1['url'][20*j+19], wait_until="domcontentloaded")
-            scrape(page19)
-        except:
-            pass   
-        try:
-            page20.goto(domain+df2_L1['url'][20*j+20], wait_until="domcontentloaded")
-            scrape(page20)
-        except:
-            pass     
+            async with AsyncWebCrawler(config=browser_config()) as crawler:
+                return await fetch_from_crawler(crawler, l1)
+        except Exception as exc:
+            last_error = exc
+            if attempt < MAX_RETRIES: await asyncio.sleep(attempt * 2)
+    raise RuntimeError(f'{canonical_exhibitor_url(l1["url"])}: failed after {MAX_RETRIES} fresh-browser attempts: {last_error}')
 
 
-    r=len(df2_L1) %20
-    
-    if r==0:
-        f=20
-        l=int(len(df2_L1)/20)-1
-    else:
-        f=r
-        l=int(len(df2_L1)/20)
+async def extract(l1_records: list[dict[str, str]]) -> list[dict[str, str]]:
+    """Use one fresh browser per three-profile batch; preserve L1 order."""
+    records: list[dict[str, str]] = []
+    for queue_start in range(0, len(l1_records), QUEUE_SIZE):
+        queue = l1_records[queue_start:queue_start + QUEUE_SIZE]
+        print(f'Queue {queue_start + 1}-{queue_start + len(queue)} of {len(l1_records)}', flush=True)
+        for queue_offset in range(0, len(queue), BATCH_SIZE):
+            batch_start = queue_start + queue_offset
+            batch = queue[queue_offset:queue_offset + BATCH_SIZE]
+            print(f'Batch {batch_start + 1}-{batch_start + len(batch)} of {len(l1_records)}', flush=True)
+            async with AsyncWebCrawler(config=browser_config()) as crawler:
+                for offset, l1 in enumerate(batch):
+                    position = batch_start + offset + 1
+                    try:
+                        record = await fetch_from_crawler(crawler, l1)
+                    except Exception as batch_error:
+                        # A failed/reused context is never trusted: retry this profile in a
+                        # separate fresh browser, while preserving its source position.
+                        print(f'Batch context failed at {position}; retrying fresh: {batch_error}', flush=True)
+                        record = await fetch_one(l1)
+                    records.append(record)
+                    print(f'Processing {position}/{len(l1_records)}: {record["l2_status"]}', flush=True)
+                    if position < len(l1_records): await asyncio.sleep(REQUEST_DELAY_SECONDS)
+    extracted = sum(row['l2_status'] == 'extracted' for row in records)
+    blocked = sum(row['l2_status'].startswith('blocked_') for row in records)
+    if len(records) != len(l1_records) or extracted + blocked != len(l1_records):
+        raise ValueError(f'L2 reconciliation failed: records={len(records)}, extracted={extracted}, blocked={blocked}, L1={len(l1_records)}')
+    return records
 
-    print('Processing '+str(20*l+1)+' to '+str(20*l+f)+' out of '+str(len(df2_L1)))
-    for i in range(1,f,1):
-        try:
-            page1.goto(domain+df2_L1['url'][20*l+i])
-            scrape(page1)
-        except:
-            pass
-        #print(20*l+i)
-        
-    # ---------------------
-    context.close()
-    browser.close()
+
+def write_artifacts(prefix: str, records: list[dict[str, str]]) -> None:
+    output_dir = OUTPUT_ROOT / prefix
+    json_path, csv_path = output_dir / f'hktdc_{prefix}_L2.json', output_dir / f'hktdc_{prefix}_L2.csv'
+    fields = list(dict.fromkeys(key for row in records for key in row))
+    json_tmp, csv_tmp = json_path.with_suffix('.json.tmp'), csv_path.with_suffix('.csv.tmp')
+    with json_tmp.open('w', encoding='utf-8') as handle:
+        for row in records: handle.write(json.dumps(row, ensure_ascii=False) + '\n')
+    with csv_tmp.open('w', encoding='utf-8-sig', newline='') as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator='\n'); writer.writeheader(); writer.writerows(records)
+    json_tmp.replace(json_path); csv_tmp.replace(csv_path)
 
 
-with sync_playwright() as playwright:
-    run(playwright)
-    df = pd.read_json(OUTPUT_DIR / ('hktdc_'+prefix+'_L2.json'), orient='records', lines=True)
-    df.to_csv(OUTPUT_DIR / ('hktdc_'+prefix+'_L2.csv'),index=False)
+def main() -> None:
+    prefix = input('What is the prefix of your exhibition?').strip()
+    l1_path = OUTPUT_ROOT / prefix / f'hktdc_{prefix}_L1.csv'
+    with l1_path.open(encoding='utf-8-sig', newline='') as handle:
+        l1_records = list(csv.DictReader(handle))
+    required = {'Company Name', 'Location', 'url'}
+    if not l1_records or not required.issubset(l1_records[0]):
+        raise ValueError(f'L1 missing required columns: {sorted(required)}')
+    if any(not row['url'] for row in l1_records): raise ValueError('L1 has missing exhibitor URLs')
+    records = asyncio.run(extract(l1_records))
+    write_artifacts(prefix, records)
+    extracted = sum(row['l2_status'] == 'extracted' for row in records)
+    print(json.dumps({'records': len(records), 'extracted': extracted, 'blocked': len(records)-extracted, 'stage': 'L2'}))
 
+
+if __name__ == '__main__': main()

@@ -45,6 +45,13 @@ ROOT = Path(__file__).resolve().parents[2]
 SCRIPT_DIR = Path(__file__).resolve().parent
 CONTROL_CSV = ROOT / 'Result' / 'Exhibition Organizers' / 'HKTDC' / 'Event_Schedule' / 'event_control.csv'
 
+L1_PYTHON = ROOT / '.venv-crawl4ai' / 'bin' / 'python'
+L2_PYTHON = ROOT / '.venv-crawl4ai' / 'bin' / 'python'
+L3_PYTHON = ROOT / '.venv-crawl4ai' / 'bin' / 'python'
+for stage, interpreter in {'L1': L1_PYTHON, 'L2': L2_PYTHON, 'L3': L3_PYTHON}.items():
+    if not interpreter.is_file():
+        raise RuntimeError(f'{stage} Crawl4AI runtime is missing: {interpreter}')
+
 #all_events=['hkelectronicsfairae']
 
 all_events=list(tmp['prefix'])
@@ -55,7 +62,7 @@ for t in all_events:
 
 # Execute the python script as a subprocess
     result_l1 = subprocess.run(
-        [sys.executable, str(SCRIPT_DIR / "hktdc_exhibit_L1.py")],
+        [str(L1_PYTHON), str(SCRIPT_DIR / "hktdc_exhibit_L1.py")],
         input=t,
         text=True,
         capture_output=True
@@ -68,7 +75,7 @@ for t in all_events:
         print(f"✅ L1 執行成功。標準輸出：\n{result_l1.stdout}")
 
     result_l2 = subprocess.run(
-        [sys.executable, str(SCRIPT_DIR / "hktdc_exhibit_L2.py")],
+        [str(L2_PYTHON), str(SCRIPT_DIR / "hktdc_exhibit_L2.py")],
         input=t,
         text=True,
         capture_output=True
@@ -81,7 +88,7 @@ for t in all_events:
         print(f"✅ L2 執行成功。標準輸出：\n{result_l2.stdout}")
 
     result_l3 = subprocess.run(
-        [sys.executable, str(SCRIPT_DIR / "hktdc_exhibit_L3.py")],
+        [str(L3_PYTHON), str(SCRIPT_DIR / "hktdc_exhibit_L3.py")],
         input=t,
         text=True,
         capture_output=True

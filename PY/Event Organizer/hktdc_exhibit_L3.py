@@ -1,159 +1,97 @@
-import re
-from playwright.sync_api import Playwright, sync_playwright, expect
+"""HKTDC L3 supplier-profile enrichment with Crawl4AI and aligned outcomes."""
+from __future__ import annotations
 
 import asyncio
+import csv
 import json
-#from playwright.async_api import async_playwright
-
-import pandas as pd
-import os
-
-domain='https://www.hktdc.com'
-
 from pathlib import Path
 
-prefix=input('What is the prefix of your exhibition?')
-OUTPUT_DIR = Path(__file__).resolve().parents[2] / 'Result' / 'Exhibition Organizers' / 'HKTDC' / prefix
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-os.chdir(OUTPUT_DIR)
+from bs4 import BeautifulSoup
+from crawl4ai import AsyncWebCrawler, BrowserConfig, CacheMode, CrawlerRunConfig
 
-df2_L1=pd.read_csv('hktdc_'+prefix+'_L2.csv')
-
-df2_L1['supplier_url']=df2_L1['supplier_url'].fillna('about:blank')
-
-def scrape(page) -> None:
-
-    data={}
-
-    data['url']=page.url
-    card_box=page.locator(".item.css-19axa4z")
-
-    child_div_locator = card_box.locator("> div")
-
-    # Use the count() method to get the number of matching elements
-    count = child_div_locator.count()
-    #print(count)
-
-    for i in range(3,count+1):
-        card_box1=page.locator(".item.css-19axa4z > div:nth-child("+str(i)+")")
-        content=card_box1.inner_text().split('\n')
-
-        if len(content)>=3:
-            for m in range(1,len(content)):
-                if content[m][-1:]==':':
-                    col=content[m][:-1]
-                    cnt=''
-                elif content[m][-1:]!=':':
-                    cnt=cnt+' '+content[m]
-                    cnt=cnt.strip()
-                    data[col]=cnt
-
-    with open('hktdc_'+prefix+'_L3.json', "a") as f:
-        json_record = json.dumps(data)
-        f.write(json_record + '\n')
-
-    # ---------------------
-    #context.close()
-    #browser.close()
-
-def run(playwright: Playwright) -> None:
-    browser = playwright.chromium.launch(headless=True)
-    context = browser.new_context()
-
-    j=0
-    page0 = context.new_page()
-    page0.goto(df2_L1['supplier_url'][0], wait_until="domcontentloaded")
-    scrape(page0)
-
-    page1 = context.new_page()
-    page2 = context.new_page()
-    page3 = context.new_page()
-    page4 = context.new_page()
-    page5 = context.new_page()
-    page6 = context.new_page()
-    page7 = context.new_page()
-    page8 = context.new_page()
-    page9 = context.new_page()
-    page10 = context.new_page()
-    page11 = context.new_page()
-    page12 = context.new_page()
-    page13 = context.new_page()
-    page14 = context.new_page()
-    page15 = context.new_page()
-    page16 = context.new_page()
-    page17 = context.new_page()
-    page18 = context.new_page()
-    page19 = context.new_page()
-    page20 = context.new_page()
+ROOT = Path(__file__).resolve().parents[2]
+OUTPUT_ROOT = ROOT / 'Result' / 'Exhibition Organizers' / 'HKTDC'
+REQUEST_DELAY_SECONDS = 1
+MAX_RETRIES = 2
 
 
+def browser_config() -> BrowserConfig:
+    return BrowserConfig(headless=True, verbose=False, extra_args=['--disable-gpu', '--single-process'])
 
-    l=int(len(df2_L1)/20)
-    #for j in range(55,l+1,1):
-    for j in range(0,l,1):
-        print('Processing '+str(20*j+1)+' - '+str(20*j+20)+' out of '+str(len(df2_L1)+1))
-        page1.goto(df2_L1['supplier_url'][20*j+1], wait_until="domcontentloaded")
-        page2.goto(df2_L1['supplier_url'][20*j+2], wait_until="domcontentloaded")
-        page3.goto(df2_L1['supplier_url'][20*j+3], wait_until="domcontentloaded")
-        page4.goto(df2_L1['supplier_url'][20*j+4], wait_until="domcontentloaded")
-        page5.goto(df2_L1['supplier_url'][20*j+5], wait_until="domcontentloaded")
-        page6.goto(df2_L1['supplier_url'][20*j+6], wait_until="domcontentloaded")
-        page7.goto(df2_L1['supplier_url'][20*j+7], wait_until="domcontentloaded")
-        page8.goto(df2_L1['supplier_url'][20*j+8], wait_until="domcontentloaded")
-        page9.goto(df2_L1['supplier_url'][20*j+9], wait_until="domcontentloaded")
-        page10.goto(df2_L1['supplier_url'][20*j+10], wait_until="domcontentloaded")
-        page11.goto(df2_L1['supplier_url'][20*j+11], wait_until="domcontentloaded")
-        page12.goto(df2_L1['supplier_url'][20*j+12], wait_until="domcontentloaded")
-        page13.goto(df2_L1['supplier_url'][20*j+13], wait_until="domcontentloaded")
-        page14.goto(df2_L1['supplier_url'][20*j+14], wait_until="domcontentloaded")
-        page15.goto(df2_L1['supplier_url'][20*j+15], wait_until="domcontentloaded")
-        page16.goto(df2_L1['supplier_url'][20*j+16], wait_until="domcontentloaded")
-        page17.goto(df2_L1['supplier_url'][20*j+17], wait_until="domcontentloaded")
-        page18.goto(df2_L1['supplier_url'][20*j+18], wait_until="domcontentloaded")
-        page19.goto(df2_L1['supplier_url'][20*j+19], wait_until="domcontentloaded")
-        page20.goto(df2_L1['supplier_url'][20*j+20], wait_until="domcontentloaded")
 
-        scrape(page1)
-        scrape(page2)
-        scrape(page3)
-        scrape(page4)
-        scrape(page5)
-        scrape(page6)
-        scrape(page7)
-        scrape(page8)
-        scrape(page9)
-        scrape(page10)
-        scrape(page11)
-        scrape(page12)
-        scrape(page13)
-        scrape(page14)
-        scrape(page15)
-        scrape(page16)
-        scrape(page17)
-        scrape(page18)
-        scrape(page19)
-        scrape(page20)
+def parse_supplier(html: str, l2: dict[str, str], url: str) -> dict[str, str]:
+    soup = BeautifulSoup(html, 'html.parser')
+    record = {'source_company_name': l2.get('source_company_name', ''), 'supplier_url': url, 'l3_status': 'extracted'}
+    card = soup.select_one('.item.css-19axa4z')
+    if not card:
+        raise ValueError(f'{url}: supplier detail card missing from HTTP 200 response')
+    for child in card.select(':scope > div')[2:]:
+        content = [part.strip() for part in child.get_text('\n', strip=True).split('\n') if part.strip()]
+        key, values = '', []
+        for item in content:
+            if item.endswith(':'):
+                if key and values: record[key] = ' '.join(values)
+                key, values = item[:-1], []
+            elif key:
+                values.append(item)
+        if key and values: record[key] = ' '.join(values)
+    return record
 
-    r=len(df2_L1) %20
-    
-    if r==0:
-        f=20
-        l=int(len(df2_L1)/20)-1
-    else:
-        f=r
-        l=int(len(df2_L1)/20)
 
-    for i in range(1,f,1):
-        page1.goto(df2_L1['supplier_url'][20*l+i], wait_until="domcontentloaded")
-        scrape(page1)
-        #print(20*l+i)
-        
-    # ---------------------
-    context.close()
-    browser.close()
-    
+async def fetch_one(l2: dict[str, str]) -> dict[str, str]:
+    url = l2['supplier_url']
+    if l2.get('l2_status') != 'extracted' or not url:
+        return {'source_company_name': l2.get('source_company_name', ''), 'supplier_url': '', 'l3_status': 'not_attempted_l2_blocked'}
+    last_error: Exception | None = None
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            async with AsyncWebCrawler(config=browser_config()) as crawler:
+                result = await crawler.arun(url, config=CrawlerRunConfig(cache_mode=CacheMode.BYPASS))
+            if result.status_code == 403:
+                return {'source_company_name': l2.get('source_company_name', ''), 'supplier_url': url, 'l3_status': 'blocked_403'}
+            if not result.success or result.status_code != 200:
+                raise RuntimeError(f'{url}: success={result.success}, status={result.status_code}')
+            return parse_supplier(result.html, l2, url)
+        except Exception as exc:
+            last_error = exc
+            if attempt < MAX_RETRIES: await asyncio.sleep(attempt * 2)
+    raise RuntimeError(f'{url}: failed after {MAX_RETRIES} fresh-browser attempts: {last_error}')
 
-with sync_playwright() as playwright:
-    run(playwright)
-    df = pd.read_json(OUTPUT_DIR / ('hktdc_'+prefix+'_L3.json'), orient='records', lines=True)
-    df.to_csv(OUTPUT_DIR / ('hktdc_'+prefix+'_L3.csv'),index=False)
+
+async def extract(l2_records: list[dict[str, str]]) -> list[dict[str, str]]:
+    records = []
+    for position, l2 in enumerate(l2_records, start=1):
+        row = await fetch_one(l2)
+        records.append(row)
+        print(f'Processing {position} out of {len(l2_records)}: {row["l3_status"]}', flush=True)
+        # Do not impose a network delay when L2 was blocked and L3 made no request.
+        if position < len(l2_records) and row['l3_status'] != 'not_attempted_l2_blocked':
+            await asyncio.sleep(REQUEST_DELAY_SECONDS)
+    if len(records) != len(l2_records): raise ValueError('L3 alignment drift')
+    return records
+
+
+def write_artifacts(prefix: str, records: list[dict[str, str]]) -> None:
+    out = OUTPUT_ROOT / prefix
+    json_path, csv_path = out / f'hktdc_{prefix}_L3.json', out / f'hktdc_{prefix}_L3.csv'
+    fields = list(dict.fromkeys(key for row in records for key in row))
+    json_tmp, csv_tmp = json_path.with_suffix('.json.tmp'), csv_path.with_suffix('.csv.tmp')
+    with json_tmp.open('w', encoding='utf-8') as handle:
+        for row in records: handle.write(json.dumps(row, ensure_ascii=False) + '\n')
+    with csv_tmp.open('w', encoding='utf-8-sig', newline='') as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator='\n'); writer.writeheader(); writer.writerows(records)
+    json_tmp.replace(json_path); csv_tmp.replace(csv_path)
+
+
+def main() -> None:
+    prefix = input('What is the prefix of your exhibition?').strip()
+    l2_path = OUTPUT_ROOT / prefix / f'hktdc_{prefix}_L2.csv'
+    with l2_path.open(encoding='utf-8-sig', newline='') as handle: l2_records = list(csv.DictReader(handle))
+    if not l2_records or 'l2_status' not in l2_records[0]: raise ValueError('L2 is missing l2_status')
+    records = asyncio.run(extract(l2_records))
+    write_artifacts(prefix, records)
+    counts = {status: sum(row['l3_status'] == status for row in records) for status in sorted({row['l3_status'] for row in records})}
+    print(json.dumps({'records': len(records), 'status_counts': counts, 'stage': 'L3'}))
+
+
+if __name__ == '__main__': main()
