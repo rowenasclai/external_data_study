@@ -27,7 +27,7 @@ class ControlSelectionTests(unittest.TestCase):
             {"prefix": "later", "event_start_date": "8/14/26 0:00"},
         ]
         selected = control.select_events(rows, date(2026, 7, 14))
-        self.assertEqual([row["prefix"] for row in selected], ["alpha"])
+        self.assertEqual(selected, ["alpha"])
 
     def test_rejects_invalid_prefix(self):
         with self.assertRaises(ValueError):
