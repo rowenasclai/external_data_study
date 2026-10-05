@@ -19,10 +19,15 @@ def rows():
   if item.get('Event Name','').strip():out.append(item)
  return out
 def artifact_paths():
+ # Weekly public extractions are published below Result/Other Events.  Search
+ # that location first so a completion-manifest basename always resolves to
+ # its required public artifact; retain legacy organizer lists as fallbacks.
  result={}
- for path in Path('Result/Exhibition Organizers').rglob('*.csv'):
-  if path.name=='control_sheet_snapshot.csv':continue
-  result.setdefault(path.name,path.as_posix())
+ for root in (Path('Result/Other Events'),Path('Result/Exhibition Organizers')):
+  if not root.exists():continue
+  for path in root.rglob('*.csv'):
+   if path.name=='control_sheet_snapshot.csv':continue
+   result.setdefault(path.name,path.as_posix())
  return result
 def main():
  events=rows();paths=artifact_paths()

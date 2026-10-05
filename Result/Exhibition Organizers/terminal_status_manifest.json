@@ -41,21 +41,13 @@
       "status": "Fail",
       "extracted_file_name": ""
     },
-    {
-      "event_name": "All in Print China 2026 (The 10th All in Print China)",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
+
     {
       "event_name": "CIIF 2026 (The 25th China International Industry Fair)",
       "status": "Fail",
       "extracted_file_name": ""
     },
-    {
-      "event_name": "GovWare 2026 (Singapore International Cyber Week / SICW)",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
+
     {
       "event_name": "CIHS 2026 (China International Hardware Show)",
       "status": "Fail",
@@ -93,6 +85,16 @@
     },
     {
       "event_name": "MEGA SHOW Hong Kong 2026 (Part 2)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "PTC ASIA 2026 (Power Transmission and Control Asia)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "gamescom asia 2026",
       "status": "Fail",
       "extracted_file_name": ""
     }
