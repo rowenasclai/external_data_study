@@ -50,6 +50,16 @@
       "event_name": "TAITRONICS & AIoT Taiwan 2026",
       "status": "Agent Extraction",
       "extracted_file_name": "taitronics_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "All in Print China 2026 (The 10th All in Print China)",
+      "status": "Agent Extraction",
+      "extracted_file_name": "all_in_print_china_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "GovWare 2026 (Singapore International Cyber Week / SICW)",
+      "status": "Agent Extraction",
+      "extracted_file_name": "govware_2026_exhibitors.csv"
     }
   ]
 }
