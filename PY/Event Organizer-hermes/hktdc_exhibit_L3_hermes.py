@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -52,6 +53,7 @@ def fetch_one(l2: dict[str, str]) -> dict[str, str]:
         return outcome(l2, "not_attempted_l2_unavailable")
     request = Request(url, headers={"User-Agent": "external-data-study-hktdc-hermes/1.0", "Accept": "text/html"})
     last_error: Exception | None = None
+    terminal_status = "request_error"
     for attempt in range(1, MAX_RETRIES + 1):
         try:
             with urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
@@ -62,11 +64,16 @@ def fetch_one(l2: dict[str, str]) -> dict[str, str]:
             if error.code == 404:
                 return outcome(l2, "unavailable_404", url)
             last_error = error
+            terminal_status = f"request_error_http_{error.code}"
         except (URLError, TimeoutError) as error:
             last_error = error
+        except ValueError as error:
+            last_error = error
+            terminal_status = "parse_error"
         if attempt < MAX_RETRIES:
             time.sleep(attempt * 2)
-    raise RuntimeError(f"{url}: failed after {MAX_RETRIES} direct HTTPS attempts: {last_error}")
+    # Keep the corresponding L2 identity aligned and let the batch finish.
+    return outcome(l2, terminal_status, url)
 
 
 def read_checkpoint(path: Path, l2_records: list[dict[str, str]]) -> dict[int, dict[str, str]]:
@@ -88,6 +95,7 @@ def append_checkpoint(path: Path, position: int, l2: dict[str, str], record: dic
     with path.open("a", encoding="utf-8") as handle:
         handle.write(json.dumps({"position": position, "supplier_url": l2.get("supplier_url", ""), "record": record}, ensure_ascii=False, sort_keys=True) + "\n")
         handle.flush()
+        os.fsync(handle.fileno())
 
 
 def atomic_write(path: Path, content: str, encoding: str) -> None:
