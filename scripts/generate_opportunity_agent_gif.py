@@ -72,17 +72,29 @@ def tag(x, y, label, color):
     return rect(x, y, width, 27, "#F8F9F7", color, 1, 13) + text(x + 12, y + 18, label, 10, color, 700)
 
 
-def spark(cx, cy, radius, color):
-    """Render a four-point spark to convey a hand-off between workflow stages."""
-    inner = radius * 0.28
-    points = [
-        (cx, cy - radius), (cx + inner, cy - inner),
-        (cx + radius, cy), (cx + inner, cy + inner),
-        (cx, cy + radius), (cx - inner, cy + inner),
-        (cx - radius, cy), (cx - inner, cy - inner),
-    ]
-    point_string = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
-    return f'<polygon points="{point_string}" fill="{color}"/>'
+def swipe_arrow(x1, x2, cy, color, progress=1.0):
+    """Render an original curved, two-stroke swipe arrow between workflow cards."""
+    end = x1 + (x2 - x1) * progress
+    rise = 12
+    main = (
+        f'<path d="M {x1:.1f} {cy:.1f} C {x1 + 7:.1f} {cy - rise:.1f}, '
+        f'{end - 9:.1f} {cy - rise:.1f}, {end:.1f} {cy:.1f}" '
+        f'fill="none" stroke="{color}" stroke-width="3.5" stroke-linecap="round"/>'
+    )
+    trail_end = max(x1 + 3, end - 7)
+    trail = (
+        f'<path d="M {x1 + 3:.1f} {cy + 7:.1f} C {x1 + 10:.1f} {cy - 2:.1f}, '
+        f'{trail_end - 8:.1f} {cy - 2:.1f}, {trail_end:.1f} {cy + 4:.1f}" '
+        f'fill="none" stroke="{color}" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>'
+    )
+    if progress < 0.08:
+        return trail
+    head = (
+        f'<path d="M {end - 8:.1f} {cy - 7:.1f} L {end + 2:.1f} {cy:.1f} '
+        f'L {end - 8:.1f} {cy + 7:.1f}" fill="none" stroke="{color}" '
+        f'stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'
+    )
+    return trail + main + head
 
 
 def svg(active, progress):
@@ -102,7 +114,8 @@ def svg(active, progress):
         text(631, 201, "INTERNAL HANDLING", 13, BLUE, 700),
         f'<line x1="631" y1="214" x2="1136" y2="214" stroke="{BLUE}" stroke-width="2"/>',
     ]
-    card_w, card_h, gap, sx, cy = 250, 350, 25, 64, 230
+    # Wider inter-card gaps give the animated swipe arrows enough room to read.
+    card_w, card_h, gap, sx, cy = 240, 350, 37, 64, 230
     for i, (title, description, labels, color, icon) in enumerate(STAGES):
         x, on = sx + i * (card_w + gap), i == active
         bits.append(rect(x, cy, card_w, card_h, ACTIVE if on else PANEL, color if on else "#B7BCBC", 2 if on else 1, 20))
@@ -112,7 +125,7 @@ def svg(active, progress):
             rect(x + 22, cy + 25, 45, 45, color, "none", 0, 12),
             text(x + 44, cy + 57, icon, 25, BG, 700, "middle"),
             text(x + 82, cy + 41, f"0{i + 1}", 12, MUTED, 700),
-            text(x + 22, cy + 111, title, 22, TEXT, 700),
+            text(x + 22, cy + 111, title, 20 if len(title) > 18 else 22, TEXT, 700),
             text(x + 22, cy + 148, "BUSINESS LOGIC", 11, color, 700),
         ]
         for line_number, line in enumerate(description):
@@ -125,15 +138,13 @@ def svg(active, progress):
                 rect(x + 109, cy + 323, 98, 6, "#BDC4C4", "none", 0, 3),
                 rect(x + 109, cy + 323, int(98 * progress), 6, color, "none", 0, 3),
             ]
-    # Spark hand-offs, deliberately after cards so they are visible in gaps.
+    # Original curved swipe-arrow hand-offs, deliberately after cards so they
+    # are visible in gaps. This is not a copy of the linked stock animation.
     for i in range(3):
-        x1, x2, yy = sx + i * (card_w + gap) + card_w + 8, sx + (i + 1) * (card_w + gap) - 15, cy + 170
+        x1, x2, yy = sx + i * (card_w + gap) + card_w + 2, sx + (i + 1) * (card_w + gap) - 2, cy + 170
         color = STAGES[i][4] if i < active else LINE
-        bits.append(f'<line x1="{x1}" y1="{yy}" x2="{x2}" y2="{yy}" stroke="{color}" stroke-width="3" stroke-dasharray="6 6"/>')
-        bits.append(spark(x2 + 3, yy, 9, color))
-        if i == active - 1:
-            moving_spark = x1 + int((x2 - x1 - 5) * progress)
-            bits.append(spark(moving_spark, yy, 7, STAGES[i][4]))
+        arrow_progress = progress if i == active - 1 else 1.0
+        bits.append(swipe_arrow(x1, x2, yy, color, arrow_progress))
     bits += [
         '<line x1="64" y1="599" x2="1136" y2="599" stroke="#9EA6A9"/>',
         text(64, 630, "Explore  →  Extract  →  Match  →  Prioritize & Share", 16, TEXT, 700),
