@@ -14,11 +14,11 @@ OUT = Path("Result/Opportunity Agent/opportunity_agent_flow.gif")
 # intentionally live outside it.
 WORK = Path("/tmp/opportunity_agent_gif_frames")
 
-BG, PANEL, ACTIVE = "#081326", "#10213B", "#17345B"
-TEXT, MUTED, LINE = "#F3F7FF", "#AEC0DA", "#2A527E"
-BLUE, MINT = "#5EB8FF", "#35E0B4"
-# Colour denotes workflow domain: external exploration (steps 1–2) is blue;
-# internal handling (steps 3–4) is mint.
+BG, PANEL, ACTIVE = "#D7D8D6", "#ECEDEB", "#FFFFFF"
+TEXT, MUTED, LINE = "#17242E", "#46515A", "#9EA6A9"
+GOLD, BLUE, HSBC_RED = "#A87C00", "#4587A7", "#DB0011"
+# Colour denotes workflow domain: external exploration (steps 1–2) is gold;
+# internal handling (steps 3–4) is blue.
 STAGES = [
     ("Exploration", (
         "Scan external data sources",
@@ -26,24 +26,24 @@ STAGES = [
         "contracts, trademarks) for",
         "specific external market",
         "information.",
-    ), ("Gemini",), BLUE, "⌕"),
+    ), ("Gemini",), GOLD, "⌕"),
     ("Extraction", (
         "Parse unstructured text to",
         "identify key entities, dates, and",
         "the nature of the event and",
         "extract.",
-    ), ("Hermes", "LLM (Llama 3.3 via Ollama)"), BLUE, "↧"),
+    ), ("Hermes", "LLM (Llama 3.3 via Ollama)"), GOLD, "↧"),
     ("Matching", (
         "Reconcile extracted company",
         "names against internal CRMS",
         "databases or target lists.",
-    ), ("GCP", "Fuzzy Matching / Embeddings"), MINT, "≋"),
+    ), ("GCP", "Fuzzy Matching / Embeddings"), BLUE, "≋"),
     ("Prospect list sharing", (
         "Format the matched opportunities",
         "into a prioritized list and",
         "distribute to the trade sales or",
         "front line.",
-    ), ("Datastudio",), MINT, "↗"),
+    ), ("Datastudio",), BLUE, "↗"),
 ]
 
 
@@ -59,28 +59,32 @@ def text(x, y, value, size, fill, weight=400, anchor="start"):
 def tag(x, y, label, color):
     """Render exactly one technology tag in its own pill-shaped rectangle."""
     width = min(206, max(68, 20 + len(label) * 7.0))
-    return rect(x, y, width, 27, "#0B1A2D", color, 1, 13) + text(x + 12, y + 18, label, 10, color, 700)
+    return rect(x, y, width, 27, "#F8F9F7", color, 1, 13) + text(x + 12, y + 18, label, 10, color, 700)
 
 
 def svg(active, progress):
     bits = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">']
     bits += [rect(0, 0, W, H, BG)]
     # grid
-    for x in range(0, W + 1, 48): bits.append(f'<line x1="{x}" y1="0" x2="{x}" y2="{H}" stroke="#0B1930"/>')
-    for y in range(0, H + 1, 48): bits.append(f'<line x1="0" y1="{y}" x2="{W}" y2="{y}" stroke="#0B1930"/>')
+    for x in range(0, W + 1, 48): bits.append(f'<line x1="{x}" y1="0" x2="{x}" y2="{H}" stroke="#C9CAC8"/>')
+    for y in range(0, H + 1, 48): bits.append(f'<line x1="0" y1="{y}" x2="{W}" y2="{y}" stroke="#C9CAC8"/>')
     bits += [
-        text(64, 62, "OPPORTUNITY AGENT", 18, MINT, 700),
-        text(64, 108, "From external signals to sales-ready prospects", 34, TEXT, 700),
-        text(64, 140, "AUTOMATED MARKET INTELLIGENCE WORKFLOW", 13, MUTED, 700),
-        text(64, 190, "EXTERNAL EXPLORATION", 13, BLUE, 700),
-        '<line x1="64" y1="204" x2="604" y2="204" stroke="#5EB8FF" stroke-width="2"/>',
-        text(631, 190, "INTERNAL HANDLING", 13, MINT, 700),
-        '<line x1="631" y1="204" x2="1136" y2="204" stroke="#35E0B4" stroke-width="2"/>',
+        # HSBC device mark + wordmark at top left.
+        f'<path d="M 64 36 L 80 52 L 64 68 Z" fill="{HSBC_RED}"/>',
+        f'<path d="M 96 36 L 80 52 L 96 68 Z" fill="{HSBC_RED}"/>',
+        text(106, 62, "HSBC", 27, TEXT, 700),
+        text(64, 108, "OPPORTUNITY AGENT", 18, TEXT, 700),
+        text(64, 144, "From external signals to sales-ready prospects", 30, TEXT, 700),
+        text(64, 170, "AUTOMATED MARKET INTELLIGENCE WORKFLOW", 12, MUTED, 700),
+        text(64, 201, "EXTERNAL EXPLORATION", 13, GOLD, 700),
+        f'<line x1="64" y1="214" x2="604" y2="214" stroke="{GOLD}" stroke-width="2"/>',
+        text(631, 201, "INTERNAL HANDLING", 13, BLUE, 700),
+        f'<line x1="631" y1="214" x2="1136" y2="214" stroke="{BLUE}" stroke-width="2"/>',
     ]
-    card_w, card_h, gap, sx, cy = 250, 350, 25, 64, 220
+    card_w, card_h, gap, sx, cy = 250, 350, 25, 64, 230
     for i, (title, description, labels, color, icon) in enumerate(STAGES):
         x, on = sx + i * (card_w + gap), i == active
-        bits.append(rect(x, cy, card_w, card_h, ACTIVE if on else PANEL, color if on else "#1E3656", 2 if on else 1, 20))
+        bits.append(rect(x, cy, card_w, card_h, ACTIVE if on else PANEL, color if on else "#B7BCBC", 2 if on else 1, 20))
         if on:
             bits.append(rect(x + 1, cy + 1, card_w - 2, 6, color, "none", 0, 18))
         bits += [
@@ -97,7 +101,7 @@ def svg(active, progress):
         if on:
             bits += [
                 text(x + 22, cy + 329, "PROCESSING", 10, color, 700),
-                rect(x + 109, cy + 323, 98, 6, "#214366", "none", 0, 3),
+                rect(x + 109, cy + 323, 98, 6, "#BDC4C4", "none", 0, 3),
                 rect(x + 109, cy + 323, int(98 * progress), 6, color, "none", 0, 3),
             ]
     # connectors/dots, deliberately after cards so they are visible in gaps.
@@ -110,7 +114,7 @@ def svg(active, progress):
             dot = x1 + int((x2 - x1 - 5) * progress)
             bits.append(f'<circle cx="{dot}" cy="{yy}" r="6" fill="{STAGES[i][4]}"/>')
     bits += [
-        '<line x1="64" y1="589" x2="1136" y2="589" stroke="#203A5B"/>',
+        '<line x1="64" y1="599" x2="1136" y2="599" stroke="#9EA6A9"/>',
         text(64, 630, "Explore  →  Extract  →  Match  →  Prioritize & Share", 16, TEXT, 700),
         text(1136, 630, f"STEP {active + 1} OF 4", 12, STAGES[active][4], 700, "end"),
         '</svg>',
