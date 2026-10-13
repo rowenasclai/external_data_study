@@ -16,14 +16,34 @@ WORK = Path("/tmp/opportunity_agent_gif_frames")
 
 BG, PANEL, ACTIVE = "#081326", "#10213B", "#17345B"
 TEXT, MUTED, LINE = "#F3F7FF", "#AEC0DA", "#2A527E"
-BLUE, VIOLET, MINT, AMBER = "#5EB8FF", "#A78BFA", "#35E0B4", "#FDBA5E"
+BLUE, MINT = "#5EB8FF", "#35E0B4"
 # Colour denotes workflow domain: external exploration (steps 1–2) is blue;
 # internal handling (steps 3–4) is mint.
 STAGES = [
-    ("Exploration", "Scan exhibitions, government contracts", "and trademarks for market signals.", "Gemini", BLUE, "⌕"),
-    ("Extraction", "Parse unstructured text into entities,", "dates and event context.", "Hermes  •  Llama 3.3 via Ollama", BLUE, "↧"),
-    ("Matching", "Reconcile companies against CRM", "and target lists.", "GCP  •  Fuzzy Matching / Embeddings", MINT, "≋"),
-    ("Prospect list sharing", "Prioritize opportunities and distribute", "to trade sales / front line.", "Datastudio", MINT, "↗"),
+    ("Exploration", (
+        "Scan external data sources",
+        "(exhibitions, government",
+        "contracts, trademarks) for",
+        "specific external market",
+        "information.",
+    ), ("Gemini",), BLUE, "⌕"),
+    ("Extraction", (
+        "Parse unstructured text to",
+        "identify key entities, dates, and",
+        "the nature of the event and",
+        "extract.",
+    ), ("Hermes", "LLM (Llama 3.3 via Ollama)"), BLUE, "↧"),
+    ("Matching", (
+        "Reconcile extracted company",
+        "names against internal CRMS",
+        "databases or target lists.",
+    ), ("GCP", "Fuzzy Matching / Embeddings"), MINT, "≋"),
+    ("Prospect list sharing", (
+        "Format the matched opportunities",
+        "into a prioritized list and",
+        "distribute to the trade sales or",
+        "front line.",
+    ), ("Datastudio",), MINT, "↗"),
 ]
 
 
@@ -37,10 +57,9 @@ def text(x, y, value, size, fill, weight=400, anchor="start"):
 
 
 def tag(x, y, label, color):
-    # Keep tags within the card; the embeddings label is intentionally long.
-    width = min(206, max(68, 16 + len(label) * 7.1))
-    size = 8.5 if len(label) > 30 else 11
-    return rect(x, y, width, 27, "#0B1A2D", color, 1, 13) + text(x + 12, y + 18, label, size, color, 700)
+    """Render exactly one technology tag in its own pill-shaped rectangle."""
+    width = min(206, max(68, 20 + len(label) * 7.0))
+    return rect(x, y, width, 27, "#0B1A2D", color, 1, 13) + text(x + 12, y + 18, label, 10, color, 700)
 
 
 def svg(active, progress):
@@ -58,8 +77,8 @@ def svg(active, progress):
         text(631, 190, "INTERNAL HANDLING", 13, MINT, 700),
         '<line x1="631" y1="204" x2="1136" y2="204" stroke="#35E0B4" stroke-width="2"/>',
     ]
-    card_w, card_h, gap, sx, cy = 250, 300, 25, 64, 237
-    for i, (title, d1, d2, label, color, icon) in enumerate(STAGES):
+    card_w, card_h, gap, sx, cy = 250, 350, 25, 64, 220
+    for i, (title, description, labels, color, icon) in enumerate(STAGES):
         x, on = sx + i * (card_w + gap), i == active
         bits.append(rect(x, cy, card_w, card_h, ACTIVE if on else PANEL, color if on else "#1E3656", 2 if on else 1, 20))
         if on:
@@ -70,19 +89,20 @@ def svg(active, progress):
             text(x + 82, cy + 41, f"0{i + 1}", 12, MUTED, 700),
             text(x + 22, cy + 111, title, 22, TEXT, 700),
             text(x + 22, cy + 148, "BUSINESS LOGIC", 11, color, 700),
-            text(x + 22, cy + 177, d1, 13, MUTED),
-            text(x + 22, cy + 198, d2, 13, MUTED),
-            tag(x + 22, cy + 239, label, color),
         ]
+        for line_number, line in enumerate(description):
+            bits.append(text(x + 22, cy + 177 + line_number * 18, line, 12, MUTED))
+        for tag_number, label in enumerate(labels):
+            bits.append(tag(x + 22, cy + 260 + tag_number * 31, label, color))
         if on:
             bits += [
-                text(x + 22, cy + 281, "PROCESSING", 10, color, 700),
-                rect(x + 109, cy + 275, 98, 6, "#214366", "none", 0, 3),
-                rect(x + 109, cy + 275, int(98 * progress), 6, color, "none", 0, 3),
+                text(x + 22, cy + 329, "PROCESSING", 10, color, 700),
+                rect(x + 109, cy + 323, 98, 6, "#214366", "none", 0, 3),
+                rect(x + 109, cy + 323, int(98 * progress), 6, color, "none", 0, 3),
             ]
     # connectors/dots, deliberately after cards so they are visible in gaps.
     for i in range(3):
-        x1, x2, yy = sx + i * (card_w + gap) + card_w + 8, sx + (i + 1) * (card_w + gap) - 15, cy + 150
+        x1, x2, yy = sx + i * (card_w + gap) + card_w + 8, sx + (i + 1) * (card_w + gap) - 15, cy + 170
         color = STAGES[i][4] if i < active else LINE
         bits += [f'<line x1="{x1}" y1="{yy}" x2="{x2}" y2="{yy}" stroke="{color}" stroke-width="3"/>',
                  f'<path d="M {x2} {yy-6} L {x2} {yy+6} L {x2+9} {yy} Z" fill="{color}"/>']
