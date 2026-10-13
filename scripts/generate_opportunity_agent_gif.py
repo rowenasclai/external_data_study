@@ -4,7 +4,7 @@ Requires ffmpeg built with the librsvg decoder. Run from repository root:
     python3 scripts/generate_opportunity_agent_gif.py
 """
 import base64
-from math import cos, radians, sin
+from math import pi, sin
 from pathlib import Path
 from xml.sax.saxutils import escape
 import shutil
@@ -73,18 +73,14 @@ def tag(x, y, label, color):
     return rect(x, y, width, 27, "#F8F9F7", color, 1, 13) + text(x + 12, y + 18, label, 10, color, 700)
 
 
-def turning_gear(cx, cy, radius, color, degrees=0):
-    """Render a compact gear whose teeth rotate between animation frames."""
-    points = []
-    teeth = 10
-    for index in range(teeth * 4):
-        angle = radians(degrees - 90 + index * 360 / (teeth * 4))
-        tooth_radius = radius if index % 4 in (0, 1) else radius * 0.72
-        points.append((cx + cos(angle) * tooth_radius, cy + sin(angle) * tooth_radius))
-    point_string = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
+def chevron_right(cx, cy, size, color):
+    """Render a scalable right-facing chevron used for animated hand-offs."""
+    half = size / 2
+    stroke = max(2, size * 0.24)
     return (
-        f'<polygon points="{point_string}" fill="{color}"/>'
-        f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{radius * 0.31:.1f}" fill="{BG}"/>'
+        f'<path d="M {cx - half:.1f} {cy - half:.1f} L {cx + half:.1f} {cy:.1f} '
+        f'L {cx - half:.1f} {cy + half:.1f}" fill="none" stroke="{color}" '
+        f'stroke-width="{stroke:.1f}" stroke-linecap="round" stroke-linejoin="round"/>'
     )
 
 
@@ -129,15 +125,22 @@ def svg(active, progress):
                 rect(x + 109, cy + 323, 98, 6, "#BDC4C4", "none", 0, 3),
                 rect(x + 109, cy + 323, int(98 * progress), 6, color, "none", 0, 3),
             ]
-    # Turning-gear hand-offs, deliberately after cards so they are visible in gaps.
+    # Chevron hand-offs, deliberately after cards so they are visible in gaps.
+    # The active chevron moves right, expands at mid-transition, then contracts.
     for i in range(3):
         x1, x2, yy = sx + i * (card_w + gap) + card_w + 2, sx + (i + 1) * (card_w + gap) - 2, cy + 170
         color = STAGES[i][4] if i < active else LINE
         cx = (x1 + x2) / 2
-        bits.append(f'<line x1="{x1}" y1="{yy}" x2="{cx - 13:.1f}" y2="{yy}" stroke="{color}" stroke-width="2" stroke-linecap="round"/>')
-        bits.append(f'<line x1="{cx + 13:.1f}" y1="{yy}" x2="{x2}" y2="{yy}" stroke="{color}" stroke-width="2" stroke-linecap="round"/>')
-        rotation = progress * 360 if i == active - 1 else 180 if i < active else 0
-        bits.append(turning_gear(cx, yy, 12, color, rotation))
+        bits.append(f'<line x1="{x1}" y1="{yy}" x2="{x2}" y2="{yy}" stroke="{color}" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>')
+        if i == active - 1:
+            travel_start, travel_end = x1 + 8, x2 - 8
+            moving_x = travel_start + (travel_end - travel_start) * progress
+            # At the midpoint the chevron is largest; it returns to its normal
+            # compact footprint when it reaches the receiving card.
+            size = 9 + 14 * sin(pi * progress)
+            bits.append(chevron_right(moving_x, yy, size, STAGES[i][4]))
+        else:
+            bits.append(chevron_right(cx, yy, 8, color))
     bits += [
         '<line x1="64" y1="599" x2="1136" y2="599" stroke="#9EA6A9"/>',
         text(64, 630, "Explore  →  Extract  →  Match  →  Prioritize & Share", 16, TEXT, 700),
