@@ -20,6 +20,8 @@ WORK = Path("/tmp/opportunity_agent_gif_frames")
 BG, PANEL, ACTIVE = "#D7D8D6", "#ECEDEB", "#FFFFFF"
 TEXT, MUTED, LINE = "#17242E", "#46515A", "#9EA6A9"
 GOLD, BLUE = "#A87C00", "#4587A7"
+# High-contrast colors reserved for the animated chevron hand-offs.
+GOLD_ARROW, BLUE_ARROW = "#E6A700", "#0079C8"
 # Colour denotes workflow domain: external exploration (steps 1–2) is gold;
 # internal handling (steps 3–4) is blue.
 STAGES = [
@@ -84,6 +86,11 @@ def chevron_right(cx, cy, size, color):
     )
 
 
+def arrow_accent(stage_index):
+    """Use a sharper arrow color than the related card/icon accent."""
+    return GOLD_ARROW if stage_index < 2 else BLUE_ARROW
+
+
 def svg(active, progress):
     bits = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">']
     bits += [rect(0, 0, W, H, BG)]
@@ -129,7 +136,7 @@ def svg(active, progress):
     # The active chevron moves right, expands at mid-transition, then contracts.
     for i in range(3):
         x1, x2, yy = sx + i * (card_w + gap) + card_w + 2, sx + (i + 1) * (card_w + gap) - 2, cy + 170
-        color = STAGES[i][4] if i < active else LINE
+        color = arrow_accent(i) if i < active else LINE
         cx = (x1 + x2) / 2
         bits.append(f'<line x1="{x1}" y1="{yy}" x2="{x2}" y2="{yy}" stroke="{color}" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>')
         if i == active - 1:
@@ -138,7 +145,7 @@ def svg(active, progress):
             # At the midpoint the chevron is largest; it returns to its normal
             # compact footprint when it reaches the receiving card.
             size = 9 + 14 * sin(pi * progress)
-            bits.append(chevron_right(moving_x, yy, size, STAGES[i][4]))
+            bits.append(chevron_right(moving_x, yy, size, color))
         else:
             bits.append(chevron_right(cx, yy, 8, color))
     bits += [
