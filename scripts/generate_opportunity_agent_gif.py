@@ -72,6 +72,19 @@ def tag(x, y, label, color):
     return rect(x, y, width, 27, "#F8F9F7", color, 1, 13) + text(x + 12, y + 18, label, 10, color, 700)
 
 
+def spark(cx, cy, radius, color):
+    """Render a four-point spark to convey a hand-off between workflow stages."""
+    inner = radius * 0.28
+    points = [
+        (cx, cy - radius), (cx + inner, cy - inner),
+        (cx + radius, cy), (cx + inner, cy + inner),
+        (cx, cy + radius), (cx - inner, cy + inner),
+        (cx - radius, cy), (cx - inner, cy - inner),
+    ]
+    point_string = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
+    return f'<polygon points="{point_string}" fill="{color}"/>'
+
+
 def svg(active, progress):
     bits = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">']
     bits += [rect(0, 0, W, H, BG)]
@@ -112,15 +125,15 @@ def svg(active, progress):
                 rect(x + 109, cy + 323, 98, 6, "#BDC4C4", "none", 0, 3),
                 rect(x + 109, cy + 323, int(98 * progress), 6, color, "none", 0, 3),
             ]
-    # connectors/dots, deliberately after cards so they are visible in gaps.
+    # Spark hand-offs, deliberately after cards so they are visible in gaps.
     for i in range(3):
         x1, x2, yy = sx + i * (card_w + gap) + card_w + 8, sx + (i + 1) * (card_w + gap) - 15, cy + 170
         color = STAGES[i][4] if i < active else LINE
-        bits += [f'<line x1="{x1}" y1="{yy}" x2="{x2}" y2="{yy}" stroke="{color}" stroke-width="3"/>',
-                 f'<path d="M {x2} {yy-6} L {x2} {yy+6} L {x2+9} {yy} Z" fill="{color}"/>']
+        bits.append(f'<line x1="{x1}" y1="{yy}" x2="{x2}" y2="{yy}" stroke="{color}" stroke-width="3" stroke-dasharray="6 6"/>')
+        bits.append(spark(x2 + 3, yy, 9, color))
         if i == active - 1:
-            dot = x1 + int((x2 - x1 - 5) * progress)
-            bits.append(f'<circle cx="{dot}" cy="{yy}" r="6" fill="{STAGES[i][4]}"/>')
+            moving_spark = x1 + int((x2 - x1 - 5) * progress)
+            bits.append(spark(moving_spark, yy, 7, STAGES[i][4]))
     bits += [
         '<line x1="64" y1="599" x2="1136" y2="599" stroke="#9EA6A9"/>',
         text(64, 630, "Explore  →  Extract  →  Match  →  Prioritize & Share", 16, TEXT, 700),
