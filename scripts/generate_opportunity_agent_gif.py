@@ -3,6 +3,7 @@
 Requires ffmpeg built with the librsvg decoder. Run from repository root:
     python3 scripts/generate_opportunity_agent_gif.py
 """
+import base64
 from pathlib import Path
 from xml.sax.saxutils import escape
 import shutil
@@ -10,13 +11,14 @@ import subprocess
 
 W, H = 1200, 675
 OUT = Path("Result/Opportunity Agent/opportunity_agent_flow.gif")
+LOGO = Path("assets/opportunity_agent/hsbc_logo_supplied.png")
 # The repository's .runtime directory is gateway-owned; transient render frames
 # intentionally live outside it.
 WORK = Path("/tmp/opportunity_agent_gif_frames")
 
 BG, PANEL, ACTIVE = "#D7D8D6", "#ECEDEB", "#FFFFFF"
 TEXT, MUTED, LINE = "#17242E", "#46515A", "#9EA6A9"
-GOLD, BLUE, HSBC_RED = "#A87C00", "#4587A7", "#DB0011"
+GOLD, BLUE = "#A87C00", "#4587A7"
 # Colour denotes workflow domain: external exploration (steps 1–2) is gold;
 # internal handling (steps 3–4) is blue.
 STAGES = [
@@ -56,6 +58,14 @@ def text(x, y, value, size, fill, weight=400, anchor="start"):
             f'font-size="{size}" font-weight="{weight}" text-anchor="{anchor}">{escape(value)}</text>')
 
 
+def logo_data_uri():
+    """Embed the user-supplied HSBC logo crop into each SVG animation frame."""
+    if not LOGO.is_file():
+        raise FileNotFoundError(f"Required logo asset is missing: {LOGO}")
+    payload = base64.b64encode(LOGO.read_bytes()).decode("ascii")
+    return f"data:image/png;base64,{payload}"
+
+
 def tag(x, y, label, color):
     """Render exactly one technology tag in its own pill-shaped rectangle."""
     width = min(206, max(68, 20 + len(label) * 7.0))
@@ -69,10 +79,8 @@ def svg(active, progress):
     for x in range(0, W + 1, 48): bits.append(f'<line x1="{x}" y1="0" x2="{x}" y2="{H}" stroke="#C9CAC8"/>')
     for y in range(0, H + 1, 48): bits.append(f'<line x1="0" y1="{y}" x2="{W}" y2="{y}" stroke="#C9CAC8"/>')
     bits += [
-        # HSBC device mark + wordmark at top left.
-        f'<path d="M 64 36 L 80 52 L 64 68 Z" fill="{HSBC_RED}"/>',
-        f'<path d="M 96 36 L 80 52 L 96 68 Z" fill="{HSBC_RED}"/>',
-        text(106, 62, "HSBC", 27, TEXT, 700),
+        # Exact HSBC wordmark/device crop supplied by the user.
+        f'<image href="{logo_data_uri()}" x="64" y="28" width="235" height="57" preserveAspectRatio="xMinYMid meet"/>',
         text(64, 108, "OPPORTUNITY AGENT", 18, TEXT, 700),
         text(64, 144, "From external signals to sales-ready prospects", 30, TEXT, 700),
         text(64, 170, "AUTOMATED MARKET INTELLIGENCE WORKFLOW", 12, MUTED, 700),
