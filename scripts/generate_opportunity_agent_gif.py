@@ -4,6 +4,7 @@ Requires ffmpeg built with the librsvg decoder. Run from repository root:
     python3 scripts/generate_opportunity_agent_gif.py
 """
 import base64
+from math import cos, radians, sin
 from pathlib import Path
 from xml.sax.saxutils import escape
 import shutil
@@ -72,29 +73,19 @@ def tag(x, y, label, color):
     return rect(x, y, width, 27, "#F8F9F7", color, 1, 13) + text(x + 12, y + 18, label, 10, color, 700)
 
 
-def swipe_arrow(x1, x2, cy, color, progress=1.0):
-    """Render an original curved, two-stroke swipe arrow between workflow cards."""
-    end = x1 + (x2 - x1) * progress
-    rise = 12
-    main = (
-        f'<path d="M {x1:.1f} {cy:.1f} C {x1 + 7:.1f} {cy - rise:.1f}, '
-        f'{end - 9:.1f} {cy - rise:.1f}, {end:.1f} {cy:.1f}" '
-        f'fill="none" stroke="{color}" stroke-width="3.5" stroke-linecap="round"/>'
+def turning_gear(cx, cy, radius, color, degrees=0):
+    """Render a compact gear whose teeth rotate between animation frames."""
+    points = []
+    teeth = 10
+    for index in range(teeth * 4):
+        angle = radians(degrees - 90 + index * 360 / (teeth * 4))
+        tooth_radius = radius if index % 4 in (0, 1) else radius * 0.72
+        points.append((cx + cos(angle) * tooth_radius, cy + sin(angle) * tooth_radius))
+    point_string = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
+    return (
+        f'<polygon points="{point_string}" fill="{color}"/>'
+        f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{radius * 0.31:.1f}" fill="{BG}"/>'
     )
-    trail_end = max(x1 + 3, end - 7)
-    trail = (
-        f'<path d="M {x1 + 3:.1f} {cy + 7:.1f} C {x1 + 10:.1f} {cy - 2:.1f}, '
-        f'{trail_end - 8:.1f} {cy - 2:.1f}, {trail_end:.1f} {cy + 4:.1f}" '
-        f'fill="none" stroke="{color}" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>'
-    )
-    if progress < 0.08:
-        return trail
-    head = (
-        f'<path d="M {end - 8:.1f} {cy - 7:.1f} L {end + 2:.1f} {cy:.1f} '
-        f'L {end - 8:.1f} {cy + 7:.1f}" fill="none" stroke="{color}" '
-        f'stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'
-    )
-    return trail + main + head
 
 
 def svg(active, progress):
@@ -138,13 +129,15 @@ def svg(active, progress):
                 rect(x + 109, cy + 323, 98, 6, "#BDC4C4", "none", 0, 3),
                 rect(x + 109, cy + 323, int(98 * progress), 6, color, "none", 0, 3),
             ]
-    # Original curved swipe-arrow hand-offs, deliberately after cards so they
-    # are visible in gaps. This is not a copy of the linked stock animation.
+    # Turning-gear hand-offs, deliberately after cards so they are visible in gaps.
     for i in range(3):
         x1, x2, yy = sx + i * (card_w + gap) + card_w + 2, sx + (i + 1) * (card_w + gap) - 2, cy + 170
         color = STAGES[i][4] if i < active else LINE
-        arrow_progress = progress if i == active - 1 else 1.0
-        bits.append(swipe_arrow(x1, x2, yy, color, arrow_progress))
+        cx = (x1 + x2) / 2
+        bits.append(f'<line x1="{x1}" y1="{yy}" x2="{cx - 13:.1f}" y2="{yy}" stroke="{color}" stroke-width="2" stroke-linecap="round"/>')
+        bits.append(f'<line x1="{cx + 13:.1f}" y1="{yy}" x2="{x2}" y2="{yy}" stroke="{color}" stroke-width="2" stroke-linecap="round"/>')
+        rotation = progress * 360 if i == active - 1 else 180 if i < active else 0
+        bits.append(turning_gear(cx, yy, 12, color, rotation))
     bits += [
         '<line x1="64" y1="599" x2="1136" y2="599" stroke="#9EA6A9"/>',
         text(64, 630, "Explore  →  Extract  →  Match  →  Prioritize & Share", 16, TEXT, 700),
