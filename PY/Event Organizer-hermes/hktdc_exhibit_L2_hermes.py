@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -59,6 +60,7 @@ def fetch_one(l1: dict[str, str]) -> dict[str, str]:
     url = canonical_exhibitor_url(l1["url"])
     request = Request(url, headers={"User-Agent": "external-data-study-hktdc-hermes/1.0", "Accept": "text/html"})
     last_error: Exception | None = None
+    terminal_status = "request_error"
     for attempt in range(1, MAX_RETRIES + 1):
         try:
             with urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
@@ -69,11 +71,17 @@ def fetch_one(l1: dict[str, str]) -> dict[str, str]:
             if error.code == 404:
                 return outcome_record(l1, url, "unavailable_404")
             last_error = error
+            terminal_status = f"request_error_http_{error.code}"
         except (URLError, TimeoutError) as error:
             last_error = error
+        except ValueError as error:
+            last_error = error
+            terminal_status = "parse_error"
         if attempt < MAX_RETRIES:
             time.sleep(attempt * 2)
-    raise RuntimeError(f"{url}: failed after {MAX_RETRIES} direct HTTPS attempts: {last_error}")
+    # A single public endpoint failure must not discard the L1 identity or
+    # prevent the remaining checkpointed records from completing.
+    return outcome_record(l1, url, terminal_status)
 
 
 def read_checkpoint(path: Path, l1_records: list[dict[str, str]]) -> dict[int, dict[str, str]]:
@@ -95,6 +103,7 @@ def append_checkpoint(path: Path, position: int, l1: dict[str, str], record: dic
     with path.open("a", encoding="utf-8") as handle:
         handle.write(json.dumps({"position": position, "exhibitor_url": l1["url"], "record": record}, ensure_ascii=False, sort_keys=True) + "\n")
         handle.flush()
+        os.fsync(handle.fileno())
 
 
 def atomic_write(path: Path, content: str, encoding: str) -> None:

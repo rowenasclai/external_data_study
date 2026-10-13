@@ -60,6 +60,11 @@
       "event_name": "GovWare 2026 (Singapore International Cyber Week / SICW)",
       "status": "Agent Extraction",
       "extracted_file_name": "govware_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "Pro Integration Future Asia 2026 (PIFA 2026)",
+      "status": "Agent Extraction",
+      "extracted_file_name": "pifa_2026_exhibitors.csv"
     }
   ]
 }
