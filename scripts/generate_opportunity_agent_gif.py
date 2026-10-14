@@ -17,13 +17,16 @@ LOGO = Path("assets/opportunity_agent/hsbc_logo_supplied.png")
 # intentionally live outside it.
 WORK = Path("/tmp/opportunity_agent_gif_frames")
 
-BG, PANEL, ACTIVE = "#D7D8D6", "#ECEDEB", "#FFFFFF"
-TEXT, MUTED, LINE = "#17242E", "#46515A", "#9EA6A9"
-GOLD, BLUE = "#A87C00", "#4587A7"
+# Futuristic dark-mode palette: deep-space background, glass-like panels and
+# high-energy gold/cyan signal colors. The HSBC logo stays on a light badge so
+# the supplied black wordmark remains fully legible.
+BG, PANEL, ACTIVE = "#071522", "#10243A", "#173C5E"
+TEXT, MUTED, LINE = "#F4F7FB", "#AAB8C8", "#48637C"
+GOLD, BLUE = "#F4B000", "#00A3E0"
 # High-contrast colors reserved for the animated chevron hand-offs.
-GOLD_ARROW, BLUE_ARROW = "#E6A700", "#0079C8"
+GOLD_ARROW, BLUE_ARROW = "#FFD166", "#00D9FF"
 # Colour denotes workflow domain: external exploration (steps 1–2) is gold;
-# internal handling (steps 3–4) is blue.
+# internal handling (steps 3–4) is cyan.
 STAGES = [
     ("Exploration", (
         "Scan external data sources",
@@ -72,7 +75,7 @@ def logo_data_uri():
 def tag(x, y, label, color):
     """Render exactly one technology tag in its own pill-shaped rectangle."""
     width = min(206, max(68, 20 + len(label) * 7.0))
-    return rect(x, y, width, 27, "#F8F9F7", color, 1, 13) + text(x + 12, y + 18, label, 10, color, 700)
+    return rect(x, y, width, 27, "#0B1C2C", color, 1, 13) + text(x + 12, y + 18, label, 10, color, 700)
 
 
 def chevron_right(cx, cy, size, color):
@@ -95,12 +98,13 @@ def svg(active, progress):
     bits = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">']
     bits += [rect(0, 0, W, H, BG)]
     # grid
-    for x in range(0, W + 1, 48): bits.append(f'<line x1="{x}" y1="0" x2="{x}" y2="{H}" stroke="#C9CAC8"/>')
-    for y in range(0, H + 1, 48): bits.append(f'<line x1="0" y1="{y}" x2="{W}" y2="{y}" stroke="#C9CAC8"/>')
+    for x in range(0, W + 1, 48): bits.append(f'<line x1="{x}" y1="0" x2="{x}" y2="{H}" stroke="#102A43"/>')
+    for y in range(0, H + 1, 48): bits.append(f'<line x1="0" y1="{y}" x2="{W}" y2="{y}" stroke="#102A43"/>')
     bits += [
         # Exact HSBC wordmark/device crop supplied by the user.
-        f'<image href="{logo_data_uri()}" x="64" y="28" width="235" height="57" preserveAspectRatio="xMinYMid meet"/>',
-        text(64, 108, "OPPORTUNITY AGENT", 18, TEXT, 700),
+        '<rect x="54" y="23" width="258" height="67" rx="14" fill="#F4F7FB" stroke="#00D9FF" stroke-width="1" fill-opacity="0.96"/>',
+        f'<image href="{logo_data_uri()}" x="70" y="33" width="220" height="54" preserveAspectRatio="xMinYMid meet"/>',
+        text(64, 108, "OPPORTUNITY AGENT", 18, "#00D9FF", 700),
         text(64, 144, "From external signals to sales-ready prospects", 30, TEXT, 700),
         text(64, 170, "AUTOMATED MARKET INTELLIGENCE WORKFLOW", 12, MUTED, 700),
         text(64, 201, "EXTERNAL EXPLORATION", 13, GOLD, 700),
@@ -112,7 +116,7 @@ def svg(active, progress):
     card_w, card_h, gap, sx, cy = 240, 350, 37, 64, 230
     for i, (title, description, labels, color, icon) in enumerate(STAGES):
         x, on = sx + i * (card_w + gap), i == active
-        bits.append(rect(x, cy, card_w, card_h, ACTIVE if on else PANEL, color if on else "#B7BCBC", 2 if on else 1, 20))
+        bits.append(rect(x, cy, card_w, card_h, ACTIVE if on else PANEL, color if on else "#294A68", 2 if on else 1, 20))
         if on:
             bits.append(rect(x + 1, cy + 1, card_w - 2, 6, color, "none", 0, 18))
         bits += [
@@ -129,7 +133,7 @@ def svg(active, progress):
         if on:
             bits += [
                 text(x + 22, cy + 329, "PROCESSING", 10, color, 700),
-                rect(x + 109, cy + 323, 98, 6, "#BDC4C4", "none", 0, 3),
+                rect(x + 109, cy + 323, 98, 6, "#25445E", "none", 0, 3),
                 rect(x + 109, cy + 323, int(98 * progress), 6, color, "none", 0, 3),
             ]
     # Chevron hand-offs, deliberately after cards so they are visible in gaps.
@@ -149,7 +153,7 @@ def svg(active, progress):
         else:
             bits.append(chevron_right(cx, yy, 8, color))
     bits += [
-        '<line x1="64" y1="599" x2="1136" y2="599" stroke="#9EA6A9"/>',
+        '<line x1="64" y1="599" x2="1136" y2="599" stroke="#48637C"/>',
         text(64, 630, "Explore  →  Extract  →  Match  →  Prioritize & Share", 16, TEXT, 700),
         text(1136, 630, f"STEP {active + 1} OF 4", 12, STAGES[active][4], 700, "end"),
         '</svg>',
