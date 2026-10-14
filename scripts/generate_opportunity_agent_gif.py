@@ -100,8 +100,10 @@ def svg(active, progress):
     bits = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">']
     bits += [rect(0, 0, W, H, BG)]
     bits += [
+        # HSBC wordmark to the left of the supplied device, on transparent canvas.
+        text(64, 67, "HSBC", 31, TEXT, 700),
         # Keep the existing 57px header-logo height; preserve source aspect ratio.
-        f'<image href="{logo_data_uri()}" x="64" y="28" width="107" height="57" preserveAspectRatio="xMinYMid meet"/>',
+        f'<image href="{logo_data_uri()}" x="154" y="28" width="107" height="57" preserveAspectRatio="xMinYMid meet"/>',
         text(64, 108, "OPPORTUNITY AGENT", 18, "#00D9FF", 700),
         text(64, 144, "From external signals to sales-ready prospects", 30, TEXT, 700),
         text(64, 170, "AUTOMATED MARKET INTELLIGENCE WORKFLOW", 12, MUTED, 700),
