@@ -102,7 +102,8 @@ def svg(active, progress):
     bits += [
         # White HSBC wordmark and red device, vertically center-aligned on transparent canvas.
         f'<image href="{image_data_uri(WORDMARK)}" x="64" y="32" width="100" height="57" preserveAspectRatio="xMinYMid meet"/>',
-        f'<image href="{image_data_uri(DEVICE)}" x="168" y="28" width="107" height="57" preserveAspectRatio="xMinYMid meet"/>',
+        # Scale the red device to the white wordmark's visual cap height and align centres.
+        f'<image href="{image_data_uri(DEVICE)}" x="168" y="40" width="56" height="30" preserveAspectRatio="xMinYMid meet"/>',
         text(64, 108, "OPPORTUNITY AGENT", 18, "#00D9FF", 700),
         text(64, 144, "From external signals to sales-ready prospects", 30, TEXT, 700),
         text(64, 170, "AUTOMATED MARKET INTELLIGENCE WORKFLOW", 12, MUTED, 700),
