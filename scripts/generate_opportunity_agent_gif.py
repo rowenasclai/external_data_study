@@ -12,7 +12,9 @@ import subprocess
 
 W, H = 1200, 675
 OUT = Path("Result/Opportunity Agent/opportunity_agent_flow.gif")
-LOGO = Path("assets/opportunity_agent/hsbc_logo_supplied.png")
+# Transparent, dark-canvas variant of the supplied HSBC crop: the red device
+# remains unchanged and the wordmark is lightened for legibility.
+LOGO = Path("assets/opportunity_agent/hsbc_logo_supplied_light.png")
 # The repository's .runtime directory is gateway-owned; transient render frames
 # intentionally live outside it.
 WORK = Path("/tmp/opportunity_agent_gif_frames")
@@ -97,13 +99,9 @@ def arrow_accent(stage_index):
 def svg(active, progress):
     bits = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">']
     bits += [rect(0, 0, W, H, BG)]
-    # grid
-    for x in range(0, W + 1, 48): bits.append(f'<line x1="{x}" y1="0" x2="{x}" y2="{H}" stroke="#102A43"/>')
-    for y in range(0, H + 1, 48): bits.append(f'<line x1="0" y1="{y}" x2="{W}" y2="{y}" stroke="#102A43"/>')
     bits += [
-        # Exact HSBC wordmark/device crop supplied by the user.
-        '<rect x="54" y="23" width="258" height="67" rx="14" fill="#F4F7FB" stroke="#00D9FF" stroke-width="1" fill-opacity="0.96"/>',
-        f'<image href="{logo_data_uri()}" x="70" y="33" width="220" height="54" preserveAspectRatio="xMinYMid meet"/>',
+        # Transparent placement of the supplied HSBC wordmark/device crop.
+        f'<image href="{logo_data_uri()}" x="64" y="28" width="235" height="57" preserveAspectRatio="xMinYMid meet"/>',
         text(64, 108, "OPPORTUNITY AGENT", 18, "#00D9FF", 700),
         text(64, 144, "From external signals to sales-ready prospects", 30, TEXT, 700),
         text(64, 170, "AUTOMATED MARKET INTELLIGENCE WORKFLOW", 12, MUTED, 700),
