@@ -12,16 +12,16 @@ import subprocess
 
 W, H = 1200, 675
 OUT = Path("Result/Opportunity Agent/opportunity_agent_flow.gif")
-# Clean reference-derived mark with a solid white HSBC wordmark and unchanged
-# red device, keyed to a transparent background for the dark animation canvas.
-LOGO = Path("assets/opportunity_agent/hsbc_wordmark_white_reference.png")
+# Separate transparent logo layers allow their visual centres to be aligned:
+# white HSBC wordmark shifted down 4px beside the supplied red device.
+WORDMARK = Path("assets/opportunity_agent/hsbc_wordmark_white_only.png")
+DEVICE = Path("assets/opportunity_agent/hsbc_hexagon_supplied_transparent.png")
 # The repository's .runtime directory is gateway-owned; transient render frames
 # intentionally live outside it.
 WORK = Path("/tmp/opportunity_agent_gif_frames")
 
 # Futuristic dark-mode palette: deep-space background, glass-like panels and
-# high-energy gold/cyan signal colors. The HSBC logo stays on a light badge so
-# the supplied black wordmark remains fully legible.
+# high-energy gold/cyan signal colors, and a transparent white/red HSBC mark.
 BG, PANEL, ACTIVE = "#071522", "#10243A", "#173C5E"
 TEXT, MUTED, LINE = "#F4F7FB", "#AAB8C8", "#48637C"
 GOLD, BLUE = "#F4B000", "#00A3E0"
@@ -66,11 +66,11 @@ def text(x, y, value, size, fill, weight=400, anchor="start"):
             f'font-size="{size}" font-weight="{weight}" text-anchor="{anchor}">{escape(value)}</text>')
 
 
-def logo_data_uri():
-    """Embed the user-supplied HSBC logo crop into each SVG animation frame."""
-    if not LOGO.is_file():
-        raise FileNotFoundError(f"Required logo asset is missing: {LOGO}")
-    payload = base64.b64encode(LOGO.read_bytes()).decode("ascii")
+def image_data_uri(asset):
+    """Embed a transparent user-supplied HSBC logo asset into an SVG frame."""
+    if not asset.is_file():
+        raise FileNotFoundError(f"Required logo asset is missing: {asset}")
+    payload = base64.b64encode(asset.read_bytes()).decode("ascii")
     return f"data:image/png;base64,{payload}"
 
 
@@ -100,8 +100,9 @@ def svg(active, progress):
     bits = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">']
     bits += [rect(0, 0, W, H, BG)]
     bits += [
-        # White HSBC wordmark + red device, on transparent canvas.
-        f'<image href="{logo_data_uri()}" x="64" y="28" width="160" height="57" preserveAspectRatio="xMinYMid meet"/>',
+        # White HSBC wordmark and red device, vertically center-aligned on transparent canvas.
+        f'<image href="{image_data_uri(WORDMARK)}" x="64" y="32" width="100" height="57" preserveAspectRatio="xMinYMid meet"/>',
+        f'<image href="{image_data_uri(DEVICE)}" x="168" y="28" width="107" height="57" preserveAspectRatio="xMinYMid meet"/>',
         text(64, 108, "OPPORTUNITY AGENT", 18, "#00D9FF", 700),
         text(64, 144, "From external signals to sales-ready prospects", 30, TEXT, 700),
         text(64, 170, "AUTOMATED MARKET INTELLIGENCE WORKFLOW", 12, MUTED, 700),
