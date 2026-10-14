@@ -12,9 +12,9 @@ import subprocess
 
 W, H = 1200, 675
 OUT = Path("Result/Opportunity Agent/opportunity_agent_flow.gif")
-# The latest user-supplied HSBC device, cropped and keyed to transparent
-# background while retaining its original red/white geometry.
-LOGO = Path("assets/opportunity_agent/hsbc_hexagon_supplied_transparent.png")
+# Exact serif wordmark + red device styling from the latest supplied reference,
+# keyed to transparent background for placement on the animation canvas.
+LOGO = Path("assets/opportunity_agent/hsbc_wordmark_reference_transparent.png")
 # The repository's .runtime directory is gateway-owned; transient render frames
 # intentionally live outside it.
 WORK = Path("/tmp/opportunity_agent_gif_frames")
@@ -100,10 +100,8 @@ def svg(active, progress):
     bits = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">']
     bits += [rect(0, 0, W, H, BG)]
     bits += [
-        # HSBC wordmark to the left of the supplied device, on transparent canvas.
-        text(64, 67, "HSBC", 31, TEXT, 700),
-        # Keep the existing 57px header-logo height; preserve source aspect ratio.
-        f'<image href="{logo_data_uri()}" x="154" y="28" width="107" height="57" preserveAspectRatio="xMinYMid meet"/>',
+        # Exact serif HSBC wordmark/device styling, on transparent canvas.
+        f'<image href="{logo_data_uri()}" x="64" y="28" width="160" height="57" preserveAspectRatio="xMinYMid meet"/>',
         text(64, 108, "OPPORTUNITY AGENT", 18, "#00D9FF", 700),
         text(64, 144, "From external signals to sales-ready prospects", 30, TEXT, 700),
         text(64, 170, "AUTOMATED MARKET INTELLIGENCE WORKFLOW", 12, MUTED, 700),
