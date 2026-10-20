@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS-9 // Autonomous Market Intelligence & Data Enrichment</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Leaflet CSS & JS for Interactive Dark-Mode Geospatial Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --bg-dark: #050811;
+      --bg-panel: rgba(11, 18, 34, 0.86);
+      --border-glow: rgba(0, 240, 255, 0.26);
+      --cyan: #00f0ff;
+      --purple: #b565ff;
+      --blue: #3b82f6;
+      --amber: #ffb703;
+      --emerald: #00f59b;
+      --crimson: #ff2a6d;
+      --text-main: #e2f1ff;
+      --text-dim: #708ba8;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 20% 10%, rgba(0, 240, 255, 0.08), transparent 40%),
+        radial-gradient(circle at 80% 85%, rgba(181, 101, 255, 0.08), transparent 40%),
+        linear-gradient(rgba(0, 240, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.025) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* TOP HUD HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      border-bottom: 1px solid var(--border-glow);
+      background: rgba(5, 8, 17, 0.94);
+      backdrop-filter: blur(12px);
+      z-index: 30;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan);
+      animation: pulseDot 2s infinite;
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-family: var(--font-mono);
+      font-size: 0.98rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .phase-pill {
+      font-size: 0.68rem;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      transition: all 0.3s ease;
+    }
+
+    .phase-external {
+      background: rgba(0, 240, 255, 0.15);
+      color: var(--cyan);
+      border: 1px solid var(--cyan);
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.25);
+    }
+
+    .phase-internal {
+      background: rgba(0, 245, 155, 0.15);
+      color: var(--emerald);
+      border: 1px solid var(--emerald);
+      box-shadow: 0 0 10px rgba(0, 245, 155, 0.25);
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+      margin-top: 2px;
+    }
+
+    /* AUDIO HUD & SOURCE FILTERS */
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .audio-hud {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 240, 255, 0.04);
+      padding: 4px 8px;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 240, 255, 0.2);
+    }
+
+    .audio-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      user-select: none;
+    }
+
+    .audio-btn:hover {
+      color: var(--text-main);
+      border-color: rgba(0, 240, 255, 0.4);
+    }
+
+    .audio-btn.active-sfx {
+      background: rgba(0, 240, 255, 0.15);
+      color: var(--cyan);
+      border-color: var(--cyan);
+    }
+
+    .audio-btn.active-voice {
+      background: rgba(181, 101, 255, 0.22);
+      color: #e5b8ff;
+      border-color: var(--purple);
+    }
+
+    .eq-visualizer {
+      display: flex;
+      align-items: flex-end;
+      gap: 2.5px;
+      height: 16px;
+      padding: 0 5px;
+    }
+
+    .eq-bar {
+      width: 3px;
+      height: 4px;
+      background: var(--cyan);
+      border-radius: 2px;
+      transition: height 0.08s ease;
+    }
+
+    .eq-visualizer.playing .eq-bar:nth-child(1) { animation: eqBounce 0.36s infinite ease-in-out; }
+    .eq-visualizer.playing .eq-bar:nth-child(2) { animation: eqBounce 0.28s infinite ease-in-out 0.08s; }
+    .eq-visualizer.playing .eq-bar:nth-child(3) { animation: eqBounce 0.42s infinite ease-in-out 0.15s; }
+    .eq-visualizer.playing .eq-bar:nth-child(4) { animation: eqBounce 0.31s infinite ease-in-out 0.04s; }
+    .eq-visualizer.playing .eq-bar:nth-child(5) { animation: eqBounce 0.39s infinite ease-in-out 0.12s; }
+
+    .source-filter {
+      display: flex;
+      gap: 4px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 3px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .f-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .f-btn:hover { color: var(--text-main); }
+
+    .f-btn.active {
+      background: rgba(0, 240, 255, 0.14);
+      color: var(--cyan);
+      box-shadow: inset 0 0 0 1px var(--cyan);
+    }
+
+    /* 5-STEP PROCESS PIPELINE BAR WITH PHASE GROUPS */
+    .pipeline-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      padding: 12px 24px;
+      background: rgba(8, 14, 28, 0.85);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .phase-groups-wrapper {
+      display: flex;
+      gap: 14px;
+      flex: 1;
+      min-width: 320px;
+      overflow-x: auto;
+    }
+
+    .phase-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .phase-group.ext-group { flex: 2; border-top: 2px solid var(--cyan); }
+    .phase-group.int-group { flex: 3; border-top: 2px solid var(--emerald); }
+
+    .phase-group-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4px;
+    }
+
+    .ext-group .phase-group-label { color: var(--cyan); }
+    .int-group .phase-group-label { color: var(--emerald); }
+
+    .steps-row {
+      display: flex;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .step-node {
+      flex: 1;
+      min-width: 145px;
+      padding: 8px 11px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .step-node:hover {
+      border-color: rgba(0, 240, 255, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .step-node.active {
+      background: rgba(0, 240, 255, 0.13);
+      border-color: var(--cyan);
+      box-shadow: 0 0 16px rgba(0, 240, 255, 0.2);
+    }
+
+    .step-node.completed {
+      border-color: rgba(0, 245, 155, 0.45);
+      background: rgba(0, 245, 155, 0.06);
+    }
+
+    .step-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+
+    .step-num {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--cyan);
+    }
+
+    .step-node.completed .step-num { color: var(--emerald); }
+
+    .step-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 5px;
+    }
+
+    .step-tag {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(0, 240, 255, 0.1);
+      color: #a5f3fc;
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      display: inline-block;
+      width: fit-content;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    .step-node.tag-purple .step-tag {
+      background: rgba(181, 101, 255, 0.15);
+      color: #e9d5ff;
+      border-color: rgba(181, 101, 255, 0.35);
+    }
+
+    .step-node.tag-emerald .step-tag {
+      background: rgba(0, 245, 155, 0.14);
+      color: #a7f3d0;
+      border-color: rgba(0, 245, 155, 0.35);
+    }
+
+    .step-node.tag-amber .step-tag {
+      background: rgba(255, 183, 3, 0.14);
+      color: #fde68a;
+      border-color: rgba(255, 183, 3, 0.35);
+    }
+
+    .controls-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .ctrl-btn {
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--cyan);
+      background: rgba(0, 240, 255, 0.08);
+      color: var(--cyan);
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .ctrl-btn:hover {
+      background: var(--cyan);
+      color: #040814;
+      box-shadow: 0 0 14px rgba(0, 240, 255, 0.45);
+    }
+
+    .ctrl-btn.primary-run {
+      background: linear-gradient(135deg, var(--cyan), #00a8ff);
+      color: #040814;
+      border: none;
+      padding: 10px 16px;
+      box-shadow: 0 0 16px rgba(0, 240, 255, 0.3);
+    }
+
+    .ctrl-btn.primary-run.running {
+      background: linear-gradient(135deg, var(--crimson), #ff6b6b);
+      color: #fff;
+      box-shadow: 0 0 20px rgba(255, 42, 109, 0.5);
+    }
+
+    /* MAIN 3-COLUMN WORKSPACE (Left: Data Inspector, Center: Robot Core, Right: Map View) */
+    .workspace {
+      display: grid;
+      grid-template-columns: 1.25fr 0.85fr 1.25fr;
+      gap: 16px;
+      padding: 16px 24px;
+      flex: 1;
+      min-height: 0;
+    }
+
+    @media (max-width: 1280px) {
+      .workspace {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .panel {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-glow);
+      border-radius: 14px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      gap: 8px;
+    }
+
+    .panel-title {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .badge {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(0, 240, 255, 0.12);
+      color: var(--cyan);
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      white-space: nowrap;
+    }
+
+    /* LEFT PANEL: DYNAMIC STAGE INSPECTOR CARDS */
+    .stage-banner {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logic-label {
+      font-size: 0.66rem;
+      font-family: var(--font-mono);
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+      margin-bottom: 2px;
+    }
+
+    .logic-desc {
+      font-size: 0.8rem;
+      color: var(--text-main);
+      line-height: 1.35;
+    }
+
+    .tech-tag-large {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: rgba(181, 101, 255, 0.18);
+      color: #e9d5ff;
+      border: 1px solid var(--purple);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .inspector-List {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .signal-card {
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 10px;
+      padding: 11px 13px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .signal-card:hover, .signal-card.selected-card {
+      border-color: var(--cyan);
+      background: rgba(0, 240, 255, 0.07);
+      box-shadow: 0 0 14px rgba(0, 240, 255, 0.14);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      gap: 8px;
+    }
+
+    .source-pill {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .pill-exhibition { background: rgba(0, 240, 255, 0.16); color: var(--cyan); border: 1px solid rgba(0, 240, 255, 0.35); }
+    .pill-contract { background: rgba(255, 183, 3, 0.16); color: var(--amber); border: 1px solid rgba(255, 183, 3, 0.35); }
+    .pill-trademark { background: rgba(181, 101, 255, 0.18); color: #e5b8ff; border: 1px solid rgba(181, 101, 255, 0.4); }
+
+    .raw-snippet {
+      font-size: 0.77rem;
+      color: #b8cde0;
+      line-height: 1.42;
+      font-style: italic;
+      background: rgba(0, 0, 0, 0.28);
+      padding: 7px 9px;
+      border-radius: 6px;
+      border-left: 2px solid var(--cyan);
+    }
+
+    .extracted-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+      margin-top: 7px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+    }
+
+    .ext-cell {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 5px 8px;
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .ext-k { color: var(--text-dim); font-size: 0.64rem; display: block; }
+    .ext-v { color: var(--text-main); font-weight: 600; }
+
+    /* CENTER PANEL: ANIMATED ROBOT AGENT & TERMINAL STREAM */
+    .robot-stage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .robot-viewport {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2px 0;
+      cursor: pointer;
+    }
+
+    .cyber-ring {
+      position: absolute;
+      width: 184px;
+      height: 184px;
+      border-radius: 50%;
+      border: 1px dashed rgba(0, 240, 255, 0.35);
+      animation: spinSlow 18s linear infinite;
+    }
+
+    .cyber-ring-inner {
+      position: absolute;
+      width: 146px;
+      height: 146px;
+      border-radius: 50%;
+      border: 1px solid rgba(181, 101, 255, 0.28);
+      border-top-color: var(--cyan);
+      animation: spinReverse 6s linear infinite;
+    }
+
+    .sonic-halo {
+      position: absolute;
+      width: 165px;
+      height: 165px;
+      border-radius: 50%;
+      border: 2px solid var(--cyan);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .sonic-halo.ping-active {
+      animation: sonicPing 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .robot-svg {
+      width: 150px;
+      height: 165px;
+      z-index: 2;
+      filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.35));
+      animation: floatBot 3.2s ease-in-out infinite;
+      transition: filter 0.3s ease;
+    }
+
+    .laser-beam {
+      position: absolute;
+      width: 165px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--cyan), #fff, var(--cyan), transparent);
+      box-shadow: 0 0 14px var(--cyan);
+      z-index: 4;
+      opacity: 1;
+      animation: scanVertical 1.8s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .mouth-speaking {
+      animation: mouthTalk 0.22s infinite alternate;
+      transform-origin: center;
+    }
+
+    .agent-dialogue {
+      background: rgba(0, 240, 255, 0.06);
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      border-radius: 10px;
+      padding: 10px 12px;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .dialogue-tag {
+      font-family: var(--font-mono);
+      font-size: 0.64rem;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .dialogue-text {
+      font-size: 0.78rem;
+      line-height: 1.42;
+      color: var(--text-main);
+    }
+
+    .terminal-box {
+      background: #03060d;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      width: 100%;
+      height: 145px;
+      overflow-y: auto;
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    .log-line {
+      margin-bottom: 4px;
+      opacity: 0;
+      animation: fadeInLog 0.25s forwards;
+    }
+
+    .log-info { color: var(--cyan); }
+    .log-warn { color: var(--amber); }
+    .log-agent { color: #d8b4fe; }
+    .log-ok { color: var(--emerald); }
+
+    /* RIGHT PANEL: GEOSPATIAL MAP VIEW & OPPORTUNITY RADAR */
+    .map-container-wrapper {
+      position: relative;
+      flex: 1;
+      min-height: 290px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      background: #040812;
+    }
+
+    #geoMap {
+      width: 100%;
+      height: 100%;
+      min-height: 290px;
+      background: #040812;
+      z-index: 1;
+    }
+
+    /* Custom Dark Mode Filter for Map Tiles */
+    .leaflet-tile-pane {
+      filter: brightness(0.88) contrast(1.15) saturate(0.85);
+    }
+
+    .map-overlay-hud {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+      z-index: 400;
+    }
+
+    .map-legend {
+      display: flex;
+      gap: 8px;
+      background: rgba(5, 9, 20, 0.88);
+      border: 1px solid rgba(0, 240, 255, 0.28);
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      pointer-events: auto;
+      backdrop-filter: blur(6px);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .map-zoom-btns {
+      display: flex;
+      gap: 5px;
+      pointer-events: auto;
+    }
+
+    .map-mini-btn {
+      background: rgba(5, 9, 20, 0.9);
+      border: 1px solid rgba(0, 240, 255, 0.35);
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      padding: 4px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .map-mini-btn:hover {
+      background: var(--cyan);
+      color: #000;
+    }
+
+    /* Glowing Custom Map Pins */
+    .nexus-pin {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .pin-core {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      z-index: 2;
+      transition: transform 0.25s ease;
+    }
+
+    .pin-pulse {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      opacity: 0.65;
+      animation: mapPulse 1.8s infinite ease-out;
+      z-index: 1;
+    }
+
+    .pin-selected .pin-core {
+      transform: scale(1.45);
+      box-shadow: 0 0 16px #fff;
+    }
+
+    /* Map Selected Target Detail Card */
+    .map-selection-card {
+      margin-top: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      border-radius: 10px;
+      padding: 11px 13px;
+    }
+
+    /* Leaflet dark popup styling */
+    .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+      background: rgba(7, 13, 27, 0.95) !important;
+      color: #e2f1ff !important;
+      border: 1px solid var(--cyan);
+      font-family: var(--font-sans);
+      border-radius: 8px !important;
+    }
+
+    /* FOOTER TALKING POINTS */
+    footer {
+      margin: 0 24px 14px 24px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, rgba(0, 240, 255, 0.09), rgba(181, 101, 255, 0.09));
+      border: 1px solid rgba(0, 240, 255, 0.28);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .pitch-tip {
+      font-size: 0.8rem;
+      color: var(--text-main);
+    }
+
+    .pitch-tip strong {
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      margin-right: 6px;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.65; }
+    }
+    @keyframes floatBot {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes spinReverse {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes scanVertical {
+      0% { top: 22%; }
+      50% { top: 78%; }
+      100% { top: 22%; }
+    }
+    @keyframes fadeInLog {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes eqBounce {
+      0%, 100% { height: 4px; }
+      50% { height: 15px; }
+    }
+    @keyframes sonicPing {
+      0% { transform: scale(0.8); opacity: 0.85; }
+      100% { transform: scale(1.35); opacity: 0; }
+    }
+    @keyframes mouthTalk {
+      0% { stroke-width: 2.5px; transform: scaleX(0.85); }
+      100% { stroke-width: 6px; transform: scaleX(1.15); }
+    }
+    @keyframes mapPulse {
+      0% { transform: scale(0.5); opacity: 0.85; }
+      100% { transform: scale(1.85); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP HUD HEADER -->
+  <header>
+    <div class="brand">
+      <div class="brand-dot"></div>
+      <div>
+        <div class="brand-title">
+          <span>NEXUS-9 // Market Discovery & Enrichment</span>
+          <span class="phase-pill phase-external" id="activePhasePill">PHASE A: EXTERNAL EXPLORATION</span>
+        </div>
+        <div class="brand-sub">End-to-End Autonomous Signal Exploration, LLM Extraction, CRMS Matching & Geospatial Radar</div>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <!-- Web Audio Synthesizer & Voice Controls -->
+      <div class="audio-hud">
+        <div class="eq-visualizer" id="eqVisualizer">
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+        </div>
+        <button class="audio-btn active-sfx" id="sfxToggleBtn" onclick="toggleSfx()">🔊 SFX: ON</button>
+        <button class="audio-btn" id="voiceToggleBtn" onclick="toggleVoice()">🗣️ VOICE: OFF</button>
+      </div>
+
+      <!-- External Signal Source Filter -->
+      <div class="source-filter">
+        <button class="f-btn active" onclick="filterSignalType('ALL')">All Signals (6)</button>
+        <button class="f-btn" onclick="filterSignalType('Exhibition')">Exhibitions (2)</button>
+        <button class="f-btn" onclick="filterSignalType('Gov Contract')">Gov Contracts (2)</button>
+        <button class="f-btn" onclick="filterSignalType('Trademark')">Trademarks (2)</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 5-STEP WORKFLOW BAR DIVIDED INTO EXTERNAL EXPLORATION & INTERNAL HANDLING -->
+  <section class="pipeline-bar">
+    <div class="phase-groups-wrapper" id="stepperNodes">
+      <!-- PHASE A: EXTERNAL EXPLORATION -->
+      <div class="phase-group ext-group">
+        <div class="phase-group-label">
+          <span>🌐 PHASE A // EXTERNAL EXPLORATION</span>
+          <span>UNSTRUCTURED WEB & REGISTRIES</span>
+        </div>
+        <div class="steps-row">
+          <div class="step-node active" onclick="goToStage(0)">
+            <div class="step-top">
+              <span class="step-num">STEP 01</span>
+              <span style="font-size:0.7rem;">🔍</span>
+            </div>
+            <div class="step-title">1. Exploration</div>
+            <span class="step-tag">Tag: Gemini</span>
+          </div>
+
+          <div class="step-node tag-purple" onclick="goToStage(1)">
+            <div class="step-top">
+              <span class="step-num">STEP 02</span>
+              <span style="font-size:0.7rem;">🧠</span>
+            </div>
+            <div class="step-title">2. Extraction</div>
+            <span class="step-tag">Tag: Hermes • Llama 3.3 (Ollama)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE B: INTERNAL HANDLING -->
+      <div class="phase-group int-group">
+        <div class="phase-group-label">
+          <span>🏛️ PHASE B // INTERNAL HANDLING</span>
+          <span>CRMS RECONCILIATION & FRONT-LINE SYNC</span>
+        </div>
+        <div class="steps-row">
+          <div class="step-node tag-emerald" onclick="goToStage(2)">
+            <div class="step-top">
+              <span class="step-num">STEP 03</span>
+              <span style="font-size:0.7rem;">🔗</span>
+            </div>
+            <div class="step-title">3. Matching</div>
+            <span class="step-tag">Tag: GCP • Fuzzy / Embeddings</span>
+          </div>
+
+          <div class="step-node tag-amber" onclick="goToStage(3)">
+            <div class="step-top">
+              <span class="step-num">STEP 04</span>
+              <span style="font-size:0.7rem;">📈</span>
+            </div>
+            <div class="step-title">4. Data Enrichment</div>
+            <span class="step-tag">Tag: Internal KPI + Ext Data</span>
+          </div>
+
+          <div class="step-node tag-emerald" onclick="goToStage(4)">
+            <div class="step-top">
+              <span class="step-num">STEP 05</span>
+              <span style="font-size:0.7rem;">🚀</span>
+            </div>
+            <div class="step-title">5. Prospect Sharing</div>
+            <span class="step-tag">Tag: Datastudio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-box">
+      <button class="ctrl-btn" onclick="prevStage()">◀ Prev</button>
+      <button class="ctrl-btn" onclick="nextStage()">Next ▶</button>
+      <button class="ctrl-btn primary-run" id="autoPlayBtn" onclick="toggleAutoPlay()">▶ Run Autonomous Pipeline</button>
+    </div>
+  </section>
+
+  <!-- 3-COLUMN WORKSPACE -->
+  <main class="workspace">
+
+    <!-- LEFT PANEL: BUSINESS LOGIC & STAGE DATA INSPECTOR -->
+    <section class="panel">
+      <div class="panel-header">
+        <div class="panel-title"><span>▤</span> <span id="leftPanelTitle">Step 1: External Source Exploration</span></div>
+        <span class="badge" id="stepCounterBadge">STEP 1 OF 5</span>
+      </div>
+
+      <!-- Business Logic & Active Tech Tag Callout -->
+      <div class="stage-banner">
+        <div>
+          <div class="logic-label" id="logicHeaderLabel">BUSINESS LOGIC // EXTERNAL EXPLORATION</div>
+          <div class="logic-desc" id="businessLogicText">
+            Scan external data sources (exhibitions, government contracts, trademarks) for specific external market information.
+          </div>
+        </div>
+        <div class="tech-tag-large" id="activeTechBadge">Tag: Gemini</div>
+      </div>
+
+      <!-- Dynamic Stage Records List -->
+      <div class="inspector-List" id="inspectorList">
+        <!-- Populated dynamically by JS for Steps 1-5 -->
+      </div>
+    </section>
+
+    <!-- CENTER PANEL: NEXUS-9 ROBOT CORE & STREAMING LOGS -->
+    <section class="panel robot-stage" id="robotStagePanel">
+      <div class="panel-header" style="width: 100%;">
+        <div class="panel-title"><span>🤖</span> NEXUS-9 Orchestrator</div>
+        <span class="badge" id="botStateBadge">GEMINI CRAWLER ACTIVE</span>
+      </div>
+
+      <div class="robot-viewport" onclick="triggerRobotChirp()" title="Click NEXUS-9 to test audio telemetry">
+        <div class="cyber-ring"></div>
+        <div class="cyber-ring-inner"></div>
+        <div class="sonic-halo" id="sonicHalo"></div>
+        <div class="laser-beam" id="laserBeam"></div>
+
+        <!-- Animated Cybernetic Robot SVG -->
+        <svg class="robot-svg" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="armorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1a2c4e" />
+              <stop offset="100%" stop-color="#091122" />
+            </linearGradient>
+            <linearGradient id="visorGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00f0ff" />
+              <stop offset="100%" stop-color="#b565ff" />
+            </linearGradient>
+          </defs>
+          <line x1="100" y1="12" x2="100" y2="34" stroke="#00f0ff" stroke-width="3" />
+          <circle id="botAntenna" cx="100" cy="10" r="6" fill="#00f0ff" />
+          <rect x="46" y="34" width="108" height="76" rx="22" fill="url(#armorGrad)" stroke="#00f0ff" stroke-width="2.5" />
+          <rect x="34" y="56" width="10" height="32" rx="4" fill="#00f0ff" opacity="0.8" />
+          <rect x="156" y="56" width="10" height="32" rx="4" fill="#00f0ff" opacity="0.8" />
+          <rect x="58" y="50" width="84" height="36" rx="12" fill="#050811" stroke="url(#visorGrad)" stroke-width="2" />
+          <g id="botEyes">
+            <circle cx="80" cy="68" r="8" fill="#00f0ff" />
+            <circle cx="120" cy="68" r="8" fill="#00f0ff" />
+            <circle cx="82" cy="66" r="2.5" fill="#ffffff" />
+            <circle cx="122" cy="66" r="2.5" fill="#ffffff" />
+          </g>
+          <line id="botMouth" x1="82" y1="97" x2="118" y2="97" stroke="#00f0ff" stroke-width="3" stroke-linecap="round" />
+          <rect x="86" y="110" width="28" height="12" fill="#13203B" stroke="#00f0ff" stroke-width="1.5" />
+          <path d="M 42 122 L 158 122 L 144 196 L 56 196 Z" fill="url(#armorGrad)" stroke="#00f0ff" stroke-width="2.5" stroke-linejoin="round" />
+          <circle cx="100" cy="156" r="19" fill="#060c1a" stroke="#00f0ff" stroke-width="2" />
+          <circle id="botCore" cx="100" cy="156" r="10" fill="#00f0ff" />
+        </svg>
+      </div>
+
+      <!-- Agent Speech Bubble -->
+      <div class="agent-dialogue" id="dialogueBox">
+        <div class="dialogue-tag">
+          <span id="agentStepTag">PHASE A // STEP 1: EXPLORATION</span>
+          <span id="confidenceTag">LATENCY: 210ms</span>
+        </div>
+        <div class="dialogue-text" id="agentSpeech">
+          Gemini Search Agent is scanning Asia-Pacific trade exhibitions, government contract registries, and trademark filings for high-intent commercial signals.
+        </div>
+      </div>
+
+      <!-- Live Execution Terminal -->
+      <div class="terminal-box" id="terminalLogs"></div>
+    </section>
+
+    <!-- RIGHT PANEL: INTERACTIVE GEOSPATIAL MAP VIEW -->
+    <section class="panel">
+      <div class="panel-header">
+        <div class="panel-title"><span>🗺️</span> Live Geospatial Opportunity Radar</div>
+        <span class="badge" id="mapStatusBadge">GBA & APAC HUBS</span>
+      </div>
+
+      <div class="map-container-wrapper">
+        <!-- Top Map HUD Overlay -->
+        <div class="map-overlay-hud">
+          <div class="map-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:#00f0ff; box-shadow:0 0 6px #00f0ff;"></span> Exhibition</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#ffb703; box-shadow:0 0 6px #ffb703;"></span> Gov Contract</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#b565ff; box-shadow:0 0 6px #b565ff;"></span> Trademark</div>
+          </div>
+          <div class="map-zoom-btns">
+            <button class="map-mini-btn" onclick="focusMapRegion('HK')">Focus HK</button>
+            <button class="map-mini-btn" onclick="focusMapRegion('GBA')">Greater Bay Area</button>
+          </div>
+        </div>
+
+        <!-- Leaflet Interactive Map Container -->
+        <div id="geoMap"></div>
+      </div>
+
+      <!-- Selected Map Pin Live Telemetry Card -->
+      <div class="map-selection-card" id="selectedPinCard">
+        <!-- Populated dynamically when user clicks a map marker or card -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PRESENTER COACHING BAR -->
+  <footer>
+    <div class="pitch-tip" id="presenterTip">
+      <strong>🎤 PRESENTER TALKING POINT:</strong>
+      Notice how the pipeline separates External Exploration (Gemini + Hermes/Llama 3.3 via Ollama) from Internal Handling (GCP Embeddings Matching + Internal KPI Enrichment + Datastudio distribution).
+    </div>
+  </footer>
+
+  <script>
+    /* ==========================================================================
+       1. WEB AUDIO SYNTHESIZER & SPEECH TELEMETRY ENGINE
+       ========================================================================== */
+    const SoundEngine = {
+      ctx: null,
+      sfxEnabled: true,
+      voiceEnabled: false,
+      eqTimeout: null,
+
+      init() {
+        if (!this.ctx) {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (AudioCtx) this.ctx = new AudioCtx();
+        }
+        if (this.ctx && this.ctx.state === 'suspended') {
+          this.ctx.resume();
+        }
+      },
+
+      pulseVisualizer(durationMs = 450, color = '#00f0ff') {
+        const eq = document.getElementById('eqVisualizer');
+        const halo = document.getElementById('sonicHalo');
+        const mouth = document.getElementById('botMouth');
+
+        if (eq) {
+          eq.classList.add('playing');
+          document.querySelectorAll('#eqVisualizer .eq-bar').forEach(b => {
+            b.style.backgroundColor = color;
+          });
+        }
+        if (halo) {
+          halo.style.borderColor = color;
+          halo.classList.remove('ping-active');
+          void halo.offsetWidth;
+          halo.classList.add('ping-active');
+        }
+        if (mouth) mouth.classList.add('mouth-speaking');
+
+        clearTimeout(this.eqTimeout);
+        this.eqTimeout = setTimeout(() => {
+          if (eq) eq.classList.remove('playing');
+          if (mouth && !window.speechSynthesis?.speaking) {
+            mouth.classList.remove('mouth-speaking');
+          }
+        }, durationMs);
+      },
+
+      playTone(freqStart, freqEnd, duration, type = 'sine', gainPeak = 0.11, delay = 0) {
+        if (!this.sfxEnabled) return;
+        this.init();
+        if (!this.ctx) return;
+
+        const now = this.ctx.currentTime + delay;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+
+        osc.type = type;
+        osc.frequency.setValueAtTime(freqStart, now);
+        if (freqEnd !== freqStart) {
+          osc.frequency.exponentialRampToValueAtTime(Math.max(freqEnd, 20), now + duration);
+        }
+
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.linearRampToValueAtTime(gainPeak, now + 0.015);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+
+        osc.start(now);
+        osc.stop(now + duration + 0.02);
+      },
+
+      playUiClick() {
+        if (!this.sfxEnabled) return;
+        this.playTone(1100, 620, 0.045, 'triangle', 0.07, 0);
+        this.pulseVisualizer(160, '#00f0ff');
+      },
+
+      playPowerUp() {
+        if (!this.sfxEnabled) return;
+        this.playTone(220, 880, 0.36, 'sawtooth', 0.08, 0);
+        this.playTone(330, 1320, 0.40, 'sine', 0.10, 0.06);
+        this.playTone(440, 1760, 0.44, 'triangle', 0.09, 0.12);
+        this.pulseVisualizer(600, '#00f0ff');
+      },
+
+      playStepSound(stepIdx) {
+        if (!this.sfxEnabled) return;
+        if (stepIdx === 0) {
+          // Step 1 Exploration (Gemini): Radar sweep
+          this.playTone(480, 1240, 0.25, 'sine', 0.10, 0);
+          this.playTone(1240, 1680, 0.12, 'triangle', 0.09, 0.22);
+          this.pulseVisualizer(450, '#00f0ff');
+        } else if (stepIdx === 1) {
+          // Step 2 Extraction (Hermes + Llama 3.3 via Ollama): Neural token parsing clicks
+          const freqs = [920, 1380, 1140, 1720, 1480, 2050];
+          freqs.forEach((f, i) => this.playTone(f, f * 1.06, 0.05, 'square', 0.05, i * 0.055));
+          this.pulseVisualizer(550, '#b565ff');
+        } else if (stepIdx === 2) {
+          // Step 3 Matching (GCP Fuzzy / Embeddings): Dual lock-on harmony
+          this.playTone(587.33, 880, 0.18, 'triangle', 0.10, 0);
+          this.playTone(880, 1174.66, 0.22, 'sine', 0.11, 0.16);
+          this.pulseVisualizer(500, '#00f59b');
+        } else if (stepIdx === 3) {
+          // Step 4 Data Enrichment (Internal KPI + Ext Data): Data cascade chime
+          [523.25, 659.25, 783.99, 1046.5].forEach((n, i) => {
+            this.playTone(n, n, 0.18, 'sine', 0.09, i * 0.07);
+          });
+          this.pulseVisualizer(550, '#ffb703');
+        } else if (stepIdx === 4) {
+          // Step 5 Prospect List Sharing (Datastudio): Triumphant emerald chord
+          [523.25, 659.25, 783.99, 987.77, 1318.5, 1567.98].forEach((n, i) => {
+            this.playTone(n, n, 0.30, 'triangle', 0.10, i * 0.065);
+          });
+          this.pulseVisualizer(800, '#00f59b');
+        }
+      },
+
+      speak(text) {
+        if (!this.voiceEnabled || !('speechSynthesis' in window)) return;
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(text);
+        u.pitch = 0.8;
+        u.rate = 1.06;
+        const mouth = document.getElementById('botMouth');
+        u.onstart = () => { if (mouth) mouth.classList.add('mouth-speaking'); };
+        u.onend = () => { if (mouth) mouth.classList.remove('mouth-speaking'); };
+        window.speechSynthesis.speak(u);
+      }
+    };
+
+    /* ==========================================================================
+       2. REAL-WORLD GEOSPATIAL MARKET SIGNALS DATASET (HK & GREATER BAY AREA)
+       Covers Exhibitions, Government Contracts, and Trademarks
+       ========================================================================== */
+    const marketSignals = [
+      {
+        id: "SIG-01",
+        type: "Exhibition",
+        pillClass: "pill-exhibition",
+        color: "#00f0ff",
+        sourceTitle: "HKTDC Autumn Electronics Fair 2026 (Wan Chai HKCEC)",
+        rawText: "Exhibitor Booth 3B-A12: 'AeroDynamics Robotics (SZ) Co., Ltd.' unveiling industrial autonomous warehouse AMR fleet; seeking APAC trade finance & USD/CNH FX hedging line.",
+        extractedEntity: "AeroDynamics Robotics (SZ) Co., Ltd.",
+        extractedEvent: "Product Launch @ HKCEC Hall 3B",
+        extractedDate: "2026-10-14",
+        extractedValue: "Est. Export Order Vol: $18.5M",
+        crmsMatchName: "Aerodynamics Robotics Shenzhen Ltd",
+        crmsId: "CRMS-HK-88412",
+        matchScore: "0.96 Cosine (GCP Vertex Embeddings)",
+        matchStatus: "Existing Mid-Cap Client (Dormant FX)",
+        internalKpi: {
+          walletShare: "22% (Low)",
+          ytdTradeVol: "$4.2M USD",
+          creditTier: "Tier-1A (Pre-Approved $15M)",
+          assignedRm: "Kelvin Kwok (Commercial Banking - Kowloon)"
+        },
+        externalEnrich: "380 Employees • 14 EU/US Robotics Patents • Series B",
+        priorityScore: 98,
+        salesAction: "Pitch USD/CNH Cross-Border Trade Line + Equipment Leasing",
+        lat: 22.2833,
+        lng: 114.1731,
+        locationName: "Wan Chai, Hong Kong (HKCEC)"
+      },
+      {
+        id: "SIG-02",
+        type: "Gov Contract",
+        pillClass: "pill-contract",
+        color: "#ffb703",
+        sourceTitle: "HKSAR Gov e-Tender Gazette // EMSD Contract Award",
+        rawText: "Contract #EMSD/EV/2026/08 awarded to 'Pacific Volt Infrastructure Hldgs Ltd' (HK$ 148,000,000) for smart micro-grid & fast-charging installation across Kowloon East.",
+        extractedEntity: "Pacific Volt Infrastructure Hldgs Ltd",
+        extractedEvent: "Gov Contract Award (HK$148M)",
+        extractedDate: "2026-10-09",
+        extractedValue: "Contract Value: HK$148.0M",
+        crmsMatchName: "Pacific Volt Infrastructure Holdings Limited",
+        crmsId: "CRMS-HK-41098",
+        matchScore: "0.98 Fuzzy + Embedding Match",
+        matchStatus: "Active Corporate Client",
+        internalKpi: {
+          walletShare: "64% (Core)",
+          ytdTradeVol: "$19.8M USD",
+          creditTier: "Tier-1 (Performance Bond Ready)",
+          assignedRm: "grace.lam@bank (Infra & Energy Desk)"
+        },
+        externalEnrich: "ISO-14001 Certified • Green Loan Eligible • 0 Sanctions",
+        priorityScore: 95,
+        salesAction: "Issue Immediate Performance Guarantee & Green Receivables Loan",
+        lat: 22.3145,
+        lng: 114.2153,
+        locationName: "Kwun Tong, Kowloon East"
+      },
+      {
+        id: "SIG-03",
+        type: "Trademark",
+        pillClass: "pill-trademark",
+        color: "#b565ff",
+        sourceTitle: "HK Intellectual Property Dept // Trademark Registry #3068991",
+        rawText: "Applicant 'VitaGenix BioLabs (Asia) Limited' at HK Science Park filed Class 5 & Class 42 global trademarks for 'NEURO-SYNTHESIS AI DIAGNOSTICS' ahead of ASEAN distribution.",
+        extractedEntity: "VitaGenix BioLabs (Asia) Limited",
+        extractedEvent: "Class 5 & 42 Global IP Filing",
+        extractedDate: "2026-10-12",
+        extractedValue: "ASEAN Commercialization Signal",
+        crmsMatchName: "Vitagenix Biolabs Asia Ltd (Target List)",
+        crmsId: "TARGET-GBA-9021",
+        matchScore: "0.93 Cosine (High-Growth Target List)",
+        matchStatus: "Net-New Prospect (Target List Hit)",
+        internalKpi: {
+          walletShare: "0% (New Logo Prospect)",
+          ytdTradeVol: "$0.0M (Competitor Banked)",
+          creditTier: "Pre-Screened Biotech Track",
+          assignedRm: "Derek Yuen (Innovation & Life Sciences RM)"
+        },
+        externalEnrich: "$32M Series A • 65 R&D Staff • Expanding to Singapore",
+        priorityScore: 91,
+        salesAction: "Initiate Treasury Onboarding + ASEAN Cross-Border Cash Mgmt",
+        lat: 22.4258,
+        lng: 114.2119,
+        locationName: "Pak Shek Kok, HK Science Park"
+      },
+      {
+        id: "SIG-04",
+        type: "Exhibition",
+        pillClass: "pill-exhibition",
+        color: "#00f0ff",
+        sourceTitle: "GBA Advanced Manufacturing Expo (Shenzhen Qianhai Hub)",
+        rawText: "Keynote & Pavilion 1A: 'BayArea Precision Micro-Optics Ltd' signed MOU with 3 German automotive Tier-1 suppliers for LIDAR sensor modules exported via HK port.",
+        extractedEntity: "BayArea Precision Micro-Optics Ltd",
+        extractedEvent: "EU Auto Tier-1 Export MOU",
+        extractedDate: "2026-10-15",
+        extractedValue: "EUR 24M Annual Export Pipeline",
+        crmsMatchName: "Bay Area Precision Optics (HK) Trading Ltd",
+        crmsId: "CRMS-HK-77320",
+        matchScore: "0.91 Cross-Entity Subsidiary Match",
+        matchStatus: "HK Trading Subsidiary Matched",
+        internalKpi: {
+          walletShare: "38% (Medium)",
+          ytdTradeVol: "$8.9M USD",
+          creditTier: "Tier-2A (LC Limit Available)",
+          assignedRm: "Sophia Tang (Cross-Border GBA Desk)"
+        },
+        externalEnrich: "IATF-16949 Auto Cert • 520 Staff • EUR/HKD Hedging Need",
+        priorityScore: 89,
+        salesAction: "Offer Export Factoring + EUR/HKD Forward FX Facility",
+        lat: 22.5285,
+        lng: 113.9022,
+        locationName: "Qianhai / Nanshan, Shenzhen"
+      },
+      {
+        id: "SIG-05",
+        type: "Gov Contract",
+        pillClass: "pill-contract",
+        color: "#ffb703",
+        sourceTitle: "Marine Dept & Airport Authority Logistics Tender",
+        rawText: "Tender #AAHK-CARGO-2604 awarded to 'Neptune Cold-Chain Express Ltd' for automated temperature-controlled pharma air-freight handling at Chek Lap Kok.",
+        extractedEntity: "Neptune Cold-Chain Express Ltd",
+        extractedEvent: "Airport Cold-Chain Concession",
+        extractedDate: "2026-10-06",
+        extractedValue: "CapEx Expansion: HK$85M",
+        crmsMatchName: "Neptune Cold Chain Express Limited",
+        crmsId: "CRMS-HK-55190",
+        matchScore: "0.99 Exact Vector & BRN Match",
+        matchStatus: "Existing Logistics Client",
+        internalKpi: {
+          walletShare: "51% (Core)",
+          ytdTradeVol: "$12.4M USD",
+          creditTier: "Tier-1B (Asset Finance Ready)",
+          assignedRm: "Marco Cheung (Aviation & Logistics RM)"
+        },
+        externalEnrich: "IATA CEIV Pharma Certified • Fleet of 95 Reefer Trucks",
+        priorityScore: 87,
+        salesAction: "Propose HK$85M Cold-Storage CapEx Term Loan",
+        lat: 22.3080,
+        lng: 113.9185,
+        locationName: "Chek Lap Kok, HK Intl Airport"
+      },
+      {
+        id: "SIG-06",
+        type: "Trademark",
+        pillClass: "pill-trademark",
+        color: "#b565ff",
+        sourceTitle: "WIPO & Macau IP Registry // CleanTech Patent & TM",
+        rawText: "Registrant 'Solaris Hydrogen Marine Systems Ltd' registered trademark 'HYDRO-FOIL ZERO' for zero-emission passenger ferries operating across Pearl River Delta.",
+        extractedEntity: "Solaris Hydrogen Marine Systems Ltd",
+        extractedEvent: "WIPO CleanTech Vessel Trademark",
+        extractedDate: "2026-10-11",
+        extractedValue: "Green Maritime Fleet Rollout",
+        crmsMatchName: "Solaris Marine Engineering (Target List)",
+        crmsId: "TARGET-ESG-3044",
+        matchScore: "0.89 Embedding Similarity Match",
+        matchStatus: "ESG Target List Prospect",
+        internalKpi: {
+          walletShare: "0% (ESG Prospect)",
+          ytdTradeVol: "$0.0M",
+          creditTier: "Green Maritime Transition Eligible",
+          assignedRm: "Elena Wong (Sustainable Finance Team)"
+        },
+        externalEnrich: "Gov Green Tech Fund Grantee • 110 Engineers",
+        priorityScore: 85,
+        salesAction: "Pitch Sustainability-Linked Shipbuilding Facility",
+        lat: 22.3204,
+        lng: 114.1325,
+        locationName: "Kwai Tsing Maritime Hub, HK"
+      }
+    ];
+
+    /* ==========================================================================
+       3. THE 5-STEP WORKFLOW DEFINITIONS (MATCHING USER ARCHITECTURE)
+       ========================================================================== */
+    const workflowSteps = [
+      {
+        stepNum: 1,
+        phase: "EXTERNAL EXPLORATION",
+        phaseClass: "phase-external",
+        title: "Step 1: External Exploration",
+        logicLabel: "BUSINESS LOGIC // 1. EXPLORATION",
+        logicText: "Scan external data sources (exhibitions, government contracts, trademarks) for specific external market information.",
+        techTag: "Tag: Gemini",
+        botBadge: "GEMINI WEB CRAWLER",
+        eyeColor: "#00f0ff",
+        latency: "210ms",
+        speech: "Gemini Autonomous Search is scanning exhibition directories, HKSAR government contract awards, and IP trademark registries across the Greater Bay Area.",
+        voiceText: "Step 1: Exploration. Gemini is scanning exhibitions, government contracts, and trademark registries for market signals.",
+        tip: "Stage 1 (Exploration): Show how Gemini continuously monitors non-traditional external sources—trade exhibitions, government tenders, and trademark filings.",
+        logs: [
+          "[14:20:01] <span class='log-info'>[GEMINI-SEARCH]</span> Connecting to HKTDC Exhibition Catalog, Gov e-Tender Gazette & HKIPD...",
+          "[14:20:01] <span class='log-ok'>[DISCOVERY]</span> Found 6 high-signal unstructured events across Hong Kong & Shenzhen."
+        ]
+      },
+      {
+        stepNum: 2,
+        phase: "EXTERNAL EXPLORATION",
+        phaseClass: "phase-external",
+        title: "Step 2: Unstructured Extraction",
+        logicLabel: "BUSINESS LOGIC // 2. EXTRACTION",
+        logicText: "Parse unstructured text to identify key entities, dates, and the nature of the event and extract.",
+        techTag: "Tag: Hermes, LLM (Llama 3.3 via Ollama)",
+        botBadge: "HERMES + LLAMA 3.3 (OLLAMA)",
+        eyeColor: "#b565ff",
+        latency: "640ms",
+        speech: "Hermes pipeline & local Llama 3.3 (running via Ollama) parsed the raw exhibition and tender text into strict JSON: extracting Company Names, Dates, Event Nature, and Coordinates.",
+        voiceText: "Step 2: Extraction. Hermes and Llama 3.3 via Ollama parsed unstructured text into structured entities, dates, and event types.",
+        tip: "Stage 2 (Extraction): Highlight privacy & speed—Hermes orchestrates Llama 3.3 via Ollama to turn messy paragraphs into structured entity schemas.",
+        logs: [
+          "[14:20:02] <span class='log-agent'>[HERMES-INGEST]</span> Piping 6 raw HTML/PDF snippets to local Ollama instance...",
+          "[14:20:03] <span class='log-agent'>[LLAMA-3.3-70B]</span> Extracted structured JSON: {entity_name, event_date, event_nature, geo_coords}."
+        ]
+      },
+      {
+        stepNum: 3,
+        phase: "INTERNAL HANDLING",
+        phaseClass: "phase-internal",
+        title: "Step 3: Internal CRMS Matching",
+        logicLabel: "BUSINESS LOGIC // 3. MATCHING",
+        logicText: "Reconcile extracted company names against internal CRMS databases or target lists.",
+        techTag: "Tag: GCP, Fuzzy Matching / Embeddings",
+        botBadge: "GCP EMBEDDINGS MATCHER",
+        eyeColor: "#3b82f6",
+        latency: "310ms",
+        speech: "Transitioned to Internal Handling! Using GCP Fuzzy Matching & Vector Embeddings, I reconciled messy extracted names (like 'AeroDynamics (SZ)') against our internal CRMS & Target Lists.",
+        voiceText: "Step 3: Internal Matching. G C P vector embeddings reconciled extracted companies against internal C R M S and target lists.",
+        tip: "Stage 3 (Matching): External names rarely match internal legal names word-for-word. GCP Embeddings + Fuzzy Matching resolves abbreviations and subsidiaries automatically.",
+        logs: [
+          "[14:20:04] <span class='log-info'>[GCP-VERTEX-EMBED]</span> Generating 768-dim embeddings for 6 extracted entities...",
+          "[14:20:04] <span class='log-ok'>[CRMS-RECONCILE]</span> 4 matched active CRMS clients (Cosine > 0.91); 2 matched High-Growth Target List."
+        ]
+      },
+      {
+        stepNum: 4,
+        phase: "INTERNAL HANDLING",
+        phaseClass: "phase-internal",
+        title: "Step 4: Holistic Data Enrichment",
+        logicLabel: "BUSINESS LOGIC // 4. DATA ENRICHMENT",
+        logicText: "Expand customer knowledge with internal KPI, as well as external available data.",
+        techTag: "Tag: Internal KPI + External Data",
+        botBadge: "KPI + EXTERNAL ENRICHMENT",
+        eyeColor: "#ffb703",
+        latency: "490ms",
+        speech: "Enriching matched records by fusing Internal KPIs (Wallet Share, YTD Trade Volume, Pre-Approved Credit Tier, RM Owner) with External Firmographics and Patent/Cert data.",
+        voiceText: "Step 4: Data Enrichment. Fused internal bank K P Is such as wallet share and credit tier with external firmographics.",
+        tip: "Stage 4 (Data Enrichment): True commercial intelligence combines what happened outside (the market signal) with what we know inside (Wallet Share, Credit Limit, RM Owner).",
+        logs: [
+          "[14:20:05] <span class='log-warn'>[INTERNAL-KPI-JOIN]</span> Joined CRMS IDs with Internal Trade Finance & Wallet Share warehouse...",
+          "[14:20:06] <span class='log-ok'>[EXT-ENRICH]</span> Appended ISO certifications, headcount & patent counts to Golden Records."
+        ]
+      },
+      {
+        stepNum: 5,
+        phase: "INTERNAL HANDLING",
+        phaseClass: "phase-internal",
+        title: "Step 5: Prospect List Sharing",
+        logicLabel: "BUSINESS LOGIC // 5. PROSPECT LIST SHARING",
+        logicText: "Format the matched opportunities into a prioritized list and distribute to the trade sales or front line.",
+        techTag: "Tag: Datastudio",
+        botBadge: "DATASTUDIO FRONT-LINE SYNC",
+        eyeColor: "#00f59b",
+        latency: "180ms",
+        speech: "Formatted all 6 enriched opportunities into a prioritized Front-Line Action List and published live to Datastudio for Trade Sales & Relationship Managers!",
+        voiceText: "Step 5: Prospect List Sharing. Prioritized opportunities published to Datastudio and routed to front-line trade sales.",
+        tip: "Stage 5 (Prospect List Sharing): Insights are useless if trapped in a database. Datastudio delivers ranked, actionable leads directly to Trade Sales and RMs on the front line.",
+        logs: [
+          "[14:20:07] <span class='log-ok'>[RANKING-ENGINE]</span> Scored opportunities by Signal Urgency x Wallet Share Gap...",
+          "[14:20:07] <span class='log-ok'>[DATASTUDIO-PUSH]</span> Published prioritized Trade Sales feed to Looker/Datastudio Front-Line Portal ✓"
+        ]
+      }
+    ];
+
+    /* ==========================================================================
+       4. STATE & INTERACTIVE LEAFLET GEOSPATIAL MAP CONTROLLER
+       ========================================================================== */
+    let currentStage = 0;
+    let currentFilter = 'ALL';
+    let selectedSignalId = 'SIG-01';
+    let autoPlayInterval = null;
+    let mapInstance = null;
+    let mapMarkers = {};
+    let mapArcs = [];
+
+    // Central HK Corporate HQ coordinates for drawing internal CRM connection lines
+    const hqCoords = [22.2819, 114.1581]; // Central, Hong Kong
+
+    function initGeospatialMap() {
+      if (mapInstance) return;
+      mapInstance = L.map('geoMap', {
+        center: [22.3450, 114.1300],
+        zoom: 10,
+        zoomControl: false,
+        attributionControl: false
+      });
+
+      // Dark-mode futuristic CartoDB Dark Matter tiles
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        maxZoom: 18
+      }).addTo(mapInstance);
+
+      // Add HQ Hub Marker in Central HK
+      const hqIcon = L.divIcon({
+        className: 'nexus-pin',
+        html: `<div style="background:#00f59b; width:12px; height:12px; border-radius:3px; transform:rotate(45deg); border:2px solid #fff; box-shadow:0 0 12px #00f59b;" title="Internal CRMS & Trade Sales HQ (Central HK)"></div>`,
+        iconSize: [16, 16],
+        iconAnchor: [8, 8]
+      });
+      L.marker(hqCoords, { icon: hqIcon })
+        .addTo(mapInstance)
+        .bindPopup(`<b>🏛️ Internal CRMS & Trade Sales HQ</b><br/><span style="font-size:11px; color:#94a3b8;">Central, Hong Kong • GCP / Datastudio Hub</span>`);
+
+      renderMapMarkers();
+    }
+
+    function renderMapMarkers() {
+      if (!mapInstance) return;
+
+      // Clear existing markers & connection arcs
+      Object.values(mapMarkers).forEach(m => mapInstance.removeLayer(m));
+      mapMarkers = {};
+      mapArcs.forEach(a => mapInstance.removeLayer(a));
+      mapArcs = [];
+
+      const filtered = getFilteredSignals();
+
+      filtered.forEach(sig => {
+        const isSelected = sig.id === selectedSignalId;
+        const pinHtml = `
+          <div class="nexus-pin ${isSelected ? 'pin-selected' : ''}">
+            <div class="pin-pulse" style="background:${sig.color};"></div>
+            <div class="pin-core" style="background:${sig.color}; box-shadow:0 0 12px ${sig.color};"></div>
+          </div>
+        `;
+
+        const icon = L.divIcon({
+          className: '',
+          html: pinHtml,
+          iconSize: [32, 32],
+          iconAnchor: [16, 16]
+        });
+
+        const marker = L.marker([sig.lat, sig.lng], { icon }).addTo(mapInstance);
+        marker.on('click', () => {
+          selectSignal(sig.id, true);
+        });
+
+        mapMarkers[sig.id] = marker;
+
+        // In Internal Handling stages (Steps 3, 4, 5), draw glowing tactical vector lines to HQ
+        if (currentStage >= 2) {
+          const lineColor = currentStage === 4 ? '#00f59b' : sig.color;
+          const poly = L.polyline([hqCoords, [sig.lat, sig.lng]], {
+            color: lineColor,
+            weight: isSelected ? 2.5 : 1.3,
+            opacity: isSelected ? 0.85 : 0.4,
+            dashArray: '5, 6'
+          }).addTo(mapInstance);
+          mapArcs.push(poly);
+        }
+      });
+    }
+
+    function focusMapRegion(region) {
+      SoundEngine.playUiClick();
+      if (!mapInstance) return;
+      if (region === 'HK') {
+        mapInstance.flyTo([22.3150, 114.1700], 11, { duration: 0.9 });
+      } else {
+        mapInstance.flyTo([22.3900, 114.0500], 10, { duration: 0.9 });
+      }
+    }
+
+    function getFilteredSignals() {
+      if (currentFilter === 'ALL') return marketSignals;
+      return marketSignals.filter(s => s.type === currentFilter);
+    }
+
+    function selectSignal(sigId, flyToPin = false) {
+      SoundEngine.playUiClick();
+      selectedSignalId = sigId;
+      const sig = marketSignals.find(s => s.id === sigId) || marketSignals[0];
+
+      if (flyToPin && mapInstance) {
+        mapInstance.flyTo([sig.lat, sig.lng], 12, { duration: 0.7 });
+      }
+
+      renderInspectorCards();
+      renderMapMarkers();
+      renderSelectedPinCard();
+    }
+
+    /* ==========================================================================
+       5. RENDER LEFT INSPECTOR & RIGHT MAP DETAIL BY ACTIVE WORKFLOW STEP (1-5)
+       ========================================================================== */
+    function renderInspectorCards() {
+      const container = document.getElementById('inspectorList');
+      container.innerHTML = '';
+      const signals = getFilteredSignals();
+
+      signals.forEach(sig => {
+        const card = document.createElement('div');
+        card.className = 'signal-card ' + (sig.id === selectedSignalId ? 'selected-card' : '');
+        card.onclick = () => selectSignal(sig.id, true);
+
+        let bodyHtml = '';
+
+        if (currentStage === 0) {
+          // STEP 1: EXPLORATION (GEMINI) — Raw unstructured sources
+          bodyHtml = `
+            <div class="card-top">
+              <span class="source-pill ${sig.pillClass}">${sig.type}</span>
+              <span style="font-family:var(--font-mono); font-size:0.68rem; color:var(--cyan);">📍 ${sig.locationName}</span>
+            </div>
+            <div style="font-size:0.8rem; font-weight:700; color:#fff; margin-bottom:5px;">${sig.sourceTitle}</div>
+            <div class="raw-snippet">"${sig.rawText}"</div>
+          `;
+        } else if (currentStage === 1) {
+          // STEP 2: EXTRACTION (HERMES + LLAMA 3.3 VIA OLLAMA) — Structured JSON entities
+          bodyHtml = `
+            <div class="card-top">
+              <span class="source-pill ${sig.pillClass}">EXTRACTED // ${sig.type}</span>
+              <span style="font-family:var(--font-mono); font-size:0.66rem; color:#d8b4fe;">Llama 3.3 JSON ✓</span>
+            </div>
+            <div class="extracted-grid">
+              <div class="ext-cell"><span class="ext-k">ENTITY_NAME</span><span class="ext-v" style="color:var(--cyan);">${sig.extractedEntity}</span></div>
+              <div class="ext-cell"><span class="ext-k">EVENT_DATE</span><span class="ext-v">${sig.extractedDate}</span></div>
+              <div class="ext-cell"><span class="ext-k">EVENT_NATURE</span><span class="ext-v">${sig.extractedEvent}</span></div>
+              <div class="ext-cell"><span class="ext-k">SIGNAL_MAGNITUDE</span><span class="ext-v" style="color:var(--amber);">${sig.extractedValue}</span></div>
+            </div>
+          `;
+        } else if (currentStage === 2) {
+          // STEP 3: MATCHING (GCP FUZZY MATCHING / EMBEDDINGS) — Reconcile with CRMS
+          bodyHtml = `
+            <div class="card-top">
+              <span style="font-family:var(--font-mono); font-size:0.74rem; font-weight:700; color:#fff;">${sig.extractedEntity}</span>
+              <span class="source-pill" style="background:rgba(0,245,155,0.16); color:var(--emerald); border:1px solid var(--emerald);">${sig.crmsId}</span>
+            </div>
+            <div class="extracted-grid">
+              <div class="ext-cell"><span class="ext-k">CRMS CANONICAL RECORD</span><span class="ext-v">${sig.crmsMatchName}</span></div>
+              <div class="ext-cell"><span class="ext-k">GCP VECTOR SIMILARITY</span><span class="ext-v" style="color:var(--emerald);">${sig.matchScore}</span></div>
+            </div>
+            <div style="margin-top:6px; font-family:var(--font-mono); font-size:0.7rem; color:#93c5fd;">
+              🔗 Status: ${sig.matchStatus}
+            </div>
+          `;
+        } else if (currentStage === 3) {
+          // STEP 4: DATA ENRICHMENT (INTERNAL KPI + EXTERNAL DATA)
+          bodyHtml = `
+            <div class="card-top">
+              <span style="font-size:0.8rem; font-weight:700; color:#fff;">${sig.crmsMatchName}</span>
+              <span class="source-pill" style="background:rgba(255,183,3,0.16); color:var(--amber); border:1px solid var(--amber);">KPI + EXT ENRICHED</span>
+            </div>
+            <div class="extracted-grid">
+              <div class="ext-cell"><span class="ext-k">INTERNAL WALLET SHARE</span><span class="ext-v" style="color:var(--amber);">${sig.internalKpi.walletShare}</span></div>
+              <div class="ext-cell"><span class="ext-k">YTD TRADE VOLUME</span><span class="ext-v">${sig.internalKpi.ytdTradeVol}</span></div>
+              <div class="ext-cell"><span class="ext-k">INTERNAL CREDIT TIER</span><span class="ext-v" style="color:var(--emerald);">${sig.internalKpi.creditTier}</span></div>
+              <div class="ext-cell"><span class="ext-k">EXTERNAL DATA APPEND</span><span class="ext-v" style="color:var(--cyan);">${sig.externalEnrich}</span></div>
+            </div>
+          `;
+        } else {
+          // STEP 5: PROSPECT LIST SHARING (DATASTUDIO) — Prioritized Front-Line Action List
+          bodyHtml = `
+            <div class="card-top">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-family:var(--font-mono); font-size:0.78rem; font-weight:700; background:var(--emerald); color:#040814; padding:2px 7px; border-radius:4px;">SCORE: ${sig.priorityScore}</span>
+                <span style="font-size:0.82rem; font-weight:700; color:#fff;">${sig.crmsMatchName}</span>
+              </div>
+              <span class="source-pill" style="background:rgba(0,245,155,0.15); color:var(--emerald); border:1px solid var(--emerald);">Datastudio Live ✓</span>
+            </div>
+            <div style="font-size:0.76rem; color:var(--cyan); font-weight:600; margin:5px 0;">
+              🎯 Action: ${sig.salesAction}
+            </div>
+            <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:0.68rem; color:var(--text-dim);">
+              <span>👤 Front-Line RM: ${sig.internalKpi.assignedRm}</span>
+              <span>📍 ${sig.locationName}</span>
+            </div>
+          `;
+        }
+
+        card.innerHTML = bodyHtml;
+        container.appendChild(card);
+      });
+    }
+
+    function renderSelectedPinCard() {
+      const sig = marketSignals.find(s => s.id === selectedSignalId) || marketSignals[0];
+      const box = document.getElementById('selectedPinCard');
+
+      box.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="source-pill ${sig.pillClass}">${sig.type}</span>
+            <span style="font-weight:700; font-size:0.84rem; color:#fff;">${sig.extractedEntity}</span>
+          </div>
+          <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--emerald);">${sig.crmsId} • Priority ${sig.priorityScore}/100</span>
+        </div>
+        <div style="display:grid; grid-template-columns:1.2fr 1fr 1.2fr; gap:8px; font-family:var(--font-mono); font-size:0.7rem;">
+          <div class="ext-cell">
+            <span class="ext-k">GEOSPATIAL EVENT</span>
+            <span class="ext-v" style="color:var(--cyan);">${sig.extractedEvent} (${sig.locationName})</span>
+          </div>
+          <div class="ext-cell">
+            <span class="ext-k">INTERNAL KPI // WALLET</span>
+            <span class="ext-v" style="color:var(--amber);">${sig.internalKpi.walletShare} • ${sig.internalKpi.ytdTradeVol}</span>
+          </div>
+          <div class="ext-cell">
+            <span class="ext-k">FRONT-LINE SALES ACTION</span>
+            <span class="ext-v" style="color:var(--emerald);">${sig.salesAction}</span>
+          </div>
+        </div>
+      `;
+    }
+
+    /* ==========================================================================
+       6. MASTER STAGE RENDERER & NAVIGATION CONTROLS
+       ========================================================================== */
+    function renderStage(withAudio = false) {
+      const step = workflowSteps[currentStage];
+
+      // Update Top Phase Badge
+      const phasePill = document.getElementById('activePhasePill');
+      phasePill.textContent = (currentStage < 2 ? "PHASE A: " : "PHASE B: ") + step.phase;
+      phasePill.className = "phase-pill " + step.phaseClass;
+
+      // Update Left Panel Headers & Business Logic Banner
+      document.getElementById('leftPanelTitle').textContent = step.title;
+      document.getElementById('stepCounterBadge').textContent = `STEP ${step.stepNum} OF 5`;
+      document.getElementById('logicHeaderLabel').textContent = step.logicLabel;
+      document.getElementById('businessLogicText').textContent = step.logicText;
+      document.getElementById('activeTechBadge').textContent = step.techTag;
+      document.getElementById('activeTechBadge').style.borderColor = step.eyeColor;
+
+      // Update Stepper Bar Nodes
+      const nodes = document.querySelectorAll('#stepperNodes .step-node');
+      nodes.forEach((node, idx) => {
+        node.classList.remove('active', 'completed');
+        if (idx === currentStage) node.classList.add('active');
+        else if (idx < currentStage) node.classList.add('completed');
+      });
+
+      // Update Center Robot Visuals & Dialogue
+      document.getElementById('botStateBadge').textContent = step.botBadge;
+      document.getElementById('agentStepTag').textContent = `${step.phase} // STEP ${step.stepNum}`;
+      document.getElementById('confidenceTag').textContent = `LATENCY: ${step.latency}`;
+      document.getElementById('agentSpeech').textContent = step.speech;
+      document.getElementById('presenterTip').innerHTML = `<strong>🎤 PRESENTER TALKING POINT:</strong> ${step.tip}`;
+
+      document.querySelectorAll('#botEyes circle:nth-child(1), #botEyes circle:nth-child(2)').forEach(c => {
+        c.setAttribute('fill', step.eyeColor);
+      });
+      document.getElementById('botCore').setAttribute('fill', step.eyeColor);
+      document.getElementById('botAntenna').setAttribute('fill', step.eyeColor);
+      document.getElementById('botMouth').setAttribute('stroke', step.eyeColor);
+      document.getElementById('dialogueBox').style.borderColor = step.eyeColor;
+      document.getElementById('laserBeam').style.background = `linear-gradient(90deg, transparent, ${step.eyeColor}, #fff, ${step.eyeColor}, transparent)`;
+
+      // Update Cumulative Terminal Logs
+      const term = document.getElementById('terminalLogs');
+      term.innerHTML = '';
+      for (let i = 0; i <= currentStage; i++) {
+        workflowSteps[i].logs.forEach(line => {
+          const div = document.createElement('div');
+          div.className = 'log-line';
+          div.innerHTML = line;
+          term.appendChild(div);
+        });
+      }
+      term.scrollTop = term.scrollHeight;
+
+      // Update Map Badge
+      const mapBadge = document.getElementById('mapStatusBadge');
+      if (currentStage < 2) {
+        mapBadge.textContent = "EXTERNAL SIGNAL RADAR";
+      } else if (currentStage < 4) {
+        mapBadge.textContent = "CRMS + KPI GEO-LINKED";
+      } else {
+        mapBadge.textContent = "DATASTUDIO TERRITORY MAP ✓";
+      }
+
+      // Render Cards & Map
+      renderInspectorCards();
+      renderMapMarkers();
+      renderSelectedPinCard();
+
+      if (withAudio) {
+        SoundEngine.playStepSound(currentStage);
+        SoundEngine.speak(step.voiceText);
+      }
+    }
+
+    function filterSignalType(type) {
+      SoundEngine.playUiClick();
+      currentFilter = type;
+      document.querySelectorAll('.source-filter .f-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('onclick').includes(`'${type}'`));
+      });
+      const filtered = getFilteredSignals();
+      if (filtered.length > 0 && !filtered.some(s => s.id === selectedSignalId)) {
+        selectedSignalId = filtered[0].id;
+      }
+      renderInspectorCards();
+      renderMapMarkers();
+      renderSelectedPinCard();
+    }
+
+    function goToStage(idx) {
+      stopAutoPlay();
+      currentStage = idx;
+      renderStage(true);
+    }
+
+    function nextStage() {
+      stopAutoPlay();
+      currentStage = (currentStage + 1) % 5;
+      renderStage(true);
+    }
+
+    function prevStage() {
+      stopAutoPlay();
+      currentStage = (currentStage - 1 + 5) % 5;
+      renderStage(true);
+    }
+
+    function toggleAutoPlay() {
+      if (autoPlayInterval) {
+        stopAutoPlay();
+        SoundEngine.playUiClick();
+      } else {
+        SoundEngine.playPowerUp();
+        const btn = document.getElementById('autoPlayBtn');
+        btn.textContent = '⏹ Stop Auto-Pipeline';
+        btn.classList.add('running');
+        currentStage = 0;
+        renderStage(false);
+        SoundEngine.speak(workflowSteps[0].voiceText);
+
+        autoPlayInterval = setInterval(() => {
+          if (currentStage < 4) {
+            currentStage++;
+            renderStage(true);
+          } else {
+            stopAutoPlay();
+          }
+        }, 3200);
+      }
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayInterval) {
+        clearInterval(autoPlayInterval);
+        autoPlayInterval = null;
+      }
+      const btn = document.getElementById('autoPlayBtn');
+      btn.textContent = '▶ Run Autonomous Pipeline';
+      btn.classList.remove('running');
+    }
+
+    function toggleSfx() {
+      SoundEngine.sfxEnabled = !SoundEngine.sfxEnabled;
+      const btn = document.getElementById('sfxToggleBtn');
+      if (SoundEngine.sfxEnabled) {
+        btn.textContent = '🔊 SFX: ON';
+        btn.classList.add('active-sfx');
+        SoundEngine.playStepSound(currentStage);
+      } else {
+        btn.textContent = '🔇 SFX: OFF';
+        btn.classList.remove('active-sfx');
+      }
+    }
+
+    function toggleVoice() {
+      SoundEngine.voiceEnabled = !SoundEngine.voiceEnabled;
+      const btn = document.getElementById('voiceToggleBtn');
+      if (SoundEngine.voiceEnabled) {
+        btn.textContent = '🗣️ VOICE: ON';
+        btn.classList.add('active-voice');
+        SoundEngine.speak(workflowSteps[currentStage].voiceText);
+      } else {
+        btn.textContent = '🗣️ VOICE: OFF';
+        btn.classList.remove('active-voice');
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      }
+    }
+
+    function triggerRobotChirp() {
+      SoundEngine.playStepSound(currentStage);
+      if (SoundEngine.voiceEnabled) {
+        SoundEngine.speak(workflowSteps[currentStage].voiceText);
+      }
+    }
+
+    window.onload = function () {
+      initGeospatialMap();
+      renderStage(false);
+    };
+  </script>
+</body>
+</html>
