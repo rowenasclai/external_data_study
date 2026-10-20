@@ -112,6 +112,21 @@
       "event_name": "Cosmoprof Asia 2026 & Cosmopack Asia 2026",
       "status": "Fail",
       "extracted_file_name": ""
+    },
+    {
+      "event_name": "EDUtech Asia 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Agri-Food Tech Expo Asia 2026 (AFTEA 2026)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "FTE APEX Asia Expo 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
     }
   ]
 }

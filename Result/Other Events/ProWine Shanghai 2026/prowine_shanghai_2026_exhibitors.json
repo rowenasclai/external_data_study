@@ -1,0 +1,5762 @@
+[
+  {
+    "exhibitor_key": "Spain|W4A55-6|Artoje",
+    "company_name": "Artoje",
+    "booth_no": "W4A55-6",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "1"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-5|Alvia",
+    "company_name": "Alvia",
+    "booth_no": "W4A55-5",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "2"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-3|Alto de la Huesera",
+    "company_name": "Alto de la Huesera",
+    "booth_no": "W4A55-3",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "3"
+  },
+  {
+    "exhibitor_key": "Spain|W4A34-3|ABET I NOYA",
+    "company_name": "ABET I NOYA",
+    "booth_no": "W4A34-3",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "4"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-01|AleksandrovicWinery",
+    "company_name": "AleksandrovicWinery",
+    "booth_no": "W5D10-01",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "5"
+  },
+  {
+    "exhibitor_key": "Portugal|W5X13|ADEGA DE REDONDO",
+    "company_name": "ADEGA DE REDONDO",
+    "booth_no": "W5X13",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "6"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76-10|Adega Cooperativa de Silgueiros",
+    "company_name": "Adega Cooperativa de Silgueiros",
+    "booth_no": "W5A76-10",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "7"
+  },
+  {
+    "exhibitor_key": "South Africa|W4C40|Avondale",
+    "company_name": "Avondale",
+    "booth_no": "W4C40",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "8"
+  },
+  {
+    "exhibitor_key": "Albania|W4W01|ARBËRI WINERY",
+    "company_name": "ARBËRI WINERY",
+    "booth_no": "W4W01",
+    "country": "Albania",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "9"
+  },
+  {
+    "exhibitor_key": "China|W5A76-17|American Portuguese (Beijing) International Trade Co., Ltd",
+    "company_name": "American Portuguese (Beijing) International Trade Co., Ltd",
+    "booth_no": "W5A76-17",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "10"
+  },
+  {
+    "exhibitor_key": "Albania|W4W01-6|ARIANITI WINERY",
+    "company_name": "ARIANITI WINERY",
+    "booth_no": "W4W01-6",
+    "country": "Albania",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "11"
+  },
+  {
+    "exhibitor_key": "Spain|W4A34-3|Albet i Noya",
+    "company_name": "Albet i Noya",
+    "booth_no": "W4A34-3",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "12"
+  },
+  {
+    "exhibitor_key": "China|W4C32|澳柏城商贸有限公司",
+    "company_name": "澳柏城商贸有限公司",
+    "booth_no": "W4C32",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "13"
+  },
+  {
+    "exhibitor_key": "China|W4C38|Amarula",
+    "company_name": "Amarula",
+    "booth_no": "W4C38",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "14"
+  },
+  {
+    "exhibitor_key": "China|W4E30-4|Aus Continent wine Group",
+    "company_name": "Aus Continent wine Group",
+    "booth_no": "W4E30-4",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "15"
+  },
+  {
+    "exhibitor_key": "China|W4X05|AOLAN CO., LTD",
+    "company_name": "AOLAN CO., LTD",
+    "booth_no": "W4X05",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "16"
+  },
+  {
+    "exhibitor_key": "Italy|W5B71|Azienda Agricola Iasci Donatello",
+    "company_name": "Azienda Agricola Iasci Donatello",
+    "booth_no": "W5B71",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "17"
+  },
+  {
+    "exhibitor_key": "Italy|W5A66|Antica cantina leonardi",
+    "company_name": "Antica cantina leonardi",
+    "booth_no": "W5A66",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "18"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4W15|Ahi Kā",
+    "company_name": "Ahi Kā",
+    "booth_no": "W4W15",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "19"
+  },
+  {
+    "exhibitor_key": "Spain|W4X09|ALMA CARRAOVEJAS",
+    "company_name": "ALMA CARRAOVEJAS",
+    "booth_no": "W4X09",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "20"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-4|ALTOS DE RIOJA",
+    "company_name": "ALTOS DE RIOJA",
+    "booth_no": "W4A55-4",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "21"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-3|ALTANZA",
+    "company_name": "ALTANZA",
+    "booth_no": "W4A55-3",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "22"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-2|ALTO DE LA HUESERA (AIURRI)",
+    "company_name": "ALTO DE LA HUESERA (AIURRI)",
+    "booth_no": "W4A55-2",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "23"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-1|ALACADIA",
+    "company_name": "ALACADIA",
+    "booth_no": "W4A55-1",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "24"
+  },
+  {
+    "exhibitor_key": "Spain|W4B01-5|ALEJNADRO FERNANDEZ TINTO PESQUERA ,SL",
+    "company_name": "ALEJNADRO FERNANDEZ TINTO PESQUERA ,SL",
+    "booth_no": "W4B01-5",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "25"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-02|Aleksic Winery",
+    "company_name": "Aleksic Winery",
+    "booth_no": "W5D10-02",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "26"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-01|Aleksandrovic Winerz",
+    "company_name": "Aleksandrovic Winerz",
+    "booth_no": "W5D10-01",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "27"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A18|ADEGA MÃE",
+    "company_name": "ADEGA MÃE",
+    "booth_no": "W5A18",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "28"
+  },
+  {
+    "exhibitor_key": "Portugal|W5X13|Adega Redondo",
+    "company_name": "Adega Redondo",
+    "booth_no": "W5X13",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "29"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Arribas do Douro / Porttable",
+    "company_name": "Arribas do Douro / Porttable",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "30"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|AMALIA VINEYARD ALLIANCE",
+    "company_name": "AMALIA VINEYARD ALLIANCE",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "31"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Adega Cooperativa de Silgueiros CRL",
+    "company_name": "Adega Cooperativa de Silgueiros CRL",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "32"
+  },
+  {
+    "exhibitor_key": "South Africa|W4C35|Asara Wines",
+    "company_name": "Asara Wines",
+    "booth_no": "W4C35",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "33"
+  },
+  {
+    "exhibitor_key": "South Africa|W4C35|Arid and Co",
+    "company_name": "Arid and Co",
+    "booth_no": "W4C35",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "34"
+  },
+  {
+    "exhibitor_key": "South Africa|W4C40|Alexander Vineyards",
+    "company_name": "Alexander Vineyards",
+    "booth_no": "W4C40",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "35"
+  },
+  {
+    "exhibitor_key": "South Africa|W4C40|Avondale Organic Wine",
+    "company_name": "Avondale Organic Wine",
+    "booth_no": "W4C40",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "36"
+  },
+  {
+    "exhibitor_key": "Republic of Korea|W4B75-01|Applease Korea Brewery",
+    "company_name": "Applease Korea Brewery",
+    "booth_no": "W4B75-01",
+    "country": "Republic of Korea",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "37"
+  },
+  {
+    "exhibitor_key": "Republic of Korea|W4B70-08|Andong Distillery",
+    "company_name": "Andong Distillery",
+    "booth_no": "W4B70-08",
+    "country": "Republic of Korea",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "38"
+  },
+  {
+    "exhibitor_key": "Republic of Korea|W4B70-03|Andong Soju Ilpoom",
+    "company_name": "Andong Soju Ilpoom",
+    "booth_no": "W4B70-03",
+    "country": "Republic of Korea",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "39"
+  },
+  {
+    "exhibitor_key": "Republic of Korea|W4B70|Andong Soju Association",
+    "company_name": "Andong Soju Association",
+    "booth_no": "W4B70",
+    "country": "Republic of Korea",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "40"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-1|Askaneli Brothers LLC",
+    "company_name": "Askaneli Brothers LLC",
+    "booth_no": "W5B80-1",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "41"
+  },
+  {
+    "exhibitor_key": "France|W5X04|Academie des boissons",
+    "company_name": "Academie des boissons",
+    "booth_no": "W5X04",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "42"
+  },
+  {
+    "exhibitor_key": "France|W5A01-3|Armand Heitz",
+    "company_name": "Armand Heitz",
+    "booth_no": "W5A01-3",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "43"
+  },
+  {
+    "exhibitor_key": "Germany|W5D50-4|AWG",
+    "company_name": "AWG",
+    "booth_no": "W5D50-4",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "44"
+  },
+  {
+    "exhibitor_key": "Austria|W4A01-7|ADV.AUSTRIA",
+    "company_name": "ADV.AUSTRIA",
+    "booth_no": "W4A01-7",
+    "country": "Austria",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "45"
+  },
+  {
+    "exhibitor_key": "Austria|W4A01-5|ALP DRINKS",
+    "company_name": "ALP DRINKS",
+    "booth_no": "W4A01-5",
+    "country": "Austria",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "46"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-01|ATLAS WINES",
+    "company_name": "ATLAS WINES",
+    "booth_no": "W4C01-01",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "47"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01|Australian wine",
+    "company_name": "Australian wine",
+    "booth_no": "W4C01",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "48"
+  },
+  {
+    "exhibitor_key": "Albania|W4W01|AIDA - ALBANIAN INVESTMENT DEVELOPMENT AGENCY",
+    "company_name": "AIDA - ALBANIAN INVESTMENT DEVELOPMENT AGENCY",
+    "booth_no": "W4W01",
+    "country": "Albania",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "49"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-05|Antmoore Brands",
+    "company_name": "Antmoore Brands",
+    "booth_no": "W4A76-05",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "50"
+  },
+  {
+    "exhibitor_key": "South Africa|W4C35|Arid & Co.(Pty)Ltd",
+    "company_name": "Arid & Co.(Pty)Ltd",
+    "booth_no": "W4C35",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "51"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-2|Achenbach Organic Winery",
+    "company_name": "Achenbach Organic Winery",
+    "booth_no": "W5D41-2",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "52"
+  },
+  {
+    "exhibitor_key": "China|W4E30-4|AUS-CONTINENT WINE GROUP PTY LTD",
+    "company_name": "AUS-CONTINENT WINE GROUP PTY LTD",
+    "booth_no": "W4E30-4",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "53"
+  },
+  {
+    "exhibitor_key": "Finland|W5D66|ANORA GROUP PLC.",
+    "company_name": "ANORA GROUP PLC.",
+    "booth_no": "W5D66",
+    "country": "Finland",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "54"
+  },
+  {
+    "exhibitor_key": "Spain|W4B01-5|ALEJANDRO FERNANDEZ TINTO PESQUERA ,SL",
+    "company_name": "ALEJANDRO FERNANDEZ TINTO PESQUERA ,SL",
+    "booth_no": "W4B01-5",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "55"
+  },
+  {
+    "exhibitor_key": "Germany|W5D55-4|AWG Associated Wines Germany GmbH",
+    "company_name": "AWG Associated Wines Germany GmbH",
+    "booth_no": "W5D55-4",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "56"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-1|Affentaler Winzer eG",
+    "company_name": "Affentaler Winzer eG",
+    "booth_no": "W5C46-1",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "57"
+  },
+  {
+    "exhibitor_key": "Austria|W4A01|Advantage Austria",
+    "company_name": "Advantage Austria",
+    "booth_no": "W4A01",
+    "country": "Austria",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "58"
+  },
+  {
+    "exhibitor_key": "Hungary|W5A13|Bork",
+    "company_name": "Bork",
+    "booth_no": "W5A13",
+    "country": "Hungary",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "59"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-10|Bilbaínas",
+    "company_name": "Bilbaínas",
+    "booth_no": "W4A55-10",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "60"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-9|Bhilar",
+    "company_name": "Bhilar",
+    "booth_no": "W4A55-9",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "61"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-8|Beronia",
+    "company_name": "Beronia",
+    "booth_no": "W4A55-8",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "62"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-7|Baigorri",
+    "company_name": "Baigorri",
+    "booth_no": "W4A55-7",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "63"
+  },
+  {
+    "exhibitor_key": "Spain|W4X13-1|BODEGAS CASTAÑO SL",
+    "company_name": "BODEGAS CASTAÑO SL",
+    "booth_no": "W4X13-1",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "64"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-10|Babylonstoren",
+    "company_name": "Babylonstoren",
+    "booth_no": "W4A61-10",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "65"
+  },
+  {
+    "exhibitor_key": "Albania|W4W01|BELBA WINERY",
+    "company_name": "BELBA WINERY",
+    "booth_no": "W4W01",
+    "country": "Albania",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "66"
+  },
+  {
+    "exhibitor_key": "China|W4A34-2|Buil & Gine wine Co.,SL",
+    "company_name": "Buil & Gine wine Co.,SL",
+    "booth_no": "W4A34-2",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "67"
+  },
+  {
+    "exhibitor_key": "China|W4D51-09|BRIGHT SPIRITS & WINE",
+    "company_name": "BRIGHT SPIRITS & WINE",
+    "booth_no": "W4D51-09",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "68"
+  },
+  {
+    "exhibitor_key": "Italy|W5A18|Bosio Family Estates",
+    "company_name": "Bosio Family Estates",
+    "booth_no": "W5A18",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "69"
+  },
+  {
+    "exhibitor_key": "Hungary|W5A13|BD-Expo Ltd.",
+    "company_name": "BD-Expo Ltd.",
+    "booth_no": "W5A13",
+    "country": "Hungary",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "70"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4W15|Blank Canvas Wines",
+    "company_name": "Blank Canvas Wines",
+    "booth_no": "W4W15",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "71"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A78|Babich",
+    "company_name": "Babich",
+    "booth_no": "W4A78",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "72"
+  },
+  {
+    "exhibitor_key": "Spain|W4A19|Bodegas Gran Gota",
+    "company_name": "Bodegas Gran Gota",
+    "booth_no": "W4A19",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "73"
+  },
+  {
+    "exhibitor_key": "Spain|W4X10|Bodegas Matarromera",
+    "company_name": "Bodegas Matarromera",
+    "booth_no": "W4X10",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "74"
+  },
+  {
+    "exhibitor_key": "Spain|W4X09|BODEGAS VALDUBÓN",
+    "company_name": "BODEGAS VALDUBÓN",
+    "booth_no": "W4X09",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "75"
+  },
+  {
+    "exhibitor_key": "Spain|W4X15|Bodegas Santa Cruz de Alpera",
+    "company_name": "Bodegas Santa Cruz de Alpera",
+    "booth_no": "W4X15",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "76"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-35|BODEGAS Y VIÑEDOS EL PACTO",
+    "company_name": "BODEGAS Y VIÑEDOS EL PACTO",
+    "booth_no": "W4A55-35",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "77"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-34|BODEGAS VIVANCO",
+    "company_name": "BODEGAS VIVANCO",
+    "booth_no": "W4A55-34",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "78"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-33|BODEGAS TOBIA",
+    "company_name": "BODEGAS TOBIA",
+    "booth_no": "W4A55-33",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "79"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-32|BODEGAS TARON, S.COOP.",
+    "company_name": "BODEGAS TARON, S.COOP.",
+    "booth_no": "W4A55-32",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "80"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-31|BODEGAS RIOJANAS",
+    "company_name": "BODEGAS RIOJANAS",
+    "booth_no": "W4A55-31",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "81"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-30|BODEGAS PROELIO",
+    "company_name": "BODEGAS PROELIO",
+    "booth_no": "W4A55-30",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "82"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-29|BODEGAS PACO GARCÍA",
+    "company_name": "BODEGAS PACO GARCÍA",
+    "booth_no": "W4A55-29",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "83"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-28|BODEGAS MURUA",
+    "company_name": "BODEGAS MURUA",
+    "booth_no": "W4A55-28",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "84"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-27|BODEGAS MASET RIOJA",
+    "company_name": "BODEGAS MASET RIOJA",
+    "booth_no": "W4A55-27",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "85"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-26|BODEGAS MARTINEZ LACUESTA S.A.",
+    "company_name": "BODEGAS MARTINEZ LACUESTA S.A.",
+    "booth_no": "W4A55-26",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "86"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-25|BODEGAS MARQUES DE CACERES - UNION VITIVINICOLA S.A.",
+    "company_name": "BODEGAS MARQUES DE CACERES - UNION VITIVINICOLA S.A.",
+    "booth_no": "W4A55-25",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "87"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-24|BODEGAS MANZANOS",
+    "company_name": "BODEGAS MANZANOS",
+    "booth_no": "W4A55-24",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "88"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-23|BODEGAS LUZON",
+    "company_name": "BODEGAS LUZON",
+    "booth_no": "W4A55-23",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "89"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-22|BODEGAS LOZANO (JUAN RAMÓN LOZANO)",
+    "company_name": "BODEGAS LOZANO (JUAN RAMÓN LOZANO)",
+    "booth_no": "W4A55-22",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "90"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-21|BODEGAS LAN",
+    "company_name": "BODEGAS LAN",
+    "booth_no": "W4A55-21",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "91"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-20|BODEGAS LA MATEO",
+    "company_name": "BODEGAS LA MATEO",
+    "booth_no": "W4A55-20",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "92"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-19|BODEGAS FRANCO ESPAÑOLAS",
+    "company_name": "BODEGAS FRANCO ESPAÑOLAS",
+    "booth_no": "W4A55-19",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "93"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-18|BODEGAS ESCUDERO S.L.",
+    "company_name": "BODEGAS ESCUDERO S.L.",
+    "booth_no": "W4A55-18",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "94"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-17|BODEGAS DON SANCHO DE LONDOÑO",
+    "company_name": "BODEGAS DON SANCHO DE LONDOÑO",
+    "booth_no": "W4A55-17",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "95"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-16|BODEGAS CONTADOR",
+    "company_name": "BODEGAS CONTADOR",
+    "booth_no": "W4A55-16",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "96"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-15|BODEGAS CASA PRIMICIA",
+    "company_name": "BODEGAS CASA PRIMICIA",
+    "booth_no": "W4A55-15",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "97"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-14|BODEGAS CARLOS SERRES",
+    "company_name": "BODEGAS CARLOS SERRES",
+    "booth_no": "W4A55-14",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "98"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-13|BODEGAS BILBAINAS",
+    "company_name": "BODEGAS BILBAINAS",
+    "booth_no": "W4A55-13",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "99"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-12|BODEGAS BHILAR",
+    "company_name": "BODEGAS BHILAR",
+    "booth_no": "W4A55-12",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "100"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-11|BODEGAS BERONIA",
+    "company_name": "BODEGAS BERONIA",
+    "booth_no": "W4A55-11",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "101"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-10|BODEGAS BAIGORRI",
+    "company_name": "BODEGAS BAIGORRI",
+    "booth_no": "W4A55-10",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "102"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-9|BODEGAS ARTOJE (LUIS SAENZ)",
+    "company_name": "BODEGAS ARTOJE (LUIS SAENZ)",
+    "booth_no": "W4A55-9",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "103"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-8|BODEGAS ALVIA",
+    "company_name": "BODEGAS ALVIA",
+    "booth_no": "W4A55-8",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "104"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-7|BODEGA CLASSICA",
+    "company_name": "BODEGA CLASSICA",
+    "booth_no": "W4A55-7",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "105"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-6|B. Y VIÑEDOS HERAS CORDON",
+    "company_name": "B. Y VIÑEDOS HERAS CORDON",
+    "booth_no": "W4A55-6",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "106"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-5|B. GOMEZ DE SEGURA IBAÑEZ",
+    "company_name": "B. GOMEZ DE SEGURA IBAÑEZ",
+    "booth_no": "W4A55-5",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "107"
+  },
+  {
+    "exhibitor_key": "Spain|W4X13-3|BODEGAS LA PURISIMA",
+    "company_name": "BODEGAS LA PURISIMA",
+    "booth_no": "W4X13-3",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "108"
+  },
+  {
+    "exhibitor_key": "Spain|W4X13-2|BODEGAS CASTAÑO",
+    "company_name": "BODEGAS CASTAÑO",
+    "booth_no": "W4X13-2",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "109"
+  },
+  {
+    "exhibitor_key": "Spain|W4X13-1|BARAHONDA",
+    "company_name": "BARAHONDA",
+    "booth_no": "W4X13-1",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "110"
+  },
+  {
+    "exhibitor_key": "Spain|W4B15-12|Bodega Viñaguareña",
+    "company_name": "Bodega Viñaguareña",
+    "booth_no": "W4B15-12",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "111"
+  },
+  {
+    "exhibitor_key": "Spain|W4B15-11|BODEGA REJADORADA",
+    "company_name": "BODEGA REJADORADA",
+    "booth_no": "W4B15-11",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "112"
+  },
+  {
+    "exhibitor_key": "Spain|W4B15-10|Bodega Bucrana",
+    "company_name": "Bodega Bucrana",
+    "booth_no": "W4B15-10",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "113"
+  },
+  {
+    "exhibitor_key": "Spain|W4B15-9|Bodega Viña Zangarrón",
+    "company_name": "Bodega Viña Zangarrón",
+    "booth_no": "W4B15-9",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "114"
+  },
+  {
+    "exhibitor_key": "Spain|W4B15-8|BODEGA FRONTAURA",
+    "company_name": "BODEGA FRONTAURA",
+    "booth_no": "W4B15-8",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "115"
+  },
+  {
+    "exhibitor_key": "Spain|W4B15-7|BODEGA FARIÑA",
+    "company_name": "BODEGA FARIÑA",
+    "booth_no": "W4B15-7",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "116"
+  },
+  {
+    "exhibitor_key": "Spain|W4B15-6|Bodega Sobreño",
+    "company_name": "Bodega Sobreño",
+    "booth_no": "W4B15-6",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "117"
+  },
+  {
+    "exhibitor_key": "Spain|W4B15-5|Bodegas Monte la Reina",
+    "company_name": "Bodegas Monte la Reina",
+    "booth_no": "W4B15-5",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "118"
+  },
+  {
+    "exhibitor_key": "Spain|W4B15-4|Bodegas Vatán",
+    "company_name": "Bodegas Vatán",
+    "booth_no": "W4B15-4",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "119"
+  },
+  {
+    "exhibitor_key": "Spain|W4B15-3|BODEGA PALACIO DE VILLACHICA",
+    "company_name": "BODEGA PALACIO DE VILLACHICA",
+    "booth_no": "W4B15-3",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "120"
+  },
+  {
+    "exhibitor_key": "Spain|W4B15-2|BODEGA TORREDUERO",
+    "company_name": "BODEGA TORREDUERO",
+    "booth_no": "W4B15-2",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "121"
+  },
+  {
+    "exhibitor_key": "Spain|W4B15-1|BODEGAS FRUTOS VILLAR",
+    "company_name": "BODEGAS FRUTOS VILLAR",
+    "booth_no": "W4B15-1",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "122"
+  },
+  {
+    "exhibitor_key": "Spain|W4B01-10|BODEGA CUATRO RAYAS",
+    "company_name": "BODEGA CUATRO RAYAS",
+    "booth_no": "W4B01-10",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "123"
+  },
+  {
+    "exhibitor_key": "Spain|W4B01-4|BODEGAS DE POSTIN",
+    "company_name": "BODEGAS DE POSTIN",
+    "booth_no": "W4B01-4",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "124"
+  },
+  {
+    "exhibitor_key": "Spain|W4B01-3|BODEGAS RESALTE",
+    "company_name": "BODEGAS RESALTE",
+    "booth_no": "W4B01-3",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "125"
+  },
+  {
+    "exhibitor_key": "Spain|W4B01-2|BODEGA Y VIÑEDOS F.CALLEJO",
+    "company_name": "BODEGA Y VIÑEDOS F.CALLEJO",
+    "booth_no": "W4B01-2",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "126"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-03|BT Winery",
+    "company_name": "BT Winery",
+    "booth_no": "W5D10-03",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "127"
+  },
+  {
+    "exhibitor_key": "China|W4A61-10|Babylonstoren Beijing Trade Co., Ltd.",
+    "company_name": "Babylonstoren Beijing Trade Co., Ltd.",
+    "booth_no": "W4A61-10",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "128"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-2|Besini Company Ltd",
+    "company_name": "Besini Company Ltd",
+    "booth_no": "W5B80-2",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "129"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-11|BEKAURI FAMILY VINEYARDS",
+    "company_name": "BEKAURI FAMILY VINEYARDS",
+    "booth_no": "W5B80-11",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "130"
+  },
+  {
+    "exhibitor_key": "France|W5A31-2|BWINE - CHÂTEAU SEGUIN - CHÂTEAU LA FRANCE",
+    "company_name": "BWINE - CHÂTEAU SEGUIN - CHÂTEAU LA FRANCE",
+    "booth_no": "W5A31-2",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "131"
+  },
+  {
+    "exhibitor_key": "Germany|W5C31-10|Bottwartaler Winzer e.G.",
+    "company_name": "Bottwartaler Winzer e.G.",
+    "booth_no": "W5C31-10",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "132"
+  },
+  {
+    "exhibitor_key": "Germany|W5C31,W5C46,W5C85,W5D20,W5D50|BMLEH/DWI",
+    "company_name": "BMLEH/DWI",
+    "booth_no": "W5C31,W5C46,W5C85,W5D20,W5D50",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "133"
+  },
+  {
+    "exhibitor_key": "Spain|W4A15|Bodegas Ontanon",
+    "company_name": "Bodegas Ontanon",
+    "booth_no": "W4A15",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "134"
+  },
+  {
+    "exhibitor_key": "Australia|W4C10|BonBon Blossom",
+    "company_name": "BonBon Blossom",
+    "booth_no": "W4C10",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "135"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-04|Burge Family Winemakers",
+    "company_name": "Burge Family Winemakers",
+    "booth_no": "W4C01-04",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "136"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-02|Barrel Estate",
+    "company_name": "Barrel Estate",
+    "booth_no": "W4C01-02",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "137"
+  },
+  {
+    "exhibitor_key": "Argentina|W4C80-11|BODEGA CATENA ZAPATA",
+    "company_name": "BODEGA CATENA ZAPATA",
+    "booth_no": "W4C80-11",
+    "country": "Argentina",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "138"
+  },
+  {
+    "exhibitor_key": "R.O.Korea|W4X02|Boksoondoga",
+    "company_name": "Boksoondoga",
+    "booth_no": "W4X02",
+    "country": "R.O.Korea",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "139"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-03|Brown Brothers",
+    "company_name": "Brown Brothers",
+    "booth_no": "W4C01-03",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "140"
+  },
+  {
+    "exhibitor_key": "France|W5A16|B.CHOUETTE",
+    "company_name": "B.CHOUETTE",
+    "booth_no": "W5A16",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "141"
+  },
+  {
+    "exhibitor_key": "Spain|W4X07|BODEGAS FERNANDO CASTRO",
+    "company_name": "BODEGAS FERNANDO CASTRO",
+    "booth_no": "W4X07",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "142"
+  },
+  {
+    "exhibitor_key": "R.O.Korea|W4X03|Baekkyung Distillery Inc.",
+    "company_name": "Baekkyung Distillery Inc.",
+    "booth_no": "W4X03",
+    "country": "R.O.Korea",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "143"
+  },
+  {
+    "exhibitor_key": "France|W5A01,W5A31|BUSINESS FRANCE",
+    "company_name": "BUSINESS FRANCE",
+    "booth_no": "W5A01,W5A31",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "144"
+  },
+  {
+    "exhibitor_key": "Australia|W5B01|BAROSSA DUKE",
+    "company_name": "BAROSSA DUKE",
+    "booth_no": "W5B01",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "145"
+  },
+  {
+    "exhibitor_key": "Hungary|W5A13-01|Bock",
+    "company_name": "Bock",
+    "booth_no": "W5A13-01",
+    "country": "Hungary",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "146"
+  },
+  {
+    "exhibitor_key": "Spain|W4A18|BODEGAS LOPEZ MORENAS S.L.",
+    "company_name": "BODEGAS LOPEZ MORENAS S.L.",
+    "booth_no": "W4A18",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "147"
+  },
+  {
+    "exhibitor_key": "Germany|W5C31-10|Bottwartaler Winzer EG",
+    "company_name": "Bottwartaler Winzer EG",
+    "booth_no": "W5C31-10",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "148"
+  },
+  {
+    "exhibitor_key": "China|W5X05|BEIJING HENMAN IMPORT AND EXPORT TRADE CO. LTD",
+    "company_name": "BEIJING HENMAN IMPORT AND EXPORT TRADE CO. LTD",
+    "booth_no": "W5X05",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "149"
+  },
+  {
+    "exhibitor_key": "Italy|W5A66|Cardinal Marcantonio Barbaiago",
+    "company_name": "Cardinal Marcantonio Barbaiago",
+    "booth_no": "W5A66",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "150"
+  },
+  {
+    "exhibitor_key": "Italy|W5A61-2|CROCE DEL VENTO SRL",
+    "company_name": "CROCE DEL VENTO SRL",
+    "booth_no": "W5A61-2",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "151"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-08|Champion Wines Achernar Churton Escarpment Two Paddocks",
+    "company_name": "Champion Wines Achernar Churton Escarpment Two Paddocks",
+    "booth_no": "W4A76-08",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "152"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-16|Contador (Benjamín Romeo)",
+    "company_name": "Contador (Benjamín Romeo)",
+    "booth_no": "W4A55-16",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "153"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-15|Classica",
+    "company_name": "Classica",
+    "booth_no": "W4A55-15",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "154"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-12|Casa Primicia",
+    "company_name": "Casa Primicia",
+    "booth_no": "W4A55-12",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "155"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-11|Carlos Serres",
+    "company_name": "Carlos Serres",
+    "booth_no": "W4A55-11",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "156"
+  },
+  {
+    "exhibitor_key": "Spain|W4A34-4|CELLER CAL PLA SL.",
+    "company_name": "CELLER CAL PLA SL.",
+    "booth_no": "W4A34-4",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "157"
+  },
+  {
+    "exhibitor_key": "Spain|W4A31-4|CELLER VENDRELL-RIVED",
+    "company_name": "CELLER VENDRELL-RIVED",
+    "booth_no": "W4A31-4",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "158"
+  },
+  {
+    "exhibitor_key": "Spain|W4A31-3|COOPERATIVA FALSET-MARÇÀ",
+    "company_name": "COOPERATIVA FALSET-MARÇÀ",
+    "booth_no": "W4A31-3",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "159"
+  },
+  {
+    "exhibitor_key": "Spain|W4A31-3|CELLERS SANT RAFEL",
+    "company_name": "CELLERS SANT RAFEL",
+    "booth_no": "W4A31-3",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "160"
+  },
+  {
+    "exhibitor_key": "Spain|W4A31-2|CELLER LAURONA",
+    "company_name": "CELLER LAURONA",
+    "booth_no": "W4A31-2",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "161"
+  },
+  {
+    "exhibitor_key": "France|W5A31-9|CHANTOVENT",
+    "company_name": "CHANTOVENT",
+    "booth_no": "W5A31-9",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "162"
+  },
+  {
+    "exhibitor_key": "Italy|W5A69|CANTINA SANTADI",
+    "company_name": "CANTINA SANTADI",
+    "booth_no": "W5A69",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "163"
+  },
+  {
+    "exhibitor_key": "China|W4D85-2|CHIYU INTERNATIONAL TRADE CO. LTD.",
+    "company_name": "CHIYU INTERNATIONAL TRADE CO. LTD.",
+    "booth_no": "W4D85-2",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "164"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76-16|Casa da Passarella",
+    "company_name": "Casa da Passarella",
+    "booth_no": "W5A76-16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "165"
+  },
+  {
+    "exhibitor_key": "Portugal|W5C16-20|CARMIM",
+    "company_name": "CARMIM",
+    "booth_no": "W5C16-20",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "166"
+  },
+  {
+    "exhibitor_key": "Hong Kong, China|W5W09|Certiz Premier Product Limited",
+    "company_name": "Certiz Premier Product Limited",
+    "booth_no": "W5W09",
+    "country": "Hong Kong, China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "167"
+  },
+  {
+    "exhibitor_key": "China|W4D01|COFCO W & W International Co., Ltd.",
+    "company_name": "COFCO W & W International Co., Ltd.",
+    "booth_no": "W4D01",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "168"
+  },
+  {
+    "exhibitor_key": "China|W4D70-08|Chateau Summer Land",
+    "company_name": "Chateau Summer Land",
+    "booth_no": "W4D70-08",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "169"
+  },
+  {
+    "exhibitor_key": "China|W4D51|Chinese Fine Wine",
+    "company_name": "Chinese Fine Wine",
+    "booth_no": "W4D51",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "170"
+  },
+  {
+    "exhibitor_key": "Italy|W5C01|Cantine Sgarzi Luigi S.r.l",
+    "company_name": "Cantine Sgarzi Luigi S.r.l",
+    "booth_no": "W5C01",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "171"
+  },
+  {
+    "exhibitor_key": "Italy|W5A61|Club Italy",
+    "company_name": "Club Italy",
+    "booth_no": "W5A61",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "172"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-14|Clos Ostler Guangzhou Chateau Kiwi Wine co., Ltd",
+    "company_name": "Clos Ostler Guangzhou Chateau Kiwi Wine co., Ltd",
+    "booth_no": "W4A76-14",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "173"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-13|Cloudy Bay",
+    "company_name": "Cloudy Bay",
+    "booth_no": "W4A76-13",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "174"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-05|Castlebrae Estate Taitoa Estate",
+    "company_name": "Castlebrae Estate Taitoa Estate",
+    "booth_no": "W4A76-05",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "175"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-39|CVNE",
+    "company_name": "CVNE",
+    "booth_no": "W4A55-39",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "176"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-38|COMPAÑIA DE VINOS HERACLIO",
+    "company_name": "COMPAÑIA DE VINOS HERACLIO",
+    "booth_no": "W4A55-38",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "177"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-37|CASTILLO CLAVIJO",
+    "company_name": "CASTILLO CLAVIJO",
+    "booth_no": "W4A55-37",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "178"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-36|CASTILLO DE CUZCURRITA",
+    "company_name": "CASTILLO DE CUZCURRITA",
+    "booth_no": "W4A55-36",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "179"
+  },
+  {
+    "exhibitor_key": "Spain|W4A31|CATALONIA - PRODECA",
+    "company_name": "CATALONIA - PRODECA",
+    "booth_no": "W4A31",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "180"
+  },
+  {
+    "exhibitor_key": "Portugal|W5B70|CARM SA",
+    "company_name": "CARM SA",
+    "booth_no": "W5B70",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "181"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Crafted Wine & Spirits Portugal",
+    "company_name": "Crafted Wine & Spirits Portugal",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "182"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Casa das Hortas",
+    "company_name": "Casa das Hortas",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "183"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Casa Santos Lima",
+    "company_name": "Casa Santos Lima",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "184"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Casa José Pedro",
+    "company_name": "Casa José Pedro",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "185"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|CASA ERMELINDA FREITAS",
+    "company_name": "CASA ERMELINDA FREITAS",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "186"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|CASA DOS AMADOS",
+    "company_name": "CASA DOS AMADOS",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "187"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|CASA DA PASSARELLA",
+    "company_name": "CASA DA PASSARELLA",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "188"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|CARMIM",
+    "company_name": "CARMIM",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "189"
+  },
+  {
+    "exhibitor_key": "Morocco|W5E45|Cohen brothers manufactring and markting of alcoholic beverages l.t.",
+    "company_name": "Cohen brothers manufactring and markting of alcoholic beverages l.t.",
+    "booth_no": "W5E45",
+    "country": "Morocco",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "190"
+  },
+  {
+    "exhibitor_key": "France|W5X07|Champagne Amis de Beauregar",
+    "company_name": "Champagne Amis de Beauregar",
+    "booth_no": "W5X07",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "191"
+  },
+  {
+    "exhibitor_key": "France|W5A31-4|CHATEAU AD FRANCOS - SHANGHAI KOOK WINE CO.",
+    "company_name": "CHATEAU AD FRANCOS - SHANGHAI KOOK WINE CO.",
+    "booth_no": "W5A31-4",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "192"
+  },
+  {
+    "exhibitor_key": "France|W5A31-9|CHANTOVENT S.A.",
+    "company_name": "CHANTOVENT S.A.",
+    "booth_no": "W5A31-9",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "193"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-05|CW Wines",
+    "company_name": "CW Wines",
+    "booth_no": "W4C01-05",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "194"
+  },
+  {
+    "exhibitor_key": "Azerbaijan|W5C62|Chabiant",
+    "company_name": "Chabiant",
+    "booth_no": "W5C62",
+    "country": "Azerbaijan",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "195"
+  },
+  {
+    "exhibitor_key": "China|W4C80-15|Centare Vineyard",
+    "company_name": "Centare Vineyard",
+    "booth_no": "W4C80-15",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "196"
+  },
+  {
+    "exhibitor_key": "China|W4B31|CALIFORNIA WINE INSTITUTE",
+    "company_name": "CALIFORNIA WINE INSTITUTE",
+    "booth_no": "W4B31",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "197"
+  },
+  {
+    "exhibitor_key": "China|W4A76-14|Clos Ostler & Chateau Kiwi",
+    "company_name": "Clos Ostler & Chateau Kiwi",
+    "booth_no": "W4A76-14",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "198"
+  },
+  {
+    "exhibitor_key": "China|W4B31-08|CONSTELLATION BRANDS",
+    "company_name": "CONSTELLATION BRANDS",
+    "booth_no": "W4B31-08",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "199"
+  },
+  {
+    "exhibitor_key": "Albania|W4W01-2|CACO Winery",
+    "company_name": "CACO Winery",
+    "booth_no": "W4W01-2",
+    "country": "Albania",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "200"
+  },
+  {
+    "exhibitor_key": "Azerbaijan|W5C62|Chabiant Winery",
+    "company_name": "Chabiant Winery",
+    "booth_no": "W5C62",
+    "country": "Azerbaijan",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "201"
+  },
+  {
+    "exhibitor_key": "China|W5W09|Certiz Premier Products Limited",
+    "company_name": "Certiz Premier Products Limited",
+    "booth_no": "W5W09",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "202"
+  },
+  {
+    "exhibitor_key": "America|W4B31-03|Cobb Wines",
+    "company_name": "Cobb Wines",
+    "booth_no": "W4B31-03",
+    "country": "America",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "203"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-10|Carlo Schmitt Winery",
+    "company_name": "Carlo Schmitt Winery",
+    "booth_no": "W5C46-10",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "204"
+  },
+  {
+    "exhibitor_key": "America|W4B31-02|Chateau Montelena",
+    "company_name": "Chateau Montelena",
+    "booth_no": "W4B31-02",
+    "country": "America",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "205"
+  },
+  {
+    "exhibitor_key": "China|W4Y09|Caide (Shanghai) Industrial Development Co., Ltd",
+    "company_name": "Caide (Shanghai) Industrial Development Co., Ltd",
+    "booth_no": "W4Y09",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "206"
+  },
+  {
+    "exhibitor_key": "Germany|W5D55-2|Cologne Spirits GmbH",
+    "company_name": "Cologne Spirits GmbH",
+    "booth_no": "W5D55-2",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "207"
+  },
+  {
+    "exhibitor_key": "Israel|W5E45|C B DRIMKS",
+    "company_name": "C B DRIMKS",
+    "booth_no": "W5E45",
+    "country": "Israel",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "208"
+  },
+  {
+    "exhibitor_key": "China|W4D51|达美拥",
+    "company_name": "达美拥",
+    "booth_no": "W4D51",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "209"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-18|Don Sancho de Londoño",
+    "company_name": "Don Sancho de Londoño",
+    "booth_no": "W4A55-18",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "210"
+  },
+  {
+    "exhibitor_key": "Spain|W4A31-6|DOSTERRAS",
+    "company_name": "DOSTERRAS",
+    "booth_no": "W4A31-6",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "211"
+  },
+  {
+    "exhibitor_key": "Spain|W4A31-1|DO MONTSANT",
+    "company_name": "DO MONTSANT",
+    "booth_no": "W4A31-1",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "212"
+  },
+  {
+    "exhibitor_key": "USA||DAOU Family Estates",
+    "company_name": "DAOU Family Estates",
+    "booth_no": "",
+    "country": "USA",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "213"
+  },
+  {
+    "exhibitor_key": "France|W5A01-3|DOMAINE ARMAND HEITZ",
+    "company_name": "DOMAINE ARMAND HEITZ",
+    "booth_no": "W5A01-3",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "214"
+  },
+  {
+    "exhibitor_key": "China|W4D51-01|DRINK YN Brand Management Co., Ltd.",
+    "company_name": "DRINK YN Brand Management Co., Ltd.",
+    "booth_no": "W4D51-01",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "215"
+  },
+  {
+    "exhibitor_key": "Philippines|W5A46-2|DESTILERIA LIMTUACO & CO., INC.",
+    "company_name": "DESTILERIA LIMTUACO & CO., INC.",
+    "booth_no": "W5A46-2",
+    "country": "Philippines",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "216"
+  },
+  {
+    "exhibitor_key": "China|W4X05|大连尊禄国际贸易有限公司",
+    "company_name": "大连尊禄国际贸易有限公司",
+    "booth_no": "W4X05",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "217"
+  },
+  {
+    "exhibitor_key": "China|W4C37|DeZhou Oldman Winery Co., Ltd.",
+    "company_name": "DeZhou Oldman Winery Co., Ltd.",
+    "booth_no": "W4C37",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "218"
+  },
+  {
+    "exhibitor_key": "China|W4C31|Domaine de LanYue(Yantai)Co.,LTD.",
+    "company_name": "Domaine de LanYue(Yantai)Co.,LTD.",
+    "booth_no": "W4C31",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "219"
+  },
+  {
+    "exhibitor_key": "India|W5D70-B|DEVANS MODERN BREWERIES LTD",
+    "company_name": "DEVANS MODERN BREWERIES LTD",
+    "booth_no": "W5D70-B",
+    "country": "India",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "220"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4W15|Dog Point Vineyard",
+    "company_name": "Dog Point Vineyard",
+    "booth_no": "W4W15",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "221"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4W17|Dashwood",
+    "company_name": "Dashwood",
+    "booth_no": "W4W17",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "222"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55|D.O.Ca. Rioja",
+    "company_name": "D.O.Ca. Rioja",
+    "booth_no": "W4A55",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "223"
+  },
+  {
+    "exhibitor_key": "Spain|W4X13|DO Yecla",
+    "company_name": "DO Yecla",
+    "booth_no": "W4X13",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "224"
+  },
+  {
+    "exhibitor_key": "Spain|W4B15|DO TORO",
+    "company_name": "DO TORO",
+    "booth_no": "W4B15",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "225"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-05|Djordjevic Winery",
+    "company_name": "Djordjevic Winery",
+    "booth_no": "W5D10-05",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "226"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-04|Deuric Winery (Atos Fructum)",
+    "company_name": "Deuric Winery (Atos Fructum)",
+    "booth_no": "W5D10-04",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "227"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10|Development Agency of Serbia",
+    "company_name": "Development Agency of Serbia",
+    "booth_no": "W5D10",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "228"
+  },
+  {
+    "exhibitor_key": "Philippine|W5A46|Destileria Limtuaco & Co., Inc",
+    "company_name": "Destileria Limtuaco & Co., Inc",
+    "booth_no": "W5A46",
+    "country": "Philippine",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "229"
+  },
+  {
+    "exhibitor_key": "South Africa|W4C35|De Meye Wines",
+    "company_name": "De Meye Wines",
+    "booth_no": "W4C35",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "230"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-04|DGB",
+    "company_name": "DGB",
+    "booth_no": "W4A61-04",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "231"
+  },
+  {
+    "exhibitor_key": "Germany|W4W15|Dr. Pauly Bergweiler",
+    "company_name": "Dr. Pauly Bergweiler",
+    "booth_no": "W4W15",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "232"
+  },
+  {
+    "exhibitor_key": "China|W4W17|DP World Market Access China Co., LTD",
+    "company_name": "DP World Market Access China Co., LTD",
+    "booth_no": "W4W17",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "233"
+  },
+  {
+    "exhibitor_key": "China|W5D60|DACHSER Far East Ltd.",
+    "company_name": "DACHSER Far East Ltd.",
+    "booth_no": "W5D60",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "234"
+  },
+  {
+    "exhibitor_key": "France|W5A31-7|DOMAINE COSTE-MOYNIER",
+    "company_name": "DOMAINE COSTE-MOYNIER",
+    "booth_no": "W5A31-7",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "235"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-04|DGB South Africa",
+    "company_name": "DGB South Africa",
+    "booth_no": "W4A61-04",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "236"
+  },
+  {
+    "exhibitor_key": "Austria|W4A01-6|Destillerie Farthofer GmbH",
+    "company_name": "Destillerie Farthofer GmbH",
+    "booth_no": "W4A01-6",
+    "country": "Austria",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "237"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-12|Deutsches Weintor",
+    "company_name": "Deutsches Weintor",
+    "booth_no": "W5C46-12",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "238"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-21|Escudero",
+    "company_name": "Escudero",
+    "booth_no": "W4A55-21",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "239"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-20|El Pacto",
+    "company_name": "El Pacto",
+    "booth_no": "W4A55-20",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "240"
+  },
+  {
+    "exhibitor_key": "Portugal|W5C16-24|Esporão S.A.",
+    "company_name": "Esporão S.A.",
+    "booth_no": "W5C16-24",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "241"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-40|EGOMEI",
+    "company_name": "EGOMEI",
+    "booth_no": "W4A55-40",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "242"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-06|Erdevik Winery",
+    "company_name": "Erdevik Winery",
+    "booth_no": "W5D10-06",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "243"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|ESPORÃO",
+    "company_name": "ESPORÃO",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "244"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|ERVIDEIRA",
+    "company_name": "ERVIDEIRA",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "245"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Enoport Wines",
+    "company_name": "Enoport Wines",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "246"
+  },
+  {
+    "exhibitor_key": "China|W4B31-06|EVO WINE GROUP",
+    "company_name": "EVO WINE GROUP",
+    "booth_no": "W4B31-06",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "247"
+  },
+  {
+    "exhibitor_key": "Albania|W4W01-5|Enofama winery",
+    "company_name": "Enofama winery",
+    "booth_no": "W4W01-5",
+    "country": "Albania",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "248"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-7|Einig-Zenzen GmbH & Co. KG",
+    "company_name": "Einig-Zenzen GmbH & Co. KG",
+    "booth_no": "W5C46-7",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "249"
+  },
+  {
+    "exhibitor_key": "China|W5E30|Fushouhai Wine(Zhenjiang) Co.,Ltd",
+    "company_name": "Fushouhai Wine(Zhenjiang) Co.,Ltd",
+    "booth_no": "W5E30",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "250"
+  },
+  {
+    "exhibitor_key": "Ukraine|W5C64|\"FACTORY OF ALCOHOLIC BEVERAGES\" LLC",
+    "company_name": "\"FACTORY OF ALCOHOLIC BEVERAGES\" LLC",
+    "booth_no": "W5C64",
+    "country": "Ukraine",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "251"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-24|Franco Españolas",
+    "company_name": "Franco Españolas",
+    "booth_no": "W4A55-24",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "252"
+  },
+  {
+    "exhibitor_key": "Australia|W4W17|Fogarty Hall - DeepWoods",
+    "company_name": "Fogarty Hall - DeepWoods",
+    "booth_no": "W4W17",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "253"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76-04|Falua",
+    "company_name": "Falua",
+    "booth_no": "W5A76-04",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "254"
+  },
+  {
+    "exhibitor_key": "China|W5E30|Fushouhai Wine (Zhenjiang) CO.,Ltd",
+    "company_name": "Fushouhai Wine (Zhenjiang) CO.,Ltd",
+    "booth_no": "W5E30",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "255"
+  },
+  {
+    "exhibitor_key": "China|W4D70-09|Farmentation®",
+    "company_name": "Farmentation®",
+    "booth_no": "W4D70-09",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "256"
+  },
+  {
+    "exhibitor_key": "India|W5D70-D|FRATELLI VINEYARDS LIMITED",
+    "company_name": "FRATELLI VINEYARDS LIMITED",
+    "booth_no": "W5D70-D",
+    "country": "India",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "257"
+  },
+  {
+    "exhibitor_key": "Italy|W5A61-2|FAMIGLIA FURIA",
+    "company_name": "FAMIGLIA FURIA",
+    "booth_no": "W5A61-2",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "258"
+  },
+  {
+    "exhibitor_key": "Spain|W4X07|Fernando Castro",
+    "company_name": "Fernando Castro",
+    "booth_no": "W4X07",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "259"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-42|FINCA VALPIEDRA",
+    "company_name": "FINCA VALPIEDRA",
+    "booth_no": "W4A55-42",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "260"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-41|FINCA ALLENDE",
+    "company_name": "FINCA ALLENDE",
+    "booth_no": "W4A55-41",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "261"
+  },
+  {
+    "exhibitor_key": "Spain|W4B01-6|Finca Montepedroso",
+    "company_name": "Finca Montepedroso",
+    "booth_no": "W4B01-6",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "262"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-07|Frug Winery",
+    "company_name": "Frug Winery",
+    "booth_no": "W5D10-07",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "263"
+  },
+  {
+    "exhibitor_key": "Philippine|W5A46|Full Circle Craft Distillers Co.",
+    "company_name": "Full Circle Craft Distillers Co.",
+    "booth_no": "W5A46",
+    "country": "Philippine",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "264"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Falua - Wines from Portugal",
+    "company_name": "Falua - Wines from Portugal",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "265"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-11|Fairview Wines",
+    "company_name": "Fairview Wines",
+    "booth_no": "W4A61-11",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "266"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-12|FGW Winetrade International",
+    "company_name": "FGW Winetrade International",
+    "booth_no": "W5C46-12",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "267"
+  },
+  {
+    "exhibitor_key": "Australia|W4X08|Flat Rock Creek",
+    "company_name": "Flat Rock Creek",
+    "booth_no": "W4X08",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "268"
+  },
+  {
+    "exhibitor_key": "Australia|W4C10|First Hand Vintners",
+    "company_name": "First Hand Vintners",
+    "booth_no": "W4C10",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "269"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-06|Ferngrove Vineyards",
+    "company_name": "Ferngrove Vineyards",
+    "booth_no": "W4C01-06",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "270"
+  },
+  {
+    "exhibitor_key": "Spain|W4X11|FELIX SOLIS AVANTIS, S.A.",
+    "company_name": "FELIX SOLIS AVANTIS, S.A.",
+    "booth_no": "W4X11",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "271"
+  },
+  {
+    "exhibitor_key": "Australia|W4C50|Fogarty Hall Fine Wine Estates",
+    "company_name": "Fogarty Hall Fine Wine Estates",
+    "booth_no": "W4C50",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "272"
+  },
+  {
+    "exhibitor_key": "Spain|W4A17|FINCAS DE AZABACHE",
+    "company_name": "FINCAS DE AZABACHE",
+    "booth_no": "W4A17",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "273"
+  },
+  {
+    "exhibitor_key": "China|W5F20|广州尤迪国际贸易有限公司",
+    "company_name": "广州尤迪国际贸易有限公司",
+    "booth_no": "W5F20",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "274"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-03|Giesen",
+    "company_name": "Giesen",
+    "booth_no": "W4A76-03",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "275"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-26|Gómez de Segura Ibáñez",
+    "company_name": "Gómez de Segura Ibáñez",
+    "booth_no": "W4A55-26",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "276"
+  },
+  {
+    "exhibitor_key": "China|W4D51-07|GraceVineyard",
+    "company_name": "GraceVineyard",
+    "booth_no": "W4D51-07",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "277"
+  },
+  {
+    "exhibitor_key": "Hong Kong, China|W5F10|GEXPERT SUPPLY LIMITED",
+    "company_name": "GEXPERT SUPPLY LIMITED",
+    "booth_no": "W5F10",
+    "country": "Hong Kong, China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "278"
+  },
+  {
+    "exhibitor_key": "China|W4D01|GREAT WALL",
+    "company_name": "GREAT WALL",
+    "booth_no": "W4D01",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "279"
+  },
+  {
+    "exhibitor_key": "China|W5C67|GIGLIO",
+    "company_name": "GIGLIO",
+    "booth_no": "W5C67",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "280"
+  },
+  {
+    "exhibitor_key": "China|W5W10|German Wine Alliance",
+    "company_name": "German Wine Alliance",
+    "booth_no": "W5W10",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "281"
+  },
+  {
+    "exhibitor_key": "Ireland|W5Y12|Great Northern",
+    "company_name": "Great Northern",
+    "booth_no": "W5Y12",
+    "country": "Ireland",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "282"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-08|Giesen Group",
+    "company_name": "Giesen Group",
+    "booth_no": "W4A76-08",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "283"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-43|GARCÍA DE OLANO",
+    "company_name": "GARCÍA DE OLANO",
+    "booth_no": "W4A55-43",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "284"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-6|Georgian Wines & Spirits Company",
+    "company_name": "Georgian Wines & Spirits Company",
+    "booth_no": "W5B80-6",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "285"
+  },
+  {
+    "exhibitor_key": "France|W5W01|Groupe Grands Chais de France",
+    "company_name": "Groupe Grands Chais de France",
+    "booth_no": "W5W01",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "286"
+  },
+  {
+    "exhibitor_key": "Germany|W4W17|Gut Hermannsberg",
+    "company_name": "Gut Hermannsberg",
+    "booth_no": "W4W17",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "287"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-4|GP Winery GmbH",
+    "company_name": "GP Winery GmbH",
+    "booth_no": "W5D41-4",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "288"
+  },
+  {
+    "exhibitor_key": "Germany|W5C31-5|Günther Schlink GmbH",
+    "company_name": "Günther Schlink GmbH",
+    "booth_no": "W5C31-5",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "289"
+  },
+  {
+    "exhibitor_key": "China|W4E30-1|Golden Summit Trading Co. Ltd",
+    "company_name": "Golden Summit Trading Co. Ltd",
+    "booth_no": "W4E30-1",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "290"
+  },
+  {
+    "exhibitor_key": "Ireland|W5Y12|Great Northern Distillery",
+    "company_name": "Great Northern Distillery",
+    "booth_no": "W5Y12",
+    "country": "Ireland",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "291"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-4|GP Winery GmbH / S T E P P Wines",
+    "company_name": "GP Winery GmbH / S T E P P Wines",
+    "booth_no": "W5D41-4",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "292"
+  },
+  {
+    "exhibitor_key": "China|W5C03|GF S.r.l",
+    "company_name": "GF S.r.l",
+    "booth_no": "W5C03",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "293"
+  },
+  {
+    "exhibitor_key": "China|W4X08|Guangdong Caike Label Technology co., Ltd.",
+    "company_name": "Guangdong Caike Label Technology co., Ltd.",
+    "booth_no": "W4X08",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "294"
+  },
+  {
+    "exhibitor_key": "Spain|W4A19|GRAN GOTA WINERIES",
+    "company_name": "GRAN GOTA WINERIES",
+    "booth_no": "W4A19",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "295"
+  },
+  {
+    "exhibitor_key": "China|W5C85|German Wine Pavilion",
+    "company_name": "German Wine Pavilion",
+    "booth_no": "W5C85",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "296"
+  },
+  {
+    "exhibitor_key": "China|W5X03|GUANGDONG CHUANGPU WINES CO., LTD",
+    "company_name": "GUANGDONG CHUANGPU WINES CO., LTD",
+    "booth_no": "W5X03",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "297"
+  },
+  {
+    "exhibitor_key": "Germany|W5C31-6|German Wine Group GWG GmbH",
+    "company_name": "German Wine Group GWG GmbH",
+    "booth_no": "W5C31-6",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "298"
+  },
+  {
+    "exhibitor_key": "China|W5W10|German Wine Alliance(China)co.,Ltd",
+    "company_name": "German Wine Alliance(China)co.,Ltd",
+    "booth_no": "W5W10",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "299"
+  },
+  {
+    "exhibitor_key": "China|W5A40|GVS",
+    "company_name": "GVS",
+    "booth_no": "W5A40",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "300"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-28|Heras Cordón",
+    "company_name": "Heras Cordón",
+    "booth_no": "W4A55-28",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "301"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-27|Heraclio Alfaro",
+    "company_name": "Heraclio Alfaro",
+    "booth_no": "W4A55-27",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "302"
+  },
+  {
+    "exhibitor_key": "China|W4A34-1|Haikou Vistant Import and Export Trading Co., Ltd.",
+    "company_name": "Haikou Vistant Import and Export Trading Co., Ltd.",
+    "booth_no": "W4A34-1",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "303"
+  },
+  {
+    "exhibitor_key": "China|W5X08|Hangzhou Vitae Trading Co.,Ltd",
+    "company_name": "Hangzhou Vitae Trading Co.,Ltd",
+    "booth_no": "W5X08",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "304"
+  },
+  {
+    "exhibitor_key": "China|W4D78|Hunan Qi Joy Food Co., Ltd.",
+    "company_name": "Hunan Qi Joy Food Co., Ltd.",
+    "booth_no": "W4D78",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "305"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-03|Helder Crest",
+    "company_name": "Helder Crest",
+    "booth_no": "W4A61-03",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "306"
+  },
+  {
+    "exhibitor_key": "Republic of Korea|W4B70-02|Hoegok Brewery",
+    "company_name": "Hoegok Brewery",
+    "booth_no": "W4B70-02",
+    "country": "Republic of Korea",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "307"
+  },
+  {
+    "exhibitor_key": "Austria|W4A01-4|HOLZAPFELI",
+    "company_name": "HOLZAPFELI",
+    "booth_no": "W4A01-4",
+    "country": "Austria",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "308"
+  },
+  {
+    "exhibitor_key": "Austria|W4A01-2|HORVATH'S SPEZEREYEN",
+    "company_name": "HORVATH'S SPEZEREYEN",
+    "booth_no": "W4A01-2",
+    "country": "Austria",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "309"
+  },
+  {
+    "exhibitor_key": "China|W5C64|Hammond’s Spirits Ltd",
+    "company_name": "Hammond’s Spirits Ltd",
+    "booth_no": "W5C64",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "310"
+  },
+  {
+    "exhibitor_key": "China|W5C07|Hangzhou Sirius Wine Co. LTd",
+    "company_name": "Hangzhou Sirius Wine Co. LTd",
+    "booth_no": "W5C07",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "311"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-03|Helder Crest Wines",
+    "company_name": "Helder Crest Wines",
+    "booth_no": "W4A61-03",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "312"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-01|Indevin Villa Maria / Vidal / Thornbury",
+    "company_name": "Indevin Villa Maria / Vidal / Thornbury",
+    "booth_no": "W4A76-01",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "313"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-05|Imbuko Family Vintners",
+    "company_name": "Imbuko Family Vintners",
+    "booth_no": "W4A61-05",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "314"
+  },
+  {
+    "exhibitor_key": "Austria|W4A01-3|IN VINO WEIX",
+    "company_name": "IN VINO WEIX",
+    "booth_no": "W4A01-3",
+    "country": "Austria",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "315"
+  },
+  {
+    "exhibitor_key": "China|W4C01-07|Investment NSW",
+    "company_name": "Investment NSW",
+    "booth_no": "W4C01-07",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "316"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-05|Imbuko Wines (Pty) Ltd",
+    "company_name": "Imbuko Wines (Pty) Ltd",
+    "booth_no": "W4A61-05",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "317"
+  },
+  {
+    "exhibitor_key": "Austria|W4A01-3|In Vino Weix Weixelbaum",
+    "company_name": "In Vino Weix Weixelbaum",
+    "booth_no": "W4A01-3",
+    "country": "Austria",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "318"
+  },
+  {
+    "exhibitor_key": "China|W4D51|迦南酒业",
+    "company_name": "迦南酒业",
+    "booth_no": "W4D51",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "319"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76-08|José Maria da Fonseca Vinhos S.A",
+    "company_name": "José Maria da Fonseca Vinhos S.A",
+    "booth_no": "W5A76-08",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "320"
+  },
+  {
+    "exhibitor_key": "China|W5W06|JOYETOWN (SHANGHAI) INDUSTRIAL CO.，LTD.",
+    "company_name": "JOYETOWN (SHANGHAI) INDUSTRIAL CO.，LTD.",
+    "booth_no": "W5W06",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "321"
+  },
+  {
+    "exhibitor_key": "China|W5X10|Jiaozuo Zhongwei Special Products Pharmaceutical Co,Ltd.",
+    "company_name": "Jiaozuo Zhongwei Special Products Pharmaceutical Co,Ltd.",
+    "booth_no": "W5X10",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "322"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-15|Jeremic Winery",
+    "company_name": "Jeremic Winery",
+    "booth_no": "W5D10-15",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "323"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|JUSTINO'S MADEIRA",
+    "company_name": "JUSTINO'S MADEIRA",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "324"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Julia Kemper Wines",
+    "company_name": "Julia Kemper Wines",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "325"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|José Maria da Fonseca",
+    "company_name": "José Maria da Fonseca",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "326"
+  },
+  {
+    "exhibitor_key": "Republic of Korea|W4B70-07|Jinmac Andongsoju",
+    "company_name": "Jinmac Andongsoju",
+    "booth_no": "W4B70-07",
+    "country": "Republic of Korea",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "327"
+  },
+  {
+    "exhibitor_key": "Germany|W5D55-3|Johanninger x Weinreich GbR",
+    "company_name": "Johanninger x Weinreich GbR",
+    "booth_no": "W5D55-3",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "328"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-14|Joypattern (Beijing) Trading Co., Ltd",
+    "company_name": "Joypattern (Beijing) Trading Co., Ltd",
+    "booth_no": "W5C46-14",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "329"
+  },
+  {
+    "exhibitor_key": "China|W5B20|JETRO Shanghai Office（Japan External Trade Organization）",
+    "company_name": "JETRO Shanghai Office（Japan External Trade Organization）",
+    "booth_no": "W5B20",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "330"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-16|JSC Corporation Kindzmarauli",
+    "company_name": "JSC Corporation Kindzmarauli",
+    "booth_no": "W5B80-16",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "331"
+  },
+  {
+    "exhibitor_key": "China|W5C46-14|JoyPattern (Beijing) Trading Co., Ltd.",
+    "company_name": "JoyPattern (Beijing) Trading Co., Ltd.",
+    "booth_no": "W5C46-14",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "332"
+  },
+  {
+    "exhibitor_key": "China|W5D01|JF CORPORATION LIMITED",
+    "company_name": "JF CORPORATION LIMITED",
+    "booth_no": "W5D01",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "333"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-06|Kleine Zalze",
+    "company_name": "Kleine Zalze",
+    "booth_no": "W4A61-06",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "334"
+  },
+  {
+    "exhibitor_key": "Republic of Korea|W4B75|Korean Traditional Liquor Export Association",
+    "company_name": "Korean Traditional Liquor Export Association",
+    "booth_no": "W4B75",
+    "country": "Republic of Korea",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "335"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-08|Kovačević Winery",
+    "company_name": "Kovačević Winery",
+    "booth_no": "W5D10-08",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "336"
+  },
+  {
+    "exhibitor_key": "South Africa|W4W17|KWV",
+    "company_name": "KWV",
+    "booth_no": "W4W17",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "337"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-06|Kleine Zalze Wines",
+    "company_name": "Kleine Zalze Wines",
+    "booth_no": "W4A61-06",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "338"
+  },
+  {
+    "exhibitor_key": "R.O.Korea|W4B75|KTLEA",
+    "company_name": "KTLEA",
+    "booth_no": "W4B75",
+    "country": "R.O.Korea",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "339"
+  },
+  {
+    "exhibitor_key": "Republic of Korea|W4B70-05|Korea National Heritage Andongsoju",
+    "company_name": "Korea National Heritage Andongsoju",
+    "booth_no": "W4B70-05",
+    "country": "Republic of Korea",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "340"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-13|Kakheti Marani LLC",
+    "company_name": "Kakheti Marani LLC",
+    "booth_no": "W5B80-13",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "341"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-12|Kakhetian Traditional Winemaking (KTW)",
+    "company_name": "Kakhetian Traditional Winemaking (KTW)",
+    "booth_no": "W5B80-12",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "342"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-6|Knyphausen GmbH & Co.KG",
+    "company_name": "Knyphausen GmbH & Co.KG",
+    "booth_no": "W5C46-6",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "343"
+  },
+  {
+    "exhibitor_key": "Austria|W4A01-1|KERINGER",
+    "company_name": "KERINGER",
+    "booth_no": "W4A01-1",
+    "country": "Austria",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "344"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-08|Kay Brothers",
+    "company_name": "Kay Brothers",
+    "booth_no": "W4C01-08",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "345"
+  },
+  {
+    "exhibitor_key": "China|W4W15|King's Wine",
+    "company_name": "King's Wine",
+    "booth_no": "W4W15",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "346"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-09|Knappstein Wines",
+    "company_name": "Knappstein Wines",
+    "booth_no": "W4C01-09",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "347"
+  },
+  {
+    "exhibitor_key": "Albania|W4W01-3|Kantina Familjare Shehi (SHEHI FAMILY WINERY)",
+    "company_name": "Kantina Familjare Shehi (SHEHI FAMILY WINERY)",
+    "booth_no": "W4W01-3",
+    "country": "Albania",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "348"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-11|Klumpp Winery",
+    "company_name": "Klumpp Winery",
+    "booth_no": "W5C46-11",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "349"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-12|Kakhetian Traditional Winemaking",
+    "company_name": "Kakhetian Traditional Winemaking",
+    "booth_no": "W5B80-12",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "350"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4X04|LAWSON'S DRY HILLS",
+    "company_name": "LAWSON'S DRY HILLS",
+    "booth_no": "W4X04",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "351"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-33|Luzón / Corral",
+    "company_name": "Luzón / Corral",
+    "booth_no": "W4A55-33",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "352"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-32|Lozano (Juan Ramón Lozano)",
+    "company_name": "Lozano (Juan Ramón Lozano)",
+    "booth_no": "W4A55-32",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "353"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-31|LAN",
+    "company_name": "LAN",
+    "booth_no": "W4A55-31",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "354"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-29|La Mateo",
+    "company_name": "La Mateo",
+    "booth_no": "W4A55-29",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "355"
+  },
+  {
+    "exhibitor_key": "Portugal|W5C16-21|Lavradores de Feitoria",
+    "company_name": "Lavradores de Feitoria",
+    "booth_no": "W5C16-21",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "356"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-08|L'Avenir Wine Estate",
+    "company_name": "L'Avenir Wine Estate",
+    "booth_no": "W4A61-08",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "357"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-18|Land of Tomorrow by Winegrapes Australia",
+    "company_name": "Land of Tomorrow by Winegrapes Australia",
+    "booth_no": "W4C01-18",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "358"
+  },
+  {
+    "exhibitor_key": "China|W5D70|LONGMAN'S",
+    "company_name": "LONGMAN'S",
+    "booth_no": "W5D70",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "359"
+  },
+  {
+    "exhibitor_key": "China|W4D70-04|Lewei",
+    "company_name": "Lewei",
+    "booth_no": "W4D70-04",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "360"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4X04|Lawsons Dry Hills",
+    "company_name": "Lawsons Dry Hills",
+    "booth_no": "W4X04",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "361"
+  },
+  {
+    "exhibitor_key": "Spain|W4A18|LOPEZ MORENAS S.L.",
+    "company_name": "LOPEZ MORENAS S.L.",
+    "booth_no": "W4A18",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "362"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-44|LA RIOJA ALTA",
+    "company_name": "LA RIOJA ALTA",
+    "booth_no": "W4A55-44",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "363"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-16|La Gora Winery",
+    "company_name": "La Gora Winery",
+    "booth_no": "W5D10-16",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "364"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-09|Lastar Winery",
+    "company_name": "Lastar Winery",
+    "booth_no": "W5D10-09",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "365"
+  },
+  {
+    "exhibitor_key": "Philippine|W5A46|连云港道恩贸易有限公司",
+    "company_name": "连云港道恩贸易有限公司",
+    "booth_no": "W5A46",
+    "country": "Philippine",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "366"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Lindeborg Wines",
+    "company_name": "Lindeborg Wines",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "367"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Lavradores de Feitoria - Douro Collective",
+    "company_name": "Lavradores de Feitoria - Douro Collective",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "368"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-08|L'Avenir & Le Bonheur Wine Estates",
+    "company_name": "L'Avenir & Le Bonheur Wine Estates",
+    "booth_no": "W4A61-08",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "369"
+  },
+  {
+    "exhibitor_key": "Mexico|W4D61|LA CEPA WINE & SPIRITS, LLC",
+    "company_name": "LA CEPA WINE & SPIRITS, LLC",
+    "booth_no": "W4D61",
+    "country": "Mexico",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "370"
+  },
+  {
+    "exhibitor_key": "Canada|W4X05|LE VIEUX PIN",
+    "company_name": "LE VIEUX PIN",
+    "booth_no": "W4X05",
+    "country": "Canada",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "371"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-18|LLC RTVELISI",
+    "company_name": "LLC RTVELISI",
+    "booth_no": "W5B80-18",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "372"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80|LEPL National Wine Agency",
+    "company_name": "LEPL National Wine Agency",
+    "booth_no": "W5B80",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "373"
+  },
+  {
+    "exhibitor_key": "France|W5C02|La Vallongue",
+    "company_name": "La Vallongue",
+    "booth_no": "W5C02",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "374"
+  },
+  {
+    "exhibitor_key": "France|W5A31-3|Les Grappes",
+    "company_name": "Les Grappes",
+    "booth_no": "W5A31-3",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "375"
+  },
+  {
+    "exhibitor_key": "France|W5A31-5|LGI WINES",
+    "company_name": "LGI WINES",
+    "booth_no": "W5A31-5",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "376"
+  },
+  {
+    "exhibitor_key": "France|W5A31-6|LES DOMAINES PAUL MAS",
+    "company_name": "LES DOMAINES PAUL MAS",
+    "booth_no": "W5A31-6",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "377"
+  },
+  {
+    "exhibitor_key": "Germany|W5C31-7|Les Grands Chais de France",
+    "company_name": "Les Grands Chais de France",
+    "booth_no": "W5C31-7",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "378"
+  },
+  {
+    "exhibitor_key": "China|W4C33|LANGMEIL WINERY",
+    "company_name": "LANGMEIL WINERY",
+    "booth_no": "W4C33",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "379"
+  },
+  {
+    "exhibitor_key": "France|W5A31-5|LGI",
+    "company_name": "LGI",
+    "booth_no": "W5A31-5",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "380"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-40|Murúa",
+    "company_name": "Murúa",
+    "booth_no": "W4A55-40",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "381"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-39|Maset Rioja",
+    "company_name": "Maset Rioja",
+    "booth_no": "W4A55-39",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "382"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-38|Martínez Lacuesta",
+    "company_name": "Martínez Lacuesta",
+    "booth_no": "W4A55-38",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "383"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-35|Marqués de Cáceres (Unión Vitivinícola S.A.)",
+    "company_name": "Marqués de Cáceres (Unión Vitivinícola S.A.)",
+    "booth_no": "W4A55-35",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "384"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-34|Manzanos",
+    "company_name": "Manzanos",
+    "booth_no": "W4A55-34",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "385"
+  },
+  {
+    "exhibitor_key": "Spain|W4A33|MASET",
+    "company_name": "MASET",
+    "booth_no": "W4A33",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "386"
+  },
+  {
+    "exhibitor_key": "Spain|W4A33|MASET FAMILY WINE GROUP",
+    "company_name": "MASET FAMILY WINE GROUP",
+    "booth_no": "W4A33",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "387"
+  },
+  {
+    "exhibitor_key": "China|W4D70-06|Mingdi Wines",
+    "company_name": "Mingdi Wines",
+    "booth_no": "W4D70-06",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "388"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4W17|Mt Difficulty",
+    "company_name": "Mt Difficulty",
+    "booth_no": "W4W17",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "389"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-12|Marisco Vineyards THE NED",
+    "company_name": "Marisco Vineyards THE NED",
+    "booth_no": "W4A76-12",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "390"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-07|Misity Cove",
+    "company_name": "Misity Cove",
+    "booth_no": "W4A76-07",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "391"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-04|Man O' War Vineyards Swiftsure Vineyards",
+    "company_name": "Man O' War Vineyards Swiftsure Vineyards",
+    "booth_no": "W4A76-04",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "392"
+  },
+  {
+    "exhibitor_key": "China|W4A76-03|Misty Cove Wines",
+    "company_name": "Misty Cove Wines",
+    "booth_no": "W4A76-03",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "393"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-46|MARQUÉS DEL ATRIO",
+    "company_name": "MARQUÉS DEL ATRIO",
+    "booth_no": "W4A55-46",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "394"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-45|MARQUÉS DE LA CONCORDIA",
+    "company_name": "MARQUÉS DE LA CONCORDIA",
+    "booth_no": "W4A55-45",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "395"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-10|Matalj Winery",
+    "company_name": "Matalj Winery",
+    "booth_no": "W5D10-10",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "396"
+  },
+  {
+    "exhibitor_key": "Republic of Korea|W4B70-04|Myung In Andongsoju",
+    "company_name": "Myung In Andongsoju",
+    "booth_no": "W4B70-04",
+    "country": "Republic of Korea",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "397"
+  },
+  {
+    "exhibitor_key": "Republic of Korea|W4B70-01|Myeong Pum Andongsoju",
+    "company_name": "Myeong Pum Andongsoju",
+    "booth_no": "W4B70-01",
+    "country": "Republic of Korea",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "398"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-7|Marniskari LLC",
+    "company_name": "Marniskari LLC",
+    "booth_no": "W5B80-7",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "399"
+  },
+  {
+    "exhibitor_key": "France|W5A01-2|MAISON ANDRE GOICHOT",
+    "company_name": "MAISON ANDRE GOICHOT",
+    "booth_no": "W5A01-2",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "400"
+  },
+  {
+    "exhibitor_key": "China|W5A01-4|MAISON SALIN",
+    "company_name": "MAISON SALIN",
+    "booth_no": "W5A01-4",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "401"
+  },
+  {
+    "exhibitor_key": "Australia|W4C10|Murray Street Vineyard",
+    "company_name": "Murray Street Vineyard",
+    "booth_no": "W4C10",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "402"
+  },
+  {
+    "exhibitor_key": "Australia|W4W17|Mr Riggs",
+    "company_name": "Mr Riggs",
+    "booth_no": "W4W17",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "403"
+  },
+  {
+    "exhibitor_key": "Spain|W4B01-8|MUSA DOMAINE",
+    "company_name": "MUSA DOMAINE",
+    "booth_no": "W4B01-8",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "404"
+  },
+  {
+    "exhibitor_key": "Hong Kong, China|W5X09|Msquare Wine Limited",
+    "company_name": "Msquare Wine Limited",
+    "booth_no": "W5X09",
+    "country": "Hong Kong, China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "405"
+  },
+  {
+    "exhibitor_key": "South Africa|W4C38|Marula Wine (Ningbo) Co.Ltd",
+    "company_name": "Marula Wine (Ningbo) Co.Ltd",
+    "booth_no": "W4C38",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "406"
+  },
+  {
+    "exhibitor_key": "Republic of Armenia|W5F05|NEW LINE BRANDS GLOBAL LLC",
+    "company_name": "NEW LINE BRANDS GLOBAL LLC",
+    "booth_no": "W5F05",
+    "country": "Republic of Armenia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "407"
+  },
+  {
+    "exhibitor_key": "China|W4D70-02|No&Low Lifestyle",
+    "company_name": "No&Low Lifestyle",
+    "booth_no": "W4D70-02",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "408"
+  },
+  {
+    "exhibitor_key": "South Africa|W4C35|Nuiba Consult",
+    "company_name": "Nuiba Consult",
+    "booth_no": "W4C35",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "409"
+  },
+  {
+    "exhibitor_key": "Georgia|W5F08|Naked LLC",
+    "company_name": "Naked LLC",
+    "booth_no": "W5F08",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "410"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76|New Zealand Winegrowers",
+    "company_name": "New Zealand Winegrowers",
+    "booth_no": "W4A76",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "411"
+  },
+  {
+    "exhibitor_key": "Georgia|W5F08|Naked Ltd",
+    "company_name": "Naked Ltd",
+    "booth_no": "W5F08",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "412"
+  },
+  {
+    "exhibitor_key": "Hong Kong, China|W4E50|Orange Wine Zone by Meiburg Wine Media",
+    "company_name": "Orange Wine Zone by Meiburg Wine Media",
+    "booth_no": "W4E50",
+    "country": "Hong Kong, China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "413"
+  },
+  {
+    "exhibitor_key": "Serbia|W5F15|OLD PLUM",
+    "company_name": "OLD PLUM",
+    "booth_no": "W5F15",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "414"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-01|Origin Wine",
+    "company_name": "Origin Wine",
+    "booth_no": "W4A61-01",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "415"
+  },
+  {
+    "exhibitor_key": "China|W4C45|ONE LESSON SUPPLY CHAIN",
+    "company_name": "ONE LESSON SUPPLY CHAIN",
+    "booth_no": "W4C45",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "416"
+  },
+  {
+    "exhibitor_key": "China|W4D70-10|Purple Mist",
+    "company_name": "Purple Mist",
+    "booth_no": "W4D70-10",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "417"
+  },
+  {
+    "exhibitor_key": "Italy|W5A61-3|PROSIT GROUP",
+    "company_name": "PROSIT GROUP",
+    "booth_no": "W5A61-3",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "418"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-44|Proelio",
+    "company_name": "Proelio",
+    "booth_no": "W4A55-44",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "419"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-41|Paco García",
+    "company_name": "Paco García",
+    "booth_no": "W4A55-41",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "420"
+  },
+  {
+    "exhibitor_key": "Spain|W4A32|PRODECA S.A",
+    "company_name": "PRODECA S.A",
+    "booth_no": "W4A32",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "421"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76-17|Pereira D'Oliveira",
+    "company_name": "Pereira D'Oliveira",
+    "booth_no": "W5A76-17",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "422"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76-12|Porttable",
+    "company_name": "Porttable",
+    "booth_no": "W5A76-12",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "423"
+  },
+  {
+    "exhibitor_key": "Albania|W4W01|PUPA WINERY",
+    "company_name": "PUPA WINERY",
+    "booth_no": "W4W01",
+    "country": "Albania",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "424"
+  },
+  {
+    "exhibitor_key": "China|W4A20|PuJia Wine",
+    "company_name": "PuJia Wine",
+    "booth_no": "W4A20",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "425"
+  },
+  {
+    "exhibitor_key": "China|W4D70-03|Petit Mont",
+    "company_name": "Petit Mont",
+    "booth_no": "W4D70-03",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "426"
+  },
+  {
+    "exhibitor_key": "India|W5D70-A|PAUL JOHN DISTILLIERS PVT LIMITED",
+    "company_name": "PAUL JOHN DISTILLIERS PVT LIMITED",
+    "booth_no": "W5D70-A",
+    "country": "India",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "427"
+  },
+  {
+    "exhibitor_key": "Italy|W5A61-3|PROSIT GROUP S.P.A.",
+    "company_name": "PROSIT GROUP S.P.A.",
+    "booth_no": "W5A61-3",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "428"
+  },
+  {
+    "exhibitor_key": "Armenia|W5F05|Pogossian Luxury Brand House",
+    "company_name": "Pogossian Luxury Brand House",
+    "booth_no": "W5F05",
+    "country": "Armenia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "429"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-48|PREMIUM FINCAS",
+    "company_name": "PREMIUM FINCAS",
+    "booth_no": "W4A55-48",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "430"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-47|PAGOS DEL REY",
+    "company_name": "PAGOS DEL REY",
+    "booth_no": "W4A55-47",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "431"
+  },
+  {
+    "exhibitor_key": "Spain|W4B01-11|PROTOS",
+    "company_name": "PROTOS",
+    "booth_no": "W4B01-11",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "432"
+  },
+  {
+    "exhibitor_key": "Spain|W4B01-1|PINNA FIDELIS",
+    "company_name": "PINNA FIDELIS",
+    "booth_no": "W4B01-1",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "433"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-11|PIK Oplenac",
+    "company_name": "PIK Oplenac",
+    "booth_no": "W5D10-11",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "434"
+  },
+  {
+    "exhibitor_key": "Philippine|W5A46|Philippine Trade and Investment Center-Shanghai",
+    "company_name": "Philippine Trade and Investment Center-Shanghai",
+    "booth_no": "W5A46",
+    "country": "Philippine",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "435"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Pereira D'Oliveira(Vinhos), Lda.",
+    "company_name": "Pereira D'Oliveira(Vinhos), Lda.",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "436"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Poças",
+    "company_name": "Poças",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "437"
+  },
+  {
+    "exhibitor_key": "USA|W4B31-07|Palmaz Vineyards",
+    "company_name": "Palmaz Vineyards",
+    "booth_no": "W4B31-07",
+    "country": "USA",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "438"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-15|PERI WINE LLC",
+    "company_name": "PERI WINE LLC",
+    "booth_no": "W5B80-15",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "439"
+  },
+  {
+    "exhibitor_key": "France|W5A10|PLAIMONT PRODUCTEURS",
+    "company_name": "PLAIMONT PRODUCTEURS",
+    "booth_no": "W5A10",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "440"
+  },
+  {
+    "exhibitor_key": "Germany|W5C31-11|Peter Mertes KG",
+    "company_name": "Peter Mertes KG",
+    "booth_no": "W5C31-11",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "441"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-11|Penny's Hill Estate",
+    "company_name": "Penny's Hill Estate",
+    "booth_no": "W4C01-11",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "442"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-10|Peerick",
+    "company_name": "Peerick",
+    "booth_no": "W4C01-10",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "443"
+  },
+  {
+    "exhibitor_key": "China|W5A46|Philippine Trade and Investment Center (Shanghai)",
+    "company_name": "Philippine Trade and Investment Center (Shanghai)",
+    "booth_no": "W5A46",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "444"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-11|PIK OPLENAC d.o.o. Topola SERBI",
+    "company_name": "PIK OPLENAC d.o.o. Topola SERBI",
+    "booth_no": "W5D10-11",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "445"
+  },
+  {
+    "exhibitor_key": "France|W5A31-1|Producta Vignobles",
+    "company_name": "Producta Vignobles",
+    "booth_no": "W5A31-1",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "446"
+  },
+  {
+    "exhibitor_key": "Malaysia|W5Y09|PARAGON CARE SDN BHD",
+    "company_name": "PARAGON CARE SDN BHD",
+    "booth_no": "W5Y09",
+    "country": "Malaysia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "447"
+  },
+  {
+    "exhibitor_key": "China|W4B31-01|PURLIEU WINES",
+    "company_name": "PURLIEU WINES",
+    "booth_no": "W4B31-01",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "448"
+  },
+  {
+    "exhibitor_key": "China|W4D51|麒響",
+    "company_name": "麒響",
+    "booth_no": "W4D51",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "449"
+  },
+  {
+    "exhibitor_key": "Portugal|W5C16-27|Quinta & Casa das Hortas",
+    "company_name": "Quinta & Casa das Hortas",
+    "booth_no": "W5C16-27",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "450"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76-11|Quinta D´Amares",
+    "company_name": "Quinta D´Amares",
+    "booth_no": "W5A76-11",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "451"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Quinta Vale Benfeito",
+    "company_name": "Quinta Vale Benfeito",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "452"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Quinta do Vallado",
+    "company_name": "Quinta do Vallado",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "453"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Quinta D'Amares",
+    "company_name": "Quinta D'Amares",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "454"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-09|Quoin Rock Wine",
+    "company_name": "Quoin Rock Wine",
+    "booth_no": "W4A61-09",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "455"
+  },
+  {
+    "exhibitor_key": "Germany|W5D55-1|QUASAR VENTURES GmbH",
+    "company_name": "QUASAR VENTURES GmbH",
+    "booth_no": "W5D55-1",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "456"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-9|39 Qvevri",
+    "company_name": "39 Qvevri",
+    "booth_no": "W5B80-9",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "457"
+  },
+  {
+    "exhibitor_key": "Spain|W4B01-12|乔斯帕里恩特酒庄",
+    "company_name": "乔斯帕里恩特酒庄",
+    "booth_no": "W4B01-12",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "458"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-45|Riojanas",
+    "company_name": "Riojanas",
+    "booth_no": "W4A55-45",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "459"
+  },
+  {
+    "exhibitor_key": "Czech Republic|W5Y02|R.Jelinek",
+    "company_name": "R.Jelinek",
+    "booth_no": "W5Y02",
+    "country": "Czech Republic",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "460"
+  },
+  {
+    "exhibitor_key": "India|W5D70-C|REVELRY DISTILLERY PVT LIMITED",
+    "company_name": "REVELRY DISTILLERY PVT LIMITED",
+    "booth_no": "W5D70-C",
+    "country": "India",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "461"
+  },
+  {
+    "exhibitor_key": "Italy|W5A61-5|Rive della Chiesa",
+    "company_name": "Rive della Chiesa",
+    "booth_no": "W5A61-5",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "462"
+  },
+  {
+    "exhibitor_key": "France|W5A18|Rhonéa",
+    "company_name": "Rhonéa",
+    "booth_no": "W5A18",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "463"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-1|Römerhof Weinhaus GmbH",
+    "company_name": "Römerhof Weinhaus GmbH",
+    "booth_no": "W5D41-1",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "464"
+  },
+  {
+    "exhibitor_key": "Austria|W4A01-8|REEH",
+    "company_name": "REEH",
+    "booth_no": "W4A01-8",
+    "country": "Austria",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "465"
+  },
+  {
+    "exhibitor_key": "Australia|W4X08|Richard Buller Wines",
+    "company_name": "Richard Buller Wines",
+    "booth_no": "W4X08",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "466"
+  },
+  {
+    "exhibitor_key": "China|W4C01-16|Riversdale Fine Wines",
+    "company_name": "Riversdale Fine Wines",
+    "booth_no": "W4C01-16",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "467"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-12|Rathbone Wine Group",
+    "company_name": "Rathbone Wine Group",
+    "booth_no": "W4C01-12",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "468"
+  },
+  {
+    "exhibitor_key": "Hungary|W5A13-03|Royal Tokaji",
+    "company_name": "Royal Tokaji",
+    "booth_no": "W5A13-03",
+    "country": "Hungary",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "469"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-6|Reh Kendermann GmbH Weinkellerei",
+    "company_name": "Reh Kendermann GmbH Weinkellerei",
+    "booth_no": "W5D41-6",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "470"
+  },
+  {
+    "exhibitor_key": "China|W5A15|Rising Star Supply Chain",
+    "company_name": "Rising Star Supply Chain",
+    "booth_no": "W5A15",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "471"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-1|Roemerhof Weinhaus GmbH",
+    "company_name": "Roemerhof Weinhaus GmbH",
+    "booth_no": "W5D41-1",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "472"
+  },
+  {
+    "exhibitor_key": "Czech Republic|W5Y02|RUDOLF JELÍNEK a.s.",
+    "company_name": "RUDOLF JELÍNEK a.s.",
+    "booth_no": "W5Y02",
+    "country": "Czech Republic",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "473"
+  },
+  {
+    "exhibitor_key": "China|W4D51|圣域",
+    "company_name": "圣域",
+    "booth_no": "W4D51",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "474"
+  },
+  {
+    "exhibitor_key": "Spain|W4A34-1|Sota els Àngels",
+    "company_name": "Sota els Àngels",
+    "booth_no": "W4A34-1",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "475"
+  },
+  {
+    "exhibitor_key": "France|W5C02|SAS LA VALLONGUE SAS",
+    "company_name": "SAS LA VALLONGUE SAS",
+    "booth_no": "W5C02",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "476"
+  },
+  {
+    "exhibitor_key": "Albania|W4W01|SHEHI FAMILY WINERY",
+    "company_name": "SHEHI FAMILY WINERY",
+    "booth_no": "W4W01",
+    "country": "Albania",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "477"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76-15|Santos & Seixo Wines",
+    "company_name": "Santos & Seixo Wines",
+    "booth_no": "W5A76-15",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "478"
+  },
+  {
+    "exhibitor_key": "China|W5C05|深圳黑鲸国际贸易有限公司",
+    "company_name": "深圳黑鲸国际贸易有限公司",
+    "booth_no": "W5C05",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "479"
+  },
+  {
+    "exhibitor_key": "China|W5Y07|山东多隆包装有限公司",
+    "company_name": "山东多隆包装有限公司",
+    "booth_no": "W5Y07",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "480"
+  },
+  {
+    "exhibitor_key": "China|W5C60|Suzhou Yizhi Refrigeration Equipment Co., Ltd",
+    "company_name": "Suzhou Yizhi Refrigeration Equipment Co., Ltd",
+    "booth_no": "W5C60",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "481"
+  },
+  {
+    "exhibitor_key": "China|W4C15|SAINT HERMA",
+    "company_name": "SAINT HERMA",
+    "booth_no": "W4C15",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "482"
+  },
+  {
+    "exhibitor_key": "China|W5X06|Sleepy Grape（Shanghai Beilan Weita Trading Co., Ltd.）",
+    "company_name": "Sleepy Grape（Shanghai Beilan Weita Trading Co., Ltd.）",
+    "booth_no": "W5X06",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "483"
+  },
+  {
+    "exhibitor_key": "China|W5D01|上海鼎尚企业发展有限公司",
+    "company_name": "上海鼎尚企业发展有限公司",
+    "booth_no": "W5D01",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "484"
+  },
+  {
+    "exhibitor_key": "China|W5B01|上海桔滋贸易有限公司",
+    "company_name": "上海桔滋贸易有限公司",
+    "booth_no": "W5B01",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "485"
+  },
+  {
+    "exhibitor_key": "China|W5B71|Sorsi diVini",
+    "company_name": "Sorsi diVini",
+    "booth_no": "W5B71",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "486"
+  },
+  {
+    "exhibitor_key": "China|W4W15|深圳市帝醇酒庄贸易有限公司",
+    "company_name": "深圳市帝醇酒庄贸易有限公司",
+    "booth_no": "W4W15",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "487"
+  },
+  {
+    "exhibitor_key": "China|W4C36|Shanghai Wine Time import & export Pty Ltd",
+    "company_name": "Shanghai Wine Time import & export Pty Ltd",
+    "booth_no": "W4C36",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "488"
+  },
+  {
+    "exhibitor_key": "China|W4C33|Shenzhen Tongfu Supply Chain Co.,Ltd",
+    "company_name": "Shenzhen Tongfu Supply Chain Co.,Ltd",
+    "booth_no": "W4C33",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "489"
+  },
+  {
+    "exhibitor_key": "China|W4D70-05|Si Mang",
+    "company_name": "Si Mang",
+    "booth_no": "W4D70-05",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "490"
+  },
+  {
+    "exhibitor_key": "China|W4D70-01|Shofang",
+    "company_name": "Shofang",
+    "booth_no": "W4D70-01",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "491"
+  },
+  {
+    "exhibitor_key": "Chile|W4C80-09|Santa Rita",
+    "company_name": "Santa Rita",
+    "booth_no": "W4C80-09",
+    "country": "Chile",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "492"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4C52|SEIFRIED ESTATE",
+    "company_name": "SEIFRIED ESTATE",
+    "booth_no": "W4C52",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "493"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-15|Stoneleigh Brancott Estates Mud House Church Road",
+    "company_name": "Stoneleigh Brancott Estates Mud House Church Road",
+    "booth_no": "W4A76-15",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "494"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-06|Shanghai Xinlijieli Network Technology Bladen Quartz Reef Folding Hill",
+    "company_name": "Shanghai Xinlijieli Network Technology Bladen Quartz Reef Folding Hill",
+    "booth_no": "W4A76-06",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "495"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|SYMINGTON FAMILY ESTATES",
+    "company_name": "SYMINGTON FAMILY ESTATES",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "496"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Santos & Seixo Wines",
+    "company_name": "Santos & Seixo Wines",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "497"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-07|SPIER WINE FARM",
+    "company_name": "SPIER WINE FARM",
+    "booth_no": "W4A61-07",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "498"
+  },
+  {
+    "exhibitor_key": "USA|W4B31-01|SHANGHAI GS TRADING",
+    "company_name": "SHANGHAI GS TRADING",
+    "booth_no": "W4B31-01",
+    "country": "USA",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "499"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-10|Schuchmann Wines Georgia",
+    "company_name": "Schuchmann Wines Georgia",
+    "booth_no": "W5B80-10",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "500"
+  },
+  {
+    "exhibitor_key": "Germany|W5C65|Schmitt Soehne GmbH",
+    "company_name": "Schmitt Soehne GmbH",
+    "booth_no": "W5C65",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "501"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-7|Sander - ökologische Weine",
+    "company_name": "Sander - ökologische Weine",
+    "booth_no": "W5D41-7",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "502"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-13|Steinhardter Hof W. Bamberger & Söhne GmbH",
+    "company_name": "Steinhardter Hof W. Bamberger & Söhne GmbH",
+    "booth_no": "W5C46-13",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "503"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-2|Spiess-Wein GmbH",
+    "company_name": "Spiess-Wein GmbH",
+    "booth_no": "W5C46-2",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "504"
+  },
+  {
+    "exhibitor_key": "Germany|W5C31-7|Shanghai Hong Ao",
+    "company_name": "Shanghai Hong Ao",
+    "booth_no": "W5C31-7",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "505"
+  },
+  {
+    "exhibitor_key": "Austria|W4A01-9|SABATHI",
+    "company_name": "SABATHI",
+    "booth_no": "W4A01-9",
+    "country": "Austria",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "506"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-15|Storm Ridge",
+    "company_name": "Storm Ridge",
+    "booth_no": "W4C01-15",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "507"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-14|Seven Barrels",
+    "company_name": "Seven Barrels",
+    "booth_no": "W4C01-14",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "508"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-13|Seppeltsfield Wines & Penny's Hill Estate",
+    "company_name": "Seppeltsfield Wines & Penny's Hill Estate",
+    "booth_no": "W4C01-13",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "509"
+  },
+  {
+    "exhibitor_key": "China|W4C80-09|SHANGHAI VISION FINE WINES",
+    "company_name": "SHANGHAI VISION FINE WINES",
+    "booth_no": "W4C80-09",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "510"
+  },
+  {
+    "exhibitor_key": "China|W5B72|Shenzhen Maison Trading Co., Ltd.",
+    "company_name": "Shenzhen Maison Trading Co., Ltd.",
+    "booth_no": "W5B72",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "511"
+  },
+  {
+    "exhibitor_key": "China|W4A76-06|Shanghai Xinlijieli Network Technology Ltd",
+    "company_name": "Shanghai Xinlijieli Network Technology Ltd",
+    "booth_no": "W4A76-06",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "512"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-5|SHALOSHVILI CELLAR LTD",
+    "company_name": "SHALOSHVILI CELLAR LTD",
+    "booth_no": "W5B80-5",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "513"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-13|Seppeltsfield & Penny’s Hill Estate",
+    "company_name": "Seppeltsfield & Penny’s Hill Estate",
+    "booth_no": "W4C01-13",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "514"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-14|SEVEN BARRELS WINE",
+    "company_name": "SEVEN BARRELS WINE",
+    "booth_no": "W4C01-14",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "515"
+  },
+  {
+    "exhibitor_key": "China|W5D70|shenzheng longman import & export company ltd",
+    "company_name": "shenzheng longman import & export company ltd",
+    "booth_no": "W5D70",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "516"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-12|Sena Spirits",
+    "company_name": "Sena Spirits",
+    "booth_no": "W5D10-12",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "517"
+  },
+  {
+    "exhibitor_key": "China|W5X01|Shanghai Zhaomei Jiacheng Supply Chain Management Co., Ltd.",
+    "company_name": "Shanghai Zhaomei Jiacheng Supply Chain Management Co., Ltd.",
+    "booth_no": "W5X01",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "518"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10|SERBIA NATIONAL PAVILION",
+    "company_name": "SERBIA NATIONAL PAVILION",
+    "booth_no": "W5D10",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "519"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61-02|Swartland Winery",
+    "company_name": "Swartland Winery",
+    "booth_no": "W4A61-02",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "520"
+  },
+  {
+    "exhibitor_key": "China|W5X16|Shanghai LC Printing Co.,Ltd",
+    "company_name": "Shanghai LC Printing Co.,Ltd",
+    "booth_no": "W5X16",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "521"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-7|Sander",
+    "company_name": "Sander",
+    "booth_no": "W5D41-7",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "522"
+  },
+  {
+    "exhibitor_key": "Germany|W5C65|Schmitt Söhne Wines",
+    "company_name": "Schmitt Söhne Wines",
+    "booth_no": "W5C65",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "523"
+  },
+  {
+    "exhibitor_key": "Hungary|W5A13-02|SAUSKA&TÁRSA Kft.",
+    "company_name": "SAUSKA&TÁRSA Kft.",
+    "booth_no": "W5A13-02",
+    "country": "Hungary",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "524"
+  },
+  {
+    "exhibitor_key": "Spain|W4X15|SANTA CRUZ DE ALPERA S. COOP. DE C-LM",
+    "company_name": "SANTA CRUZ DE ALPERA S. COOP. DE C-LM",
+    "booth_no": "W4X15",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "525"
+  },
+  {
+    "exhibitor_key": "China|W4C53|Shaoxing Mansong Huangjiu Co., Ltd.",
+    "company_name": "Shaoxing Mansong Huangjiu Co., Ltd.",
+    "booth_no": "W4C53",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "526"
+  },
+  {
+    "exhibitor_key": "China|W4E30-3|Shandong Manfei Import and Export Trade Co., Ltd.",
+    "company_name": "Shandong Manfei Import and Export Trade Co., Ltd.",
+    "booth_no": "W4E30-3",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "527"
+  },
+  {
+    "exhibitor_key": "China|W5C01|SGARZI LUIGI WINE (SHENZHEN) CO., LTD",
+    "company_name": "SGARZI LUIGI WINE (SHENZHEN) CO., LTD",
+    "booth_no": "W5C01",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "528"
+  },
+  {
+    "exhibitor_key": "China|W5A18|SHANGHAI YOUR WINE REP CONSULTING LTD",
+    "company_name": "SHANGHAI YOUR WINE REP CONSULTING LTD",
+    "booth_no": "W5A18",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "529"
+  },
+  {
+    "exhibitor_key": "China|W4X06|Shaoxing Fanhua Biotechnology Co., Ltd.",
+    "company_name": "Shaoxing Fanhua Biotechnology Co., Ltd.",
+    "booth_no": "W4X06",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "530"
+  },
+  {
+    "exhibitor_key": "China|W5C04|Shanghai Bottoms Up International Commerce Co., Ltd",
+    "company_name": "Shanghai Bottoms Up International Commerce Co., Ltd",
+    "booth_no": "W5C04",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "531"
+  },
+  {
+    "exhibitor_key": "China|W4D51|天戈",
+    "company_name": "天戈",
+    "booth_no": "W4D51",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "532"
+  },
+  {
+    "exhibitor_key": "China|W4D51|太阳魂",
+    "company_name": "太阳魂",
+    "booth_no": "W4D51",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "533"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-47|Tobía",
+    "company_name": "Tobía",
+    "booth_no": "W4A55-47",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "534"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-46|Tarón",
+    "company_name": "Tarón",
+    "booth_no": "W4A55-46",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "535"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-16|Tahbilk",
+    "company_name": "Tahbilk",
+    "booth_no": "W4C01-16",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "536"
+  },
+  {
+    "exhibitor_key": "America|Atest123|test",
+    "company_name": "test",
+    "booth_no": "Atest123",
+    "country": "America",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "537"
+  },
+  {
+    "exhibitor_key": "China|W5X07/1|Tipsy Fruit (Shanghai) International Commerce Co., Ltd",
+    "company_name": "Tipsy Fruit (Shanghai) International Commerce Co., Ltd",
+    "booth_no": "W5X07/1",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "538"
+  },
+  {
+    "exhibitor_key": "China|W4C80-11|TANG CONNECTION INTERNATIONAL TRADING (SHANGHAI) CO., LTD",
+    "company_name": "TANG CONNECTION INTERNATIONAL TRADING (SHANGHAI) CO., LTD",
+    "booth_no": "W4C80-11",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "539"
+  },
+  {
+    "exhibitor_key": "Italy|W5W08|TENUTE PICCINISPA",
+    "company_name": "TENUTE PICCINISPA",
+    "booth_no": "W5W08",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "540"
+  },
+  {
+    "exhibitor_key": "Italy|W5B71|TENUTA GIUSTINI DI PAPADOPOLI SALVATORE",
+    "company_name": "TENUTA GIUSTINI DI PAPADOPOLI SALVATORE",
+    "booth_no": "W5B71",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "541"
+  },
+  {
+    "exhibitor_key": "Italy|W5A61-1|TRE MONTI",
+    "company_name": "TRE MONTI",
+    "booth_no": "W5A61-1",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "542"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-10|TUKU Winemaker's Collective Tiki Wines Steve Bird Wines Tarras Vineyards",
+    "company_name": "TUKU Winemaker's Collective Tiki Wines Steve Bird Wines Tarras Vineyards",
+    "booth_no": "W4A76-10",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "543"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-09|The Wine Republic Greywacke Kumeu River wines",
+    "company_name": "The Wine Republic Greywacke Kumeu River wines",
+    "booth_no": "W4A76-09",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "544"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-02|te Pā Family Vineyards",
+    "company_name": "te Pā Family Vineyards",
+    "booth_no": "W4A76-02",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "545"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-49|TORRE DE OÑA",
+    "company_name": "TORRE DE OÑA",
+    "booth_no": "W4A55-49",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "546"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-8|Tsereteli wine and spirits",
+    "company_name": "Tsereteli wine and spirits",
+    "booth_no": "W5B80-8",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "547"
+  },
+  {
+    "exhibitor_key": "Australia|W4W15|The Flying Winemaker",
+    "company_name": "The Flying Winemaker",
+    "booth_no": "W4W15",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "548"
+  },
+  {
+    "exhibitor_key": "Singapore|W5X11|The Wine Reserve Singapore",
+    "company_name": "The Wine Reserve Singapore",
+    "booth_no": "W5X11",
+    "country": "Singapore",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "549"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4A76-07|The Ned",
+    "company_name": "The Ned",
+    "booth_no": "W4A76-07",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "550"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-19|Teliani Valley jsc",
+    "company_name": "Teliani Valley jsc",
+    "booth_no": "W5B80-19",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "551"
+  },
+  {
+    "exhibitor_key": "China|W4C80-11|TANG CONNECTION INTERNATIONAL TRADING(SHANGHAI)CO.,LTD",
+    "company_name": "TANG CONNECTION INTERNATIONAL TRADING(SHANGHAI)CO.,LTD",
+    "booth_no": "W4C80-11",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "552"
+  },
+  {
+    "exhibitor_key": "America|W4B31-05|The Letter M",
+    "company_name": "The Letter M",
+    "booth_no": "W4B31-05",
+    "country": "America",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "553"
+  },
+  {
+    "exhibitor_key": "Italy|W5W08|TENUTE PICCINI SPA",
+    "company_name": "TENUTE PICCINI SPA",
+    "booth_no": "W5W08",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "554"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-51|Vivanco",
+    "company_name": "Vivanco",
+    "booth_no": "W4A55-51",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "555"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-50|Viñedos de Aldeanueva",
+    "company_name": "Viñedos de Aldeanueva",
+    "booth_no": "W4A55-50",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "556"
+  },
+  {
+    "exhibitor_key": "Spain|W4A31-5|VINYES DOMÈNECH",
+    "company_name": "VINYES DOMÈNECH",
+    "booth_no": "W4A31-5",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "557"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76-03|Vidigal Wines",
+    "company_name": "Vidigal Wines",
+    "booth_no": "W5A76-03",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "558"
+  },
+  {
+    "exhibitor_key": "Portugal|W5C16-21|Vinalda - Companhia Comercial de Bebidas, S.A.",
+    "company_name": "Vinalda - Companhia Comercial de Bebidas, S.A.",
+    "booth_no": "W5C16-21",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "559"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76-14|Vicente Faria Vinhos",
+    "company_name": "Vicente Faria Vinhos",
+    "booth_no": "W5A76-14",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "560"
+  },
+  {
+    "exhibitor_key": "Italy|W5A61-4|Varvaglione Vigne e Vini",
+    "company_name": "Varvaglione Vigne e Vini",
+    "booth_no": "W5A61-4",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "561"
+  },
+  {
+    "exhibitor_key": "New Zealand|W4W15|Valli Wines",
+    "company_name": "Valli Wines",
+    "booth_no": "W4W15",
+    "country": "New Zealand",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "562"
+  },
+  {
+    "exhibitor_key": "Spain|W4A10|Viñedos y Bodegas Sierra Cantabria",
+    "company_name": "Viñedos y Bodegas Sierra Cantabria",
+    "booth_no": "W4A10",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "563"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-51|VIÑEDOS DE ALDEANUEVA, S.COOP.",
+    "company_name": "VIÑEDOS DE ALDEANUEVA, S.COOP.",
+    "booth_no": "W4A55-51",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "564"
+  },
+  {
+    "exhibitor_key": "Spain|W4A55-50|VIÑA DEL LENTISCO",
+    "company_name": "VIÑA DEL LENTISCO",
+    "booth_no": "W4A55-50",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "565"
+  },
+  {
+    "exhibitor_key": "Spain|W4B01-9|Vinos de Arganza S.L.",
+    "company_name": "Vinos de Arganza S.L.",
+    "booth_no": "W4B01-9",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "566"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-13|Vincic Winery",
+    "company_name": "Vincic Winery",
+    "booth_no": "W5D10-13",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "567"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Vidigal Wines, SA",
+    "company_name": "Vidigal Wines, SA",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "568"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Vicente Faria Vinhos",
+    "company_name": "Vicente Faria Vinhos",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "569"
+  },
+  {
+    "exhibitor_key": "USA|W4B31-04|Vin-de-Cal International, LLC",
+    "company_name": "Vin-de-Cal International, LLC",
+    "booth_no": "W4B31-04",
+    "country": "USA",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "570"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-3|Vazisubani Estate LTD",
+    "company_name": "Vazisubani Estate LTD",
+    "booth_no": "W5B80-3",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "571"
+  },
+  {
+    "exhibitor_key": "France|W5A18|Vinovalie",
+    "company_name": "Vinovalie",
+    "booth_no": "W5A18",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "572"
+  },
+  {
+    "exhibitor_key": "France|W5A31-10|VIGNOBLES VELLAS",
+    "company_name": "VIGNOBLES VELLAS",
+    "booth_no": "W5A31-10",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "573"
+  },
+  {
+    "exhibitor_key": "France|W5A31-8|VIALADE & FILS",
+    "company_name": "VIALADE & FILS",
+    "booth_no": "W5A31-8",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "574"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-5|Veritable Wines & Estates KG",
+    "company_name": "Veritable Wines & Estates KG",
+    "booth_no": "W5D41-5",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "575"
+  },
+  {
+    "exhibitor_key": "France|W5A31-8|Vialade et Fils",
+    "company_name": "Vialade et Fils",
+    "booth_no": "W5A31-8",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "576"
+  },
+  {
+    "exhibitor_key": "France|W5A01-1|VIGNERONS DU MONT VENTOUX",
+    "company_name": "VIGNERONS DU MONT VENTOUX",
+    "booth_no": "W5A01-1",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "577"
+  },
+  {
+    "exhibitor_key": "Italy|W5A61-4|Varvaglione 1921",
+    "company_name": "Varvaglione 1921",
+    "booth_no": "W5A61-4",
+    "country": "Italy",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "578"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-5|Veritable Wines & Estates",
+    "company_name": "Veritable Wines & Estates",
+    "booth_no": "W5D41-5",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "579"
+  },
+  {
+    "exhibitor_key": "America|W4B31-04|VIN-DE-CAL INTERNATIONAL",
+    "company_name": "VIN-DE-CAL INTERNATIONAL",
+    "booth_no": "W4B31-04",
+    "country": "America",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "580"
+  },
+  {
+    "exhibitor_key": "France|W5X02|Vinifield",
+    "company_name": "Vinifield",
+    "booth_no": "W5X02",
+    "country": "France",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "581"
+  },
+  {
+    "exhibitor_key": "China|W4X09|VINGLOW COMPANY LIMITED",
+    "company_name": "VINGLOW COMPANY LIMITED",
+    "booth_no": "W4X09",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "582"
+  },
+  {
+    "exhibitor_key": "China|W5Y01|WINE100葡萄酒大赛",
+    "company_name": "WINE100葡萄酒大赛",
+    "booth_no": "W5Y01",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "583"
+  },
+  {
+    "exhibitor_key": "China|W4F50|Winterhalter (Shanghai) Trading Co.,Ltd.",
+    "company_name": "Winterhalter (Shanghai) Trading Co.,Ltd.",
+    "booth_no": "W4F50",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "584"
+  },
+  {
+    "exhibitor_key": "Spain|W4B01-7|WINE PEOPLE",
+    "company_name": "WINE PEOPLE",
+    "booth_no": "W4B01-7",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "585"
+  },
+  {
+    "exhibitor_key": "Spain|W4B01|WINES FROM CASTILLA Y LEÓN-SPAIN",
+    "company_name": "WINES FROM CASTILLA Y LEÓN-SPAIN",
+    "booth_no": "W4B01",
+    "country": "Spain",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "586"
+  },
+  {
+    "exhibitor_key": "Serbia|W5D10-14|Wine Atelier Sapat",
+    "company_name": "Wine Atelier Sapat",
+    "booth_no": "W5D10-14",
+    "country": "Serbia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "587"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Wine & Soul",
+    "company_name": "Wine & Soul",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "588"
+  },
+  {
+    "exhibitor_key": "Portugal|W5A76&W5C16|Wines of Portugal",
+    "company_name": "Wines of Portugal",
+    "booth_no": "W5A76&W5C16",
+    "country": "Portugal",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "589"
+  },
+  {
+    "exhibitor_key": "South Africa|W4C35|Wellington Wyne (Pty) Ltd",
+    "company_name": "Wellington Wyne (Pty) Ltd",
+    "booth_no": "W4C35",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "590"
+  },
+  {
+    "exhibitor_key": "South Africa|W4A61|Wines of South Africa",
+    "company_name": "Wines of South Africa",
+    "booth_no": "W4A61",
+    "country": "South Africa",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "591"
+  },
+  {
+    "exhibitor_key": "Moldova|W5B40|WINE OF MOLDOVA",
+    "company_name": "WINE OF MOLDOVA",
+    "booth_no": "W5B40",
+    "country": "Moldova",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "592"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-4|Winery Khareba",
+    "company_name": "Winery Khareba",
+    "booth_no": "W5B80-4",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "593"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-14|WINE COMPANY SHUMI LTD",
+    "company_name": "WINE COMPANY SHUMI LTD",
+    "booth_no": "W5B80-14",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "594"
+  },
+  {
+    "exhibitor_key": "Germany|W4W15|Weingut Vollenweider",
+    "company_name": "Weingut Vollenweider",
+    "booth_no": "W4W15",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "595"
+  },
+  {
+    "exhibitor_key": "Germany|W5C66|Weinhaus Tina Pfaffmann GmbH",
+    "company_name": "Weinhaus Tina Pfaffmann GmbH",
+    "booth_no": "W5C66",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "596"
+  },
+  {
+    "exhibitor_key": "Germany|W5D55-6|Weingut Thörle GbR",
+    "company_name": "Weingut Thörle GbR",
+    "booth_no": "W5D55-6",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "597"
+  },
+  {
+    "exhibitor_key": "Germany|W5D55-5|Weinkontor A.&J. Pflüger",
+    "company_name": "Weinkontor A.&J. Pflüger",
+    "booth_no": "W5D55-5",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "598"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-10|Weingut Schloss Reinhartshausen",
+    "company_name": "Weingut Schloss Reinhartshausen",
+    "booth_no": "W5D41-10",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "599"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-9|Weingut Kopp",
+    "company_name": "Weingut Kopp",
+    "booth_no": "W5D41-9",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "600"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-8|Weingut Hubertushof",
+    "company_name": "Weingut Hubertushof",
+    "booth_no": "W5D41-8",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "601"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-2|Weingut Achenbach",
+    "company_name": "Weingut Achenbach",
+    "booth_no": "W5D41-2",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "602"
+  },
+  {
+    "exhibitor_key": "Germany|W5C85|Wines of Germany",
+    "company_name": "Wines of Germany",
+    "booth_no": "W5C85",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "603"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-11|Weinhaus Klumpp GmbH",
+    "company_name": "Weinhaus Klumpp GmbH",
+    "booth_no": "W5C46-11",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "604"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-10|Weingut Schnaitmann",
+    "company_name": "Weingut Schnaitmann",
+    "booth_no": "W5C46-10",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "605"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-9|Weingut Beurer",
+    "company_name": "Weingut Beurer",
+    "booth_no": "W5C46-9",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "606"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-8|Weingut Knebel",
+    "company_name": "Weingut Knebel",
+    "booth_no": "W5C46-8",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "607"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-8|Weingut Kruger-Rumpf",
+    "company_name": "Weingut Kruger-Rumpf",
+    "booth_no": "W5C46-8",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "608"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-8|Weingut Uli Metzger",
+    "company_name": "Weingut Uli Metzger",
+    "booth_no": "W5C46-8",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "609"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-5|Weingut Gutzler GbR",
+    "company_name": "Weingut Gutzler GbR",
+    "booth_no": "W5C46-5",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "610"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-4|Weingut Schenk-Siebert",
+    "company_name": "Weingut Schenk-Siebert",
+    "booth_no": "W5C46-4",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "611"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-3|Weingut Genetsch",
+    "company_name": "Weingut Genetsch",
+    "booth_no": "W5C46-3",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "612"
+  },
+  {
+    "exhibitor_key": "Germany|W5C31-8|Weingut Heid",
+    "company_name": "Weingut Heid",
+    "booth_no": "W5C31-8",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "613"
+  },
+  {
+    "exhibitor_key": "Germany|W5C31-3|Weingut Rappenhof GbR",
+    "company_name": "Weingut Rappenhof GbR",
+    "booth_no": "W5C31-3",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "614"
+  },
+  {
+    "exhibitor_key": "Germany|W5C31-2|Weingut Hain",
+    "company_name": "Weingut Hain",
+    "booth_no": "W5C31-2",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "615"
+  },
+  {
+    "exhibitor_key": "Austria|W4A01|Wirtschaftskammer OE Messebereich",
+    "company_name": "Wirtschaftskammer OE Messebereich",
+    "booth_no": "W4A01",
+    "country": "Austria",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "616"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-19|Wren Estate",
+    "company_name": "Wren Estate",
+    "booth_no": "W4C01-19",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "617"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-18|Winegrapes Australia Pty Ltd",
+    "company_name": "Winegrapes Australia Pty Ltd",
+    "booth_no": "W4C01-18",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "618"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01-17|Wild Duck Creek Estate",
+    "company_name": "Wild Duck Creek Estate",
+    "booth_no": "W4C01-17",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "619"
+  },
+  {
+    "exhibitor_key": "Australia|W4C01|Wine Australia",
+    "company_name": "Wine Australia",
+    "booth_no": "W4C01",
+    "country": "Australia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "620"
+  },
+  {
+    "exhibitor_key": "Georgia|W5B80-17|Wine Kakheti",
+    "company_name": "Wine Kakheti",
+    "booth_no": "W5B80-17",
+    "country": "Georgia",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "621"
+  },
+  {
+    "exhibitor_key": "Germany|W5C31-9|Weingut Volker Barth",
+    "company_name": "Weingut Volker Barth",
+    "booth_no": "W5C31-9",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "622"
+  },
+  {
+    "exhibitor_key": "Germany|W5C31-4|Weingut Landerer",
+    "company_name": "Weingut Landerer",
+    "booth_no": "W5C31-4",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "623"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-2|Weingut Spiess",
+    "company_name": "Weingut Spiess",
+    "booth_no": "W5C46-2",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "624"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-8|Weingut Metzger",
+    "company_name": "Weingut Metzger",
+    "booth_no": "W5C46-8",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "625"
+  },
+  {
+    "exhibitor_key": "Austria|W4A01-4|Weingut Holzapfel",
+    "company_name": "Weingut Holzapfel",
+    "booth_no": "W4A01-4",
+    "country": "Austria",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "626"
+  },
+  {
+    "exhibitor_key": "Germany|W5D41-3|Weingut Meierer",
+    "company_name": "Weingut Meierer",
+    "booth_no": "W5D41-3",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "627"
+  },
+  {
+    "exhibitor_key": "Germany|W5C46-5|Winery Gutzler",
+    "company_name": "Winery Gutzler",
+    "booth_no": "W5C46-5",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "628"
+  },
+  {
+    "exhibitor_key": "China|W4D51|香格里拉酒业",
+    "company_name": "香格里拉酒业",
+    "booth_no": "W4D51",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "629"
+  },
+  {
+    "exhibitor_key": "China|W4E30-2|橡木湾(上海)酒业有限公司",
+    "company_name": "橡木湾(上海)酒业有限公司",
+    "booth_no": "W4E30-2",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "630"
+  },
+  {
+    "exhibitor_key": "China|W4E30-5/6|幸得很（上海）文化有限公司",
+    "company_name": "幸得很（上海）文化有限公司",
+    "booth_no": "W4E30-5/6",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "631"
+  },
+  {
+    "exhibitor_key": "China|W4D51|怡园",
+    "company_name": "怡园",
+    "booth_no": "W4D51",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "632"
+  },
+  {
+    "exhibitor_key": "China|W4D70-07|Yin Chi Estate",
+    "company_name": "Yin Chi Estate",
+    "booth_no": "W4D70-07",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "633"
+  },
+  {
+    "exhibitor_key": "China|W4D70|Young Generation Creative Wine",
+    "company_name": "Young Generation Creative Wine",
+    "booth_no": "W4D70",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "634"
+  },
+  {
+    "exhibitor_key": "Republic of Korea|W4B70-06|Yang Ban Andongsoju",
+    "company_name": "Yang Ban Andongsoju",
+    "booth_no": "W4B70-06",
+    "country": "Republic of Korea",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "635"
+  },
+  {
+    "exhibitor_key": "China|W4C54|YITONG Winery (Deqin) Ltd.",
+    "company_name": "YITONG Winery (Deqin) Ltd.",
+    "booth_no": "W4C54",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "636"
+  },
+  {
+    "exhibitor_key": "China|W4X12|YANTAI DINGNUO PRINTING TECHNOLOGY CO.,LTD.",
+    "company_name": "YANTAI DINGNUO PRINTING TECHNOLOGY CO.,LTD.",
+    "booth_no": "W4X12",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "637"
+  },
+  {
+    "exhibitor_key": "China|W4X06|Zhou Qing Wine",
+    "company_name": "Zhou Qing Wine",
+    "booth_no": "W4X06",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "638"
+  },
+  {
+    "exhibitor_key": "Germany|W5C31-1|Zhengzhou Tengan Industry&trade Co., Ltd",
+    "company_name": "Zhengzhou Tengan Industry&trade Co., Ltd",
+    "booth_no": "W5C31-1",
+    "country": "Germany",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "639"
+  },
+  {
+    "exhibitor_key": "China|W5C31-1|ZhengZhou TengAn Industry &Trade Co.,LTD",
+    "company_name": "ZhengZhou TengAn Industry &Trade Co.,LTD",
+    "booth_no": "W5C31-1",
+    "country": "China",
+    "profile_url": "",
+    "source_url": "https://www.prowine-shanghai.com/en/exhibition",
+    "source_position": "640"
+  }
+]
