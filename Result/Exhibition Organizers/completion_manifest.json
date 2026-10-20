@@ -65,6 +65,16 @@
       "event_name": "Pro Integration Future Asia 2026 (PIFA 2026)",
       "status": "Agent Extraction",
       "extracted_file_name": "pifa_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "Super Terminal Expo 2026",
+      "status": "Agent Extraction",
+      "extracted_file_name": "super_terminal_expo_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "ProWine Shanghai 2026",
+      "status": "Agent Extraction",
+      "extracted_file_name": "prowine_shanghai_2026_exhibitors.csv"
     }
   ]
 }
