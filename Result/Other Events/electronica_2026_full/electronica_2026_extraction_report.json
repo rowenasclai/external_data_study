@@ -1,0 +1,18 @@
+{
+  "source": "https://exhibitors.electronica.de/exhibitor-portal/2026/list-of-exhibitors/",
+  "reported_total": 3616,
+  "reported_pages": 242,
+  "pagination_derived_total": 3630,
+  "records": 3630,
+  "unique_profile_urls": 3630,
+  "profile_field_coverage": {
+    "address": 3630,
+    "website": 3565,
+    "profile_description": 3630,
+    "profile_sections": 3630
+  },
+  "source_count_discrepancy": 14,
+  "csv": "electronica_2026_exhibitors.csv",
+  "json": "electronica_2026_exhibitors.json",
+  "complete": true
+}
