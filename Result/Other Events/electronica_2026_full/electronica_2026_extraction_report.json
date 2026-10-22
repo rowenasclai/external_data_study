@@ -12,6 +12,14 @@
     "profile_sections": 3630
   },
   "source_count_discrepancy": 14,
+  "independent_public_export": {
+    "source": "https://exhibitors.electronica.de/download/informationmaterial/xls_electronica_Export_2026_en/electronica_export_2026_en.xlsx",
+    "last_update": "2026-10-21 12:31",
+    "records": 3630,
+    "count_matches_pagination_derived_total": true,
+    "normalized_name_set_matches": false,
+    "name_set_differences_each_way": 2
+  },
   "csv": "electronica_2026_exhibitors.csv",
   "json": "electronica_2026_exhibitors.json",
   "complete": true
