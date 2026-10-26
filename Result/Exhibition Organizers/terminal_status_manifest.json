@@ -41,13 +41,11 @@
       "status": "Fail",
       "extracted_file_name": ""
     },
-
     {
       "event_name": "CIIF 2026 (The 25th China International Industry Fair)",
       "status": "Fail",
       "extracted_file_name": ""
     },
-
     {
       "event_name": "CIHS 2026 (China International Hardware Show)",
       "status": "Fail",
@@ -125,6 +123,41 @@
     },
     {
       "event_name": "FTE APEX Asia Expo 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "IPFM 2026 (International Plant Fiber Molding Industry Exhibition 2026)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Nanjing International Beauty and Cosmetics Expo 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "API China 2026 (The 95th API China & PHARMPACK & SINOPHEX)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "CIOAE 2026 (The 19th China Online Analytical Instrument Application and Development Expo)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "China International Agricultural Trade Fair (CATF 2026)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "The 23rd Suzhou International Plastics and Rubber Industry Exhibition 2026 (Huasuo Exhibition)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "China Small and Medium-Sized Factory Exhibition (Ningbo Factory Expo 2026)",
       "status": "Fail",
       "extracted_file_name": ""
     }
