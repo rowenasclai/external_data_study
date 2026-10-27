@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO-NEXUS // Cybernetic Intelligence Dashboard</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#050508',
+                        panel: '#0b0c16',
+                        cyberCyan: '#00f0ff',
+                        cyberMagenta: '#ff007f',
+                        cyberViolet: '#9d00ff',
+                        cyberGreen: '#00ff66',
+                        cyberYellow: '#ffee00'
+                    },
+                    fontFamily: {
+                        mono: ['Courier New', monospace],
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'neon-cyan': '0 0 15px rgba(0, 240, 255, 0.4)',
+                        'neon-magenta': '0 0 15px rgba(255, 0, 127, 0.4)',
+                        'neon-violet': '0 0 15px rgba(157, 0, 255, 0.4)',
+                        'hud-glow': 'inset 0 0 20px rgba(0, 240, 255, 0.15), 0 0 20px rgba(0, 240, 255, 0.2)'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for futuristic icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom Scanlines & CRT FX */
+        body {
+            background-color: #050508;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .scanlines {
+            background: linear-gradient(
+                to bottom,
+                rgba(255,255,255,0),
+                rgba(255,255,255,0) 50%,
+                rgba(0, 0, 0, 0.3) 50%,
+                rgba(0, 0, 0, 0.3)
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+        }
+        .cyber-grid {
+            background-image:
+                linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        /* Holographic Card Tilt Effect */
+        .holo-card {
+            background: rgba(11, 12, 22, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .holo-card:hover {
+            border-color: rgba(0, 240, 255, 0.8);
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+            transform: translateY(-4px);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050508;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00f0ff;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff007f;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        .animate-pulse-slow {
+            animation: pulseGlow 3s infinite;
+        }
+    </style>
+</head>
+<body class="cyber-grid min-h-screen flex flex-col relative">
+
+    <!-- Scanline Overlay -->
+    <div class="scanlines absolute inset-0 z-50 fixed"></div>
+
+    <!-- Top Navigation HUD -->
+    <header class="border-b border-cyberCyan/30 bg-obsidian/90 backdrop-blur-md sticky top-0 z-40 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded bg-gradient-to-br from-cyberCyan to-cyberMagenta flex items-center justify-center shadow-neon-cyan animate-pulse-slow">
+                <i class="fa-solid fa-microchip text-obsidian text-xl font-bold"></i>
+            </div>
+            <div>
+                <h1 class="font-mono tracking-widest text-lg font-bold text-cyberCyan">NEO-NEXUS <span class="text-cyberMagenta text-xs px-2 py-0.5 border border-cyberMagenta/50 rounded">SYS v4.92</span></h1>
+                <p class="text-xs text-gray-400 font-mono">NEURAL CLIENT INTELLIGENCE SUITE</p>
+            </div>
+        </div>
+
+        <!-- Progress Step Indicator Bar -->
+        <div class="hidden md:flex items-center space-x-2">
+            <button onclick="switchStep(1)" id="step-btn-1" class="step-indicator px-4 py-1.5 rounded-l border border-cyberCyan bg-cyberCyan/20 text-cyberCyan font-mono text-xs tracking-wider transition-all flex items-center space-x-2 shadow-neon-cyan">
+                <span class="w-5 h-5 rounded-full border border-cyberCyan flex items-center justify-center text-[10px]">01</span>
+                <span>EXHIBITION</span>
+            </button>
+            <button onclick="switchStep(2)" id="step-btn-2" class="step-indicator px-4 py-1.5 border-y border-r border-gray-700 bg-panel text-gray-400 font-mono text-xs tracking-wider transition-all flex items-center space-x-2 hover:border-cyberMagenta hover:text-cyberMagenta">
+                <span class="w-5 h-5 rounded-full border border-gray-600 flex items-center justify-center text-[10px]">02</span>
+                <span>CUSTOMERS</span>
+            </button>
+            <button onclick="switchStep(3)" id="step-btn-3" class="step-indicator px-4 py-1.5 rounded-r border-y border-r border-gray-700 bg-panel text-gray-400 font-mono text-xs tracking-wider transition-all flex items-center space-x-2 hover:border-cyberViolet hover:text-cyberViolet">
+                <span class="w-5 h-5 rounded-full border border-gray-600 flex items-center justify-center text-[10px]">03</span>
+                <span>ENRICHED DOSSIER</span>
+            </button>
+        </div>
+
+        <div class="flex items-center space-x-4">
+            <div class="hidden lg:flex flex-col text-right font-mono text-xs">
+                <span class="text-cyberGreen flex items-center justify-end space-x-1">
+                    <span class="w-2 h-2 rounded-full bg-cyberGreen animate-ping"></span>
+                    <span>LINK STABLE // 1.2 TB/s</span>
+                </span>
+                <span class="text-gray-500" id="live-clock">00:00:00 UTC</span>
+            </div>
+            <button onclick="triggerSystemPulse()" class="px-3 py-1.5 border border-cyberMagenta text-cyberMagenta rounded font-mono text-xs hover:bg-cyberMagenta/10 transition shadow-neon-magenta">
+                <i class="fa-solid fa-radar mr-1"></i> SCAN
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 relative z-10">
+
+        <!-- ==================== STEP 1: EXHIBITION ==================== -->
+        <section id="step-1-view" class="space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-cyberCyan/20 pb-4">
+                <div>
+                    <div class="text-cyberCyan font-mono text-xs tracking-widest uppercase">// STAGE 01: VIRTUAL ARTIFACT SHOWCASE</div>
+                    <h2 class="text-2xl md:text-3xl font-bold font-sans text-white tracking-wide mt-1">October–November 2026 Exhibition Intelligence</h2>
+                    <p class="text-gray-400 text-sm mt-1">Public Oct–Nov 2026 trade events sourced from the shared exhibition control spreadsheet. Filter by sector and open the event or public exhibitor directory.</p>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <label class="text-xs font-mono px-3 py-1 rounded bg-panel border border-cyberCyan/40 text-cyberCyan">FILTER: <select id="sector-filter" class="bg-obsidian text-cyberCyan focus:outline-none" aria-label="Filter exhibitions by sector"></select></label><span id="event-count" class="text-xs text-gray-400 font-mono"></span>
+                    <button onclick="showToast('SELECT AN EVENT', 'Use VIEW CUSTOMERS on an exhibition card to load that event\'s published customer list.')" class="px-5 py-2 bg-gradient-to-r from-cyberCyan to-blue-600 text-obsidian font-bold font-mono text-sm rounded shadow-neon-cyan hover:opacity-90 transition flex items-center space-x-2">
+                        <span>SELECT EVENT CUSTOMERS</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Exhibition Grid -->
+            <div id="exhibition-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cards are populated from the public control-sheet snapshot. -->
+                <div class="holo-card rounded-xl p-5 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-cyberCyan/10 text-cyberCyan text-[10px] font-mono px-3 py-1 rounded-bl border-l border-b border-cyberCyan/30">
+                        ASSET #889-X
+                    </div>
+                    <div class="h-48 rounded-lg bg-gradient-to-br from-panel to-obsidian border border-cyberCyan/20 flex items-center justify-center relative overflow-hidden mb-4">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,240,255,0.15)_0%,transparent_70%)]"></div>
+                        <i class="fa-solid fa-brain text-6xl text-cyberCyan group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(0,240,255,0.6)]"></i>
+                        <div class="absolute bottom-2 left-2 text-[10px] font-mono text-cyberCyan/70">SYNC RATE: 99.4%</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">Neural Synapse Augment IV</h3>
+                    <p class="text-gray-400 text-xs mb-4">High-bandwidth cognitive processor designed for high-frequency financial arbitrage traders.</p>
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-800">
+                        <span class="text-cyberMagenta font-mono font-bold text-sm">₿ 14.85 BTC</span>
+                        <button onclick="inspectArtifact('Neural Synapse Augment IV', '14.85 BTC', '99.4%')" class="px-3 py-1 border border-cyberCyan text-cyberCyan rounded text-xs font-mono hover:bg-cyberCyan/20 transition">
+                            INSPECT
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="holo-card rounded-xl p-5 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-cyberMagenta/10 text-cyberMagenta text-[10px] font-mono px-3 py-1 rounded-bl border-l border-b border-cyberMagenta/30">
+                        ASSET #404-B
+                    </div>
+                    <div class="h-48 rounded-lg bg-gradient-to-br from-panel to-obsidian border border-cyberMagenta/20 flex items-center justify-center relative overflow-hidden mb-4">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,0,127,0.15)_0%,transparent_70%)]"></div>
+                        <i class="fa-solid fa-eye text-6xl text-cyberMagenta group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(255,0,127,0.6)]"></i>
+                        <div class="absolute bottom-2 left-2 text-[10px] font-mono text-cyberMagenta/70">RESOLUTION: 16K RETINA</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">Kiroshi Cybernetic Optic v9</h3>
+                    <p class="text-gray-400 text-xs mb-4">Tactical vision overlay featuring real-time heat signatures and encrypted ledger scanner.</p>
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-800">
+                        <span class="text-cyberMagenta font-mono font-bold text-sm">₿ 8.20 BTC</span>
+                        <button onclick="inspectArtifact('Kiroshi Cybernetic Optic v9', '8.20 BTC', '16K')" class="px-3 py-1 border border-cyberMagenta text-cyberMagenta rounded text-xs font-mono hover:bg-cyberMagenta/20 transition">
+                            INSPECT
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="holo-card rounded-xl p-5 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-cyberViolet/10 text-cyberViolet text-[10px] font-mono px-3 py-1 rounded-bl border-l border-b border-cyberViolet/30">
+                        ASSET #991-Z
+                    </div>
+                    <div class="h-48 rounded-lg bg-gradient-to-br from-panel to-obsidian border border-cyberViolet/20 flex items-center justify-center relative overflow-hidden mb-4">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(157,0,255,0.15)_0%,transparent_70%)]"></div>
+                        <i class="fa-solid fa-shield-halved text-6xl text-cyberViolet group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(157,0,255,0.6)]"></i>
+                        <div class="absolute bottom-2 left-2 text-[10px] font-mono text-cyberViolet/70">SHIELD: QUANTUM</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">Aegis Sub-Dermal Armor Grid</h3>
+                    <p class="text-gray-400 text-xs mb-4">Carbon-nanotube weave providing ballistic resistance and EMP pulse dampening.</p>
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-800">
+                        <span class="text-cyberMagenta font-mono font-bold text-sm">₿ 22.10 BTC</span>
+                        <button onclick="inspectArtifact('Aegis Sub-Dermal Armor Grid', '22.10 BTC', 'Quantum')" class="px-3 py-1 border border-cyberViolet text-cyberViolet rounded text-xs font-mono hover:bg-cyberViolet/20 transition">
+                            INSPECT
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== STEP 2: SHOW MY CUSTOMERS ==================== -->
+        <section id="step-2-view" class="space-y-6 hidden">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-cyberMagenta/20 pb-4">
+                <div>
+                    <div class="text-cyberMagenta font-mono text-xs tracking-widest uppercase">// STAGE 02: HIGH-VALUE CLIENT DIRECTORY</div>
+                    <h2 class="text-2xl md:text-3xl font-bold font-sans text-white tracking-wide mt-1">Global Customer Portfolio</h2>
+                    <p class="text-gray-400 text-sm mt-1">Manage VIP corporate executives, syndicate leaders, and neural-linked account holders.</p>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <button onclick="switchStep(1)" class="px-4 py-2 border border-gray-700 text-gray-300 font-mono text-sm rounded hover:bg-gray-800 transition">
+                        <i class="fa-solid fa-arrow-left mr-1"></i> BACK
+                    </button>
+                    <button onclick="switchStep(3)" class="px-5 py-2 bg-gradient-to-r from-cyberMagenta to-purple-600 text-white font-bold font-mono text-sm rounded shadow-neon-magenta hover:opacity-90 transition flex items-center space-x-2">
+                        <span>SELECT DOSSIER</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filters & Search Bar -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-panel/80 p-4 rounded-xl border border-cyberCyan/20">
+                <div class="relative w-full sm:w-80">
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-cyberCyan">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" id="customer-search" oninput="filterCustomers()" placeholder="Search alias, corp, or ID..." class="w-full bg-obsidian border border-cyberCyan/40 rounded pl-10 pr-4 py-2 text-sm text-white font-mono focus:outline-none focus:border-cyberCyan focus:ring-1 focus:ring-cyberCyan">
+                </div>
+                <div class="flex items-center space-x-2 w-full sm:w-auto overflow-x-auto pb-1 sm:pb-0">
+                    <button onclick="filterStatus('ALL')" class="filter-chip px-3 py-1.5 rounded border border-cyberCyan bg-cyberCyan/20 text-cyberCyan font-mono text-xs whitespace-nowrap">ALL (5)</button>
+                    <button onclick="filterStatus('ACTIVE')" class="filter-chip px-3 py-1.5 rounded border border-gray-700 bg-obsidian text-gray-400 font-mono text-xs whitespace-nowrap hover:border-cyberCyan">ACTIVE</button>
+                    <button onclick="filterStatus('VIP')" class="filter-chip px-3 py-1.5 rounded border border-gray-700 bg-obsidian text-gray-400 font-mono text-xs whitespace-nowrap hover:border-cyberMagenta">VIP SYNDICATE</button>
+                </div>
+            </div>
+
+            <!-- Customer Table / Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="customer-grid">
+                <!-- Customer 1 -->
+                <div onclick="selectCustomer('Vex Cor Leonis', 'Arasaka Security', 'Level 9 VIP', '98.7%')" class="customer-card holo-card rounded-xl p-5 cursor-pointer relative group" data-status="VIP" data-name="vex cor leonis arasaka">
+                    <div class="absolute top-4 right-4 text-xs font-mono px-2 py-0.5 rounded bg-cyberMagenta/20 text-cyberMagenta border border-cyberMagenta/40">VIP</div>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-cyberMagenta to-cyberViolet flex items-center justify-center font-mono font-bold text-white text-lg shadow-neon-magenta">
+                            VC
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-base group-hover:text-cyberCyan transition">Vex Cor Leonis</h3>
+                            <p class="text-xs text-gray-400 font-mono">Arasaka Security // Sector 04</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-xs font-mono text-gray-300 mb-4 pt-3 border-t border-gray-800">
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">NETWORTH:</span>
+                            <span class="text-cyberCyan">₿ 142.5 BTC</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">NEURAL SYNC:</span>
+                            <span class="text-cyberGreen">98.7%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">RISK INDEX:</span>
+                            <span class="text-cyberYellow">LOW (0.12)</span>
+                        </div>
+                    </div>
+                    <button class="w-full py-2 bg-panel border border-cyberCyan/50 text-cyberCyan rounded font-mono text-xs hover:bg-cyberCyan hover:text-obsidian transition font-bold">
+                        ACCESS ENRICHED DOSSIER <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Customer 2 -->
+                <div onclick="selectCustomer('Lyra Vance', 'Neo-Tokyo Biotech', 'Executive', '92.4%')" class="customer-card holo-card rounded-xl p-5 cursor-pointer relative group" data-status="ACTIVE" data-name="lyra vance neo-tokyo">
+                    <div class="absolute top-4 right-4 text-xs font-mono px-2 py-0.5 rounded bg-cyberCyan/20 text-cyberCyan border border-cyberCyan/40">ACTIVE</div>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-cyberCyan to-blue-600 flex items-center justify-center font-mono font-bold text-obsidian text-lg shadow-neon-cyan">
+                            LV
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-base group-hover:text-cyberCyan transition">Lyra Vance</h3>
+                            <p class="text-xs text-gray-400 font-mono">Neo-Tokyo Biotech // Sector 01</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-xs font-mono text-gray-300 mb-4 pt-3 border-t border-gray-800">
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">NETWORTH:</span>
+                            <span class="text-cyberCyan">₿ 84.0 BTC</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">NEURAL SYNC:</span>
+                            <span class="text-cyberGreen">92.4%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">RISK INDEX:</span>
+                            <span class="text-cyberGreen">MINIMAL (0.05)</span>
+                        </div>
+                    </div>
+                    <button class="w-full py-2 bg-panel border border-cyberCyan/50 text-cyberCyan rounded font-mono text-xs hover:bg-cyberCyan hover:text-obsidian transition font-bold">
+                        ACCESS ENRICHED DOSSIER <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Customer 3 -->
+                <div onclick="selectCustomer('Kaelen Voss', 'Militech Heavy Ind.', 'Director', '88.1%')" class="customer-card holo-card rounded-xl p-5 cursor-pointer relative group" data-status="VIP" data-name="kaelen voss militech">
+                    <div class="absolute top-4 right-4 text-xs font-mono px-2 py-0.5 rounded bg-cyberMagenta/20 text-cyberMagenta border border-cyberMagenta/40">VIP</div>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-amber-500 to-red-600 flex items-center justify-center font-mono font-bold text-obsidian text-lg shadow-neon-magenta">
+                            KV
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-base group-hover:text-cyberCyan transition">Kaelen Voss</h3>
+                            <p class="text-xs text-gray-400 font-mono">Militech Heavy Ind. // Sector 09</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-xs font-mono text-gray-300 mb-4 pt-3 border-t border-gray-800">
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">NETWORTH:</span>
+                            <span class="text-cyberCyan">₿ 210.9 BTC</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">NEURAL SYNC:</span>
+                            <span class="text-cyberGreen">88.1%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">RISK INDEX:</span>
+                            <span class="text-cyberYellow">MODERATE (0.34)</span>
+                        </div>
+                    </div>
+                    <button class="w-full py-2 bg-panel border border-cyberCyan/50 text-cyberCyan rounded font-mono text-xs hover:bg-cyberCyan hover:text-obsidian transition font-bold">
+                        ACCESS ENRICHED DOSSIER <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Customer 4 -->
+                <div onclick="selectCustomer('Nyx Shadowalker', 'Underground Syndicate', 'Shadow Broker', '99.9%')" class="customer-card holo-card rounded-xl p-5 cursor-pointer relative group" data-status="VIP" data-name="nyx shadowalker syndicate">
+                    <div class="absolute top-4 right-4 text-xs font-mono px-2 py-0.5 rounded bg-cyberViolet/20 text-cyberViolet border border-cyberViolet/40">ROGUE VIP</div>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-purple-600 to-pink-600 flex items-center justify-center font-mono font-bold text-white text-lg shadow-neon-violet">
+                            NS
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-base group-hover:text-cyberCyan transition">Nyx Shadowalker</h3>
+                            <p class="text-xs text-gray-400 font-mono">Underground Syndicate // Sector 12</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-xs font-mono text-gray-300 mb-4 pt-3 border-t border-gray-800">
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">NETWORTH:</span>
+                            <span class="text-cyberCyan">₿ 390.2 BTC</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">NEURAL SYNC:</span>
+                            <span class="text-cyberGreen">99.9%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">RISK INDEX:</span>
+                            <span class="text-red-500">HIGH (0.78)</span>
+                        </div>
+                    </div>
+                    <button class="w-full py-2 bg-panel border border-cyberCyan/50 text-cyberCyan rounded font-mono text-xs hover:bg-cyberCyan hover:text-obsidian transition font-bold">
+                        ACCESS ENRICHED DOSSIER <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Customer 5 -->
+                <div onclick="selectCustomer('Dr. Aris Thorne', 'Cortex Labs', 'Chief Scientist', '95.0%')" class="customer-card holo-card rounded-xl p-5 cursor-pointer relative group" data-status="ACTIVE" data-name="aris thorne cortex labs">
+                    <div class="absolute top-4 right-4 text-xs font-mono px-2 py-0.5 rounded bg-cyberCyan/20 text-cyberCyan border border-cyberCyan/40">ACTIVE</div>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-teal-400 to-cyberCyan flex items-center justify-center font-mono font-bold text-obsidian text-lg shadow-neon-cyan">
+                            AT
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-base group-hover:text-cyberCyan transition">Dr. Aris Thorne</h3>
+                            <p class="text-xs text-gray-400 font-mono">Cortex Labs // Sector 03</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-xs font-mono text-gray-300 mb-4 pt-3 border-t border-gray-800">
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">NETWORTH:</span>
+                            <span class="text-cyberCyan">₿ 52.8 BTC</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">NEURAL SYNC:</span>
+                            <span class="text-cyberGreen">95.0%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">RISK INDEX:</span>
+                            <span class="text-cyberGreen">MINIMAL (0.02)</span>
+                        </div>
+                    </div>
+                    <button class="w-full py-2 bg-panel border border-cyberCyan/50 text-cyberCyan rounded font-mono text-xs hover:bg-cyberCyan hover:text-obsidian transition font-bold">
+                        ACCESS ENRICHED DOSSIER <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== STEP 3: ENRICHED DOSSIER ==================== -->
+        <section id="step-3-view" class="space-y-6 hidden">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-cyberViolet/20 pb-4">
+                <div>
+                    <div class="text-cyberViolet font-mono text-xs tracking-widest uppercase">// STAGE 03: HOLOGRAPHIC ENRICHED DOSSIER HUD</div>
+                    <h2 class="text-2xl md:text-3xl font-bold font-sans text-white tracking-wide mt-1" id="dossier-title">Vex Cor Leonis // Deep Neural Intelligence</h2>
+                    <p class="text-gray-400 text-sm mt-1">Real-time telemetry, predictive behavioral metrics, AI insights, and encrypted asset networks.</p>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <button onclick="switchStep(2)" class="px-4 py-2 border border-gray-700 text-gray-300 font-mono text-sm rounded hover:bg-gray-800 transition">
+                        <i class="fa-solid fa-arrow-left mr-1"></i> DIRECTORY
+                    </button>
+                    <button onclick="triggerPurgeModal()" class="px-4 py-2 bg-red-950/40 border border-red-500 text-red-400 font-mono text-xs rounded hover:bg-red-900/40 transition">
+                        <i class="fa-solid fa-triangle-exclamation mr-1"></i> PURGE CACHE
+                    </button>
+                </div>
+            </div>
+
+            <!-- HUD Grid Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                <!-- Left Column: Profile & Telemetry -->
+                <div class="space-y-6">
+                    <!-- Holographic Avatar Card -->
+                    <div class="holo-card rounded-xl p-6 relative text-center border-cyberViolet/30">
+                        <div class="absolute top-3 left-3 text-[10px] font-mono text-cyberViolet">HUD_NODE://01</div>
+                        <div class="w-24 h-24 mx-auto rounded-full bg-gradient-to-tr from-cyberMagenta via-cyberViolet to-cyberCyan p-1 mb-4 shadow-neon-violet">
+                            <div class="w-full h-full rounded-full bg-obsidian flex items-center justify-center font-mono font-bold text-2xl text-cyberCyan" id="dossier-initials">
+                                VC
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white" id="dossier-name">Vex Cor Leonis</h3>
+                        <p class="text-xs text-cyberCyan font-mono mt-1" id="dossier-corp">Arasaka Security // Level 9 VIP</p>
+
+                        <div class="mt-6 grid grid-cols-2 gap-3 text-left font-mono text-xs">
+                            <div class="bg-obsidian/60 p-3 rounded border border-gray-800">
+                                <span class="text-gray-500 block">NEURAL SYNC</span>
+                                <span class="text-cyberGreen text-sm font-bold" id="dossier-sync">98.7%</span>
+                            </div>
+                            <div class="bg-obsidian/60 p-3 rounded border border-gray-800">
+                                <span class="text-gray-500 block">ENCRYPTION</span>
+                                <span class="text-cyberMagenta text-sm font-bold">AES-1024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Telemetry Data Stream -->
+                    <div class="holo-card rounded-xl p-5 border-cyberCyan/30">
+                        <div class="flex items-center justify-between mb-3 pb-2 border-b border-gray-800 font-mono text-xs text-cyberCyan">
+                            <span><i class="fa-solid fa-wave-square mr-1"></i> TELEMETRY STREAM</span>
+                            <span class="text-cyberGreen animate-pulse">LIVE</span>
+                        </div>
+                        <div class="space-y-3 font-mono text-xs">
+                            <div>
+                                <div class="flex justify-between mb-1 text-gray-400">
+                                    <span>SYNAPSE STABILITY</span>
+                                    <span class="text-white">94%</span>
+                                </div>
+                                <div class="w-full bg-obsidian rounded-full h-1.5 overflow-hidden">
+                                    <div class="bg-cyberCyan h-full rounded w-[94%] shadow-neon-cyan"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1 text-gray-400">
+                                    <span>MEMORY BANDWIDTH</span>
+                                    <span class="text-white">78 TB/s</span>
+                                </div>
+                                <div class="w-full bg-obsidian rounded-full h-1.5 overflow-hidden">
+                                    <div class="bg-cyberMagenta h-full rounded w-[78%] shadow-neon-magenta"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1 text-gray-400">
+                                    <span>BIOMETRIC STRESS</span>
+                                    <span class="text-cyberYellow">12 BPM (LOW)</span>
+                                </div>
+                                <div class="w-full bg-obsidian rounded-full h-1.5 overflow-hidden">
+                                    <div class="bg-cyberYellow h-full rounded w-[25%]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle Column: AI Insights & Behavioral Metrics -->
+                <div class="space-y-6 lg:col-span-2">
+                    <!-- AI Enriched Insights -->
+                    <div class="holo-card rounded-xl p-6 border-cyberCyan/40 relative">
+                        <div class="absolute top-0 right-0 bg-cyberCyan/10 text-cyberCyan text-[10px] font-mono px-3 py-1 rounded-bl border-l border-b border-cyberCyan/30">
+                            NEURAL AI ENGINE v9.1
+                        </div>
+                        <div class="flex items-center space-x-2 text-cyberCyan font-mono text-sm mb-4">
+                            <i class="fa-solid fa-microchip animate-spin text-lg"></i>
+                            <span class="font-bold tracking-wider">AI-Driven Predictive Behavioral Insights</span>
+                        </div>
+                        <div class="space-y-4 text-sm text-gray-300">
+                            <div class="p-3.5 rounded bg-obsidian/70 border-l-2 border-cyberCyan">
+                                <div class="font-mono text-xs text-cyberCyan mb-1">// PREDICTIVE PORTFOLIO REBALANCING</div>
+                                <p>Customer exhibits high correlation with quantum computing assets in Sector 01. Recommended immediate automated hedge execution of 15% BTC into decentralized neural funds.</p>
+                            </div>
+                            <div class="p-3.5 rounded bg-obsidian/70 border-l-2 border-cyberMagenta">
+                                <div class="font-mono text-xs text-cyberMagenta mb-1">// PSYCHO-ANALYTIC PROFILE</div>
+                                <p>High resilience under high-frequency market stress. Low risk of panic divestment. Prefers encrypted messaging protocols for over-the-counter block trades.</p>
+                            </div>
+                            <div class="p-3.5 rounded bg-obsidian/70 border-l-2 border-cyberViolet">
+                                <div class="font-mono text-xs text-cyberViolet mb-1">// ENGAGEMENT VECTOR</div>
+                                <p>Optimal outreach window detected between 02:00 - 04:00 UTC during low-interference cybernetic sleep cycles.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Asset Network & Ledger Nodes -->
+                    <div class="holo-card rounded-xl p-6 border-cyberViolet/40">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-cyberViolet font-mono text-xs tracking-wider">
+                                <i class="fa-solid fa-network-wired mr-1"></i> ENCRYPTED ASSET NETWORK NODES
+                            </div>
+                            <button onclick="runNetworkDiagnostics()" class="px-3 py-1 border border-cyberViolet text-cyberViolet rounded font-mono text-xs hover:bg-cyberViolet/20 transition">
+                                <i class="fa-solid fa-bolt mr-1"></i> RUN DIAGNOSTICS
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs">
+                            <div class="bg-obsidian/80 p-4 rounded border border-gray-800">
+                                <span class="text-gray-500 block mb-1">PRIMARY WALLET</span>
+                                <span class="text-cyberCyan font-bold truncate block">0x7F9...B241</span>
+                                <span class="text-[10px] text-gray-400 mt-2 block">SECURE COLD STORAGE</span>
+                            </div>
+                            <div class="bg-obsidian/80 p-4 rounded border border-gray-800">
+                                <span class="text-gray-500 block mb-1">SYNAPSE RELAY</span>
+                                <span class="text-cyberMagenta font-bold truncate block">NODE-TOKYO-09</span>
+                                <span class="text-[10px] text-gray-400 mt-2 block">LATENCY: 0.4ms</span>
+                            </div>
+                            <div class="bg-obsidian/80 p-4 rounded border border-gray-800">
+                                <span class="text-gray-500 block mb-1">SMART CONTRACT</span>
+                                <span class="text-cyberGreen font-bold truncate block">ACTIVE // 8.4X</span>
+                                <span class="text-[10px] text-gray-400 mt-2 block">AUTONOMOUS ESCROW</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer HUD -->
+    <footer class="border-t border-cyberCyan/20 bg-obsidian py-4 px-6 mt-12 text-center font-mono text-xs text-gray-500 relative z-10 flex flex-col sm:flex-row items-center justify-between">
+        <div>NEO-NEXUS CYBERNETIC SYSTEMS &copy; 2088. ALL RIGHTS RESERVED.</div>
+        <div class="mt-2 sm:mt-0 flex items-center space-x-4">
+            <span class="text-cyberCyan">SECURE PROTOCOL ACTIVE</span>
+            <span class="text-cyberMagenta">QUANTUM ENCRYPTED</span>
+        </div>
+    </footer>
+
+    <!-- Interactive Toast Notification Modal -->
+    <div id="notification-modal" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300">
+        <div class="bg-panel border border-cyberCyan text-white px-5 py-3 rounded-lg shadow-neon-cyan font-mono text-xs flex items-center space-x-3">
+            <i class="fa-solid fa-terminal text-cyberCyan text-base"></i>
+            <div>
+                <div class="font-bold text-cyberCyan" id="toast-title">SYSTEM EVENT</div>
+                <div class="text-gray-300" id="toast-message">Operation successfully executed across network.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+const OCT_NOV_EXHIBITIONS = [{"name": "CPHI Worldwide 2026 (CPHI Milan)", "dates": "October 6–8, 2026", "location": "Milan, Italy (Fiera Milano)", "organizer": "Informa Markets", "sector": "Healthcare & Life Sciences", "status": "Fail", "eventUrl": "https://www.cphi.com/europe/", "directoryUrl": "https://www.cphi.com/europe/en/exhibit/exhibitor-list.html", "eventId": "event-01", "customerSource": "", "customerDataKind": ""}, {"name": "Global Sources Consumer Electronics Show 2026", "dates": "October 11–14, 2026", "location": "Hong Kong (AsiaWorld-Expo)", "organizer": "Global Sources", "sector": "Electronics & Technology", "status": "Fail", "eventUrl": "https://www.globalsources.com/trade-fair/hk-show/consumer_electronics", "directoryUrl": "https://www.globalsources.com/exhibitors/HK/", "eventId": "event-02", "customerSource": "prototypes/data/demo_global_sources_consumer_electronics_2026_customers.csv", "customerDataKind": "synthetic_demo", "embeddedCustomerRows": [{"exhibitor_id": "DEMO-GSCE-001", "company_name": "Aurora Circuitworks Ltd.", "country": "Hong Kong", "booth": "DEMO-1A", "area": "Consumer Electronics Demo Zone", "profile_url": "", "source_url": "", "source_position": "1", "data_status": "DEMO / SYNTHETIC", "synthetic_notice": "Fictional test record; not a Global Sources exhibitor"}, {"exhibitor_id": "DEMO-GSCE-002", "company_name": "Northstar Smart Living Co.", "country": "Singapore", "booth": "DEMO-1B", "area": "Consumer Electronics Demo Zone", "profile_url": "", "source_url": "", "source_position": "2", "data_status": "DEMO / SYNTHETIC", "synthetic_notice": "Fictional test record; not a Global Sources exhibitor"}, {"exhibitor_id": "DEMO-GSCE-003", "company_name": "Pixel Forge Devices Limited", "country": "Taiwan", "booth": "DEMO-1C", "area": "Consumer Electronics Demo Zone", "profile_url": "", "source_url": "", "source_position": "3", "data_status": "DEMO / SYNTHETIC", "synthetic_notice": "Fictional test record; not a Global Sources exhibitor"}]}, {"name": "Global Sources Gaming 2026", "dates": "October 11–14, 2026", "location": "Hong Kong (AsiaWorld-Expo)", "organizer": "Global Sources", "sector": "Electronics & Technology", "status": "Fail", "eventUrl": "https://www.globalsources.com/trade-fair/hk-show/gaming", "directoryUrl": "https://www.globalsources.com/exhibitors/HK/", "eventId": "event-03", "customerSource": "", "customerDataKind": ""}, {"name": "All in Print China 2026 (The 10th All in Print China)", "dates": "October 12–16, 2026", "location": "Shanghai, China (SNIEC)", "organizer": "Messe Düsseldorf (Shanghai) Co., Ltd. / The Printing Technology Association of China", "sector": "Industrial & Manufacturing", "status": "Agent Extraction", "eventUrl": "https://www.allinprint.com/en/", "directoryUrl": "https://www.allinprint.com/en/", "eventId": "event-04", "customerSource": "Result/Other Events/All in Print China 2026/all_in_print_china_2026_exhibitors.csv", "customerDataKind": "published_public"}, {"name": "CIIF 2026 (The 25th China International Industry Fair)", "dates": "October 12–16, 2026", "location": "Shanghai, China (NECC)", "organizer": "Donghao Lansheng (Group) Co., Ltd. / CCPIT / MIIT", "sector": "Industrial & Manufacturing", "status": "Fail", "eventUrl": "https://www.ciif-expo.com/", "directoryUrl": "https://www.ciif-expo.com/", "eventId": "event-05", "customerSource": "prototypes/data/demo_ciif_2026_customers.csv", "customerDataKind": "synthetic_demo"}, {"name": "CEATEC 2026 (Combined Exhibition of Advanced Technologies)", "dates": "October 13–16, 2026", "location": "Chiba/Tokyo, Japan (Makuhari Messe)", "organizer": "Japan Electronics and Information Technology Industries Association (JEITA)", "sector": "Electronics & Technology", "status": "Agent Extraction", "eventUrl": "https://www.ceatec.com/en/", "directoryUrl": "https://www.ceatec.com/en/exhibition/exhibitor-list.php", "eventId": "event-06", "customerSource": "Result/Exhibition Organizers/CEATEC 2026/ceatec_2026_exhibitors.csv", "customerDataKind": "published_public"}, {"name": "electronicAsia 2026 (HKCEC)", "dates": "October 13-16, 2026", "location": "Hong Kong", "organizer": "Hong Kong Trade Development Council (HKTDC)", "sector": "Electronics & Technology", "status": "Done", "eventUrl": "https://www.hktdc.com/event/electronicasia", "directoryUrl": "https://www.hktdc.com/event/electronicasia/en/exhibitor-list", "eventId": "event-07", "customerSource": "", "customerDataKind": ""}, {"name": "GovWare 2026 (Singapore International Cyber Week / SICW)", "dates": "October 13–15, 2026", "location": "Singapore (Sands Expo and Convention Centre)", "organizer": "Image Engine Pte Ltd / Cyber Security Agency of Singapore (CSA)", "sector": "Cybersecurity & Safety", "status": "Agent Extraction", "eventUrl": "https://www.govware.sg/", "directoryUrl": "https://www.govware.sg/visit/govware-2026-sponsors-exhibitors", "eventId": "event-08", "customerSource": "Result/Other Events/GovWare 2026 Hermes/govware_2026_exhibitors.csv", "customerDataKind": "published_public"}, {"name": "HKTDC Hong Kong Electronics Fair (Autumn Edition) 2026 (HKCEC)", "dates": "October 13-16, 2026", "location": "Hong Kong", "organizer": "Hong Kong Trade Development Council (HKTDC)", "sector": "Electronics & Technology", "status": "Done", "eventUrl": "https://www.hktdc.com/event/hkelectronicsfairae", "directoryUrl": "https://www.hktdc.com/event/hkelectronicsfairae/en/exhibitor-list", "eventId": "event-09", "customerSource": "", "customerDataKind": ""}, {"name": "CMEF Autumn 2026 (The 94th China International Medical Equipment Fair)", "dates": "October 14–17, 2026", "location": "Shenzhen, China (Shenzhen World Exhibition & Convention Center)", "organizer": "Reed Sinopharm Exhibitions (RSE)", "sector": "Healthcare & Life Sciences", "status": "Agent Extraction", "eventUrl": "https://www.cmef.com.cn/en", "directoryUrl": "https://www.cmef.com.cn/en/Information?cid=9", "eventId": "event-10", "customerSource": "Result/Exhibition Organizers/CMEF Autumn/cmef_autumn_2026_exhibitors.csv", "customerDataKind": "published_public"}, {"name": "The 140th Canton Fair (Autumn 2026 - Phase 1)", "dates": "October 15–19, 2026", "location": "Guangzhou, China (China Import and Export Fair Complex)", "organizer": "China Foreign Trade Centre (CFTC)", "sector": "Electronics & Technology", "status": "Fail", "eventUrl": "https://www.cantonfair.org.cn/en-US", "directoryUrl": "https://activity.cantonfair.org.cn/en/SelectedExhibitors/company.html", "eventId": "event-11", "customerSource": "", "customerDataKind": ""}, {"name": "Global Sources Mobile Electronics Show 2026", "dates": "October 18–21, 2026", "location": "Hong Kong (AsiaWorld-Expo)", "organizer": "Global Sources", "sector": "Electronics & Technology", "status": "Fail", "eventUrl": "https://www.globalsources.com/trade-fair/hk-show/mobile-electronics", "directoryUrl": "https://www.globalsources.com/exhibitors/HK/", "eventId": "event-12", "customerSource": "", "customerDataKind": ""}, {"name": "MEGA SHOW Hong Kong 2026 (Part 1)", "dates": "October 20–23, 2026", "location": "Hong Kong (HKCEC)", "organizer": "Comasia Limited", "sector": "Consumer, Gifts & Trade", "status": "Agent Extraction", "eventUrl": "https://megashow.comasia.net.cn/", "directoryUrl": "https://megashow.comasia.net.cn/", "eventId": "event-13", "customerSource": "Result/Exhibition Organizers/MEGA SHOW Hong Kong/mega_show_hong_kong_2026_exhibitors.csv", "customerDataKind": "published_public"}, {"name": "TAITRONICS & AIoT Taiwan 2026", "dates": "October 20–22, 2026", "location": "Taipei, Taiwan (TaiNEX 1)", "organizer": "Taiwan External Trade Development Council (TAITRA) / Taiwan Electrical and Electronic Manufacturers' Association (TEEMA)", "sector": "Electronics & Technology", "status": "Agent Extraction", "eventUrl": "https://www.taitronics.tw/en/index.html", "directoryUrl": "https://www.taitronics.tw/en/exhibitor/", "eventId": "event-14", "customerSource": "Result/Exhibition Organizers/TAITRONICS/taitronics_2026_exhibitors.csv", "customerDataKind": "published_public"}, {"name": "The 33rd China (Shenzhen) International Gifts and Home Products Fair (Shenzhen Gift Fair Autumn 2026)", "dates": "October 20–23, 2026", "location": "Shenzhen, China (Shenzhen World Exhibition & Convention Center)", "organizer": "RX Huabo Exhibition (Shenzhen) Co., Ltd.", "sector": "Consumer, Gifts & Trade", "status": "Fail", "eventUrl": "https://oct.chinagiftsfair.com/", "directoryUrl": "https://oct.chinagiftsfair.com/", "eventId": "event-15", "customerSource": "", "customerDataKind": ""}, {"name": "ITB Asia 2026", "dates": "October 21–23, 2026", "location": "Singapore (Sands Expo and Convention Centre)", "organizer": "Messe Berlin (Singapore)", "sector": "Education & Services", "status": "Fail", "eventUrl": "https://www.itb-asia.com/", "directoryUrl": "https://www.itb-asia.com/", "eventId": "event-16", "customerSource": "", "customerDataKind": ""}, {"name": "The 140th Canton Fair (Autumn 2026 - Phase 2)", "dates": "October 23–27, 2026", "location": "Guangzhou, China (China Import and Export Fair Complex)", "organizer": "China Foreign Trade Centre (CFTC)", "sector": "Consumer, Gifts & Trade", "status": "Fail", "eventUrl": "https://www.cantonfair.org.cn/en-US", "directoryUrl": "https://activity.cantonfair.org.cn/en/SelectedExhibitors/company.html", "eventId": "event-17", "customerSource": "", "customerDataKind": ""}, {"name": "Eco Expo Asia", "dates": "October 26–29,2026", "location": "Hong Kong", "organizer": "Messse Frankfurt", "sector": "Sustainability & Environment", "status": "Done", "eventUrl": "http://www.ecoexpoasia.com", "directoryUrl": "", "eventId": "event-18", "customerSource": "", "customerDataKind": ""}, {"name": "Eco Expo Asia 2026 (AsiaWorld-Expo)", "dates": "October 26-29, 2026", "location": "Hong Kong", "organizer": "Hong Kong Trade Development Council (HKTDC)", "sector": "Sustainability & Environment", "status": "Done", "eventUrl": "https://www.hktdc.com/event/ecoexpoasia", "directoryUrl": "https://www.hktdc.com/event/ecoexpoasia/en/exhibitor-list", "eventId": "event-19", "customerSource": "", "customerDataKind": ""}, {"name": "HKTDC Hong Kong International Lighting Fair (Autumn Edition) 2026 (HKCEC)", "dates": "October 27-30, 2026", "location": "Hong Kong", "organizer": "Hong Kong Trade Development Council (HKTDC)", "sector": "Electronics & Technology", "status": "Done", "eventUrl": "https://www.hktdc.com/event/hklightingfairae", "directoryUrl": "https://www.hktdc.com/event/hklightingfairae/en/exhibitor-list", "eventId": "event-20", "customerSource": "", "customerDataKind": ""}, {"name": "MEGA SHOW Hong Kong 2026 (Part 2)", "dates": "October 27–29, 2026", "location": "Hong Kong (HKCEC)", "organizer": "Comasia Limited", "sector": "Education & Services", "status": "Fail", "eventUrl": "https://megashow.comasia.net.cn/", "directoryUrl": "https://megashow.comasia.net.cn/", "eventId": "event-21", "customerSource": "", "customerDataKind": ""}, {"name": "PTC ASIA 2026 (Power Transmission and Control Asia)", "dates": "October 27–30, 2026", "location": "Shanghai, China (SNIEC)", "organizer": "Deutsche Messe / Hannover Milano Fairs Shanghai", "sector": "Industrial & Manufacturing", "status": "Fail", "eventUrl": "https://www.ptc-asia.com/en/", "directoryUrl": "https://www.ptc-asia.com/en/exhibitor-list", "eventId": "event-22", "customerSource": "", "customerDataKind": ""}, {"name": "SWITCH 2026 (Singapore Week of Innovation and Technology)", "dates": "October 27–29, 2026", "location": "Singapore (Sands Expo and Convention Centre)", "organizer": "Enterprise Singapore", "sector": "Electronics & Technology", "status": "Fail", "eventUrl": "https://www.switchsg.org/", "directoryUrl": "https://www.switchsg.org/", "eventId": "event-23", "customerSource": "", "customerDataKind": ""}, {"name": "gamescom asia 2026", "dates": "October 29 – November 1, 2026", "location": "Bangkok, Thailand (Queen Sirikit National Convention Center - QSNCC)", "organizer": "Koelnmesse Pte Ltd", "sector": "Electronics & Technology", "status": "Fail", "eventUrl": "https://gamescom.asia/", "directoryUrl": "https://gamescom.asia/", "eventId": "event-24", "customerSource": "", "customerDataKind": ""}, {"name": "Discovery Art Fair Frankfurt", "dates": "October 30–November 01, 2026", "location": "Frankfurt/Main", "organizer": "Messse Frankfurt", "sector": "Arts & Culture", "status": "Done", "eventUrl": "https://discoveryartfair.com/de/fairs/frankfurt/", "directoryUrl": "", "eventId": "event-25", "customerSource": "", "customerDataKind": ""}, {"name": "Stuzubi Studien- und Ausbildungsmesse Frankfurt", "dates": "October 30–31, 2026", "location": "Frankfurt/Main", "organizer": "Messse Frankfurt", "sector": "Education & Services", "status": "Done", "eventUrl": "https://stuzubi.de/messen/frankfurt/", "directoryUrl": "", "eventId": "event-26", "customerSource": "", "customerDataKind": ""}, {"name": "in-cosmetics Asia 2026", "dates": "November 3–5, 2026", "location": "Bangkok, Thailand (BITEC)", "organizer": "RX Global (Reed Exhibitions)", "sector": "Healthcare & Life Sciences", "status": "Fail", "eventUrl": "https://www.in-cosmetics.com/asia/en-gb.html", "directoryUrl": "https://www.in-cosmetics.com/asia/en-gb/exhibitor-directory.html", "eventId": "event-27", "customerSource": "", "customerDataKind": ""}, {"name": "Super Terminal Expo 2026", "dates": "November 3–5, 2026", "location": "Hong Kong (AsiaWorld-Expo)", "organizer": "Informa Markets / CAPA", "sector": "Electronics & Technology", "status": "New", "eventUrl": "https://www.superterminalexpo.com/", "directoryUrl": "https://www.superterminalexpo.com/", "eventId": "event-28", "customerSource": "", "customerDataKind": ""}, {"name": "Agri-Food Tech Expo Asia 2026 (AFTEA 2026)", "dates": "November 4–6, 2026", "location": "Singapore (Sands Expo and Convention Centre)", "organizer": "Constellar Exhibitions / DLG (German Agricultural Society)", "sector": "Food, Wine & Agriculture", "status": "New", "eventUrl": "https://www.agrifoodtechexpo.com/", "directoryUrl": "https://www.agrifoodtechexpo.com/", "eventId": "event-29", "customerSource": "", "customerDataKind": ""}, {"name": "EDUtech Asia 2026", "dates": "November 4–5, 2026", "location": "Singapore (Sands Expo and Convention Centre)", "organizer": "Terrapinn Pte Ltd", "sector": "Education & Services", "status": "New", "eventUrl": "https://www.terrapinn.com/exhibition/edutech-asia/index.stm", "directoryUrl": "https://www.terrapinn.com/exhibition/edutech-asia/Official-Vendors.stm", "eventId": "event-30", "customerSource": "", "customerDataKind": ""}, {"name": "HKTDC Hong Kong International Optical Fair 2026", "dates": "November 4-6, 2026", "location": "Hong Kong", "organizer": "Hong Kong Trade Development Council (HKTDC)", "sector": "General Trade", "status": "Done", "eventUrl": "https://www.hktdc.com/event/hkopticalfair", "directoryUrl": "https://www.hktdc.com/event/hkopticalfair/en/exhibitor-list", "eventId": "event-31", "customerSource": "", "customerDataKind": ""}, {"name": "China International Import Expo (CIIE 2026)", "dates": "November 5–10, 2026", "location": "Shanghai, China (NECC)", "organizer": "Ministry of Commerce of PRC / CIIE Bureau", "sector": "Healthcare & Life Sciences", "status": "Fail", "eventUrl": "https://www.ciie.org/zbh/en/", "directoryUrl": "https://www.ciie.org/zbh/en/exhibitorList/", "eventId": "event-32", "customerSource": "", "customerDataKind": ""}, {"name": "HKTDC Hong Kong International Wine and Spirits Fair 2026 (HKCEC)", "dates": "November 5-7, 2026", "location": "Hong Kong", "organizer": "Hong Kong Trade Development Council (HKTDC)", "sector": "Food, Wine & Agriculture", "status": "Done", "eventUrl": "https://www.hktdc.com/event/hkwinefair", "directoryUrl": "https://www.hktdc.com/event/hkwinefair/en/exhibitor-list", "eventId": "event-33", "customerSource": "", "customerDataKind": ""}, {"name": "Cosmoprof Asia 2026 & Cosmopack Asia 2026", "dates": "November 10–12 (AWE) & November 11–13, 2026 (HKCEC)", "location": "Hong Kong (AsiaWorld-Expo & HKCEC)", "organizer": "BolognaFiere / Informa Markets", "sector": "Healthcare & Life Sciences", "status": "Done", "eventUrl": "https://www.cosmoprof-asia.com/", "directoryUrl": "https://www.cosmoprof-asia.com/exhibitor-list/", "eventId": "event-34", "customerSource": "", "customerDataKind": ""}, {"name": "Pro Integration Future Asia 2026 (PIFA 2026)", "dates": "November 10–12, 2026", "location": "Singapore (Sands Expo & Convention Centre)", "organizer": "Montgomery Asia", "sector": "General Trade", "status": "Agent Extraction", "eventUrl": "https://www.prointegrationfuture.asia/", "directoryUrl": "https://www.prointegrationfuture.asia/exhibitor-list", "eventId": "event-35", "customerSource": "", "customerDataKind": ""}, {"name": "ProWine Shanghai 2026", "dates": "November 10–12, 2026", "location": "Shanghai, China (SNIEC)", "organizer": "Messe Düsseldorf (Shanghai) Co., Ltd. / FHC", "sector": "Food, Wine & Agriculture", "status": "New", "eventUrl": "https://www.prowine-shanghai.com/en/", "directoryUrl": "https://www.prowine-shanghai.com/en/exhibitors-products/exhibitor_list", "eventId": "event-36", "customerSource": "", "customerDataKind": ""}, {"name": "Formnext", "dates": "November 17–20,2026", "location": "Frankfurt/Main", "organizer": "Messse Frankfurt", "sector": "Industrial & Manufacturing", "status": "Done", "eventUrl": "https://formnext.mesago.com", "directoryUrl": "", "eventId": "event-37", "customerSource": "", "customerDataKind": ""}, {"name": "FTE APEX Asia Expo 2026", "dates": "November 18–19, 2026", "location": "Singapore (Marina Bay Sands Expo and Convention Centre)", "organizer": "Future Travel Experience (FTE) / APEX", "sector": "Education & Services", "status": "New", "eventUrl": "https://www.futuretravelexperience.com/fte-apex-asia-expo/", "directoryUrl": "https://www.futuretravelexperience.com/fte-apex-asia-expo/", "eventId": "event-38", "customerSource": "", "customerDataKind": ""}, {"name": "Secutech Thailand", "dates": "November 18–20,2026", "location": "Bangkok", "organizer": "Messse Frankfurt", "sector": "Cybersecurity & Safety", "status": "Done", "eventUrl": "https://secutechthailand.tw.messefrankfurt.com", "directoryUrl": "", "eventId": "event-39", "customerSource": "", "customerDataKind": ""}];
+
+        function escapeHtml(value) {
+            return String(value || '').replace(/[&<>"']/g, char => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            }[char]));
+        }
+
+        function exhibitionIcon(sector) {
+            const icons = {
+                'Cybersecurity & Safety': 'fa-shield-halved',
+                'Healthcare & Life Sciences': 'fa-heart-pulse',
+                'Electronics & Technology': 'fa-microchip',
+                'Industrial & Manufacturing': 'fa-gears',
+                'Food, Wine & Agriculture': 'fa-wheat-awn',
+                'Education & Services': 'fa-graduation-cap',
+                'Sustainability & Environment': 'fa-leaf',
+                'Consumer, Gifts & Trade': 'fa-bag-shopping',
+                'Arts & Culture': 'fa-palette',
+                'General Trade': 'fa-calendar-days'
+            };
+            return icons[sector] || icons['General Trade'];
+        }
+
+        const EXHIBITION_BY_ID = Object.fromEntries(OCT_NOV_EXHIBITIONS.map(event => [event.eventId, event]));
+        let selectedEvent = null;
+        let activeCustomers = [];
+        const STAR_FLAGS_STORAGE_KEY = 'exhibitionDashboardStarFlags:v1';
+        let customerListOrigin = 'published';
+        let customerLoadSequence = 0;
+        function readStarFlags() {
+            try {
+                const stored = JSON.parse(window.localStorage.getItem(STAR_FLAGS_STORAGE_KEY) || '{}');
+                const valid = Object.create(null);
+                for (const [eventId, enabled] of Object.entries(stored)) {
+                    if (EXHIBITION_BY_ID[eventId] && typeof enabled === 'boolean') valid[eventId] = enabled;
+                }
+                return valid;
+            } catch { return Object.create(null); }
+        }
+        let starFlags = readStarFlags();
+        function toggleEventStar(eventId) {
+            if (!EXHIBITION_BY_ID[eventId]) return;
+            starFlags[eventId] = !starFlags[eventId];
+            try { window.localStorage.setItem(STAR_FLAGS_STORAGE_KEY, JSON.stringify(starFlags)); } catch { /* The toggle still works for this page if storage is disabled. */ }
+            renderExhibitions();
+        }
+
+        function renderExhibitions() {
+            const grid = document.getElementById('exhibition-grid');
+            const sector = document.getElementById('sector-filter').value;
+            const events = OCT_NOV_EXHIBITIONS.filter(event => sector === 'ALL' || event.sector === sector);
+            document.getElementById('event-count').textContent = `${events.length} event${events.length === 1 ? '' : 's'} shown`;
+            grid.innerHTML = events.map(event => {
+                const directory = event.directoryUrl
+                    ? `<a class="px-3 py-1 border border-cyberMagenta text-cyberMagenta rounded text-xs font-mono hover:bg-cyberMagenta/20 transition" target="_blank" rel="noopener" href="${escapeHtml(event.directoryUrl)}">DIRECTORY <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a>`
+                    : '';
+                const eventLink = event.eventUrl
+                    ? `<a class="px-3 py-1 border border-cyberCyan text-cyberCyan rounded text-xs font-mono hover:bg-cyberCyan/20 transition" target="_blank" rel="noopener" href="${escapeHtml(event.eventUrl)}">EVENT SITE <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a>`
+                    : '';
+                const isDemo = event.customerDataKind === 'synthetic_demo';
+                const customerButtonClass = isDemo ? 'border-cyberYellow text-cyberYellow hover:bg-cyberYellow/20' : 'border-cyberGreen text-cyberGreen hover:bg-cyberGreen/20';
+                const customers = event.customerSource
+                    ? `<button type="button" onclick="openEventCustomers('${event.eventId}')" class="px-3 py-1 border ${customerButtonClass} rounded text-xs font-mono transition">${isDemo ? 'VIEW DEMO CUSTOMERS' : 'VIEW CUSTOMERS'} <i class="fa-solid fa-users ml-1"></i></button>`
+                    : '<span class="text-[10px] text-gray-500 font-mono">NO EVENT CSV LINKED</span>';
+                const isStarred = Boolean(starFlags[event.eventId]);
+                const starButton = `<button type="button" onclick="toggleEventStar('${escapeHtml(event.eventId)}')" aria-label="${isStarred ? 'Remove star from' : 'Star'} ${escapeHtml(event.name)}" aria-pressed="${isStarred}" title="Star flag ${isStarred ? 'on' : 'off'}" class="inline-flex shrink-0 items-center gap-1.5 px-2 py-1 border ${isStarred ? 'border-cyberYellow text-cyberYellow bg-cyberYellow/10' : 'border-gray-700 text-gray-500 hover:text-cyberYellow'} rounded text-[10px] font-mono transition"><i class="fa-solid fa-star"></i><span>${isStarred ? 'STAR ON' : 'STAR OFF'}</span></button>`;
+                return `<article class="holo-card rounded-xl p-5 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-cyberCyan/10 text-cyberCyan text-[10px] font-mono px-3 py-1 rounded-bl border-l border-b border-cyberCyan/30">${escapeHtml(event.sector.toUpperCase())}</div>
+                    <div class="h-28 rounded-lg bg-gradient-to-br from-panel to-obsidian border border-cyberCyan/20 flex items-center justify-center relative overflow-hidden mb-4">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,240,255,0.12)_0%,transparent_70%)]"></div>
+                        <i class="fa-solid ${exhibitionIcon(event.sector)} text-4xl text-cyberCyan group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(0,240,255,0.6)]"></i>
+                    </div>
+                    <div class="flex items-start gap-2 mb-1 pr-16"><h3 class="text-lg font-bold text-white flex-1">${escapeHtml(event.name)}</h3>${starButton}</div>
+                    <p class="text-cyberMagenta text-xs font-mono mb-2">${escapeHtml(event.dates)}</p>
+                    <p class="text-gray-400 text-xs mb-1"><i class="fa-solid fa-location-dot text-cyberCyan mr-1"></i>${escapeHtml(event.location)}</p>
+                    <p class="text-gray-500 text-xs mb-4">${escapeHtml(event.organizer || 'Organizer not listed')}</p>
+                    <div class="flex flex-wrap items-center gap-2 pt-3 border-t border-gray-800">${customers}${eventLink}${directory}</div>
+                </article>`;
+            }).join('') || '<div class="col-span-full text-gray-400 font-mono text-sm border border-gray-800 rounded-xl p-6">No October–November exhibitions match this sector.</div>';
+        }
+
+        function parseCsv(text) {
+            const rows = [];
+            let row = [], cell = '', quoted = false;
+            for (let index = 0; index < text.length; index += 1) {
+                const char = text[index];
+                if (quoted) {
+                    if (char === '"' && text[index + 1] === '"') { cell += '"'; index += 1; }
+                    else if (char === '"') quoted = false;
+                    else cell += char;
+                } else if (char === '"') quoted = true;
+                else if (char === ',') { row.push(cell); cell = ''; }
+                else if (char === '\n') { row.push(cell.replace(/\r$/, '')); rows.push(row); row = []; cell = ''; }
+                else cell += char;
+            }
+            if (quoted) throw new Error('CSV contains an unclosed quoted field.');
+            if (cell || row.length) { row.push(cell.replace(/\r$/, '')); rows.push(row); }
+            const headers = (rows.shift() || []).map(header => header.replace(/^\uFEFF/, '').trim());
+            return rows.filter(row => row.some(value => value.trim())).map(row => Object.fromEntries(headers.map((header, index) => [header, (row[index] || '').trim()])));
+        }
+
+        function firstValue(row, names) {
+            for (const name of names) {
+                if (row[name]) return row[name];
+            }
+            return '';
+        }
+
+        function customerFromRow(row) {
+            const normalizedRow = Object.fromEntries(Object.entries(row).map(([key, value]) => [key.trim().toLowerCase().replace(/[ -]+/g, '_'), value]));
+            return {
+                id: firstValue(normalizedRow, ['exhibitor_id', 'company_id', 'application_id', 'id']) || '',
+                name: firstValue(normalizedRow, ['company_name_en', 'company_name', 'exhibitor_name', 'exhibitor', 'name', 'company']) || '',
+                country: firstValue(normalizedRow, ['country', 'country_name', 'region', 'province', 'city']) || '',
+                booth: firstValue(normalizedRow, ['booth', 'booth_no', 'booth_code', 'hall', 'area', 'show_area']) || '',
+                profileUrl: firstValue(normalizedRow, ['detail_url', 'profile_url', 'company_url', 'website']) || '',
+                sourceUrl: firstValue(normalizedRow, ['source_url', 'source_page']) || '',
+                raw: row
+            };
+        }
+
+        function safeHttpUrl(value) {
+            try {
+                const url = new URL(String(value || ''));
+                return url.protocol === 'http:' || url.protocol === 'https:' ? url.href : '';
+            } catch {
+                return '';
+            }
+        }
+
+        function resolveRepositoryCsvUrl(source) {
+            if (!window.location || !/^https?:$/.test(window.location.protocol)) {
+                throw new Error('Serve this dashboard over HTTP/HTTPS from the repository root; file:// pages cannot fetch the CSV files.');
+            }
+            const url = new URL(String(source || ''), new URL('/', window.location.href));
+            if (!/^https?:$/.test(url.protocol) || url.origin !== window.location.origin) {
+                throw new Error('The event CSV path must stay on the dashboard origin.');
+            }
+            if (!url.pathname.toLowerCase().endsWith('.csv')) throw new Error('The configured event path is not a CSV file.');
+            return url.href;
+        }
+
+        async function openEventCustomers(eventId) {
+            selectedEvent = EXHIBITION_BY_ID[eventId];
+            if (!selectedEvent || !selectedEvent.customerSource) {
+                showToast('CUSTOMERS UNAVAILABLE', 'No event-specific customer CSV is linked to this event yet.');
+                return;
+            }
+            const requestId = ++customerLoadSequence;
+            const isDemo = selectedEvent.customerDataKind === 'synthetic_demo';
+            customerListOrigin = isDemo ? 'synthetic' : 'published';
+            const view = document.getElementById('step-2-view');
+            const dataLabel = isDemo ? 'DEMO / SYNTHETIC — NOT A PUBLISHED EXHIBITOR LIST' : 'PUBLISHED PUBLIC CUSTOMER LIST';
+            const dataDescription = isDemo ? `Fictional interface-test records loaded from ${selectedEvent.customerSource}; they are not exhibitors.` : `Event-specific public CSV: ${selectedEvent.customerSource}. The listed fields are displayed as supplied; missing facts are not inferred.`;
+            const eventFilterOptions = OCT_NOV_EXHIBITIONS.filter(event => event.customerSource).map(event => {
+                const optionLabel = event.customerDataKind === 'synthetic_demo' ? `[DEMO / SYNTHETIC] ${event.name}` : event.name;
+                return `<option value="${escapeHtml(event.eventId)}"${event.eventId === selectedEvent.eventId ? ' selected' : ''}>${escapeHtml(optionLabel)}</option>`;
+            }).join('');
+            view.innerHTML = `<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-cyberMagenta/20 pb-4">
+                <div><div class="text-cyberMagenta font-mono text-xs tracking-widest uppercase">// STAGE 02: EVENT-LINKED CUSTOMER LIST</div><h2 id="selected-event-title" class="text-2xl md:text-3xl font-bold text-white tracking-wide mt-1">${escapeHtml(selectedEvent.name)}</h2><p class="${customerListOrigin === 'synthetic' ? 'text-cyberYellow' : 'text-gray-400'} text-sm mt-1 font-mono">${escapeHtml(dataLabel)}</p><p class="text-gray-400 text-sm mt-1">${escapeHtml(dataDescription)}</p></div>
+                <button onclick="switchStep(1)" class="px-4 py-2 border border-gray-700 text-gray-300 font-mono text-sm rounded hover:bg-gray-800 transition"><i class="fa-solid fa-arrow-left mr-1"></i> EXHIBITIONS</button>
+            </div>
+            <section id="ai-recommend-panel" class="border border-cyberViolet/40 bg-panel/70 rounded-xl p-4">
+                <div class="flex flex-wrap items-center gap-3"><h3 class="text-cyberViolet font-mono text-sm font-bold tracking-widest">AI RECOMMEND</h3><span class="text-[9px] text-cyberYellow border border-cyberYellow/40 rounded px-2 py-1 font-mono">RULE-BASED PREVIEW — NOT AN AI MODEL</span></div>
+                <p class="text-gray-400 text-xs mt-2">Review suggestions are ranked only by how many of these CSV fields are present: country, booth, ID, and a safe HTTP(S) profile URL. This is a completeness heuristic, not an assessment of company quality.</p>
+                <div id="ai-recommend-list" class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-3"><p class="text-gray-500 text-xs font-mono">Recommendations appear after the event list loads.</p></div>
+            </section>
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 bg-panel/80 p-4 rounded-xl border border-cyberCyan/20"><label class="w-full lg:w-[30rem] block"><span class="text-[10px] text-cyberMagenta font-mono tracking-wider">FILTER CUSTOMERS BY EXHIBITION</span><select id="customer-event-filter" onchange="openEventCustomers(this.value)" class="mt-1 w-full bg-obsidian border border-cyberMagenta/40 rounded px-3 py-2 text-sm text-white font-mono focus:outline-none focus:border-cyberMagenta">${eventFilterOptions}</select></label><div class="relative w-full lg:w-96"><span class="absolute inset-y-0 left-0 pt-6 pl-3 flex items-center pointer-events-none text-cyberCyan"><i class="fa-solid fa-magnifying-glass"></i></span><label class="block"><span class="text-[10px] text-cyberCyan font-mono tracking-wider">SEARCH SELECTED EXHIBITION</span><input type="search" id="customer-search" oninput="renderCustomerCards()" placeholder="Company, country, booth, or ID..." class="mt-1 w-full bg-obsidian border border-cyberCyan/40 rounded pl-10 pr-4 py-2 text-sm text-white font-mono focus:outline-none focus:border-cyberCyan"></label></div><span id="customer-count" class="text-cyberGreen font-mono text-xs pb-2"></span></div>
+            <div id="customer-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"><div class="col-span-full text-gray-400 font-mono text-sm border border-gray-800 rounded-xl p-6">Loading published customer list…</div></div>`;
+            switchStep(2);
+            activeCustomers = [];
+            try {
+                const csvUrl = resolveRepositoryCsvUrl(selectedEvent.customerSource);
+                const response = await fetch(csvUrl, { credentials: 'omit', cache: 'no-store' });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const customers = parseCsv(await response.text()).map(customerFromRow).filter(customer => customer.name);
+                if (!customers.length) throw new Error('CSV contained no named customer rows.');
+                if (requestId !== customerLoadSequence || selectedEvent.eventId !== eventId) return;
+                activeCustomers = customers;
+                renderCustomerCards();
+                showToast(isDemo ? 'DEMO CUSTOMERS LOADED' : 'CUSTOMERS LOADED', `${activeCustomers.length} ${isDemo ? 'synthetic test' : 'public'} customer records linked to this event.`);
+            } catch (error) {
+                if (requestId !== customerLoadSequence || selectedEvent.eventId !== eventId) return;
+                activeCustomers = [];
+                renderAiRecommendations();
+                document.getElementById('customer-grid').innerHTML = `<div class="col-span-full text-red-300 font-mono text-sm border border-red-500/40 rounded-xl p-6">Customer list could not be loaded (${escapeHtml(error.message)}). This event uses ${escapeHtml(selectedEvent.customerSource)} resolved from the repository root. Check that the CSV exists and serve the dashboard from the repository root over HTTP/HTTPS.</div>`;
+                document.getElementById('customer-count').textContent = 'LIST UNAVAILABLE';
+            }
+        }
+
+        function renderAiRecommendations() {
+            const target = document.getElementById('ai-recommend-list');
+            if (!target) return;
+            const candidates = activeCustomers.map((customer, index) => {
+                const available = [
+                    ['Country', customer.country], ['Booth', customer.booth], ['ID', customer.id],
+                    ['Profile URL', safeHttpUrl(customer.profileUrl || customer.sourceUrl)]
+                ].filter(([, value]) => Boolean(String(value || '').trim()));
+                return { customer, index, available };
+            }).filter(item => item.customer.name).sort((left, right) => right.available.length - left.available.length || left.index - right.index).slice(0, 3);
+            target.innerHTML = candidates.length ? candidates.map(item => `<article class="bg-obsidian/70 border border-cyberViolet/30 rounded-lg p-3"><div class="text-white text-sm font-bold">${escapeHtml(item.customer.name)}</div><p class="text-gray-400 text-[10px] mt-1">${item.available.length}/4 review fields present: ${escapeHtml(item.available.map(([label]) => label).join(', ') || 'name only')}.</p><button type="button" onclick="openCustomerDossier(${item.index})" class="mt-2 text-cyberCyan text-[10px] font-mono hover:text-white">REVIEW RECORD <i class="fa-solid fa-arrow-right ml-1"></i></button></article>`).join('') : '<p class="text-gray-500 text-xs font-mono">No named exhibitor rows are loaded for recommendations.</p>';
+        }
+
+        function renderCustomerCards() {
+            renderAiRecommendations();
+            const query = (document.getElementById('customer-search').value || '').toLowerCase();
+            const customers = activeCustomers.filter(customer => [customer.name, customer.country, customer.booth, customer.id].join(' ').toLowerCase().includes(query));
+            const recordKind = customerListOrigin === 'synthetic' ? 'synthetic demo records' : 'public records';
+            document.getElementById('customer-count').textContent = `${customers.length} of ${activeCustomers.length} ${recordKind}`;
+            const grid = document.getElementById('customer-grid');
+            grid.innerHTML = customers.map(customer => {
+                const customerIndex = activeCustomers.indexOf(customer);
+                const dataTag = customerListOrigin === 'synthetic' ? 'DEMO / SYNTHETIC' : 'PUBLIC LIST';
+                const dataTagClass = customerListOrigin === 'synthetic' ? 'bg-cyberYellow/20 text-cyberYellow border-cyberYellow/40' : 'bg-cyberMagenta/20 text-cyberMagenta border-cyberMagenta/40';
+                return `<article class="customer-card holo-card rounded-xl p-5 relative group">
+                    <div class="absolute top-4 right-4 text-[10px] font-mono px-2 py-0.5 rounded ${dataTagClass} border">${dataTag}</div>
+                    <div class="flex items-center space-x-4 mb-4"><div class="w-12 h-12 rounded-full bg-gradient-to-tr from-cyberMagenta to-cyberViolet flex items-center justify-center font-mono font-bold text-white text-lg shadow-neon-magenta">${escapeHtml(customer.name.slice(0, 2).toUpperCase())}</div><div><h3 class="font-bold text-white text-base group-hover:text-cyberCyan transition">${escapeHtml(customer.name)}</h3><p class="text-xs text-gray-400 font-mono">${escapeHtml(customer.country || 'Location not listed')}</p></div></div>
+                    <div class="space-y-2 text-xs font-mono text-gray-300 mb-4 pt-3 border-t border-gray-800"><div class="flex justify-between gap-3"><span class="text-gray-500">EVENT:</span><span class="text-cyberCyan text-right">${escapeHtml(selectedEvent.name)}</span></div><div class="flex justify-between gap-3"><span class="text-gray-500">BOOTH / AREA:</span><span class="text-cyberGreen text-right">${escapeHtml(customer.booth || 'Not listed')}</span></div><div class="flex justify-between gap-3"><span class="text-gray-500">SOURCE ID:</span><span class="text-gray-400 text-right">${escapeHtml(customer.id || 'Not listed')}</span></div></div>
+                    <button type="button" onclick="openCustomerDossier(${customerIndex})" class="w-full py-2 bg-panel border border-cyberCyan/50 text-cyberCyan rounded font-mono text-xs hover:bg-cyberCyan hover:text-obsidian transition font-bold">ENQUIRE CUSTOMER DETAILS <i class="fa-solid fa-chevron-right ml-1"></i></button>
+                </article>`;
+            }).join('') || '<div class="col-span-full text-gray-400 font-mono text-sm border border-gray-800 rounded-xl p-6">No customer records match this search.</div>';
+        }
+
+        function openCustomerDossier(customerIndex) {
+            const customer = activeCustomers[customerIndex];
+            if (!customer || !selectedEvent) return;
+            const recordLink = safeHttpUrl(customer.profileUrl || customer.sourceUrl);
+            const isDemo = customerListOrigin === 'synthetic';
+            const dataTitle = isDemo ? 'SYNTHETIC TEST CUSTOMER DOSSIER' : 'PUBLIC EXHIBITOR DOSSIER';
+            const dossierDescription = isDemo ? 'Fictional test details linked to this event for interface testing.' : 'Public-source details linked to the selected event and customer record.';
+            const dataNotice = isDemo ? `This is a fictional test record from ${selectedEvent.customerSource}. It is not a real exhibitor.` : `This screen displays fields supplied by ${selectedEvent.customerSource}. Missing fields remain unfilled; no customer facts are inferred.`;
+            const details = [
+                ['Selected event', selectedEvent.name], ['Customer / exhibitor', customer.name], ['Source record ID', customer.id],
+                ['Country / location', customer.country], ['Booth / area', customer.booth]
+            ].filter(([, value]) => value).map(([label, value]) => `<div class="bg-obsidian/60 p-3 rounded border border-gray-800"><dt class="text-gray-500 text-[10px]">${escapeHtml(label.toUpperCase())}</dt><dd class="text-white text-sm mt-1 break-words">${escapeHtml(value)}</dd></div>`).join('');
+            const view = document.getElementById('step-3-view');
+            view.innerHTML = `<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-cyberViolet/20 pb-4"><div><div class="text-cyberViolet font-mono text-xs tracking-widest uppercase">// STAGE 03: CUSTOMER ENRICHED DATA</div><h2 class="text-2xl md:text-3xl font-bold text-white tracking-wide mt-1">${escapeHtml(customer.name)}</h2><p class="text-gray-400 text-sm mt-1">${escapeHtml(dossierDescription)}</p></div><button onclick="switchStep(2)" class="px-4 py-2 border border-gray-700 text-gray-300 font-mono text-sm rounded hover:bg-gray-800 transition"><i class="fa-solid fa-arrow-left mr-1"></i> CUSTOMERS</button></div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6"><article class="holo-card rounded-xl p-6 border-cyberViolet/30 lg:col-span-2"><div class="flex items-center space-x-2 ${isDemo ? 'text-cyberYellow' : 'text-cyberCyan'} font-mono text-sm mb-5"><i class="fa-solid fa-address-card text-lg"></i><span class="font-bold tracking-wider">${dataTitle}</span></div><dl class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono">${details}</dl></article><aside class="holo-card rounded-xl p-6 border-cyberCyan/30"><div class="text-cyberCyan font-mono text-xs mb-3"><i class="fa-solid fa-circle-info mr-1"></i> DATA PROVENANCE</div><p class="text-sm text-gray-300 mb-4">${escapeHtml(dataNotice)}</p>${recordLink ? `<a target="_blank" rel="noopener" href="${escapeHtml(recordLink)}" class="inline-block px-3 py-2 border border-cyberCyan text-cyberCyan rounded text-xs font-mono hover:bg-cyberCyan/20">${isDemo ? 'OPEN DEMO SOURCE' : 'OPEN PUBLIC SOURCE'} <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a>` : '<span class="text-xs text-gray-500 font-mono">NO DETAIL URL PROVIDED</span>'}</aside></div>`;
+            switchStep(3);
+            showToast('DOSSIER LOADED', isDemo ? `Synthetic test details loaded for ${customer.name}` : `Public details loaded for ${customer.name}`);
+        }
+
+        function initialiseCustomerStages() {
+            document.getElementById('step-2-view').innerHTML = '<div class="border border-cyberMagenta/30 bg-panel/80 rounded-xl p-8 text-center"><i class="fa-solid fa-users text-cyberMagenta text-3xl mb-4"></i><h2 class="text-xl text-white font-bold">Select an event first</h2><p class="text-gray-400 text-sm mt-2">Use <span class="text-cyberGreen font-mono">VIEW CUSTOMERS</span> on an exhibition card to load that event’s linked CSV.</p></div>';
+            document.getElementById('step-3-view').innerHTML = '<div class="border border-cyberViolet/30 bg-panel/80 rounded-xl p-8 text-center"><i class="fa-solid fa-address-card text-cyberViolet text-3xl mb-4"></i><h2 class="text-xl text-white font-bold">Select a customer first</h2><p class="text-gray-400 text-sm mt-2">Choose <span class="text-cyberCyan font-mono">ENQUIRE CUSTOMER DETAILS</span> from an event-linked public customer list.</p></div>';
+        }
+
+        function initExhibitionFilter() {
+            const filter = document.getElementById('sector-filter');
+            const sectors = [...new Set(OCT_NOV_EXHIBITIONS.map(event => event.sector))].sort();
+            filter.innerHTML = '<option value="ALL">ALL SECTORS</option>' + sectors.map(sector => `<option value="${escapeHtml(sector)}">${escapeHtml(sector.toUpperCase())}</option>`).join('');
+            filter.addEventListener('change', renderExhibitions);
+            renderExhibitions();
+        }
+
+        initExhibitionFilter();
+        initialiseCustomerStages();
+
+        // Live Clock Updater
+        setInterval(() => {
+            const now = new Date();
+            document.getElementById('live-clock').innerText = now.toUTCString().slice(17, 25) + ' UTC';
+        }, 1000);
+
+        // Step Switcher Logic
+        function switchStep(stepNum) {
+            // Hide all views
+            document.getElementById('step-1-view').classList.add('hidden');
+            document.getElementById('step-2-view').classList.add('hidden');
+            document.getElementById('step-3-view').classList.add('hidden');
+
+            // Show target view
+            document.getElementById(`step-${stepNum}-view`).classList.remove('hidden');
+
+            // Reset indicator buttons style
+            for(let i = 1; i <= 3; i++) {
+                const btn = document.getElementById(`step-btn-${i}`);
+                btn.className = "step-indicator px-4 py-1.5 border border-gray-700 bg-panel text-gray-400 font-mono text-xs tracking-wider transition-all flex items-center space-x-2";
+                if(i === 1) btn.classList.add('rounded-l');
+                if(i === 3) btn.classList.add('rounded-r');
+            }
+
+            // Highlight active button
+            const activeBtn = document.getElementById(`step-btn-${stepNum}`);
+            activeBtn.className = "step-indicator px-4 py-1.5 border border-cyberCyan bg-cyberCyan/20 text-cyberCyan font-mono text-xs tracking-wider transition-all flex items-center space-x-2 shadow-neon-cyan";
+            if(stepNum === 1) activeBtn.classList.add('rounded-l');
+            if(stepNum === 3) activeBtn.classList.add('rounded-r');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            showToast('STAGE SHIFT', `Successfully transitioned to Stage 0${stepNum}`);
+        }
+
+        // Customer Selection Handler for Step 3 Dossier
+        function selectCustomer(name, corp, level, sync) {
+            document.getElementById('dossier-title').innerText = `${name} // Deep Neural Intelligence`;
+            document.getElementById('dossier-name').innerText = name;
+            document.getElementById('dossier-corp').innerText = `${corp} // ${level}`;
+            document.getElementById('dossier-sync').innerText = sync;
+
+            // Extract initials
+            const initials = name.split(' ').map(n => n[0]).join('').substring(0, 2);
+            document.getElementById('dossier-initials').innerText = initials;
+
+            switchStep(3);
+            showToast('DOSSIER LOADED', `Decrypted neural records for ${name}`);
+        }
+
+        // Exhibition Artifact Inspection
+        function inspectArtifact(title, price, sync) {
+            showToast('ARTIFACT SCAN', `${title} (${price}) - Sync: ${sync}`);
+        }
+
+        // Customer Filtering
+        function filterCustomers() {
+            const query = document.getElementById('customer-search').value.toLowerCase();
+            const cards = document.querySelectorAll('.customer-card');
+            cards.forEach(card => {
+                const nameAttr = card.getAttribute('data-name');
+                if(nameAttr.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function filterStatus(status) {
+            const chips = document.querySelectorAll('.filter-chip');
+            chips.forEach(chip => {
+                chip.className = "filter-chip px-3 py-1.5 rounded border border-gray-700 bg-obsidian text-gray-400 font-mono text-xs whitespace-nowrap hover:border-cyberCyan";
+            });
+            event.target.className = "filter-chip px-3 py-1.5 rounded border border-cyberCyan bg-cyberCyan/20 text-cyberCyan font-mono text-xs whitespace-nowrap";
+
+            const cards = document.querySelectorAll('.customer-card');
+            cards.forEach(card => {
+                const cardStatus = card.getAttribute('data-status');
+                if(status === 'ALL' || cardStatus === status) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            showToast('FILTER APPLIED', `Showing status category: ${status}`);
+        }
+
+        // Diagnostics & Toast triggers
+        function runNetworkDiagnostics() {
+            showToast('DIAGNOSTICS', 'All 3 neural asset nodes operating at peak quantum efficiency.');
+        }
+
+        function triggerSystemPulse() {
+            showToast('RADAR SCAN', 'Sector sweep complete. 0 hostile intrusions detected.');
+        }
+
+        function triggerPurgeModal() {
+            showToast('CACHE PURGED', 'Temporary neural telemetry buffers securely wiped.');
+        }
+
+        function showToast(title, message) {
+            const modal = document.getElementById('notification-modal');
+            document.getElementById('toast-title').innerText = title;
+            document.getElementById('toast-message').innerText = message;
+
+            modal.classList.remove('translate-y-32', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('translate-y-32', 'opacity-0');
+            }, 3500);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+exhibitor_id,company_name,country,booth,area,profile_url,source_url,source_position,data_status,synthetic_notice
+DEMO-GSCE-001,Aurora Circuitworks Ltd.,Hong Kong,DEMO-1A,Consumer Electronics Demo Zone,,,1,DEMO / SYNTHETIC,"Fictional test record; not a Global Sources exhibitor"
+DEMO-GSCE-002,Northstar Smart Living Co.,Singapore,DEMO-1B,Consumer Electronics Demo Zone,,,2,DEMO / SYNTHETIC,"Fictional test record; not a Global Sources exhibitor"
+DEMO-GSCE-003,Pixel Forge Devices Limited,Taiwan,DEMO-1C,Consumer Electronics Demo Zone,,,3,DEMO / SYNTHETIC,"Fictional test record; not a Global Sources exhibitor"

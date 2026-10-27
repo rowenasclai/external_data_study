@@ -1,0 +1,4 @@
+exhibitor_id,company_name,country,booth,area,profile_url,source_url,source_position,data_status,synthetic_notice
+DEMO-CIIF-001,Vertex Automation Systems Co. 1,China,DEMO-H1-01,Industrial Automation Demo Zone,,,1,DEMO / SYNTHETIC,Fictional test record; not a CIIF exhibitor
+DEMO-CIIF-002,ForgeSight Robotics Limited,South Korea,DEMO-H1-02,Industrial Automation Demo Zone,,,2,DEMO / SYNTHETIC,Fictional test record; not a CIIF exhibitor
+DEMO-CIIF-003,Greenline Industrial Analytics Pte. Ltd.,Singapore,DEMO-H1-03,Industrial Automation Demo Zone,,,3,DEMO / SYNTHETIC,Fictional test record; not a CIIF exhibitor
