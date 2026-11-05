@@ -160,6 +160,21 @@
       "event_name": "China Small and Medium-Sized Factory Exhibition (Ningbo Factory Expo 2026)",
       "status": "Fail",
       "extracted_file_name": ""
+    },
+    {
+      "event_name": "MEDICA 2026 / COMPAMED 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "METALEX 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "CXPE 2026 (Dongguan Printing and Packaging Industry Expo 2026)",
+      "status": "Fail",
+      "extracted_file_name": ""
     }
   ]
 }
