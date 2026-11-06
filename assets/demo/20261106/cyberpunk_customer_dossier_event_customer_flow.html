@@ -254,10 +254,13 @@
                 <div>
                     <div class="text-cyberCyan font-mono text-xs tracking-widest uppercase">// STAGE 01: VIRTUAL ARTIFACT SHOWCASE</div>
                     <h2 class="text-2xl md:text-3xl font-bold font-sans text-white tracking-wide mt-1">October–November 2026 Exhibition Intelligence</h2>
-                    <p class="text-gray-400 text-sm mt-1">Public Oct–Nov 2026 trade events sourced from the shared exhibition control spreadsheet. Filter by sector and open the event or public exhibitor directory.</p>
+                    <p class="text-gray-400 text-sm mt-1">Public Oct–Nov 2026 trade events sourced from the shared exhibition control spreadsheet. Filter by sector, continent, and country or region, then open the event or public exhibitor directory.</p>
                 </div>
                 <div class="flex flex-wrap items-center gap-3">
-                    <label class="text-xs font-mono px-3 py-1 rounded bg-panel border border-cyberCyan/40 text-cyberCyan">FILTER: <select id="sector-filter" class="bg-obsidian text-cyberCyan focus:outline-none" aria-label="Filter exhibitions by sector"></select></label><span id="event-count" class="text-xs text-gray-400 font-mono"></span>
+                    <label class="flex items-center gap-2 text-[10px] font-mono px-3 py-2 rounded bg-panel border border-cyberCyan/40 text-cyberCyan">SECTOR <select id="sector-filter" class="bg-obsidian text-cyberCyan focus:outline-none" aria-label="Filter exhibitions by sector"></select></label>
+                    <label class="flex items-center gap-2 text-[10px] font-mono px-3 py-2 rounded bg-panel border border-cyberCyan/40 text-cyberCyan">CONTINENT <select id="continent-filter" class="bg-obsidian text-cyberCyan focus:outline-none" aria-label="Filter exhibitions by continent"></select></label>
+                    <label class="flex items-center gap-2 text-[10px] font-mono px-3 py-2 rounded bg-panel border border-cyberCyan/40 text-cyberCyan">COUNTRY / REGION <select id="country-filter" class="bg-obsidian text-cyberCyan focus:outline-none" aria-label="Filter exhibitions by country or region"></select></label>
+                    <span id="event-count" class="text-xs text-gray-400 font-mono"></span>
                     <div class="flex items-center" role="group" aria-label="Exhibition display mode">
                         <button id="view-cards-btn" type="button" onclick="setExhibitionView('cards')" aria-pressed="true" class="px-3 py-2 rounded-l border border-cyberCyan bg-cyberCyan/20 text-cyberCyan font-mono text-xs"><i class="fa-solid fa-grip mr-1"></i>CARDS</button>
                         <button id="view-map-btn" type="button" onclick="setExhibitionView('map')" aria-pressed="false" class="px-3 py-2 rounded-r border-y border-r border-gray-700 bg-panel text-gray-400 font-mono text-xs hover:border-cyberMagenta hover:text-cyberMagenta"><i class="fa-solid fa-map-location-dot mr-1"></i>MAP</button>
@@ -730,6 +733,33 @@ const OCT_NOV_EXHIBITIONS = [{"name": "CPHI Worldwide 2026 (CPHI Milan)", "dates
         }
 
         const EXHIBITION_BY_ID = Object.fromEntries(OCT_NOV_EXHIBITIONS.map(event => [event.eventId, event]));
+        const EVENT_GEOGRAPHY_RULES = [
+            { pattern: /\bHong Kong\b/i, continent: 'Asia', country: 'Hong Kong' },
+            { pattern: /\bChina\b/i, continent: 'Asia', country: 'China' },
+            { pattern: /\bJapan\b/i, continent: 'Asia', country: 'Japan' },
+            { pattern: /\bSingapore\b/i, continent: 'Asia', country: 'Singapore' },
+            { pattern: /\bTaiwan\b/i, continent: 'Asia', country: 'Taiwan' },
+            { pattern: /\bBangkok\b/i, continent: 'Asia', country: 'Thailand' },
+            { pattern: /\bThailand\b/i, continent: 'Asia', country: 'Thailand' },
+            { pattern: /\bItaly\b/i, continent: 'Europe', country: 'Italy' },
+            { pattern: /Frankfurt\/Main/i, continent: 'Europe', country: 'Germany' }
+        ];
+        function exhibitionGeography(event) {
+            const location = String(event.location || '');
+            const match = EVENT_GEOGRAPHY_RULES.find(rule => rule.pattern.test(location));
+            return match ? { continent: match.continent, country: match.country } : { continent: 'Unspecified', country: 'Unspecified' };
+        }
+        function getFilteredExhibitions() {
+            const sector = document.getElementById('sector-filter').value;
+            const continent = document.getElementById('continent-filter').value;
+            const country = document.getElementById('country-filter').value;
+            return OCT_NOV_EXHIBITIONS.filter(event => {
+                const geography = exhibitionGeography(event);
+                return (sector === 'ALL' || event.sector === sector)
+                    && (continent === 'ALL' || geography.continent === continent)
+                    && (country === 'ALL' || geography.country === country);
+            });
+        }
         let selectedEvent = null;
         let activeCustomers = [];
         let exhibitionMap = null;
@@ -812,8 +842,7 @@ const OCT_NOV_EXHIBITIONS = [{"name": "CPHI Worldwide 2026 (CPHI Milan)", "dates
             cardsButton.className = `px-3 py-2 rounded-l border ${!mapVisible ? 'border-cyberCyan bg-cyberCyan/20 text-cyberCyan' : 'border-gray-700 bg-panel text-gray-400'} font-mono text-xs`;
             mapButton.className = `px-3 py-2 rounded-r border-y border-r ${mapVisible ? 'border-cyberCyan bg-cyberCyan/20 text-cyberCyan' : 'border-gray-700 bg-panel text-gray-400'} font-mono text-xs`;
             if (mapVisible) {
-                const sector = document.getElementById('sector-filter').value;
-                const events = OCT_NOV_EXHIBITIONS.filter(event => sector === 'ALL' || event.sector === sector);
+                const events = getFilteredExhibitions();
                 renderEventMap(events);
                 if (exhibitionMap) setTimeout(() => exhibitionMap.invalidateSize(), 0);
             }
@@ -821,8 +850,7 @@ const OCT_NOV_EXHIBITIONS = [{"name": "CPHI Worldwide 2026 (CPHI Milan)", "dates
 
         function renderExhibitions() {
             const grid = document.getElementById('exhibition-grid');
-            const sector = document.getElementById('sector-filter').value;
-            const events = OCT_NOV_EXHIBITIONS.filter(event => sector === 'ALL' || event.sector === sector);
+            const events = getFilteredExhibitions();
             document.getElementById('event-count').textContent = `${events.length} event${events.length === 1 ? '' : 's'} shown`;
             grid.innerHTML = events.map(event => {
                 const directory = event.directoryUrl
@@ -848,7 +876,7 @@ const OCT_NOV_EXHIBITIONS = [{"name": "CPHI Worldwide 2026 (CPHI Milan)", "dates
                     <p class="text-gray-500 text-xs mb-4">${escapeHtml(event.organizer || 'Organizer not listed')}</p>
                     <div class="flex flex-wrap items-center gap-2 pt-3 border-t border-gray-800">${customers}${eventLink}${directory}</div>
                 </article>`;
-            }).join('') || '<div class="col-span-full text-gray-400 font-mono text-sm border border-gray-800 rounded-xl p-6">No October–November exhibitions match this sector.</div>';
+            }).join('') || '<div class="col-span-full text-gray-400 font-mono text-sm border border-gray-800 rounded-xl p-6">No October–November exhibitions match these filters.</div>';
             if (currentExhibitionView === 'map' && exhibitionMap) renderEventMap(events);
         }
 
@@ -968,11 +996,33 @@ const OCT_NOV_EXHIBITIONS = [{"name": "CPHI Worldwide 2026 (CPHI Milan)", "dates
             document.getElementById('step-3-view').innerHTML = '<div class="border border-cyberViolet/30 bg-panel/80 rounded-xl p-8 text-center"><i class="fa-solid fa-address-card text-cyberViolet text-3xl mb-4"></i><h2 class="text-xl text-white font-bold">Select a customer first</h2><p class="text-gray-400 text-sm mt-2">Choose <span class="text-cyberCyan font-mono">ENQUIRE CUSTOMER DETAILS</span> from an event-linked public customer list.</p></div>';
         }
 
+        function refreshCountryFilter() {
+            const continent = document.getElementById('continent-filter').value;
+            const countryFilter = document.getElementById('country-filter');
+            const previousCountry = countryFilter.value;
+            const countries = [...new Set(OCT_NOV_EXHIBITIONS
+                .filter(event => continent === 'ALL' || exhibitionGeography(event).continent === continent)
+                .map(event => exhibitionGeography(event).country))].sort();
+            countryFilter.innerHTML = '<option value="ALL">ALL COUNTRIES / REGIONS</option>'
+                + countries.map(country => `<option value="${escapeHtml(country)}">${escapeHtml(country.toUpperCase())}</option>`).join('');
+            countryFilter.value = countries.includes(previousCountry) ? previousCountry : 'ALL';
+        }
+
         function initExhibitionFilter() {
             const filter = document.getElementById('sector-filter');
             const sectors = [...new Set(OCT_NOV_EXHIBITIONS.map(event => event.sector))].sort();
             filter.innerHTML = '<option value="ALL">ALL SECTORS</option>' + sectors.map(sector => `<option value="${escapeHtml(sector)}">${escapeHtml(sector.toUpperCase())}</option>`).join('');
             filter.addEventListener('change', renderExhibitions);
+
+            const continentFilter = document.getElementById('continent-filter');
+            const continents = [...new Set(OCT_NOV_EXHIBITIONS.map(event => exhibitionGeography(event).continent))].sort();
+            continentFilter.innerHTML = '<option value="ALL">ALL CONTINENTS</option>' + continents.map(continent => `<option value="${escapeHtml(continent)}">${escapeHtml(continent.toUpperCase())}</option>`).join('');
+            refreshCountryFilter();
+            continentFilter.addEventListener('change', () => {
+                refreshCountryFilter();
+                renderExhibitions();
+            });
+            document.getElementById('country-filter').addEventListener('change', renderExhibitions);
             renderExhibitions();
         }
 
