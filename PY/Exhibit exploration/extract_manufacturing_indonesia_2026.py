@@ -124,7 +124,14 @@ def validate_rows(rows: list[dict[str, str]], total: int, expected_pages: int) -
         raise ValueError(f"row count {len(rows)} does not equal total {total}")
     ids = [row["exhibitor_id"] for row in rows]
     if len(set(ids)) != len(ids):
-        duplicates = sorted({item for item in ids if ids.count(item) > 1})[:10]
+        seen: set[str] = set()
+        duplicates: list[str] = []
+        for exhibitor_id in ids:
+            if exhibitor_id in seen and exhibitor_id not in duplicates:
+                duplicates.append(exhibitor_id)
+                if len(duplicates) == 10:
+                    break
+            seen.add(exhibitor_id)
         raise ValueError(f"duplicate stable IDs: {duplicates}")
     if expected_pages != (total + PAGE_SIZE - 1) // PAGE_SIZE:
         raise ValueError("missing or unexpected pages")
@@ -143,7 +150,6 @@ def atomic_write_bytes(path: Path, content: bytes) -> None:
 
 
 def write_outputs(rows: list[dict[str, str]], csv_path: Path, json_path: Path) -> None:
-    csv_lines: list[str] = []
     import io
 
     buffer = io.StringIO(newline="")
