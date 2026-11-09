@@ -80,6 +80,11 @@
       "event_name": "bauma CHINA 2026",
       "status": "Agent Extraction",
       "extracted_file_name": "bauma_china_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "Manufacturing Indonesia 2026",
+      "status": "Agent Extraction",
+      "extracted_file_name": "manufacturing_indonesia_2026_exhibitors.csv"
     }
   ]
 }
