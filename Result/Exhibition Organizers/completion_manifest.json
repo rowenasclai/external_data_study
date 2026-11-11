@@ -90,6 +90,11 @@
       "event_name": "TRUSTECH 2026",
       "status": "Agent Extraction",
       "extracted_file_name": "trustech_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "Guangzhou Design Week 2026",
+      "status": "Agent Extraction",
+      "extracted_file_name": "guangzhou_design_week_2026_exhibitors.csv"
     }
   ]
 }
