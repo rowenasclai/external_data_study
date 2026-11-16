@@ -41,11 +41,13 @@
       "status": "Fail",
       "extracted_file_name": ""
     },
+
     {
       "event_name": "CIIF 2026 (The 25th China International Industry Fair)",
       "status": "Fail",
       "extracted_file_name": ""
     },
+
     {
       "event_name": "CIHS 2026 (China International Hardware Show)",
       "status": "Fail",
@@ -97,97 +99,32 @@
       "extracted_file_name": ""
     },
     {
-      "event_name": "in-cosmetics Asia 2026",
+      "event_name": "Big 5 Global 2026",
       "status": "Fail",
       "extracted_file_name": ""
     },
     {
-      "event_name": "China International Import Expo (CIIE 2026)",
+      "event_name": "AutoSens China 2026 / InCabin China 2026",
       "status": "Fail",
       "extracted_file_name": ""
     },
     {
-      "event_name": "Cosmoprof Asia 2026 & Cosmopack Asia 2026",
+      "event_name": "IntraLogisteX Singapore 2026",
       "status": "Fail",
       "extracted_file_name": ""
     },
     {
-      "event_name": "EDUtech Asia 2026",
+      "event_name": "HKPCA Show 2026 (International Electronics Circuit Exhibition Shenzhen)",
       "status": "Fail",
       "extracted_file_name": ""
     },
     {
-      "event_name": "Agri-Food Tech Expo Asia 2026 (AFTEA 2026)",
+      "event_name": "SEMICON Japan 2026",
       "status": "Fail",
       "extracted_file_name": ""
     },
     {
-      "event_name": "FTE APEX Asia Expo 2026",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
-    {
-      "event_name": "IPFM 2026 (International Plant Fiber Molding Industry Exhibition 2026)",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
-    {
-      "event_name": "Nanjing International Beauty and Cosmetics Expo 2026",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
-    {
-      "event_name": "API China 2026 (The 95th API China & PHARMPACK & SINOPHEX)",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
-    {
-      "event_name": "CIOAE 2026 (The 19th China Online Analytical Instrument Application and Development Expo)",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
-    {
-      "event_name": "China International Agricultural Trade Fair (CATF 2026)",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
-    {
-      "event_name": "The 23rd Suzhou International Plastics and Rubber Industry Exhibition 2026 (Huasuo Exhibition)",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
-    {
-      "event_name": "China Small and Medium-Sized Factory Exhibition (Ningbo Factory Expo 2026)",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
-    {
-      "event_name": "MEDICA 2026 / COMPAMED 2026",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
-    {
-      "event_name": "METALEX 2026",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
-    {
-      "event_name": "CXPE 2026 (Dongguan Printing and Packaging Industry Expo 2026)",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
-    {
-      "event_name": "Asia TV Forum & Market 2026 (ATF 2026)",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
-    {
-      "event_name": "DMP Greater Bay Area Industrial Expo 2026",
-      "status": "Fail",
-      "extracted_file_name": ""
-    },
-    {
-      "event_name": "Grandeur World Pet Fair Xiamen 2026 (GWPF Xiamen 2026)",
+      "event_name": "China International Bearing Industry Exhibition 2026 (20th Edition)",
       "status": "Fail",
       "extracted_file_name": ""
     }
