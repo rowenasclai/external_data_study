@@ -112,10 +112,13 @@ async def run_decoupled_crawl(l1_start_url: str):
         # Parse the JSON string out of the L1 result
         l1_data = json.loads(l1_result.extracted_content)
 
+        print(l1_data)
+
         # Flatten into a clean array of absolute URLs
         l2_urls = ['https://www.epd.gov.hk/epd/english/news_events/notices/'+item['Subject_Link'] for item in l1_data if item.get('Subject_Link')]
 
         l2_desc=[item['l1_description'] for item in l1_data if item.get('l1_description')]
+        
         
         
         print(f"[L1] Discovered {len(l2_urls)} deep links to process.")
@@ -129,7 +132,7 @@ async def run_decoupled_crawl(l1_start_url: str):
             #cache_mode=CacheMode.BYPASS,
             #magic=True,
             #cache_mode=False,
-            delay_before_return_html=3.5,  
+            delay_before_return_html=2.5,  
             wait_for="div.content"#,
             #js_code="window.scrollTo(0, document.body.scrollHeight);"
         )
@@ -137,19 +140,20 @@ async def run_decoupled_crawl(l1_start_url: str):
         # arun_many executes the array concurrently across your browser instances
         l2_results = await crawler.arun_many(urls=l2_urls, config=l2_config)
         
-        
         # Combine the results
         final_dataset = []
         for url, res, desc in zip(l2_urls, l2_results, l2_desc):
             if res.success and res.extracted_content:
                 parsed_page_data = json.loads(res.extracted_content)
+                #print(parsed_page_data)
 
                 if isinstance(parsed_page_data, list):
                     for record in parsed_page_data:
+                        print(record)
                         record['department'] = 'Environmental Protection Department'
                         record['type'] = 'contract_awarded'
-                        record['url'] = url
-                        #record['l1_desc']=desc
+                        record['url'] = res.url
+                        record['l1_desc']=desc
                         if 'Awarded in ' in desc:
                             record['award_date']=desc[desc.index('Awarded in ')+11:].replace(')','')
                         elif 'Awarded In ' in desc:
@@ -170,6 +174,7 @@ async def run_decoupled_crawl(l1_start_url: str):
                         record['awardee']=record['awardee'].replace('<p>','')
 
 
+                        #print(record)
                         with open('gov_epd.json', "a") as f:
                 
                 # 2. Dump individual record dictionary as a single JSON line

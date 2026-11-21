@@ -123,7 +123,7 @@ async def run_decoupled_crawl(l1_start_url: str):
                 record={
                     "department": "Civil Engineering and Development Department", "type": "contract_awarded",
                     "ref":ref,
-                    "url": url,
+                    "url": res.url,
                     #"extracted_data": parsed_page_data              
                     "description":raw_lines_list[raw_lines_list.index("### Subject :")+1],
                     "awardee":raw_lines_list[raw_lines_list.index("### Contractor :")+1],

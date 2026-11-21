@@ -223,7 +223,7 @@ async def run_decoupled_crawl(l1_start_url: str):
                         for record in parsed_page_data:
                             record['department'] = 'Drainage Services Department'
                             record['type'] = type1
-                            record['url'] = url
+                            record['url'] = res.url
                             record['ref'] = ref
                             record['description'] = desc
                             record['period']=''
