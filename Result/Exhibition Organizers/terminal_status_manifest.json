@@ -190,6 +190,41 @@
       "event_name": "Grandeur World Pet Fair Xiamen 2026 (GWPF Xiamen 2026)",
       "status": "Fail",
       "extracted_file_name": ""
+    },
+    {
+      "event_name": "China (Foshan) International Hydrogen Energy & Fuel Cell Technology and Products Expo 2026 (CHFE 2026)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Valve World Expo 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "SIGGRAPH Asia 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "International WorkBoat Show 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "EP Shanghai 2026 (International Exhibition on Electric Power Equipment and Technology)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "DRT SHOW Hong Kong 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Auto GuangZhou",
+      "status": "Fail",
+      "extracted_file_name": ""
     }
   ]
 }
