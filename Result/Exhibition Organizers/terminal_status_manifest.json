@@ -225,6 +225,21 @@
       "event_name": "Auto GuangZhou",
       "status": "Fail",
       "extracted_file_name": ""
+    },
+    {
+      "event_name": "JAPAN BUILD TOKYO 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "Global Aritifical Intelligence Manufacturing and Electronic Expo",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "GuangZhou International Green Chemical Technology & Equipment and Advanced Materials expo",
+      "status": "Fail",
+      "extracted_file_name": ""
     }
   ]
 }
