@@ -1,0 +1,203 @@
+{
+  "run_id": "20261125T013214+0800",
+  "timezone": "Asia/Hong_Kong",
+  "started_at": "2026-11-25T01:32:14+08:00",
+  "as_of_date": "2026-11-25",
+  "status": "partial",
+  "output_directory": "Result/Government Contract Extraction/HermesDaily/20261125T013214+0800",
+  "sources": {
+    "MTR": {
+      "source": "MTR",
+      "status": "partial",
+      "months": [
+        {
+          "month": "2026-11",
+          "url": "https://www.mtr.com.hk/en/corporate/tenders/Nov26.html",
+          "status": "error",
+          "error": "source page reports maintenance/unavailability: https://www.mtr.com.hk/en/corporate/tenders/Nov26.html"
+        },
+        {
+          "month": "2026-10",
+          "url": "https://www.mtr.com.hk/en/corporate/tenders/Oct26.html",
+          "status": "success",
+          "rows": 5,
+          "rejects": 0,
+          "duplicate_reference_rows": 0,
+          "csv": "Result/Government Contract Extraction/HermesDaily/20261125T013214+0800/mtr/mtr_Oct26.csv",
+          "json": "Result/Government Contract Extraction/HermesDaily/20261125T013214+0800/mtr/mtr_Oct26.json",
+          "reject_details": []
+        },
+        {
+          "month": "2026-09",
+          "url": "https://www.mtr.com.hk/en/corporate/tenders/Sep26.html",
+          "status": "success",
+          "rows": 14,
+          "rejects": 0,
+          "duplicate_reference_rows": 4,
+          "csv": "Result/Government Contract Extraction/HermesDaily/20261125T013214+0800/mtr/mtr_Sep26.csv",
+          "json": "Result/Government Contract Extraction/HermesDaily/20261125T013214+0800/mtr/mtr_Sep26.json",
+          "reject_details": []
+        }
+      ]
+    },
+    "Housing Authority": {
+      "source": "Housing Authority",
+      "status": "success",
+      "months": [
+        {
+          "month": "2026-11",
+          "url": "https://www.housingauthority.gov.hk/en/common/pdf/business-partnerships/tenders/BP_Tender_Award_Nov_2026.pdf",
+          "status": "not_published",
+          "http_status": 404
+        },
+        {
+          "month": "2026-10",
+          "url": "https://www.housingauthority.gov.hk/en/common/pdf/business-partnerships/tenders/BP_Tender_Award_Oct_2026.pdf",
+          "status": "success",
+          "http_status": 200,
+          "rows": 19,
+          "csv": "Result/Government Contract Extraction/HermesDaily/20261125T013214+0800/housing_authority/HA_Oct_2026.csv",
+          "json": "Result/Government Contract Extraction/HermesDaily/20261125T013214+0800/housing_authority/HA_Oct_2026.json",
+          "pages": 5,
+          "page_rows": [
+            {
+              "page": 1,
+              "rows": 3
+            },
+            {
+              "page": 2,
+              "rows": 5
+            },
+            {
+              "page": 3,
+              "rows": 5
+            },
+            {
+              "page": 4,
+              "rows": 4
+            },
+            {
+              "page": 5,
+              "rows": 2
+            }
+          ],
+          "unmatched_lines": [],
+          "unknown_procedures": [],
+          "rows_with_unsplit_contractor": 0,
+          "rows_with_unsplit_amount_date": 0,
+          "duplicate_exact_rows": 0,
+          "source_month": "2026-10",
+          "source_notice_period": "September/October 2026"
+        },
+        {
+          "month": "2026-09",
+          "url": "https://www.housingauthority.gov.hk/en/common/pdf/business-partnerships/tenders/BP_Tender_Award_Sep_2026.pdf",
+          "status": "success",
+          "http_status": 200,
+          "rows": 31,
+          "csv": "Result/Government Contract Extraction/HermesDaily/20261125T013214+0800/housing_authority/HA_Sep_2026.csv",
+          "json": "Result/Government Contract Extraction/HermesDaily/20261125T013214+0800/housing_authority/HA_Sep_2026.json",
+          "pages": 8,
+          "page_rows": [
+            {
+              "page": 1,
+              "rows": 2
+            },
+            {
+              "page": 2,
+              "rows": 4
+            },
+            {
+              "page": 3,
+              "rows": 5
+            },
+            {
+              "page": 4,
+              "rows": 4
+            },
+            {
+              "page": 5,
+              "rows": 4
+            },
+            {
+              "page": 6,
+              "rows": 4
+            },
+            {
+              "page": 7,
+              "rows": 4
+            },
+            {
+              "page": 8,
+              "rows": 4
+            }
+          ],
+          "unmatched_lines": [],
+          "unknown_procedures": [],
+          "rows_with_unsplit_contractor": 0,
+          "rows_with_unsplit_amount_date": 0,
+          "duplicate_exact_rows": 0,
+          "source_month": "2026-09",
+          "source_notice_period": "August/September 2026"
+        },
+        {
+          "month": "2026-08",
+          "url": "https://www.housingauthority.gov.hk/en/common/pdf/business-partnerships/tenders/BP_Tender_Award_Aug_2026.pdf",
+          "status": "success",
+          "http_status": 200,
+          "rows": 20,
+          "csv": "Result/Government Contract Extraction/HermesDaily/20261125T013214+0800/housing_authority/HA_Aug_2026.csv",
+          "json": "Result/Government Contract Extraction/HermesDaily/20261125T013214+0800/housing_authority/HA_Aug_2026.json",
+          "pages": 6,
+          "page_rows": [
+            {
+              "page": 1,
+              "rows": 2
+            },
+            {
+              "page": 2,
+              "rows": 5
+            },
+            {
+              "page": 3,
+              "rows": 4
+            },
+            {
+              "page": 4,
+              "rows": 4
+            },
+            {
+              "page": 5,
+              "rows": 4
+            },
+            {
+              "page": 6,
+              "rows": 1
+            }
+          ],
+          "unmatched_lines": [],
+          "unknown_procedures": [],
+          "rows_with_unsplit_contractor": 0,
+          "rows_with_unsplit_amount_date": 0,
+          "duplicate_exact_rows": 0,
+          "source_month": "2026-08",
+          "source_notice_period": "August 2026"
+        }
+      ]
+    }
+  },
+  "cross_month_duplicates": {
+    "MTR_full_source_rows": {
+      "duplicate_signatures": 0,
+      "examples": [],
+      "deduplicated": false
+    },
+    "Housing_Authority_full_source_rows": {
+      "duplicate_signatures": 0,
+      "examples": [],
+      "deduplicated": false
+    }
+  },
+  "manifest": "Result/Government Contract Extraction/HermesDaily/20261125T013214+0800/run_manifest.json",
+  "finished_at": "2026-11-25T01:32:28+08:00"
+}
