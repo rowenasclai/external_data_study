@@ -1,0 +1,239 @@
+﻿Location_English,Location_Aliases,Location_Chinese_Simplified,Location_Chinese_Traditional,Location_Type,Parent_Province_State,Country_Territory,Subregion
+Asia,APAC|Asia-Pacific|Asia Pacific,亚洲,亞洲,Region / Economic Zone,,Multi-Country,Asia
+Greater China,GC|Greater China Region,大中华区,大中華區,Region / Economic Zone,,Multi-Country,Greater China
+Greater Bay Area,GBA|Guangdong-Hong Kong-Macao Greater Bay Area,大湾区,大灣區,Region / Economic Zone,,China / Hong Kong / Macau,Greater China
+Pearl River Delta,PRD,珠三角,珠三角,Region / Economic Zone,Guangdong,China,Greater China
+Yangtze River Delta,YRD,长三角,長三角,Region / Economic Zone,,China,Greater China
+ASEAN,Southeast Asia|SEA,东盟,東盟,Region / Economic Zone,,Multi-Country,Southeast Asia
+China,PRC|Mainland China|CN|P.R.China|P.R. China,中国,中國,Country,,China,Greater China
+Hong Kong,HK|HKSAR|Hong Kong SAR|Hongkong,香港,香港,Special Administrative Region,,Hong Kong,Greater China
+Kowloon,KLN,九龙,九龍,City / District,Hong Kong,Hong Kong,Greater China
+New Territories,NT,新界,新界,City / District,Hong Kong,Hong Kong,Greater China
+Hong Kong Island,HK Island,香港岛,香港島,City / District,Hong Kong,Hong Kong,Greater China
+Macau,Macao|MO|MSAR|Macau SAR,澳门,澳門,Special Administrative Region,,Macau,Greater China
+Taiwan,TW|Chinese Taipei,台湾,臺灣,Territory / Region,,Taiwan,Greater China
+Taipei,Taipei City|TPE,台北,臺北,City / District,Taiwan,Taiwan,Greater China
+New Taipei,New Taipei City,新北,新北,City / District,Taiwan,Taiwan,Greater China
+Taoyuan,Taoyuan City,桃园,桃園,City / District,Taiwan,Taiwan,Greater China
+Hsinchu,Hsinchu City|Hsinchu County,新竹,新竹,City / District,Taiwan,Taiwan,Greater China
+Taichung,Taichung City,台中,臺中,City / District,Taiwan,Taiwan,Greater China
+Tainan,Tainan City,台南,臺南,City / District,Taiwan,Taiwan,Greater China
+Kaohsiung,Kaohsiung City,高雄,高雄,City / District,Taiwan,Taiwan,Greater China
+Changhua,Changhua County,彰化,彰化,City / District,Taiwan,Taiwan,Greater China
+Beijing,BJ|Peking|Beijing City,北京,北京,Province / Municipality,Beijing,China,Greater China
+Shanghai,SH|Shanghai City,上海,上海,Province / Municipality,Shanghai,China,Greater China
+Tianjin,TJ|Tianjin City,天津,天津,Province / Municipality,Tianjin,China,Greater China
+Chongqing,CQ|Chongqing City,重庆,重慶,Province / Municipality,Chongqing,China,Greater China
+Guangdong,GD|Guangdong Province|Canton,广东,廣東,Province / Municipality,Guangdong,China,Greater China
+Shenzhen,SZ|S.Z.|Shenzhen City,深圳,深圳,City / District,Guangdong,China,Greater China
+Guangzhou,GZ|Canton|Guangzhou City,广州,廣州,City / District,Guangdong,China,Greater China
+Dongguan,DG|Dongguan City,东莞,東莞,City / District,Guangdong,China,Greater China
+Foshan,FS|Foshan City,佛山,佛山,City / District,Guangdong,China,Greater China
+Shunde,Shunde District,顺德,順德,City / District,Guangdong,China,Greater China
+Nanhai,Nanhai District,南海,南海,City / District,Guangdong,China,Greater China
+Sanshui,Sanshui District,三水,三水,City / District,Guangdong,China,Greater China
+Zhongshan,ZS|Zhongshan City,中山,中山,City / District,Guangdong,China,Greater China
+Zhuhai,ZH|Zhuhai City,珠海,珠海,City / District,Guangdong,China,Greater China
+Huizhou,HZ|Huizhou City,惠州,惠州,City / District,Guangdong,China,Greater China
+Jiangmen,JM|Jiangmen City,江门,江門,City / District,Guangdong,China,Greater China
+Taishan,Taishan City,台山,台山,City / District,Guangdong,China,Greater China
+Zhaoqing,Zhaoqing City,肇庆,肇慶,City / District,Guangdong,China,Greater China
+Qingyuan,Qingyuan City|Fogang,清远,清遠,City / District,Guangdong,China,Greater China
+Shantou,Shantou City,汕头,汕頭,City / District,Guangdong,China,Greater China
+Zhanjiang,Zhanjiang City,湛江,湛江,City / District,Guangdong,China,Greater China
+Jiangsu,JS|Jiangsu Province,江苏,江蘇,Province / Municipality,Jiangsu,China,Greater China
+Nanjing,Nanjing City,南京,南京,City / District,Jiangsu,China,Greater China
+Suzhou,Suzhou City,苏州,蘇州,City / District,Jiangsu,China,Greater China
+Kunshan,Kunshan City,昆山,崑山,City / District,Jiangsu,China,Greater China
+Wuxi,Wuxi City,无锡,無錫,City / District,Jiangsu,China,Greater China
+Changzhou,Changzhou City,常州,常州,City / District,Jiangsu,China,Greater China
+Nantong,Nantong City,南通,南通,City / District,Jiangsu,China,Greater China
+Changshu,Changshu City,常熟,常熟,City / District,Jiangsu,China,Greater China
+Danyang,Danyang City|Tanyou,丹阳,丹陽,City / District,Jiangsu,China,Greater China
+Yancheng,Yancheng City,盐城,鹽城,City / District,Jiangsu,China,Greater China
+Yangzhou,Yangzhou City,扬州,揚州,City / District,Jiangsu,China,Greater China
+Xuzhou,Xuzhou City,徐州,徐州,City / District,Jiangsu,China,Greater China
+Zhejiang,ZJ|Zhejiang Province,浙江,浙江,Province / Municipality,Zhejiang,China,Greater China
+Hangzhou,Hangzhou City,杭州,杭州,City / District,Zhejiang,China,Greater China
+Ningbo,Ningbo City,宁波,寧波,City / District,Zhejiang,China,Greater China
+Wenzhou,Wenzhou City,温州,溫州,City / District,Zhejiang,China,Greater China
+Ruian,Rui'an|Ruian City,瑞安,瑞安,City / District,Zhejiang,China,Greater China
+Yueqing,Yueqing City,乐清,樂清,City / District,Zhejiang,China,Greater China
+Jiaxing,Jiaxing City,嘉兴,嘉興,City / District,Zhejiang,China,Greater China
+Shaoxing,Shaoxing City,绍兴,紹興,City / District,Zhejiang,China,Greater China
+Taizhou,Taizhou City,台州,台州,City / District,Zhejiang,China,Greater China
+Jinhua,Jinhua City|Yiwu,金华,金華,City / District,Zhejiang,China,Greater China
+Huzhou,Huzhou City|Changxing,湖州,湖州,City / District,Zhejiang,China,Greater China
+Fujian,FJ|Fujian Province,福建,福建,Province / Municipality,Fujian,China,Greater China
+Xiamen,Amoy|Xiamen City,厦门,廈門,City / District,Fujian,China,Greater China
+Fuzhou,Fuzhou City,福州,福州,City / District,Fujian,China,Greater China
+Quanzhou,Quanzhou City,泉州,泉州,City / District,Fujian,China,Greater China
+Zhangzhou,Zhangzhou City,漳州,漳州,City / District,Fujian,China,Greater China
+Shandong,SD|Shandong Province,山东,山東,Province / Municipality,Shandong,China,Greater China
+Qingdao,Tsingtao|Qingdao City,青岛,青島,City / District,Shandong,China,Greater China
+Jinan,Jinan City,济南,濟南,City / District,Shandong,China,Greater China
+Yantai,Yantai City,烟台,煙臺,City / District,Shandong,China,Greater China
+Weihai,Weihai City,威海,威海,City / District,Shandong,China,Greater China
+Rizhao,Rizhao City,日照,日照,City / District,Shandong,China,Greater China
+Weifang,Weifang City,潍坊,濰坊,City / District,Shandong,China,Greater China
+Sichuan,SC|Sichuan Province,四川,四川,Province / Municipality,Sichuan,China,Greater China
+Chengdu,Chengdu City,成都,成都,City / District,Sichuan,China,Greater China
+Hubei,HB|Hubei Province,湖北,湖北,Province / Municipality,Hubei,China,Greater China
+Wuhan,Wuhan City,武汉,武漢,City / District,Hubei,China,Greater China
+Hunan,HN|Hunan Province,湖南,湖南,Province / Municipality,Hunan,China,Greater China
+Changsha,Changsha City,长沙,長沙,City / District,Hunan,China,Greater China
+Henan,HA|Henan Province,河南,河南,Province / Municipality,Henan,China,Greater China
+Zhengzhou,Zhengzhou City,郑州,鄭州,City / District,Henan,China,Greater China
+Nanyang,Nanyang City,南阳,南陽,City / District,Henan,China,Greater China
+Hebei,HE|Hebei Province,河北,河北,Province / Municipality,Hebei,China,Greater China
+Shijiazhuang,Shijiazhuang City,石家庄,石家莊,City / District,Hebei,China,Greater China
+Anhui,AH|Anhui Province,安徽,安徽,Province / Municipality,Anhui,China,Greater China
+Hefei,Hefei City,合肥,合肥,City / District,Anhui,China,Greater China
+Wuhu,Wuhu City,芜湖,蕪湖,City / District,Anhui,China,Greater China
+Jiangxi,JX|Jiangxi Province,江西,江西,Province / Municipality,Jiangxi,China,Greater China
+Nanchang,Nanchang City,南昌,南昌,City / District,Jiangxi,China,Greater China
+Liaoning,LN|Liaoning Province,辽宁,遼寧,Province / Municipality,Liaoning,China,Greater China
+Shenyang,Shenyang City,沈阳,瀋陽,City / District,Liaoning,China,Greater China
+Dalian,Dalian City,大连,大連,City / District,Liaoning,China,Greater China
+Jilin,JL|Jilin Province,吉林,吉林,Province / Municipality,Jilin,China,Greater China
+Changchun,Changchun City,长春,長春,City / District,Jilin,China,Greater China
+Heilongjiang,HL|Heilongjiang Province,黑龙江,黑龍江,Province / Municipality,Heilongjiang,China,Greater China
+Harbin,Harbin City,哈尔滨,哈爾濱,City / District,Heilongjiang,China,Greater China
+Shaanxi,SN|Shaanxi Province,陕西,陝西,Province / Municipality,Shaanxi,China,Greater China
+Xi'an,Xian|Xi'an City,西安,西安,City / District,Shaanxi,China,Greater China
+Shanxi,SX|Shanxi Province,山西,山西,Province / Municipality,Shanxi,China,Greater China
+Taiyuan,Taiyuan City,太原,太原,City / District,Shanxi,China,Greater China
+Guangxi,GX|Guangxi Autonomous Region,广西,廣西,Province / Municipality,Guangxi,China,Greater China
+Nanning,Nanning City,南宁,南寧,City / District,Guangxi,China,Greater China
+Yunnan,YN|Yunnan Province,云南,雲南,Province / Municipality,Yunnan,China,Greater China
+Kunming,Kunming City,昆明,昆明,City / District,Yunnan,China,Greater China
+Guizhou,GZ|Guizhou Province,贵州,貴州,Province / Municipality,Guizhou,China,Greater China
+Guiyang,Guiyang City,贵阳,貴陽,City / District,Guizhou,China,Greater China
+Hainan,HI|Hainan Province,海南,海南,Province / Municipality,Hainan,China,Greater China
+Haikou,Haikou City,海口,海口,City / District,Hainan,China,Greater China
+Gansu,GS|Gansu Province,甘肃,甘肅,Province / Municipality,Gansu,China,Greater China
+Inner Mongolia,Neimenggu|NM,内蒙古,內蒙古,Province / Municipality,Inner Mongolia,China,Greater China
+Xinjiang,XJ|Urumqi,新疆,新疆,Province / Municipality,Xinjiang,China,Greater China
+Ningxia,NX,宁夏,寧夏,Province / Municipality,Ningxia,China,Greater China
+Qinghai,QH,青海,青海,Province / Municipality,Qinghai,China,Greater China
+Tibet,Xizang|XZ,西藏,西藏,Province / Municipality,Tibet,China,Greater China
+Japan,JP|JPN,日本,日本,Country,,Japan,East Asia
+Tokyo,TYO|Tokyo-to,东京,東京,City / District,Tokyo,Japan,East Asia
+Osaka,OSA|Osaka-fu,大阪,大阪,City / District,Osaka,Japan,East Asia
+Nagoya,Aichi,名古屋,名古屋,City / District,Aichi,Japan,East Asia
+Yokohama,Kanagawa,横滨,橫濱,City / District,Kanagawa,Japan,East Asia
+Kyoto,Kyoto-fu,京都,京都,City / District,Kyoto,Japan,East Asia
+Kobe,Hyogo,神户,神戶,City / District,Hyogo,Japan,East Asia
+Fukuoka,Fukuoka-ken,福冈,福岡,City / District,Fukuoka,Japan,East Asia
+Sapporo,Hokkaido,札幌,札幌,City / District,Hokkaido,Japan,East Asia
+Hiroshima,Hiroshima-ken,广岛,廣島,City / District,Hiroshima,Japan,East Asia
+Sendai,Miyagi,仙台,仙台,City / District,Miyagi,Japan,East Asia
+Shizuoka,Hamamatsu,静冈,靜岡,City / District,Shizuoka,Japan,East Asia
+Gifu,Gifu-ken,岐阜,岐阜,City / District,Gifu,Japan,East Asia
+Mie,Mie-ken,三重,三重,City / District,Mie,Japan,East Asia
+Nagano,Nagano-ken,长野,長野,City / District,Nagano,Japan,East Asia
+South Korea,Korea|ROK|KR|Republic of Korea,韩国,韓國,Country,,South Korea,East Asia
+Seoul,SEL|Seoul City,首尔,首爾,City / District,Seoul,South Korea,East Asia
+Busan,Pusan,釜山,釜山,City / District,Busan,South Korea,East Asia
+Incheon,ICN,仁川,仁川,City / District,Incheon,South Korea,East Asia
+Daegu,Taegu,大邱,大邱,City / District,Daegu,South Korea,East Asia
+Daejeon,Taejon,大田,大田,City / District,Daejeon,South Korea,East Asia
+Gwangju,Kwangju,光州,光州,City / District,Gwangju,South Korea,East Asia
+Ulsan,Ulsan City,蔚山,蔚山,City / District,Ulsan,South Korea,East Asia
+Suwon,Gyeonggi,水原,水原,City / District,Gyeonggi,South Korea,East Asia
+Changwon,Gyeongnam,昌原,昌原,City / District,South Gyeongsang,South Korea,East Asia
+Mongolia,MN,蒙古,蒙古,Country,,Mongolia,East Asia
+Ulaanbaatar,Ulan Bator,乌兰巴托,烏蘭巴托,City / District,,Mongolia,East Asia
+Singapore,SG|SGP|Republic of Singapore,新加坡,新加坡,Country,,Singapore,Southeast Asia
+Malaysia,MY|MYS,马来西亚,馬來西亞,Country,,Malaysia,Southeast Asia
+Kuala Lumpur,KL|KUL,吉隆坡,吉隆坡,City / District,Kuala Lumpur,Malaysia,Southeast Asia
+Penang,Pulau Pinang|George Town,槟城,檳城,City / District,Penang,Malaysia,Southeast Asia
+Johor Bahru,JB|Johor,新山,新山,City / District,Johor,Malaysia,Southeast Asia
+Selangor,Petaling Jaya|Shah Alam|Subang Jaya|Klang,雪兰莪,雪蘭莪,Province / Municipality,Selangor,Malaysia,Southeast Asia
+Ipoh,Perak,怡保,怡保,City / District,Perak,Malaysia,Southeast Asia
+Kuching,Sarawak,古晋,古晉,City / District,Sarawak,Malaysia,Southeast Asia
+Kota Kinabalu,KK|Sabah,亚庇,亞庇,City / District,Sabah,Malaysia,Southeast Asia
+Thailand,TH|THA,泰国,泰國,Country,,Thailand,Southeast Asia
+Bangkok,BKK|Krung Thep,曼谷,曼谷,City / District,Bangkok,Thailand,Southeast Asia
+Chonburi,Pattaya|Laem Chabang,春武里,春武裏,City / District,Chonburi,Thailand,Southeast Asia
+Rayong,Rayong Province,罗勇,羅勇,City / District,Rayong,Thailand,Southeast Asia
+Chiang Mai,CNX,清迈,清邁,City / District,Chiang Mai,Thailand,Southeast Asia
+Samut Prakan,Ayutthaya|Pathum Thani,北榄,北欖,City / District,Samut Prakan,Thailand,Southeast Asia
+Phuket,HKT,普吉,普吉,City / District,Phuket,Thailand,Southeast Asia
+Vietnam,VN|VNM|Viet Nam,越南,越南,Country,,Vietnam,Southeast Asia
+Ho Chi Minh City,HCMC|Saigon|SGN,胡志明市,胡志明市,City / District,Ho Chi Minh City,Vietnam,Southeast Asia
+Hanoi,Ha Noi|HAN,河内,河內,City / District,Hanoi,Vietnam,Southeast Asia
+Da Nang,Danang|DAD,岘港,峴港,City / District,Da Nang,Vietnam,Southeast Asia
+Hai Phong,Haiphong,海防,海防,City / District,Hai Phong,Vietnam,Southeast Asia
+Binh Duong,Dong Nai|Bac Ninh,平阳,平陽,Province / Municipality,Binh Duong,Vietnam,Southeast Asia
+Indonesia,ID|IDN,印度尼西亚,印度尼西亞,Country,,Indonesia,Southeast Asia
+Jakarta,JKT|DKI Jakarta,雅加达,雅加達,City / District,Jakarta,Indonesia,Southeast Asia
+Surabaya,SUB|East Java,泗水,泗水,City / District,East Java,Indonesia,Southeast Asia
+Bandung,West Java,万隆,萬隆,City / District,West Java,Indonesia,Southeast Asia
+Medan,North Sumatra,棉兰,棉蘭,City / District,North Sumatra,Indonesia,Southeast Asia
+Batam,Riau Islands,巴淡,巴淡,City / District,Riau Islands,Indonesia,Southeast Asia
+Bekasi,Tangerang|Karawang|Cikarang,勿加泗,勿加泗,City / District,West Java,Indonesia,Southeast Asia
+Bali,Denpasar,巴厘岛,巴厘島,Province / Municipality,Bali,Indonesia,Southeast Asia
+Philippines,PH|PHL,菲律宾,菲律賓,Country,,Philippines,Southeast Asia
+Manila,Metro Manila|MNL|Makati|Quezon City|Taguig|BGC,马尼拉,馬尼拉,City / District,Metro Manila,Philippines,Southeast Asia
+Cebu,Cebu City|CEB,宿务,宿務,City / District,Cebu,Philippines,Southeast Asia
+Davao,Davao City,达沃,達沃,City / District,Davao,Philippines,Southeast Asia
+Cambodia,KH|KHM,柬埔寨,柬埔寨,Country,,Cambodia,Southeast Asia
+Phnom Penh,PNH,金边,金邊,City / District,,Cambodia,Southeast Asia
+Laos,LA|Lao PDR,老挝,老撾,Country,,Laos,Southeast Asia
+Vientiane,VTE,万象,萬象,City / District,,Laos,Southeast Asia
+Myanmar,MM|Burma,缅甸,緬甸,Country,,Myanmar,Southeast Asia
+Yangon,Rangoon,仰光,仰光,City / District,,Myanmar,Southeast Asia
+Brunei,BN|Brunei Darussalam,文莱,文萊,Country,,Brunei,Southeast Asia
+Bandar Seri Begawan,BSB,斯里巴加湾,斯里巴加灣,City / District,,Brunei,Southeast Asia
+Timor-Leste,East Timor|TL,东帝汶,東帝汶,Country,,Timor-Leste,Southeast Asia
+India,IN|IND,印度,印度,Country,,India,South Asia
+Mumbai,Bombay|BOM,孟买,孟買,City / District,Maharashtra,India,South Asia
+Delhi,New Delhi|DEL|NCR,德里,德里,City / District,Delhi,India,South Asia
+Bengaluru,Bangalore|BLR,班加罗尔,班加羅爾,City / District,Karnataka,India,South Asia
+Hyderabad,HYD,海得拉巴,海得拉巴,City / District,Telangana,India,South Asia
+Chennai,Madras|MAA,金奈,金奈,City / District,Tamil Nadu,India,South Asia
+Pune,PNQ,浦那,浦那,City / District,Maharashtra,India,South Asia
+Kolkata,Calcutta|CCU,加尔各答,加爾各答,City / District,West Bengal,India,South Asia
+Ahmedabad,Gujarat|AMD,艾哈迈达巴德,艾哈邁達巴德,City / District,Gujarat,India,South Asia
+Gurugram,Gurgaon|Noida,古尔冈,古爾岡,City / District,Haryana,India,South Asia
+Bangladesh,BD|BGD,孟加拉国,孟加拉國,Country,,Bangladesh,South Asia
+Dhaka,DAC,达卡,達卡,City / District,,Bangladesh,South Asia
+Chittagong,Chattogram,吉大港,吉大港,City / District,,Bangladesh,South Asia
+Pakistan,PK|PAK,巴基斯坦,巴基斯坦,Country,,Pakistan,South Asia
+Karachi,KHI,卡拉奇,卡拉奇,City / District,Sindh,Pakistan,South Asia
+Lahore,LHE,拉合尔,拉合爾,City / District,Punjab,Pakistan,South Asia
+Islamabad,ISB,伊斯兰堡,伊斯蘭堡,City / District,,Pakistan,South Asia
+Sri Lanka,LK|LKA,斯里兰卡,斯里蘭卡,Country,,Sri Lanka,South Asia
+Colombo,CMB,科伦坡,科倫坡,City / District,,Sri Lanka,South Asia
+Nepal,NP|NPL,尼泊尔,尼泊爾,Country,,Nepal,South Asia
+Kathmandu,KTM,加德满都,加德滿都,City / District,,Nepal,South Asia
+Maldives,MV,马尔代夫,馬爾代夫,Country,,Maldives,South Asia
+Bhutan,BT,不丹,不丹,Country,,Bhutan,South Asia
+United Arab Emirates,UAE|AE,阿联酋,阿聯酋,Country,,United Arab Emirates,West Asia / Middle East
+Dubai,DXB|Jebel Ali,迪拜,迪拜,City / District,Dubai,United Arab Emirates,West Asia / Middle East
+Abu Dhabi,AUH,阿布扎比,阿布扎比,City / District,Abu Dhabi,United Arab Emirates,West Asia / Middle East
+Sharjah,SHJ,沙迦,沙迦,City / District,Sharjah,United Arab Emirates,West Asia / Middle East
+Saudi Arabia,KSA|SA,沙特阿拉伯,沙特阿拉伯,Country,,Saudi Arabia,West Asia / Middle East
+Riyadh,RUH,利雅得,利雅得,City / District,,Saudi Arabia,West Asia / Middle East
+Jeddah,JED,吉达,吉達,City / District,,Saudi Arabia,West Asia / Middle East
+Dammam,DMM,达曼,達曼,City / District,,Saudi Arabia,West Asia / Middle East
+Qatar,QA,卡塔尔,卡塔爾,Country,,Qatar,West Asia / Middle East
+Doha,DOH,多哈,多哈,City / District,,Qatar,West Asia / Middle East
+Kuwait,KW|Kuwait City,科威特,科威特,Country,,Kuwait,West Asia / Middle East
+Bahrain,BH|Manama,巴林,巴林,Country,,Bahrain,West Asia / Middle East
+Oman,OM|Muscat,阿曼,阿曼,Country,,Oman,West Asia / Middle East
+Israel,IL,以色列,以色列,Country,,Israel,West Asia / Middle East
+Tel Aviv,TLV,特拉维夫,特拉維夫,City / District,,Israel,West Asia / Middle East
+Turkey,Turkiye|TR,土耳其,土耳其,Country,,Turkey,West Asia / Middle East
+Istanbul,IST,伊斯坦布尔,伊斯坦布爾,City / District,,Turkey,West Asia / Middle East
+Ankara,ANK,安卡拉,安卡拉,City / District,,Turkey,West Asia / Middle East
+Jordan,JO|Amman,约旦,約旦,Country,,Jordan,West Asia / Middle East
+Kazakhstan,KZ,哈萨克斯坦,哈薩克斯坦,Country,,Kazakhstan,Central Asia
+Almaty,ALA,阿拉木图,阿拉木圖,City / District,,Kazakhstan,Central Asia
+Astana,Nur-Sultan|NQZ,阿斯塔纳,阿斯塔納,City / District,,Kazakhstan,Central Asia
+Uzbekistan,UZ,乌兹别克斯坦,烏茲別克斯坦,Country,,Uzbekistan,Central Asia
+Tashkent,TAS,塔什干,塔什干,City / District,,Uzbekistan,Central Asia
+Kyrgyzstan,KG|Bishkek,吉尔吉斯斯坦,吉爾吉斯斯坦,Country,,Kyrgyzstan,Central Asia
+Tajikistan,TJ|Dushanbe,塔吉克斯坦,塔吉克斯坦,Country,,Tajikistan,Central Asia
+Turkmenistan,TM|Ashgabat,土库曼斯坦,土庫曼斯坦,Country,,Turkmenistan,Central Asia
