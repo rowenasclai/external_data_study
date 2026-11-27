@@ -240,6 +240,36 @@
       "event_name": "GuangZhou International Green Chemical Technology & Equipment and Advanced Materials expo",
       "status": "Fail",
       "extracted_file_name": ""
+    },
+    {
+      "event_name": "Big 5 Global 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "AutoSens China 2026 / InCabin China 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "IntraLogisteX Singapore 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "HKPCA Show 2026 (International Electronics Circuit Exhibition Shenzhen)",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "SEMICON Japan 2026",
+      "status": "Fail",
+      "extracted_file_name": ""
+    },
+    {
+      "event_name": "China International Bearing Industry Exhibition 2026 (20th Edition)",
+      "status": "Fail",
+      "extracted_file_name": ""
     }
   ]
 }
