@@ -95,6 +95,11 @@
       "event_name": "Guangzhou Design Week 2026",
       "status": "Agent Extraction",
       "extracted_file_name": "guangzhou_design_week_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "SEASONS | Autumn - Fashion Jewellery & Accessories Fair 2026",
+      "status": "Agent Extraction",
+      "extracted_file_name": "seasons_autumn_2026_exhibitors.csv"
     }
   ]
 }
