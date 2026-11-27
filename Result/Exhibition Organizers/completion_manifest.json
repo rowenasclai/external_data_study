@@ -95,6 +95,11 @@
       "event_name": "Guangzhou Design Week 2026",
       "status": "Agent Extraction",
       "extracted_file_name": "guangzhou_design_week_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "Global Aritifical Intelligence Manufacturing and Electronic Expo",
+      "status": "Agent Extraction",
+      "extracted_file_name": "aie_expo_2026_exhibitors.csv"
     }
   ]
 }
