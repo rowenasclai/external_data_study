@@ -11,8 +11,41 @@ from googleapiclient.discovery import build
 
 SPREADSHEET_ID = "1WJHV8bBeiCJbY-zo5zFDUuYoUH_LNXPHuIqUlPqP0II"
 HEADERS = {"Event Name", "Status", "Extracted File Name"}
-ALLOWED_STATUSES = {"Agent Extraction", "Fail"}
+ALLOWED_STATUSES = {
+    "Agent Extraction",
+    "Fail",
+    "No Exhibitor List",
+    "Scope Mismatch",
+    "Visible method not available",
+}
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
+
+
+def load_requested_updates(manifest_paths: list[Path]) -> dict[str, tuple[str, str]]:
+    requested: dict[str, tuple[str, str]] = {}
+    for manifest_path in manifest_paths:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        updates = manifest.get("updates")
+        if manifest.get("schema_version") != 1 or not isinstance(updates, list) or not updates:
+            raise ValueError(f"invalid control manifest: {manifest_path}")
+        for item in updates:
+            if not isinstance(item, dict) or set(item) != {"event_name", "status", "extracted_file_name"}:
+                raise ValueError("manifest item has unexpected fields")
+            name, status, filename = (
+                str(item[key]).strip()
+                for key in ("event_name", "status", "extracted_file_name")
+            )
+            if not name or status not in ALLOWED_STATUSES or "/" in filename or "\\" in filename:
+                raise ValueError("manifest contains an unapproved status or filename")
+            requires_filename = status == "Agent Extraction"
+            if requires_filename != bool(filename):
+                raise ValueError(
+                    "Agent Extraction requires a filename; all other statuses require it to be blank"
+                )
+            if name in requested:
+                raise ValueError(f"duplicate event in control manifests: {name}")
+            requested[name] = (status, filename)
+    return requested
 
 
 def main() -> int:
@@ -24,24 +57,7 @@ def main() -> int:
         ).split(",")
         if path.strip()
     ]
-    requested = {}
-    for manifest_path in manifest_paths:
-        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        updates = manifest.get("updates")
-        if manifest.get("schema_version") != 1 or not isinstance(updates, list) or not updates:
-            raise ValueError(f"invalid control manifest: {manifest_path}")
-        for item in updates:
-            if set(item) != {"event_name", "status", "extracted_file_name"}:
-                raise ValueError("manifest item has unexpected fields")
-            name, status, filename = (str(item[key]).strip() for key in ("event_name", "status", "extracted_file_name"))
-            if not name or status not in ALLOWED_STATUSES or "/" in filename or "\\" in filename:
-                raise ValueError("manifest contains an unapproved status or filename")
-            requires_filename = status == "Agent Extraction"
-            if requires_filename != bool(filename):
-                raise ValueError("Agent Extraction requires a filename; Fail requires it to be blank")
-            if name in requested:
-                raise ValueError(f"duplicate event in control manifests: {name}")
-            requested[name] = (status, filename)
+    requested = load_requested_updates(manifest_paths)
 
     credentials_data = json.loads(os.environ["GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON"])
     # GitHub secrets should contain the JSON object directly. Accept one extra
@@ -81,11 +97,8 @@ def main() -> int:
                 if current_status == target_status and current_filename == target_filename:
                     found.add(event_name)
                     continue
-                # The manifests are an explicit event allowlist. The requested
-                # standardized Agent Extraction/Fail labels may correct any
-                # previous workflow label for those named events.
-                if current_status != "New" and target_status not in ALLOWED_STATUSES:
-                    raise ValueError(f"refusing to overwrite {event_name!r} with current status {current_status!r}")
+                # The manifests are an explicit event allowlist. These approved
+                # labels may correct the previous workflow label for named events.
                 for column, value in ((status_col, target_status), (file_col, target_filename)):
                     letter = chr(ord("A") + column)
                     batch.append({"range": f"'{title}'!{letter}{row_number}", "values": [[value]]})
@@ -94,7 +107,7 @@ def main() -> int:
 
     missing = set(requested) - found
     if missing:
-        raise ValueError(f"events not found in New status: {sorted(missing)}")
+        raise ValueError(f"events not found in sheet: {sorted(missing)}")
     service.spreadsheets().values().batchUpdate(
         spreadsheetId=SPREADSHEET_ID,
         body={"valueInputOption": "RAW", "data": batch},
