@@ -100,6 +100,11 @@
       "event_name": "SEMICON Japan 2026",
       "status": "Agent Extraction",
       "extracted_file_name": "semicon_japan_2026_exhibitors.csv"
+    },
+    {
+      "event_name": "China International Bearing Industry Exhibition 2026 (20th Edition)",
+      "status": "Agent Extraction",
+      "extracted_file_name": "china_international_bearing_industry_exhibition_2026_exhibitors.csv"
     }
   ]
 }
